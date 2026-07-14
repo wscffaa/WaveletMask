@@ -18,5 +18,5 @@ python test.py -opt Exp/options/test/<config>.yml
 Copied from BasicOFR `1.0.0`. Upgrade with:
 
 ```bash
-python ../BasicOFR/scripts/sync_framework.py --to .
+python ../../BasicOFR/scripts/sync_framework.py --to .
 ```
