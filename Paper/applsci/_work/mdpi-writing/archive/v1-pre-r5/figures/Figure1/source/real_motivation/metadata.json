@@ -1,0 +1,179 @@
+{
+  "figure": "Fig2_wavelet_frequency_motivation",
+  "server": "L40_aliyun",
+  "repo_root": "/mnt/data/Antigravity_OFR",
+  "checkpoint": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/checkpoints/waveletmask_ab/net_g_best.pth",
+  "checkpoint_sha256": "662bf4ae334a8f41fd69f39c3698b1ca8b3d0f2607fa148bd8bdab300744a873",
+  "expected_checkpoint_sha256": "662bf4ae334a8f41fd69f39c3698b1ca8b3d0f2607fa148bd8bdab300744a873",
+  "datasets": {
+    "synthetic_lq": "/mnt/data/Antigravity_OFR/framework/datasets/val/REDS/LQ/val_sharp_degraded",
+    "synthetic_gt": "/mnt/data/Antigravity_OFR/framework/datasets/val/REDS/GT/val_sharp",
+    "real": "/mnt/data/Antigravity_OFR/framework/datasets/OldFilmRestoration/val/RealFilm/MambaOFR_SRWOV"
+  },
+  "model": "WaveletMaskABNet(num_feat=16,num_block=6,flow_type=raft)",
+  "model_load": {
+    "missing_keys": [],
+    "unexpected_keys": []
+  },
+  "processing": {
+    "short_side": 352,
+    "align": 16,
+    "pixel_indicator": "mean of bidirectional RAFT-warped first-channel absolute differences",
+    "max_fusion_error": 0.0
+  },
+  "selected": {
+    "synthetic_sparse_damage": {
+      "kind": "synthetic",
+      "sequence": "013",
+      "frame_index": 97,
+      "frame_path": "/mnt/data/Antigravity_OFR/framework/datasets/val/REDS/LQ/val_sharp_degraded/013/00000097.png",
+      "resized_size_wh": [
+        624,
+        352
+      ],
+      "roi_xyxy": [
+        336,
+        192,
+        432,
+        288
+      ],
+      "cheap_score": 0.2364826281554997,
+      "model_score": 0.5061871409729389,
+      "mask_signal": 0.27843141509220004,
+      "pixel_signal": 0.5000562787055967,
+      "max_fusion_error": 0.0,
+      "raw_dir": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/raw/synthetic_sparse_damage",
+      "maps_npz": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/raw/synthetic_sparse_damage/maps.npz"
+    },
+    "real_flicker": {
+      "kind": "real",
+      "sequence": "6ZCNaCHPacE/236-241/frames",
+      "frame_index": 113,
+      "frame_path": "/mnt/data/Antigravity_OFR/framework/datasets/OldFilmRestoration/val/RealFilm/MambaOFR_SRWOV/6ZCNaCHPacE/236-241/frames/00113.jpg",
+      "resized_size_wh": [
+        464,
+        352
+      ],
+      "roi_xyxy": [
+        0,
+        0,
+        464,
+        352
+      ],
+      "cheap_score": 0.03338681310415268,
+      "model_score": -0.005914187838789076,
+      "mask_signal": 0.0017553546116687358,
+      "pixel_signal": 0.030678169801831245,
+      "max_fusion_error": 0.0,
+      "raw_dir": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/raw/real_flicker",
+      "maps_npz": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/raw/real_flicker/maps.npz"
+    }
+  },
+  "candidate_summaries": {
+    "synthetic": [
+      {
+        "kind": "synthetic",
+        "sequence": "013",
+        "frame_index": 97,
+        "frame_path": "/mnt/data/Antigravity_OFR/framework/datasets/val/REDS/LQ/val_sharp_degraded/013/00000097.png",
+        "cheap_score": 0.2364826281554997,
+        "model_score": 0.5061871409729389,
+        "mask_signal": 0.27843141509220004,
+        "pixel_signal": 0.5000562787055967,
+        "roi_xyxy": [
+          336,
+          192,
+          432,
+          288
+        ],
+        "selection_mode": "locked_from_existing_metadata"
+      }
+    ],
+    "real": [
+      {
+        "kind": "real",
+        "sequence": "6ZCNaCHPacE/236-241/frames",
+        "frame_index": 113,
+        "frame_path": "/mnt/data/Antigravity_OFR/framework/datasets/OldFilmRestoration/val/RealFilm/MambaOFR_SRWOV/6ZCNaCHPacE/236-241/frames/00113.jpg",
+        "cheap_score": 0.03338681310415268,
+        "model_score": -0.005914187838789076,
+        "mask_signal": 0.0017553546116687358,
+        "pixel_signal": 0.030678169801831245,
+        "roi_xyxy": [
+          0,
+          0,
+          464,
+          352
+        ],
+        "selection_mode": "locked_from_existing_metadata"
+      }
+    ]
+  },
+  "layout_version": "mdpi_v11_small_sans_labels_filled_response",
+  "layout_final_candidate": "D_mdpi_clean",
+  "layout_candidates": [
+    {
+      "name": "A_story_matrix",
+      "pdf": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/candidates/Fig1_candidate_A_story_matrix.pdf",
+      "svg": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/candidates/Fig1_candidate_A_story_matrix.svg",
+      "preview_png": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/candidates/Fig1_candidate_A_story_matrix.png"
+    },
+    {
+      "name": "B_grouped_flow",
+      "pdf": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/candidates/Fig1_candidate_B_grouped_flow.pdf",
+      "svg": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/candidates/Fig1_candidate_B_grouped_flow.svg",
+      "preview_png": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/candidates/Fig1_candidate_B_grouped_flow.png"
+    },
+    {
+      "name": "D_mdpi_clean",
+      "pdf": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/candidates/Fig1_candidate_D_mdpi_clean.pdf",
+      "svg": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/candidates/Fig1_candidate_D_mdpi_clean.svg",
+      "preview_png": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/candidates/Fig1_candidate_D_mdpi_clean.png"
+    }
+  ],
+  "panel_grid": {
+    "rows": 2,
+    "cols": 5,
+    "column_widths": "content_weighted",
+    "flow": "left_to_right_compact_labels"
+  },
+  "export": {
+    "target_width": "13.86 cm MDPI textwidth",
+    "latex_width": "\\textwidth",
+    "font_family": "TeX Gyre Pagella / Palatino fallback",
+    "final_png_dpi": 600,
+    "pdf_raster_dpi": 600,
+    "label_policy": "column and row labels outside panels; subband/time labels are compact corner tags without reserved title bands"
+  },
+  "layout_sources": [
+    {
+      "name": "IEEE graphics resolution and size",
+      "url": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/resolution-and-size/"
+    },
+    {
+      "name": "Nature figure panel arrangement and fonts",
+      "url": "https://research-figure-guide.nature.com/figures/building-and-exporting-figure-panels/"
+    },
+    {
+      "name": "Nature figure specifications",
+      "url": "https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/"
+    }
+  ],
+  "panel_normalization": {
+    "pixel_indicator": "fixed display scale vmin=0, vmax=1",
+    "wavelet_response": "percentile display-normalized per panel",
+    "branch_mask": "percentile display-normalized per panel",
+    "fused_mask": "percentile display-normalized per panel"
+  },
+  "outputs": {
+    "pdf": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/archive/pre_redraw_20260512/Figure1_auto_attempt/Fig2_wavelet_frequency_motivation.pdf",
+    "svg": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/archive/pre_redraw_20260512/Figure1_auto_attempt/Fig2_wavelet_frequency_motivation.svg",
+    "png_600dpi": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/archive/pre_redraw_20260512/Figure1_auto_attempt/Fig2_wavelet_frequency_motivation.png",
+    "preview_png": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/Fig2_wavelet_frequency_motivation_preview.png"
+  },
+  "output_sha256": {
+    "pdf": "024b17a68c4779329afcd311619e1e049f0753a00abafd92114a98fe6c97bd6d",
+    "svg": "e9bfc402fb6056838b2ee72936d5ed80136ec20ab77b52c58064f29257230fa6",
+    "png_600dpi": "f92c5536bbf7a8390ad538a9d47812ea94ab646fd813a17837e88830fb0e0232"
+  }
+}

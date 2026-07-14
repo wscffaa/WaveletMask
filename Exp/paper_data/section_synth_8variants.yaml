@@ -1,0 +1,98 @@
+_meta:
+  project: 007-waveletmask
+  section: Synthetic 8-variant evaluation
+  dataset: REDS_synthetic (val_sharp / val_sharp_degraded)
+  metrics_set:
+  - PSNR↑
+  - SSIM↑
+  - LPIPS↓
+  - DISTS↓
+  metrics_lib: pyiqa (PSNR/SSIM Y-channel, LPIPS AlexNet, DISTS VGG16)
+  hardware: 1× NVIDIA L40 (46GB) — wm_synth_test session
+  executed_on: L40_aliyun
+  num_clips: 30
+  checkpoint: net_g_best.pth (per-variant)
+  log_source: /mnt/data/Antigravity_OFR/Exp/results/waveletmask_<variant>_reds_synthetic_best/test_*.log
+  consolidated_at: '2026-04-19T08:49:47'
+  consolidated_by: D1 task — 2026-04-19-system-audit
+variants:
+  base:
+    arch: WaveletMaskBaseNet
+    innovation: baseline (no mask)
+    metrics:
+      psnr: 26.158
+      ssim: 0.8917
+      lpips: 0.1034
+      dists: 0.0953
+    test_started: '2026-04-15 17:41:18'
+    test_finished: '2026-04-15 18:18:29'
+  local:
+    arch: WaveletMaskLocalNet
+    innovation: 'A only: local high-freq mask (HH/HL/LH geometric mean)'
+    metrics:
+      psnr: 26.3778
+      ssim: 0.8966
+      lpips: 0.0914
+      dists: 0.079
+    test_started: '2026-04-15 18:18:35'
+    test_finished: '2026-04-15 18:55:45'
+  local_fusion:
+    arch: WaveletMaskLocalFusionNet
+    innovation: A + lightweight fusion (mid_channels=32)
+    metrics:
+      psnr: 25.9858
+      ssim: 0.8978
+      lpips: 0.0889
+      dists: 0.083
+    test_started: '2026-04-15 19:33:00'
+    test_finished: '2026-04-15 20:10:12'
+  flicker:
+    arch: WaveletMaskFlickerNet
+    innovation: 'B only: global flicker mask (LL diff)'
+    metrics:
+      psnr: 26.1024
+      ssim: 0.898
+      lpips: 0.0969
+      dists: 0.0916
+    test_started: '2026-04-15 18:55:50'
+    test_finished: '2026-04-15 19:14:21'
+  flicker_fusion:
+    arch: WaveletMaskFlickerFusionNet
+    innovation: B + lightweight fusion
+    metrics:
+      psnr: 25.9488
+      ssim: 0.8956
+      lpips: 0.0946
+      dists: 0.0814
+    test_started: '2026-04-15 20:10:18'
+    test_finished: '2026-04-15 20:47:17'
+  gated_flicker:
+    arch: WaveletMaskGatedFlickerNet
+    innovation: B with sigmoid gate
+    metrics:
+      psnr: 26.3515
+      ssim: 0.8966
+      lpips: 0.0869
+      dists: 0.0842
+    test_started: '2026-04-15 20:47:23'
+    test_finished: '2026-04-15 21:24:49'
+  ab:
+    arch: WaveletMaskABNet
+    innovation: A + B fused via element-wise max
+    metrics:
+      psnr: 26.6017
+      ssim: 0.8951
+      lpips: 0.0891
+      dists: 0.0831
+    test_started: '2026-04-15 19:14:27'
+    test_finished: '2026-04-15 19:32:54'
+  full:
+    arch: WaveletMaskFullNet
+    innovation: A + B + C (learned fusion module)
+    metrics:
+      psnr: 24.9827
+      ssim: 0.8896
+      lpips: 0.1068
+      dists: 0.0867
+    test_started: '2026-04-15 21:24:55'
+    test_finished: '2026-04-15 22:02:10'

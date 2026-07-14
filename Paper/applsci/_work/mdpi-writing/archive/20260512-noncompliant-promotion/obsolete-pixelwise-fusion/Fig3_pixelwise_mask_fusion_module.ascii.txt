@@ -1,0 +1,5 @@
+Spatial residual mask --\
+                       concatenate -> alpha CNN -> sigmoid alpha -> weighted indicator -> gated aggregation
+Wavelet mask ---------/
+Warped hidden state ------------------------------------------------/
+Current frame feature ----------------------------------------------/

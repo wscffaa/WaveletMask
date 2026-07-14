@@ -1,0 +1,133 @@
+{
+  "schema_version": "ablation_matrix/v3",
+  "project_id": "007-waveletmask",
+  "fixed_variables": {
+    "num_feat": 16,
+    "num_block": 6,
+    "_source": "Exp/options/train/waveletmask_base.yml network_g field"
+  },
+  "variants": [
+    {
+      "id": "base",
+      "name": "Baseline (no masks)",
+      "config": "waveletmask_base.yml",
+      "params": {"A": false, "B": false, "C": false, "fusion": "none"},
+      "role": "baseline",
+      "comparison_target": null,
+      "metrics": {
+        "psnr_syn": 26.158, "ssim_syn": 0.8917, "lpips_syn": 0.1034, "dists_syn": 0.0953,
+        "niqe_real": 5.334, "brisque_real": 29.312, "clipiqa_real": 0.4359
+      }
+    },
+    {
+      "id": "local",
+      "name": "A only: Local HF Mask (direct replace)",
+      "config": "waveletmask_local.yml",
+      "params": {"A": true, "B": false, "C": false, "fusion": "direct_replace"},
+      "role": "ablation",
+      "comparison_target": "base",
+      "metrics": {
+        "psnr_syn": 26.378, "ssim_syn": 0.8966, "lpips_syn": 0.0914, "dists_syn": 0.079,
+        "niqe_real": 5.339, "brisque_real": 19.556, "clipiqa_real": 0.4115
+      }
+    },
+    {
+      "id": "flicker",
+      "name": "B only: Flicker Mask (direct replace)",
+      "config": "waveletmask_flicker.yml",
+      "params": {"A": false, "B": true, "C": false, "fusion": "direct_replace"},
+      "role": "ablation",
+      "comparison_target": "base",
+      "metrics": {
+        "psnr_syn": 26.102, "ssim_syn": 0.898, "lpips_syn": 0.0969, "dists_syn": 0.0916,
+        "niqe_real": 5.04, "brisque_real": 28.788, "clipiqa_real": 0.4388
+      }
+    },
+    {
+      "id": "ab",
+      "name": "A+B: max fusion — FINAL METHOD",
+      "config": "waveletmask_ab.yml",
+      "params": {"A": true, "B": true, "C": false, "fusion": "max"},
+      "role": "final",
+      "comparison_target": "base",
+      "metrics": {
+        "psnr_syn": 26.602, "ssim_syn": 0.8951, "lpips_syn": 0.0891, "dists_syn": 0.0831,
+        "niqe_real": 5.229, "brisque_real": 24.202, "clipiqa_real": 0.4356
+      }
+    },
+    {
+      "id": "local_fusion",
+      "name": "A+C: Local + CNN alpha fusion (C harmful)",
+      "config": "waveletmask_local_fusion.yml",
+      "params": {"A": true, "B": false, "C": true, "fusion": "cnn_alpha"},
+      "role": "ablation_negative",
+      "comparison_target": "local",
+      "metrics": {
+        "psnr_syn": 25.986, "ssim_syn": 0.8978, "lpips_syn": 0.0889, "dists_syn": 0.083,
+        "niqe_real": 5.201, "brisque_real": 22.668, "clipiqa_real": 0.4435
+      }
+    },
+    {
+      "id": "flicker_fusion",
+      "name": "B+C: Flicker + CNN alpha fusion (C harmful)",
+      "config": "waveletmask_flicker_fusion.yml",
+      "params": {"A": false, "B": true, "C": true, "fusion": "cnn_alpha"},
+      "role": "ablation_negative",
+      "comparison_target": "flicker",
+      "metrics": {
+        "psnr_syn": 25.949, "ssim_syn": 0.8956, "lpips_syn": 0.0946, "dists_syn": 0.0814,
+        "niqe_real": 5.404, "brisque_real": 18.354, "clipiqa_real": 0.4265
+      }
+    },
+    {
+      "id": "full",
+      "name": "Full: A+B+C with max→CNN alpha (C severely harmful)",
+      "config": "waveletmask_full.yml",
+      "params": {"A": true, "B": true, "C": true, "fusion": "max_then_cnn_alpha"},
+      "role": "ablation_negative",
+      "comparison_target": "ab",
+      "metrics": {
+        "psnr_syn": 24.983, "ssim_syn": 0.8896, "lpips_syn": 0.1068, "dists_syn": 0.0867,
+        "niqe_real": 4.995, "brisque_real": 20.905, "clipiqa_real": 0.4351
+      }
+    },
+    {
+      "id": "gated_flicker",
+      "name": "A+B+improved-C with gated→CNN alpha (still worse than max)",
+      "config": "waveletmask_gated_flicker.yml",
+      "params": {"A": true, "B": true, "C": true, "fusion": "gated_then_cnn_alpha"},
+      "role": "ablation_negative",
+      "comparison_target": "ab",
+      "metrics": {
+        "psnr_syn": 26.352, "ssim_syn": 0.8966, "lpips_syn": 0.0869, "dists_syn": 0.0842,
+        "niqe_real": 5.332, "brisque_real": 24.479, "clipiqa_real": 0.4503
+      }
+    }
+  ],
+  "baseline_variant": "base",
+  "best_variant": "ab",
+  "ablation_variables": {
+    "innovation_A": "局部高频掩码 (Local HF Mask)",
+    "innovation_B": "全局闪烁掩码 (Flicker Mask)",
+    "innovation_C_archived": "像素级 CNN 融合 (Pixel-Wise Fusion) — 已淘汰",
+    "fusion_strategy": "掩码融合策略 (direct/max/cnn_alpha/gated)"
+  },
+  "key_findings": [
+    "A 单独贡献: +0.22 dB (local 26.38 vs base 26.16)",
+    "B 单独贡献: SSIM +0.0063 (flicker 0.8980 vs base 0.8917)",
+    "A+B max 融合最优: ab=26.60, 超可加效应 (+0.44 > +0.22 + (-0.06) = +0.16)",
+    "C 模块在所有对照中有害: local→local_fusion -0.39, flicker→flicker_fusion -0.15, ab→full -1.62, ab→gated -0.25",
+    "Simple max > All learned fusion variants"
+  ],
+  "data_source": "L40 权威测试 2026-04-15 (synth) + 2026-03-19~21 (realworld)",
+  "_revision": {
+    "date": "2026-04-23",
+    "changes": [
+      "v2→v3: Metrics updated to L40 authoritative data",
+      "best_variant changed from 'full' to 'ab'",
+      "C-containing variants marked as ablation_negative",
+      "comparison_target updated for C variants (compare to non-C counterpart)",
+      "key_findings rewritten based on L40 data"
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+schema_version: 2
+figure_id: Fig2
+latex_label: fig:pipeline
+title: "WaveletMask architecture overview"
+role: method
+status: planned
+slot_id: METHOD_OVERVIEW
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A2]
+selected_option:
+  option_id: A
+  archetype: pipeline_overview
+  source_protocol: references/02-figure/figure-options-protocol.md
+archetype: pipeline_overview
+core_conclusion: "WaveletMask replaces the pixel-domain residual indicator with a wavelet-domain dual-mask detector (local HF mask A + global flicker mask B), fused via element-wise max and injected into RTN gated aggregation with zero extra parameters."
+evidence_data_path:
+  - Paper/applsci/figures/Figure2.pdf
+  - archs/components/wavelet_mask.py
+evidence_gate:
+  required: true
+  status: available
+  missing: []
+reviewer_risk:
+  - "Module names in figure must match code (WaveletNoiseMask, HaarDWT2d, high_freq_conv, low_freq_conv)."
+  - "Max fusion may appear trivial → ablation proves learned fusion variants are consistently worse."
+forbidden_scene: "Not applicable when innovation is a single loss function change with no architectural modification."
+figure_priority: core
+production_owner: user
+production_route: ppt
+production_status: ready
+ascii_preview: |
+  [Input LR] → [Flow Est] → [Spatial ResBlocks] → [WaveletNoiseMask: HaarDWT → A+B max fusion] → [Gated Aggregation] → [Reconstruction] → [Output HR]
+dependencies:
+  code:
+    - archs/components/wavelet_mask.py
+    - archs/components/haar_dwt.py
+  experiments: []
+  assets:
+    - Paper/applsci/figures/Figure2.pdf
+sync_targets:
+  introduction:
+    required_refs: ["\\ref{fig:pipeline}"]
+    claim_to_sync: "WaveletMask overview introduced before module-level details."
+  method:
+    required_refs: ["\\ref{fig:pipeline}"]
+    claim_to_sync: "Method sections follow the same module order as Figure 2."
+  results:
+    required_refs: []
+    claim_to_sync: ""
+caption_contract:
+  tense: present
+  required_terms: ["WaveletNoiseMask", "HaarDWT2d", "max fusion", "gated aggregation"]
+  banned_terms: ["novel architecture", "black box"]
+  draft_caption: "Overview of the proposed WaveletMask framework. The WaveletNoiseMask module replaces the pixel-domain residual indicator: Haar DWT decomposes each frame, high_freq_conv generates the local damage mask (A), low_freq_conv generates the flicker mask (B), and element-wise max fuses them before injection into RTN gated aggregation."
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by: []
+notes: "User PPT hand-drawn; file present and verified."

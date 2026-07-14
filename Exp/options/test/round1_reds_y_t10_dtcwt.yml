@@ -1,0 +1,52 @@
+name: round1_reds_y_t10_dtcwt
+results_subdir: round1_reds_y_t10_dtcwt
+model_type: WaveletMaskModel
+scale: 1
+num_gpu: 1
+manual_seed: 2021
+dist: false
+find_unused_parameters: true
+datasets:
+  test:
+    name: REDS_synthetic
+    type: Film_dataset_1
+    dataroot_gt: datasets/OldFilmRestoration/val/REDS/GT/val_sharp
+    dataroot_lq: datasets/OldFilmRestoration/val/REDS/LQ/val_sharp_degraded
+    num_frame: -1
+    cache_data: false
+    normalizing: true
+    io_backend:
+      type: disk
+network_g:
+  type: WaveletMaskReviewNet
+  num_feat: 16
+  num_block: 6
+  flow_type: raft
+  wavelet_backend: dtcwt
+  wavelet_levels: 1
+  fusion_type: max
+  flow_compensated_wavelet: false
+val:
+  save_img: true
+  metrics:
+    psnr:
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: true
+    lpips:
+      type: calculate_lpips
+      crop_border: 0
+      convert_to_grayscale: true
+    dists:
+      type: calculate_dists
+      crop_border: 0
+      convert_to_grayscale: true
+logger:
+  print_freq: 100
+path:
+  pretrain_network_g: Exp/experiments/waveletmask_ab_dtcwt/models/net_g_200000.pth
+  results_root: Exp/results

@@ -1,0 +1,56 @@
+# Author Information Configuration
+# Used by OFR Paper Generator to auto-fill author details
+
+authors:
+  - name: "Feifan Cai"
+    email: "feifan@shu.edu.cn"
+    affiliations: [1, 2, 3]
+    orcid: "0009-0000-1111-7667"
+    corresponding: false
+
+  - name: "Qi Zhang"
+    email: ""
+    affiliations: [1, 2]
+    orcid: "0000-0002-3827-1522"
+    corresponding: false
+
+  - name: "Chang-An Xu"
+    email: "xuchangan@gdcri.com"
+    affiliations: [3]
+    orcid: ""
+    corresponding: false
+
+  - name: "Youdong Ding"
+    email: "ydding@shu.edu.cn"
+    affiliations: [1, 2]
+    orcid: ""
+    corresponding: true
+
+affiliations:
+  1:
+    name: "Shanghai Film Academy, Shanghai University"
+    address: "788 Guangzhong Road, Shanghai 200072, China"
+  2:
+    name: "Shanghai Engineering Research Center of Motion Picture Special Effects"
+    address: "788 Guangzhong Road, Shanghai 200072, China"
+  3:
+    name: "Institute of Chemical Engineering, Guangdong Academy of Sciences"
+    address: "Guangzhou 510665, China"
+
+institution:
+  name: "Shanghai University"
+  address: "Shanghai, China"
+  zipcode: "200072"
+
+funding:
+  - "National Natural Science Foundation of China (Grant No. XXXXXXXX)"
+
+keywords:
+  default:
+    - "old film restoration"
+    - "degradation detection"
+    - "recurrent video restoration"
+    - "wavelet transform"
+    - "degradation mask"
+    - "structural artifacts"
+    - "brightness flicker"

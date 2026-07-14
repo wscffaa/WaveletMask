@@ -1,0 +1,25 @@
+{
+  "method": "RTN",
+  "arch": "RTNRestorationNet",
+  "status": "ok",
+  "input_shape": [
+    1,
+    7,
+    3,
+    720,
+    1280
+  ],
+  "protocol": "FP32, eval, inference_mode, warmup=3, runs=10",
+  "gpu": "NVIDIA L40",
+  "torch": "2.7.0+cu126",
+  "cuda": "12.6",
+  "params_reg_m": 0.9212,
+  "params_flow_m": 4.8139,
+  "params_full_m": 5.7351,
+  "flops_g": 31906.4,
+  "latency_ms_per_clip": 5379.113,
+  "latency_std_ms": 943.313,
+  "throughput_fps": 1.301,
+  "throughput_clips_per_s": 0.186,
+  "peak_mem_gb": 9.923
+}

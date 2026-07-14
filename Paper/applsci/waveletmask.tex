@@ -1,0 +1,166 @@
+%  LaTeX support: latex@mdpi.com 
+%  For support, please attach all files needed for compiling as well as the log file, and specify your operating system, LaTeX version, and LaTeX editor.
+
+%=================================================================
+\documentclass[applsci,article,submit,pdftex,moreauthors]{Definitions/mdpi} 
+
+%--------------------
+% Class Options:
+%--------------------
+
+%=================================================================
+\firstpage{1}
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2026}
+\copyrightyear{2026}
+\datereceived{ } 
+\daterevised{ }
+\dateaccepted{ } 
+\datepublished{ } 
+
+%=================================================================
+\input{sections/authors}
+
+% Abstract
+\abstract{Old films suffer from scratches, dust, and brightness flicker
+caused by aging film stock and unstable analog exposure. Recurrent
+restoration frameworks suppress these artifacts under the guidance of
+degradation masks, yet pixel-domain frame differencing provides weak
+evidence for thin structural defects and confuses global brightness
+variation with content change. We present WaveletMask, a wavelet-domain
+degradation sensing framework that disentangles these two failure modes
+by construction: a high-frequency branch localizes transient structural
+defects from Haar detail-band differences between adjacent frames, a
+low-frequency branch isolates frame-level brightness deviations from
+coarse approximation responses, and a parameter-free maximum fusion rule
+passes the dominant cue to the recurrent gate. On the Synthetic and
+Real-World Old Video (SRWOV) benchmark, WaveletMask attains the best PSNR
+among ten re-trained methods (26.60~dB, $+0.61$~dB over the strongest
+competitor), and a paired comparison against the Recurrent Transformer
+Network (RTN) confirms a $+0.45$~dB gain
+while adding only 898 detector parameters. On real archival footage,
+WaveletMask removes scratches and flicker more cleanly while better
+preserving film texture and temporal stability. These results indicate
+that explicit wavelet-domain separation of structural and photometric
+cues offers a reliable, nearly cost-free upgrade for mask-guided
+recurrent restoration.}
+
+% Keywords
+\keyword{old film restoration; recurrent video restoration; degradation
+mask; wavelet transform; frequency-domain restoration; temporal
+coherence; structural defects}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sections/introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sections/related_work}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sections/method}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sections/results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sections/discussion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{sections/conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{6pt} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\authorcontributions{Conceptualization, F.C. and Y.D.; methodology, F.C.; software, F.C.; validation, F.C. and Q.Z.; formal analysis, F.C.; investigation, F.C.; resources, Y.D.; data curation, F.C.; writing---original draft preparation, F.C.; writing---review and editing, C.-A.X. and Y.D.; visualization, F.C.; supervision, Y.D.; project administration, Y.D. All authors have read and agreed to the published version of the manuscript.}
+
+\funding{This research received no external funding.}
+
+\institutionalreview{The study was conducted in accordance with the Declaration of Helsinki. All algorithmic experiments in this work were conducted on publicly available video datasets for old-film restoration evaluation. The expert subjective image-quality evaluation mentioned in the manuscript was an internal visual-quality scoring of restored images by internal expert raters; it did not recruit external human subjects, collect human biological samples, record identifiable personal or private information, or involve any intervention on the human body. In accordance with Article 2 of the \emph{Measures for Scientific and Technological Ethics Review (Trial)} (Guo Ke Fa Jian [2023] No. 167; jointly issued by the Ministry of Science and Technology and nine other Chinese authorities), this work does not fall within the scope requiring mandatory ethics review, and no ethics approval or exemption document is required.}
+
+\informedconsent{Not applicable. No external human subjects were recruited, and the internal visual-quality scoring did not collect identifiable personal or private information.}
+
+\dataavailability{The REDS dataset used for training is publicly available at \url{https://seungjunnah.github.io/Datasets/reds.html}. The SRWOV benchmark used for evaluation is publicly available at \url{https://github.com/MaoAYD/MambaOFR}. The synthetic degradation protocol follows the publicly described RTN/SRWOV settings. Supplementary Tables S1--S2 and Supplementary Figures S1--S6 are provided as a separate supplementary package. The code, training and evaluation configurations, same-protocol metric summaries, paired seed-2021 clip-level statistics, diagnostic scripts, and runtime-benchmark artifacts are being prepared for public release at \url{https://github.com/wscffaa/WaveletMask}; until the tagged release is posted, they are available from the corresponding author upon reasonable request. Trained model weights are not included in the public package because of file size; they will be posted with the repository release or provided by the corresponding author subject to institutional repository approval and third-party dataset license checks.}
+
+\acknowledgments{The authors thank the developers of RTN for releasing their code and pretrained models.}
+
+\conflictsofinterest{The authors declare no conflicts of interest.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\supplementary{The following supporting information can be downloaded as a separate supplementary package mirrored in the manuscript source files: Figure S1: complete persistent-scratch diagnostic examples; Figure S2: complete residual-proxy overlap examples; Figure S3: complete cue-complementarity examples; Figure S4: expert-level subjective evaluation results ((a) overall preference distribution; (b) rank-1 counts across three perceptual dimensions); Figure S5: error-map comparison between the RTN and WaveletMask on selected SRWOV synthetic frames; Figure S6: visualization for the wavelet-mask probes; Table S1: overall preference in the internal expert-level subjective evaluation (34 internal expert raters $\times$ 14 clips); Table S2: rank-1 counts by perceptual dimension.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\abbreviations{Abbreviations}{
+The following abbreviations are used in this manuscript:
+\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+OFR & Old Film Restoration\\
+DWT & Discrete Wavelet Transform\\
+LHFM & Local High-Frequency Mask Module\\
+GFM & Global Flicker Mask Module\\
+HF & High Frequency\\
+LF & Low Frequency\\
+RTN & Recurrent Transformer Network\\
+RRTN & Recursive Recurrent Transformer Network\\
+SRWOV & Synthetic and Real-World Old Video (benchmark)\\
+REDS & REalistic and Dynamic Scenes dataset\\
+RAFT & Recurrent All-Pairs Field Transforms\\
+ROI & Region of Interest\\
+GT & Ground Truth\\
+PSNR & Peak Signal-to-Noise Ratio\\
+SSIM & Structural Similarity Index Measure\\
+LPIPS & Learned Perceptual Image Patch Similarity\\
+DISTS & Deep Image Structure and Texture Similarity\\
+NIQE & Natural Image Quality Evaluator\\
+BRISQUE & Blind/Referenceless Image Spatial Quality Evaluator\\
+CLIPIQA+ & CLIP-based Image Quality Assessment (prompt-tuned variant)\\
+CLIP & Contrastive Language--Image Pre-training\\
+CNN & Convolutional Neural Network\\
+RNN & Recurrent Neural Network\\
+GAN & Generative Adversarial Network\\
+VGG & Visual Geometry Group network\\
+GPU & Graphics Processing Unit\\
+FLOPs & Floating Point Operations\\
+MAE & Mean Absolute Error\\
+RGB & Red--Green--Blue color space\\
+BT.601 & ITU-R BT.601 luminance transform\\
+LL/LH/HL/HH & Wavelet sub-bands (Low--Low / Low--High / High--Low / High--High)
+\end{tabular}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendixtitles{yes}
+\appendixstart
+\appendix
+\input{sections/appendix_a}
+\input{sections/appendix_b}
+\input{sections/appendix_c}
+\input{sections/appendix_d}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{adjustwidth}{-\extralength}{0cm}
+
+\reftitle{References}
+
+\bibliography{references}
+
+\PublishersNote{}
+\end{adjustwidth}
+\end{document}

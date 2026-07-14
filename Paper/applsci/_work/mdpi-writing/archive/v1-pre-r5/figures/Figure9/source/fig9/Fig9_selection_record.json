@@ -1,0 +1,129 @@
+{
+  "project": "007-waveletmask",
+  "generated_at": "2026-05-12T20:42:45",
+  "command": [
+    "fast-top50-fig9"
+  ],
+  "ranking_path": "projects/007-waveletmask/Exp/vis_output/ranking_local.json",
+  "data_root": "projects/007-waveletmask/Exp/vis_output/top20",
+  "thresholds": {
+    "min_delta_psnr": 1.0,
+    "min_improved_ratio": 0.55,
+    "require_ssim_non_decrease": true,
+    "candidate_source": "top50_parallel_fastpath"
+  },
+  "outputs": [
+    "projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9/source/fig9/Fig9b_error_map.pdf",
+    "projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9/source/fig9/Fig9b_error_map.png"
+  ],
+  "selected": [
+    {
+      "rank": 1,
+      "rel_path": "012/00000085.png",
+      "clip": "012",
+      "frame": "00000085",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 5.238726,
+      "metrics": {
+        "psnr_baseline": 17.6888,
+        "psnr_ours": 21.1443,
+        "delta_psnr": 3.4555,
+        "ssim_baseline": 0.8559,
+        "ssim_ours": 0.8809,
+        "mae_baseline": 20.5884,
+        "mae_ours": 14.0801,
+        "mae_drop": 6.5083,
+        "improved_pixel_ratio": 0.6931,
+        "edge_retention_score": 0.4554
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000085.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000085.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000085.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000085.png"
+      }
+    },
+    {
+      "rank": 2,
+      "rel_path": "012/00000084.png",
+      "clip": "012",
+      "frame": "00000084",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 4.739848,
+      "metrics": {
+        "psnr_baseline": 17.2188,
+        "psnr_ours": 20.2445,
+        "delta_psnr": 3.0257,
+        "ssim_baseline": 0.8318,
+        "ssim_ours": 0.8665,
+        "mae_baseline": 23.2064,
+        "mae_ours": 16.9355,
+        "mae_drop": 6.2709,
+        "improved_pixel_ratio": 0.6598,
+        "edge_retention_score": 0.4549
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000084.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000084.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000084.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000084.png"
+      }
+    },
+    {
+      "rank": 4,
+      "rel_path": "012/00000021.png",
+      "clip": "012",
+      "frame": "00000021",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 4.159427,
+      "metrics": {
+        "psnr_baseline": 19.3472,
+        "psnr_ours": 22.2865,
+        "delta_psnr": 2.9393,
+        "ssim_baseline": 0.8674,
+        "ssim_ours": 0.8915,
+        "mae_baseline": 15.0904,
+        "mae_ours": 11.6025,
+        "mae_drop": 3.488,
+        "improved_pixel_ratio": 0.5828,
+        "edge_retention_score": 0.4565
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000021.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000021.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000021.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000021.png"
+      }
+    },
+    {
+      "rank": 6,
+      "rel_path": "025/00000096.png",
+      "clip": "025",
+      "frame": "00000096",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 4.024588,
+      "metrics": {
+        "psnr_baseline": 23.4065,
+        "psnr_ours": 25.8858,
+        "delta_psnr": 2.4793,
+        "ssim_baseline": 0.8879,
+        "ssim_ours": 0.9024,
+        "mae_baseline": 14.629,
+        "mae_ours": 10.1905,
+        "mae_drop": 4.4385,
+        "improved_pixel_ratio": 0.7774,
+        "edge_retention_score": 0.4086
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/025/00000096.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/025/00000096.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/025/00000096.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/025/00000096.png"
+      }
+    }
+  ]
+}

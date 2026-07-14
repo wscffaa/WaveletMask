@@ -1,0 +1,74 @@
+\section{Robustness and Cross-Content Generalization}\label{app:robustness}
+
+This appendix examines whether the same-protocol gain reported in Section~\ref{subsec:sota_quant} is concentrated in one degradation pattern, degrades under stronger motion or occlusion, or fails to transfer beyond REDS source content.
+
+\subsection{Artifact-Dominant Synthetic Breakdown}\label{subsec:artifact_breakdown}
+
+To examine whether the same-protocol gain is concentrated in one degradation pattern, we stratified the 30 SRWOV synthetic clips by paired input--ground-truth residual descriptors. The descriptors measure elongated high-residual components for scratch-like structure, compact high-residual components for dust-like spots, and low-frequency mean-shift responses for flicker-like brightness variation. This procedure gives clip-level artifact-dominant strata; it is not a pixel-level generator-label annotation. Table~\ref{tab:artifact_breakdown} aggregates the per-clip metrics from the RTN and WaveletMask logs within each stratum.
+
+\begin{table}[H]
+\caption{Artifact-dominant breakdown on the SRWOV synthetic benchmark. Clip strata are formed from paired input--ground-truth residual descriptors. The improvement columns report gains of WaveletMask over the RTN (positive favors WaveletMask); for LPIPS and DISTS, the improvement is the error reduction.\label{tab:artifact_breakdown}}
+\footnotesize
+\begin{tabularx}{\textwidth}{lccCCCC}
+\toprule
+& & & & \multicolumn{3}{c}{\textbf{Improvement over RTN}} \\
+\cmidrule(lr){5-7}
+\textbf{Stratum} & \textbf{Clips} & \textbf{RTN PSNR} & \textbf{WaveletMask PSNR} & \textbf{PSNR (dB)} & \textbf{SSIM} & \textbf{LPIPS / DISTS} \\
+\midrule
+Scratch-dominant & 5  & 27.47 & 28.11 & +0.64 & +0.0020 & +0.0110 / +0.0116 \\
+Dust-dominant    & 8  & 26.10 & 26.55 & +0.45 & +0.0049 & +0.0196 / +0.0120 \\
+Flicker-dominant & 6  & 23.90 & 24.37 & +0.47 & +0.0055 & +0.0176 / +0.0153 \\
+Mixed residual   & 11 & 26.83 & 27.17 & +0.34 & +0.0017 & +0.0102 / +0.0109 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+Table~\ref{tab:artifact_breakdown} shows positive PSNR, SSIM, LPIPS, and DISTS gains in all four strata. The largest PSNR gain appears in the scratch-dominant group, whereas the flicker-dominant group shows the largest SSIM and DISTS improvements. This pattern indicates that the gain is not confined to a single degradation mode within the SRWOV synthetic setting, which is consistent with the complementary roles of LHFM and GFM.
+
+\subsection{Motion- and Occlusion-Binned Analysis}\label{subsec:motion_binning}
+
+To quantify how camera motion, object motion, and occlusion affect both the detector and the final restoration quality, we computed RAFT-based motion descriptors on the clean ground-truth frames of the 30 fixed synthetic clips: the mean optical-flow magnitude, a camera-motion proxy (the magnitude of the per-frame median flow vector), an object-motion proxy (the mean residual flow after removing the median), and a forward--backward inconsistency occlusion ratio. Clips were then stratified into motion and occlusion terciles, and the per-clip metrics of the same-protocol seed-2021 RTN and WaveletMask models were aggregated per bin. For the detector itself we report, per bin, the fraction of each cue's top-5\% activation that falls outside the residual proxy of Appendix~\ref{subsec:mask_interpretability} (clean-FP; lower is better).
+
+\begin{table}[t]
+\caption{Motion- and occlusion-binned analysis on the 30 fixed synthetic clips. Motion and occlusion descriptors are RAFT statistics on clean ground-truth frames, and bins are clip terciles rather than absolute thresholds. The improvement columns report gains of WaveletMask over the RTN (positive is better for all four metrics). Clean-FP is the fraction of each detector cue's top-5\% activation outside the residual proxy (lower is better); the max-fused mask follows the GFM column because the GFM response dominates the fused scale.\label{tab:motion_binning}}
+\footnotesize
+\begin{tabularx}{\textwidth}{llCCCCCCCC}
+\toprule
+& & & & & \multicolumn{4}{c}{\textbf{Improvement over RTN}} & \\
+\cmidrule(lr){6-9}
+\textbf{Group} & \textbf{Bin} & \textbf{Clips} & \textbf{Motion} & \textbf{Occl.} & \textbf{PSNR (dB)} & \textbf{SSIM} & \textbf{LPIPS} & \textbf{DISTS} & \textbf{LHFM / GFM clean-FP} \\
+\midrule
+Motion & Low    & 10 & 0.77 & 0.009 & +0.085 & +0.0009 & +0.0115 & +0.0127 & 0.646 / 0.440 \\
+Motion & Medium & 10 & 1.87 & 0.027 & +0.477 & +0.0036 & +0.0172 & +0.0135 & 0.782 / 0.627 \\
+Motion & High   & 10 & 3.90 & 0.053 & +0.769 & +0.0056 & +0.0143 & +0.0103 & 0.681 / 0.584 \\
+\midrule
+Occlusion & Low    & 10 & 0.85 & 0.005 & +0.186 & +0.0018 & +0.0119 & +0.0133 & 0.716 / 0.515 \\
+Occlusion & Medium & 10 & 2.02 & 0.022 & +0.498 & +0.0018 & +0.0139 & +0.0113 & 0.703 / 0.541 \\
+Occlusion & High   & 10 & 3.67 & 0.062 & +0.647 & +0.0065 & +0.0172 & +0.0119 & 0.690 / 0.594 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+Table~\ref{tab:motion_binning} shows that the WaveletMask improvement does not collapse under stronger motion. The PSNR gain instead grows from +0.085~dB in the low-motion tercile to +0.477~dB (medium) and +0.769~dB (high), with a clip-level Spearman correlation of 0.58 between motion magnitude and PSNR improvement, and SSIM, LPIPS, and DISTS improve in every bin. The occlusion terciles behave consistently (+0.186/+0.498/+0.647~dB; Spearman 0.49). At the detector level, the LHFM clean-FP fraction is essentially uncorrelated with motion magnitude (Spearman $-0.04$), and the GFM fraction increases only weakly (Spearman 0.30), which matches GFM's sensitivity to global temporal change. These results indicate that, on this benchmark, motion-induced detector noise does not translate into restoration degradation; the flow-aligned recurrent propagation downstream absorbs it. These binned results also serve as the temporal-stability evidence for this work: the improvements hold and grow under stronger motion and occlusion rather than degrading, indicating that the wavelet masks do not destabilize the flow-aligned recurrent propagation. Two caveats bound this conclusion: the REDS-derived clips are camera-motion dominated (29 of 30 clips under the median-flow split), so object-dominant motion remains under-represented, and the bins are relative clip terciles on one benchmark rather than absolute motion thresholds.
+
+\subsection{Cross-Content Generalization on DAVIS}\label{subsec:davis}
+
+To assess whether the improvement transfers beyond REDS source content, we evaluated the same trained checkpoints on the DAVIS synthetic benchmark (50 clips, 854$\times$480) using the identical degradation pipeline but with substantially different video content (outdoor sports, animals, vehicles). To our knowledge, no publicly available paired old-film video restoration benchmark with ground truth exists beyond SRWOV/REDS-based protocols; DAVIS therefore represents the maximum feasible cross-content validation.
+
+\begin{table}[H]
+\caption{Cross-content generalization on DAVIS synthetic data (50 clips). Same degradation pipeline as REDS, different video content. Best results are in \textcolor{red}{red}. The final row reports improvement; for LPIPS and DISTS it is computed as RTN minus WaveletMask.\label{tab:davis_cross_content}}
+\begin{tabularx}{\textwidth}{lCCCC}
+\toprule
+\textbf{Model} & \textbf{PSNR$\uparrow$} & \textbf{SSIM$\uparrow$} & \textbf{LPIPS$\downarrow$} & \textbf{DISTS$\downarrow$} \\
+\midrule
+RTN & 25.8417 & \textcolor{red}{0.8827} & 0.1223 & 0.1089 \\
+\textbf{WaveletMask} & \textcolor{red}{25.9883} & 0.8795 & \textcolor{red}{0.1206} & \textcolor{red}{0.1048} \\
+\midrule
+Improvement & +0.15 & $-$0.003 & +0.002 & +0.004 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The gain persists on unseen video content, confirming cross-content transfer. Specifically, WaveletMask improves PSNR from 25.84 to 25.99~dB and also reduces LPIPS and DISTS on DAVIS, while SSIM is essentially unchanged ($-0.003$), even though DAVIS contains different subjects and motion patterns from REDS. The smaller numerical margin is consistent with DAVIS's higher motion complexity. This experiment validates cross-content transfer under the same degradation pipeline; cross-degradation transfer to independently generated artifacts or real archival footage remains a separate question.

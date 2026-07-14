@@ -1,0 +1,427 @@
+\begin{thebibliography}{999}
+
+\bibitem[Kokaram(1998)]{kokaram1998motion}
+Kokaram, A.C.
+\newblock {\em Motion Picture Restoration: Digital Algorithms for Artefact
+  Suppression in Degraded Motion Picture Film and Video}; Springer: London, UK,
+   1998.
+\newblock {\url{https://doi.org/10.1007/978-1-4471-3485-5}}.
+
+\bibitem[Iizuka and Simo-Serra(2019)]{iizuka2019deepremaster}
+Iizuka, S.; Simo-Serra, E.
+\newblock {DeepRemaster}: Temporal Source-Reference Attention Networks for
+  Comprehensive Video Enhancement.
+\newblock {\em ACM Transactions on Graphics} {\bf 2019}, {\em
+  38},~176:1--176:13.
+\newblock {\url{https://doi.org/10.1145/3355089.3356570}}.
+
+\bibitem[Wan et~al.(2022)Wan, Zhang, Chen, and Liao]{rtn2022}
+Wan, Z.; Zhang, B.; Chen, D.; Liao, J.
+\newblock Bringing Old Films Back to Life.
+\newblock In Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), New Orleans, LA, USA,  19--24 June 2022; pp.
+  17694--17703.
+\newblock {\url{https://doi.org/10.1109/CVPR52688.2022.01717}}.
+
+\bibitem[Wan et~al.(2020)Wan, Zhang, Chen, Zhang, Chen, Liao, and
+  Wen]{wan2020bringing}
+Wan, Z.; Zhang, B.; Chen, D.; Zhang, P.; Chen, D.; Liao, J.; Wen, F.
+\newblock Bringing Old Photos Back to Life.
+\newblock In Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), Virtual,  14--19 June 2020; pp. 2747--2757.
+\newblock {\url{https://doi.org/10.1109/CVPR42600.2020.00282}}.
+
+\bibitem[Su et~al.(2022)Su, Xu, and Yin]{su2022survey}
+Su, J.; Xu, B.; Yin, H.
+\newblock A Survey of Deep Learning Approaches to Image Restoration.
+\newblock {\em Neurocomputing} {\bf 2022}, {\em 487},~46--65.
+\newblock {\url{https://doi.org/10.1016/j.neucom.2022.02.046}}.
+
+\bibitem[Tian et~al.(2020)Tian, Fei, Zheng, Xu, Zuo, and
+  Lin]{tian2020deep_denoising}
+Tian, C.; Fei, L.; Zheng, W.; Xu, Y.; Zuo, W.; Lin, C.W.
+\newblock Deep Learning on Image Denoising: An Overview.
+\newblock {\em Neural Networks} {\bf 2020}, {\em 131},~251--275.
+\newblock {\url{https://doi.org/10.1016/j.neunet.2020.07.025}}.
+
+\bibitem[Lin and Simo-Serra(2024)]{rrtn2024}
+Lin, S.; Simo-Serra, E.
+\newblock Restoring Degraded Old Films with Recursive Recurrent Transformer
+  Networks.
+\newblock In Proceedings of the IEEE/CVF Winter Conference on Applications of
+  Computer Vision (WACV), Waikoloa, HI, USA,  3--8 January 2024; pp.
+  6718--6728.
+\newblock {\url{https://doi.org/10.1109/WACV57701.2024.00658}}.
+
+\bibitem[Mao et~al.(2025)Mao, Luo, Zhong, Chen, Zhang, and
+  Wang]{mao2025mambaofr}
+Mao, Y.; Luo, H.; Zhong, Z.; Chen, P.; Zhang, Z.; Wang, S.
+\newblock Making Old Film Great Again: Degradation-aware State Space Model for
+  Old Film Restoration.
+\newblock In Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), Nashville, TN, USA,  11--15 June 2025; pp.
+  28039--28049.
+\newblock {\url{https://doi.org/10.1109/CVPR52734.2025.02611}}.
+
+\bibitem[Guo et~al.(2024)Guo, Li, Dai, Ouyang, Ren, and Xia]{guo2024mambair}
+Guo, H.; Li, J.; Dai, T.; Ouyang, Z.; Ren, X.; Xia, S.T.
+\newblock {MambaIR}: A Simple Baseline for Image Restoration with State-Space
+  Model.
+\newblock In Proceedings of the Computer Vision -- ECCV 2024, Milan, Italy,  29
+  September--4 October 2024; pp. 222--241.
+\newblock {\url{https://doi.org/10.1007/978-3-031-72649-1_13}}.
+
+\bibitem[Mallat(1989)]{mallat1989theory}
+Mallat, S.G.
+\newblock A Theory for Multiresolution Signal Decomposition: The Wavelet
+  Representation.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence}
+  {\bf 1989}, {\em 11},~674--693.
+\newblock {\url{https://doi.org/10.1109/34.192463}}.
+
+\bibitem[Bernardini et~al.(2025)Bernardini, Bono, and
+  Collina]{bernardini2025driveby}
+Bernardini, L.; Bono, F.M.; Collina, A.
+\newblock Drive-by Damage Detection and Localization Exploiting Continuous
+  Wavelet Transform and Multiple Sparse Autoencoders.
+\newblock {\em Railway Engineering Science} {\bf 2025}, {\em 33},~721--745.
+\newblock {\url{https://doi.org/10.1007/s40534-025-00393-5}}.
+
+\bibitem[Liu et~al.(2018)Liu, Zhang, Zhang, Lin, and Zuo]{liu2018mwcnn}
+Liu, P.; Zhang, H.; Zhang, K.; Lin, L.; Zuo, W.
+\newblock Multi-Level Wavelet-{CNN} for Image Restoration.
+\newblock In Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition Workshops (CVPRW), Salt Lake City, UT, USA,  18--22 June
+  2018; pp. 773--782.
+\newblock {\url{https://doi.org/10.1109/CVPRW.2018.00121}}.
+
+\bibitem[Kokaram et~al.(1995)Kokaram, Morris, Fitzgerald, and
+  Rayner]{kokaram1995blotch}
+Kokaram, A.C.; Morris, R.D.; Fitzgerald, W.J.; Rayner, P.J.W.
+\newblock Detection of Missing Data in Image Sequences.
+\newblock {\em IEEE Trans. Image Process.} {\bf 1995}, {\em 4},~1496--1508.
+\newblock {\url{https://doi.org/10.1109/83.469932}}.
+
+\bibitem[Joyeux et~al.(2001)Joyeux, Boukir, Besserer, and
+  Buisson]{joyeux2001scratch}
+Joyeux, L.; Boukir, S.; Besserer, B.; Buisson, O.
+\newblock Reconstruction of Degraded Image Sequences. Application to Film
+  Restoration.
+\newblock {\em Image Vis. Comput.} {\bf 2001}, {\em 19},~503--516.
+\newblock {\url{https://doi.org/10.1016/S0262-8856(00)00091-3}}.
+
+\bibitem[van Roosmalen et~al.(1999)van Roosmalen, Lagendijk, and
+  Biemond]{vanroosmalen1999flicker}
+van Roosmalen, P.M.B.; Lagendijk, R.L.; Biemond, J.
+\newblock Correction of Intensity Flicker in Old Film Sequences.
+\newblock {\em IEEE Trans. Circuits Syst. Video Technol.} {\bf 1999}, {\em
+  9},~1013--1019.
+\newblock {\url{https://doi.org/10.1109/76.795058}}.
+
+\bibitem[Rota et~al.(2023)Rota, Buzzelli, Bianco, and
+  Schettini]{liu2022video_survey}
+Rota, C.; Buzzelli, M.; Bianco, S.; Schettini, R.
+\newblock Video Restoration Based on Deep Learning: A Comprehensive Survey.
+\newblock {\em Artificial Intelligence Review} {\bf 2023}, {\em
+  56},~5317--5364.
+\newblock {\url{https://doi.org/10.1007/s10462-022-10302-5}}.
+
+\bibitem[Chan et~al.(2021)Chan, Wang, Yu, Dong, and Loy]{chan2021basicvsr}
+Chan, K.C.; Wang, X.; Yu, K.; Dong, C.; Loy, C.C.
+\newblock {BasicVSR}: The Search for Essential Components in Video
+  Super-Resolution and Beyond.
+\newblock In Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), Virtual,  19--25 June 2021; pp. 4947--4956.
+\newblock {\url{https://doi.org/10.1109/CVPR46437.2021.00491}}.
+
+\bibitem[Chan et~al.(2022)Chan, Zhou, Xu, and Loy]{chan2022basicvsrpp}
+Chan, K.C.; Zhou, S.; Xu, X.; Loy, C.C.
+\newblock {BasicVSR++}: Improving Video Super-Resolution with Enhanced
+  Propagation and Alignment.
+\newblock In Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), New Orleans, LA, USA,  19--24 June 2022; pp.
+  5972--5981.
+\newblock {\url{https://doi.org/10.1109/CVPR52688.2022.00588}}.
+
+\bibitem[Ranjan and Black(2017)]{ranjan2017spynet}
+Ranjan, A.; Black, M.J.
+\newblock Optical Flow Estimation Using a Spatial Pyramid Network.
+\newblock In Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), Honolulu, HI, USA,  21--26 July 2017; pp.
+  4161--4170.
+\newblock {\url{https://doi.org/10.1109/CVPR.2017.291}}.
+
+\bibitem[Teed and Deng(2020)]{teed2020raft}
+Teed, Z.; Deng, J.
+\newblock {RAFT}: Recurrent All-Pairs Field Transforms for Optical Flow.
+\newblock In Proceedings of the Computer Vision -- ECCV 2020, Glasgow, UK,
+  23--28 August 2020; pp. 402--419.
+\newblock {\url{https://doi.org/10.1007/978-3-030-58536-5_24}}.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{vaswani2017attention}
+Vaswani, A.; Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones, L.; Gomez, A.N.;
+  Kaiser, L.; Polosukhin, I.
+\newblock Attention Is All You Need.
+\newblock In Proceedings of the Advances in Neural Information Processing
+  Systems, Long Beach, CA, USA,  4--9 December 2017; Vol.~30, pp. 5998--6008,
+  \href{http://arxiv.org/abs/1706.03762}{{\normalfont
+  [arXiv:cs.CL/1706.03762]}}.
+\newblock Canonical NeurIPS proceedings page.
+
+\bibitem[Liu et~al.(2021)Liu, Lin, Cao, Hu, Wei, Zhang, Lin, and
+  Guo]{liu2021swin}
+Liu, Z.; Lin, Y.; Cao, Y.; Hu, H.; Wei, Y.; Zhang, Z.; Lin, S.; Guo, B.
+\newblock Swin Transformer: Hierarchical Vision Transformer Using Shifted
+  Windows.
+\newblock In Proceedings of the IEEE/CVF International Conference on Computer
+  Vision (ICCV), Virtual,  11--17 October 2021; pp. 10012--10022.
+\newblock {\url{https://doi.org/10.1109/ICCV48922.2021.00986}}.
+
+\bibitem[Liang et~al.(2022)Liang, Fan, Xiang, Ranjan, Ilg, Green, Cao, Zhang,
+  Timofte, and {Van Gool}]{liang2022rvrt}
+Liang, J.; Fan, Y.; Xiang, X.; Ranjan, R.; Ilg, E.; Green, S.; Cao, J.; Zhang,
+  K.; Timofte, R.; {Van Gool}, L.
+\newblock Recurrent Video Restoration Transformer with Guided Deformable
+  Attention.
+\newblock In Proceedings of the Advances in Neural Information Processing
+  Systems, New Orleans, LA, USA,  28 November--3 December 2022; Vol.~35, pp.
+  378--393.
+\newblock {\url{https://doi.org/10.52202/068431-0028}}.
+
+\bibitem[Liang et~al.(2024)Liang, Cao, Fan, Zhang, Ranjan, Li, Timofte, and
+  {Van Gool}]{liang2024vrt}
+Liang, J.; Cao, J.; Fan, Y.; Zhang, K.; Ranjan, R.; Li, Y.; Timofte, R.; {Van
+  Gool}, L.
+\newblock {VRT}: A Video Restoration Transformer.
+\newblock {\em IEEE Trans. Image Process.} {\bf 2024}, {\em 33},~2171--2182.
+\newblock {\url{https://doi.org/10.1109/TIP.2024.3372454}}.
+
+\bibitem[Li et~al.(2023)Li, Shi, Zhang, Cheung, See, Wang, Qin, and
+  Li]{li2023shiftnet}
+Li, D.; Shi, X.; Zhang, Y.; Cheung, K.C.; See, S.; Wang, X.; Qin, H.; Li, H.
+\newblock A Simple Baseline for Video Restoration with Grouped Spatial-Temporal
+  Shift.
+\newblock In Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), Vancouver, BC, Canada,  17--24 June 2023; pp.
+  9822--9832.
+\newblock {\url{https://doi.org/10.1109/CVPR52729.2023.00947}}.
+
+\bibitem[Liang et~al.(2021)Liang, Cao, Sun, Zhang, {Van Gool}, and
+  Timofte]{liang2021swinir}
+Liang, J.; Cao, J.; Sun, G.; Zhang, K.; {Van Gool}, L.; Timofte, R.
+\newblock {SwinIR}: Image Restoration Using Swin Transformer.
+\newblock In Proceedings of the IEEE/CVF International Conference on Computer
+  Vision Workshops (ICCVW), Virtual,  11--17 October 2021; pp. 1833--1844.
+\newblock {\url{https://doi.org/10.1109/ICCVW54120.2021.00210}}.
+
+\bibitem[Zamir et~al.(2022)Zamir, Arora, Khan, Hayat, Khan, and
+  Yang]{zamir2022restormer}
+Zamir, S.W.; Arora, A.; Khan, S.; Hayat, M.; Khan, F.S.; Yang, M.H.
+\newblock Restormer: Efficient Transformer for High-Resolution Image
+  Restoration.
+\newblock In Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), New Orleans, LA, USA,  19--24 June 2022; pp.
+  5728--5739.
+\newblock {\url{https://doi.org/10.1109/CVPR52688.2022.00564}}.
+
+\bibitem[Wang et~al.(2021)Wang, Xie, Dong, and Shan]{wang2021realesrgan}
+Wang, X.; Xie, L.; Dong, C.; Shan, Y.
+\newblock Real-{ESRGAN}: Training Real-World Blind Super-Resolution with Pure
+  Synthetic Data.
+\newblock In Proceedings of the IEEE/CVF International Conference on Computer
+  Vision Workshops (ICCVW), Virtual,  11--17 October 2021; pp. 1905--1914.
+\newblock {\url{https://doi.org/10.1109/ICCVW54120.2021.00217}}.
+
+\bibitem[Zeng et~al.(2020)Zeng, Fu, and Chao]{zeng2020sttn}
+Zeng, Y.; Fu, J.; Chao, H.
+\newblock Learning Joint Spatial-Temporal Transformations for Video Inpainting.
+\newblock In Proceedings of the Computer Vision -- ECCV 2020, Glasgow, UK,
+  23--28 August 2020; pp. 528--543.
+\newblock {\url{https://doi.org/10.1007/978-3-030-58517-4_31}}.
+
+\bibitem[Zhou et~al.(2023)Zhou, Li, Chan, and Loy]{zhou2023propainter}
+Zhou, S.; Li, C.; Chan, K.C.; Loy, C.C.
+\newblock {ProPainter}: Improving Propagation and Transformer for Video
+  Inpainting.
+\newblock In Proceedings of the IEEE/CVF International Conference on Computer
+  Vision (ICCV), Paris, France,  2--6 October 2023; pp. 10477--10486.
+\newblock {\url{https://doi.org/10.1109/ICCV51070.2023.00961}}.
+
+\bibitem[Huang et~al.(2017)Huang, He, Sun, and Tan]{huang2017wavelet}
+Huang, H.; He, R.; Sun, Z.; Tan, T.
+\newblock Wavelet-{SRNet}: A Wavelet-Based {CNN} for Multi-Scale Face Super
+  Resolution.
+\newblock In Proceedings of the IEEE International Conference on Computer
+  Vision (ICCV), Venice, Italy,  22--29 October 2017; pp. 1689--1697.
+\newblock {\url{https://doi.org/10.1109/ICCV.2017.187}}.
+
+\bibitem[Deng et~al.(2019)Deng, Yang, Xu, and Dragotti]{deng2019swd}
+Deng, X.; Yang, R.; Xu, M.; Dragotti, P.L.
+\newblock Wavelet Domain Style Transfer for an Effective Perception-Distortion
+  Tradeoff in Single Image Super-Resolution.
+\newblock In Proceedings of the IEEE/CVF International Conference on Computer
+  Vision (ICCV), Seoul, South Korea,  27 October--2 November 2019; pp.
+  3076--3085.
+\newblock {\url{https://doi.org/10.1109/ICCV.2019.00317}}.
+
+\bibitem[Chen et~al.(2002)Chen, Liao, and Lin]{chen2002wavelet}
+Chen, L.F.; Liao, H.Y.M.; Lin, J.C.
+\newblock Wavelet-Based Optical Flow Estimation.
+\newblock {\em IEEE Trans. Circuits Syst. Video Technol.} {\bf 2002}, {\em
+  12},~1--12.
+\newblock {\url{https://doi.org/10.1109/76.981841}}.
+
+\bibitem[Selesnick et~al.(2005)Selesnick, Baraniuk, and
+  Kingsbury]{selesnick2005dual}
+Selesnick, I.W.; Baraniuk, R.G.; Kingsbury, N.G.
+\newblock The Dual-Tree Complex Wavelet Transform.
+\newblock {\em IEEE Signal Process. Mag.} {\bf 2005}, {\em 22},~123--151.
+\newblock {\url{https://doi.org/10.1109/MSP.2005.1550194}}.
+
+\bibitem[Li et~al.(2022)Li, Liu, Hu, Wu, Lv, and Peng]{li2022airnet}
+Li, B.; Liu, X.; Hu, P.; Wu, Z.; Lv, J.; Peng, X.
+\newblock All-in-One Image Restoration for Unknown Corruption.
+\newblock In Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), New Orleans, LA, USA,  19--24 June 2022; pp.
+  17452--17462.
+\newblock {\url{https://doi.org/10.1109/CVPR52688.2022.01693}}.
+
+\bibitem[Potlapalli et~al.(2023)Potlapalli, Zamir, Khan, and
+  Khan]{potlapalli2023promptir}
+Potlapalli, V.; Zamir, S.W.; Khan, S.H.; Khan, F.S.
+\newblock {PromptIR}: Prompting for All-in-One Image Restoration.
+\newblock In Proceedings of the Advances in Neural Information Processing
+  Systems, New Orleans, LA, USA,  10--16 December 2023; Vol.~36, pp.
+  71275--71293.
+\newblock {\url{https://doi.org/10.52202/075280-3121}}.
+
+\bibitem[Johnson et~al.(2016)Johnson, Alahi, and Li]{johnson2016perceptual}
+Johnson, J.; Alahi, A.; Li, F.F.
+\newblock Perceptual Losses for Real-Time Style Transfer and Super-Resolution.
+\newblock In Proceedings of the Computer Vision -- ECCV 2016, Amsterdam, The
+  Netherlands,  8--16 October 2016; pp. 694--711.
+\newblock {\url{https://doi.org/10.1007/978-3-319-46475-6_43}}.
+
+\bibitem[Simonyan and Zisserman(2015)]{simonyan2014vgg}
+Simonyan, K.; Zisserman, A.
+\newblock Very Deep Convolutional Networks for Large-Scale Image Recognition.
+\newblock In Proceedings of the International Conference on Learning
+  Representations (ICLR), San Diego, CA, USA,  7--9 May 2015;
+  \href{http://arxiv.org/abs/1409.1556}{{\normalfont [arXiv:cs.CV/1409.1556]}}.
+\newblock Use arXiv abs page as canonical landing page.
+
+\bibitem[Goodfellow et~al.(2014)Goodfellow, Pouget-Abadie, Mirza, Xu,
+  Warde-Farley, Ozair, Courville, and Bengio]{goodfellow2014gan}
+Goodfellow, I.; Pouget-Abadie, J.; Mirza, M.; Xu, B.; Warde-Farley, D.; Ozair,
+  S.; Courville, A.; Bengio, Y.
+\newblock Generative Adversarial Nets.
+\newblock In Proceedings of the Advances in Neural Information Processing
+  Systems, Montreal, QC, Canada,  8--13 December 2014; Vol.~27, pp. 2672--2680,
+   \href{http://arxiv.org/abs/1406.2661}{{\normalfont
+  [arXiv:stat.ML/1406.2661]}}.
+\newblock Canonical NeurIPS proceedings page.
+
+\bibitem[Nah et~al.(2019)Nah, Baik, Hong, Moon, Son, Timofte, and
+  Lee]{nah2019reds}
+Nah, S.; Baik, S.; Hong, S.; Moon, G.; Son, S.; Timofte, R.; Lee, K.M.
+\newblock {NTIRE} 2019 Challenge on Video Deblurring and Super-Resolution:
+  Dataset and Study.
+\newblock In Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition Workshops (CVPRW), Long Beach, CA, USA,  16--20 June
+  2019; pp. 1996--2005.
+\newblock {\url{https://doi.org/10.1109/CVPRW.2019.00251}}.
+
+\bibitem[Kingma and Ba(2015)]{kingma2015adam}
+Kingma, D.P.; Ba, J.
+\newblock Adam: A Method for Stochastic Optimization.
+\newblock In Proceedings of the International Conference on Learning
+  Representations (ICLR), San Diego, CA, USA,  7--9 May 2015;
+  \href{http://arxiv.org/abs/1412.6980}{{\normalfont [arXiv:cs.LG/1412.6980]}}.
+
+\bibitem[Wang et~al.(2022)Wang, Xie, Yu, Chan, Loy, and Dong]{wang2022basicsr}
+Wang, X.; Xie, L.; Yu, K.; Chan, K.C.; Loy, C.C.; Dong, C.
+\newblock {BasicSR}: Open Source Image and Video Restoration Toolbox.
+\newblock \url{https://github.com/XPixelGroup/BasicSR},  2022.
+\newblock GitHub repository; available online (accessed on 1 April 2026).
+
+\bibitem[Wang et~al.(2004)Wang, Bovik, Sheikh, and Simoncelli]{wang2004ssim}
+Wang, Z.; Bovik, A.C.; Sheikh, H.R.; Simoncelli, E.P.
+\newblock Image Quality Assessment: From Error Visibility to Structural
+  Similarity.
+\newblock {\em IEEE Trans. Image Process.} {\bf 2004}, {\em 13},~600--612.
+\newblock {\url{https://doi.org/10.1109/TIP.2003.819861}}.
+
+\bibitem[Zhang et~al.(2018)Zhang, Isola, Efros, Shechtman, and
+  Wang]{zhang2018lpips}
+Zhang, R.; Isola, P.; Efros, A.A.; Shechtman, E.; Wang, O.
+\newblock The Unreasonable Effectiveness of Deep Features as a Perceptual
+  Metric.
+\newblock In Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR), Salt Lake City, UT, USA,  18--22 June 2018; pp.
+  586--595.
+\newblock {\url{https://doi.org/10.1109/CVPR.2018.00068}}.
+
+\bibitem[Ding et~al.(2022)Ding, Ma, Wang, and Simoncelli]{ding2020dists}
+Ding, K.; Ma, K.; Wang, S.; Simoncelli, E.P.
+\newblock Image Quality Assessment: Unifying Structure and Texture Similarity.
+\newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.} {\bf 2022}, {\em
+  44},~2567--2581.
+\newblock {\url{https://doi.org/10.1109/TPAMI.2020.3045810}}.
+
+\bibitem[Mittal et~al.(2013)Mittal, Soundararajan, and Bovik]{mittal2013niqe}
+Mittal, A.; Soundararajan, R.; Bovik, A.C.
+\newblock Making a ``Completely Blind'' Image Quality Analyzer.
+\newblock {\em IEEE Signal Processing Letters} {\bf 2013}, {\em 20},~209--212.
+\newblock {\url{https://doi.org/10.1109/LSP.2012.2227726}}.
+
+\bibitem[Mittal et~al.(2012)Mittal, Moorthy, and Bovik]{mittal2012brisque}
+Mittal, A.; Moorthy, A.K.; Bovik, A.C.
+\newblock No-Reference Image Quality Assessment in the Spatial Domain.
+\newblock {\em IEEE Trans. Image Process.} {\bf 2012}, {\em 21},~4695--4708.
+\newblock {\url{https://doi.org/10.1109/TIP.2012.2214050}}.
+
+\bibitem[Wang et~al.(2023)Wang, Chan, and Loy]{wang2023clipiqa}
+Wang, J.; Chan, K.C.; Loy, C.C.
+\newblock Exploring {CLIP} for Assessing the Look and Feel of Images.
+\newblock {\em Proc. AAAI Conf. Artif. Intell.} {\bf 2023}, {\em
+  37},~2555--2563.
+\newblock {\url{https://doi.org/10.1609/aaai.v37i2.25353}}.
+
+\bibitem[Antic(2019)]{jantic2019deoldify}
+Antic, J.
+\newblock DeOldify.
+\newblock Available online: \url{https://github.com/jantic/DeOldify},  2019.
+\newblock accessed on 1 April 2026.
+
+\bibitem[Kim et~al.(2025)Kim, Kim, and Kim]{kim2025hybrid}
+Kim, K.; Kim, Y.; Kim, Y.J.
+\newblock Hybrid Frequency--Spatial Domain Learning for Image Restoration in
+  Under-Display Camera Systems Using Augmented Virtual Big Data Generated by
+  the Angular Spectrum Method.
+\newblock {\em Applied Sciences} {\bf 2025}, {\em 15},~30.
+\newblock {\url{https://doi.org/10.3390/app15010030}}.
+
+\bibitem[Park et~al.(2025)Park, Choi, and Lim]{park2025spatialfrequency}
+Park, C.H.; Choi, H.D.; Lim, M.T.
+\newblock Harnessing Spatial-Frequency Information for Enhanced Image
+  Restoration.
+\newblock {\em Applied Sciences} {\bf 2025}, {\em 15},~1856.
+\newblock {\url{https://doi.org/10.3390/app15041856}}.
+
+\bibitem[Rubel et~al.(2022)Rubel, Ieremeiev, Lukin, Fastowicz, and
+  Okarma]{rubel2022combinednr}
+Rubel, A.; Ieremeiev, O.; Lukin, V.; Fastowicz, J.; Okarma, K.
+\newblock Combined No-Reference Image Quality Metrics for Visual Quality
+  Assessment Optimized for Remote Sensing Images.
+\newblock {\em Applied Sciences} {\bf 2022}, {\em 12},~1986.
+\newblock {\url{https://doi.org/10.3390/app12041986}}.
+
+\bibitem[Yeo and Ryu(2025)]{yeo2025integration}
+Yeo, W.H.; Ryu, H.C.
+\newblock An Integration Framework for the Inpainting and Colorization of
+  Arbitrary Masked Grayscale Images.
+\newblock {\em Applied Sciences} {\bf 2025}, {\em 15},~1978.
+\newblock {\url{https://doi.org/10.3390/app15041978}}.
+
+\end{thebibliography}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Figure 1 — Final Aligned Layout</title>
+<style>
+  :root { --text:#111827; --muted:#9ca3af; --border:#e5e7eb; --green:#009e73; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Helvetica Neue',Arial,sans-serif; color:var(--text); background:#fff; padding:32px 48px; max-width:1500px; margin:0 auto; }
+  h1 { font-size:18px; font-weight:600; margin-bottom:3px; }
+  .subtitle { font-size:12px; color:var(--muted); margin-bottom:20px; }
+  .ref { font-size:10px; color:#6b7280; line-height:1.6; margin-bottom:24px; padding:10px 14px; background:#f9fafb; border:1px solid var(--border); border-radius:4px; }
+  .ref b { color:var(--text); }
+
+  /* ===== FIGURE — pixel-aligned grid ===== */
+  .fig-wrap { display:flex; gap:8px; align-items:flex-start; margin-bottom:24px; }
+  .fig-lbl { font-size:11px; font-weight:700; color:#374151; padding-top:2px; min-width:16px; }
+  .fig { background:#fff; display:inline-block; }
+
+  /* 7-column grid: Input(200) | Pixel(200) | LH(68) | HL(68) | HH(68) | Branch(200) | Fused(200) */
+  .g7 { display:grid; grid-template-columns:200px 200px 68px 68px 68px 200px 200px; gap:2px; }
+  .g7 .r1 { grid-row:1; }
+  .g7 .r2 { grid-row:2; }
+
+  /* LL spans cols 3-5 */
+  .g7 .ll-span { grid-column:3/6; grid-row:2; }
+
+  /* Panel */
+  .p { position:relative; overflow:hidden; border:0.5px solid #ddd; background:#f5f5f5; }
+  .p img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+
+  /* Corner label — 9pt, bold, white on dark badge */
+  .cl {
+    position:absolute; top:4px; left:4px;
+    font-size:9px; font-weight:700;
+    color:#fff;
+    background:rgba(0,0,0,0.55);
+    padding:1px 5px;
+    border-radius:2px;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    pointer-events:none;
+    letter-spacing:0.02em;
+    line-height:1.3;
+  }
+
+  /* Bottom-right alt label */
+  .cl-br {
+    position:absolute; bottom:4px; right:4px;
+    font-size:8px; font-weight:600;
+    color:rgba(255,255,255,0.9);
+    background:rgba(0,0,0,0.4);
+    padding:1px 4px;
+    border-radius:2px;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    pointer-events:none;
+  }
+
+  /* ===== VARIANT B: Contain ===== */
+  .p.contain img { object-fit:contain; background:#e5e5e5; }
+
+  /* ===== VARIANT C: 2x5 no empty ===== */
+  .g5 { display:grid; grid-template-columns:200px 200px 200px 200px 200px; gap:2px; }
+  .g5 .wavelet-stack { display:grid; grid-template-rows:1fr 1fr 1fr; gap:1px; }
+  .g5 .ws-cell { position:relative; overflow:hidden; border:0.5px solid #ddd; background:#f5f5f5; }
+  .g5 .ws-cell .cl-ws { position:absolute; top:2px; left:2px; font-size:9px; font-weight:700; color:#fff; background:rgba(0,0,0,0.6); padding:1px 5px; border-radius:2px; z-index:2; pointer-events:none; }
+  .g5 .ws-cell img { width:100%; height:100%; object-fit:cover; display:block; }
+</style>
+</head>
+<body>
+
+<h1>Figure 1 — Final Aligned Layout</h1>
+<p class="subtitle">Fixed 2x5 grid, full-frame Scratch row, wavelet-only coefficient column, 9pt bold labels.</p>
+
+<div class="ref">
+  <b>Label standard</b> (CVPR/ICCV/IEEE): panel labels 8–10pt minimum, bold. Axis/annotation 8–10pt. Current: <b>9pt bold</b> top-left badge + 8pt bottom-right. See
+  <a href="https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/resolution-and-size/" target="_blank">IEEE Graphics Guidelines</a>,
+  <a href="https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/" target="_blank">Nature Figure Specs</a>.
+</div>
+
+<!-- ===== OPTION A: 2x7, LL spans 3 cols ===== -->
+<div class="fig-wrap">
+  <div class="fig-lbl">(a)</div>
+  <div class="fig">
+    <div class="g7" style="grid-template-rows:130px 130px">
+
+      <!-- === Row 1: Scratch (synthetic 624x352) === -->
+      <div class="p r1"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/curr.png"><span class="cl">Input</span></div>
+      <div class="p r1"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/pixel_indicator.png"><span class="cl">Pixel cue</span></div>
+      <div class="p r1"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/lh_diff.png"><span class="cl">LH</span></div>
+      <div class="p r1"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/hl_diff.png"><span class="cl">HL</span></div>
+      <div class="p r1"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/hh_diff.png"><span class="cl">HH</span></div>
+      <div class="p r1"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/local.png"><span class="cl">m_local</span><span class="cl-br">branch</span></div>
+      <div class="p r1"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/fused.png"><span class="cl">Fused</span><span class="cl-br">max</span></div>
+
+      <!-- === Row 2: Flicker (real 464x352) === -->
+      <div class="p r2"><img src="Fig1_real_motivation/raw/real_flicker/curr.png"><span class="cl">Input</span></div>
+      <div class="p r2"><img src="Fig1_real_motivation/raw/real_flicker/pixel_indicator.png"><span class="cl">Pixel cue</span></div>
+      <!-- LL spans columns 3-5 -->
+      <div class="p ll-span"><img src="Fig1_real_motivation/raw/real_flicker/ll_diff.png"><span class="cl">LL temporal diff</span></div>
+      <div class="p r2"><img src="Fig1_real_motivation/raw/real_flicker/flicker.png"><span class="cl">m_flicker</span><span class="cl-br">branch</span></div>
+      <div class="p r2"><img src="Fig1_real_motivation/raw/real_flicker/fused.png"><span class="cl">Fused</span><span class="cl-br">max</span></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== OPTION B: 2x7 Contain ===== -->
+<h2 style="font-size:14px; font-weight:600; margin:28px 0 10px; padding-bottom:4px; border-bottom:1px solid var(--border);">Variant B: Contain (no crop)</h2>
+<div class="fig-wrap">
+  <div class="fig-lbl">(b)</div>
+  <div class="fig">
+    <div class="g7" style="grid-template-rows:130px 130px">
+
+      <!-- Row 1 -->
+      <div class="p r1 contain"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/curr.png"><span class="cl">Input</span></div>
+      <div class="p r1 contain"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/pixel_indicator.png"><span class="cl">Pixel cue</span></div>
+      <div class="p r1 contain"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/lh_diff.png"><span class="cl">LH</span></div>
+      <div class="p r1 contain"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/hl_diff.png"><span class="cl">HL</span></div>
+      <div class="p r1 contain"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/hh_diff.png"><span class="cl">HH</span></div>
+      <div class="p r1 contain"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/local.png"><span class="cl">m_local</span></div>
+      <div class="p r1 contain"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/fused.png"><span class="cl">Fused</span></div>
+
+      <!-- Row 2 -->
+      <div class="p r2 contain"><img src="Fig1_real_motivation/raw/real_flicker/curr.png"><span class="cl">Input</span></div>
+      <div class="p r2 contain"><img src="Fig1_real_motivation/raw/real_flicker/pixel_indicator.png"><span class="cl">Pixel cue</span></div>
+      <div class="p ll-span contain"><img src="Fig1_real_motivation/raw/real_flicker/ll_diff.png"><span class="cl">LL temporal diff</span></div>
+      <div class="p r2 contain"><img src="Fig1_real_motivation/raw/real_flicker/flicker.png"><span class="cl">m_flicker</span></div>
+      <div class="p r2 contain"><img src="Fig1_real_motivation/raw/real_flicker/fused.png"><span class="cl">Fused</span></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== OPTION C: 2x5 no empty ===== -->
+<h2 style="font-size:14px; font-weight:600; margin:28px 0 10px; padding-bottom:4px; border-bottom:1px solid var(--border);">Variant C: 2&times;5 No Empty Columns</h2>
+<div class="fig-wrap">
+  <div class="fig-lbl">(c)</div>
+  <div class="fig">
+    <div class="g5" style="grid-template-rows:150px 150px">
+
+      <!-- Row 1 -->
+      <div class="p"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/curr.png"><span class="cl">Input</span></div>
+      <div class="p"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/pixel_indicator.png"><span class="cl">Pixel cue</span></div>
+      <div class="wavelet-stack">
+        <div class="ws-cell"><span class="cl-ws">LH</span><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/lh_diff.png"></div>
+        <div class="ws-cell"><span class="cl-ws">HL</span><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/hl_diff.png"></div>
+        <div class="ws-cell"><span class="cl-ws">HH</span><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/hh_diff.png"></div>
+      </div>
+      <div class="p"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/local.png"><span class="cl">m_local</span></div>
+      <div class="p"><img src="Fig1_real_motivation/raw/synthetic_sparse_damage/fused.png"><span class="cl">Fused</span></div>
+
+      <!-- Row 2 -->
+      <div class="p"><img src="Fig1_real_motivation/raw/real_flicker/curr.png"><span class="cl">Input</span></div>
+      <div class="p"><img src="Fig1_real_motivation/raw/real_flicker/pixel_indicator.png"><span class="cl">Pixel cue</span></div>
+      <div class="ws-cell"><span class="cl-ws">LL</span><img src="Fig1_real_motivation/raw/real_flicker/ll_diff.png"></div>
+      <div class="p"><img src="Fig1_real_motivation/raw/real_flicker/flicker.png"><span class="cl">m_flicker</span></div>
+      <div class="p"><img src="Fig1_real_motivation/raw/real_flicker/fused.png"><span class="cl">Fused</span></div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+{
+  "dpi": 600,
+  "canvas_width_px": 4200,
+  "main_tile_size_px": 651,
+  "supplementary_tile_size_px": 605,
+  "main": {
+    "outputs": [
+      "projects/007-waveletmask/Paper/applsci/figures/Figure9_DiagnosticVisualization.png",
+      "projects/007-waveletmask/Paper/applsci/figures/Figure9_DiagnosticVisualization.pdf"
+    ],
+    "sources": {
+      "t5": [
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_002/01_clean.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_002/02_scratch.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_002/03_scratch_mask.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_002/04_raw_lhfm_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_002/05_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_002/06_m_wavelet_heatmap.png"
+      ],
+      "t8": [
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_01_026_00000026/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_01_026_00000026/02_gt.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_01_026_00000026/03_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_01_026_00000026/04_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_01_026_00000026/05_m_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_01_026_00000026/06_m_wavelet_heatmap.png"
+      ],
+      "t11": [
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_01/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_01/02_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_01/03_spatial_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_01/04_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_01/05_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_01/06_wavelet_heatmap.png"
+      ]
+    }
+  },
+  "supplementary": {
+    "s1": {
+      "outputs": [
+        "projects/007-waveletmask/Paper/applsci/figures/FigureS1_PersistentScratchDiagnostic.png",
+        "projects/007-waveletmask/Paper/applsci/figures/FigureS1_PersistentScratchDiagnostic.pdf"
+      ],
+      "sources": [
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_002/01_clean.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_002/02_scratch.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_002/03_scratch_mask.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_002/04_raw_lhfm_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_002/05_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_002/06_m_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_008/01_clean.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_008/02_scratch.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_008/03_scratch_mask.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_008/04_raw_lhfm_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_008/05_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_008/06_m_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_011/01_clean.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_011/02_scratch.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_011/03_scratch_mask.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_011/04_raw_lhfm_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_011/05_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/fixed_L1_011/06_m_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_002/01_clean.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_002/02_scratch.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_002/03_scratch_mask.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_002/04_raw_lhfm_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_002/05_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_002/06_m_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_008/01_clean.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_008/02_scratch.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_008/03_scratch_mask.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_008/04_raw_lhfm_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_008/05_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_008/06_m_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_011/01_clean.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_011/02_scratch.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_011/03_scratch_mask.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_011/04_raw_lhfm_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_011/05_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t5_persistent_scratch/formal/examples/drift_L1_011/06_m_wavelet_heatmap.png"
+      ]
+    },
+    "s2": {
+      "outputs": [
+        "projects/007-waveletmask/Paper/applsci/figures/FigureS2_MaskInterpretabilityDiagnostic.png",
+        "projects/007-waveletmask/Paper/applsci/figures/FigureS2_MaskInterpretabilityDiagnostic.pdf"
+      ],
+      "sources": [
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_01_026_00000026/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_01_026_00000026/02_gt.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_01_026_00000026/03_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_01_026_00000026/04_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_01_026_00000026/05_m_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_01_026_00000026/06_m_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_02_022_00000006/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_02_022_00000006/02_gt.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_02_022_00000006/03_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_02_022_00000006/04_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_02_022_00000006/05_m_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_02_022_00000006/06_m_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_03_026_00000098/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_03_026_00000098/02_gt.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_03_026_00000098/03_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_03_026_00000098/04_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_03_026_00000098/05_m_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_03_026_00000098/06_m_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_04_005_00000092/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_04_005_00000092/02_gt.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_04_005_00000092/03_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_04_005_00000092/04_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_04_005_00000092/05_m_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_04_005_00000092/06_m_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_05_011_00000041/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_05_011_00000041/02_gt.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_05_011_00000041/03_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_05_011_00000041/04_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_05_011_00000041/05_m_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_05_011_00000041/06_m_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_06_022_00000011/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_06_022_00000011/02_gt.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_06_022_00000011/03_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_06_022_00000011/04_m_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_06_022_00000011/05_m_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal/examples/example_06_022_00000011/06_m_wavelet_heatmap.png"
+      ]
+    },
+    "s3": {
+      "outputs": [
+        "projects/007-waveletmask/Paper/applsci/figures/FigureS3_CueComplementarityDiagnostic.png",
+        "projects/007-waveletmask/Paper/applsci/figures/FigureS3_CueComplementarityDiagnostic.pdf"
+      ],
+      "sources": [
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_01/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_01/02_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_01/03_spatial_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_01/04_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_01/05_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_01/06_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_02/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_02/02_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_02/03_spatial_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_02/04_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_02/05_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_02/06_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_03/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_03/02_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_03/03_spatial_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_03/04_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_03/05_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_03/06_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_04/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_04/02_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_04/03_spatial_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_04/04_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_04/05_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_04/06_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_05/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_05/02_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_05/03_spatial_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_05/04_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_05/05_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/000_05/06_wavelet_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/001_01/01_lq.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/001_01/02_residual_proxy.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/001_01/03_spatial_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/001_01/04_local_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/001_01/05_flicker_heatmap.png",
+        "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t11_cue_complementarity/formal/examples/001_01/06_wavelet_heatmap.png"
+      ]
+    }
+  }
+}

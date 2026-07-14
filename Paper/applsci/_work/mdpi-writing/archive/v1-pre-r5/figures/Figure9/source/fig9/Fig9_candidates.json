@@ -1,0 +1,1378 @@
+{
+  "project": "007-waveletmask",
+  "generated_at": "2026-05-12T20:42:37",
+  "ranking_path": "projects/007-waveletmask/Exp/vis_output/ranking_local.json",
+  "data_root": "projects/007-waveletmask/Exp/vis_output/top20",
+  "thresholds": {
+    "min_delta_psnr": 1.0,
+    "min_improved_ratio": 0.55,
+    "require_ssim_non_decrease": true,
+    "candidate_source": "top50_parallel_fastpath"
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "rel_path": "012/00000085.png",
+      "clip": "012",
+      "frame": "00000085",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 5.238726,
+      "metrics": {
+        "psnr_baseline": 17.6888,
+        "psnr_ours": 21.1443,
+        "delta_psnr": 3.4555,
+        "ssim_baseline": 0.8559,
+        "ssim_ours": 0.8809,
+        "mae_baseline": 20.5884,
+        "mae_ours": 14.0801,
+        "mae_drop": 6.5083,
+        "improved_pixel_ratio": 0.6931,
+        "edge_retention_score": 0.4554
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000085.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000085.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000085.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000085.png"
+      }
+    },
+    {
+      "rank": 2,
+      "rel_path": "012/00000084.png",
+      "clip": "012",
+      "frame": "00000084",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 4.739848,
+      "metrics": {
+        "psnr_baseline": 17.2188,
+        "psnr_ours": 20.2445,
+        "delta_psnr": 3.0257,
+        "ssim_baseline": 0.8318,
+        "ssim_ours": 0.8665,
+        "mae_baseline": 23.2064,
+        "mae_ours": 16.9355,
+        "mae_drop": 6.2709,
+        "improved_pixel_ratio": 0.6598,
+        "edge_retention_score": 0.4549
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000084.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000084.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000084.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000084.png"
+      }
+    },
+    {
+      "rank": 4,
+      "rel_path": "012/00000021.png",
+      "clip": "012",
+      "frame": "00000021",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 4.159427,
+      "metrics": {
+        "psnr_baseline": 19.3472,
+        "psnr_ours": 22.2865,
+        "delta_psnr": 2.9393,
+        "ssim_baseline": 0.8674,
+        "ssim_ours": 0.8915,
+        "mae_baseline": 15.0904,
+        "mae_ours": 11.6025,
+        "mae_drop": 3.488,
+        "improved_pixel_ratio": 0.5828,
+        "edge_retention_score": 0.4565
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000021.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000021.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000021.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000021.png"
+      }
+    },
+    {
+      "rank": 6,
+      "rel_path": "025/00000096.png",
+      "clip": "025",
+      "frame": "00000096",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 4.024588,
+      "metrics": {
+        "psnr_baseline": 23.4065,
+        "psnr_ours": 25.8858,
+        "delta_psnr": 2.4793,
+        "ssim_baseline": 0.8879,
+        "ssim_ours": 0.9024,
+        "mae_baseline": 14.629,
+        "mae_ours": 10.1905,
+        "mae_drop": 4.4385,
+        "improved_pixel_ratio": 0.7774,
+        "edge_retention_score": 0.4086
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/025/00000096.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/025/00000096.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/025/00000096.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/025/00000096.png"
+      }
+    },
+    {
+      "rank": 8,
+      "rel_path": "029/00000021.png",
+      "clip": "029",
+      "frame": "00000021",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.988456,
+      "metrics": {
+        "psnr_baseline": 21.4342,
+        "psnr_ours": 23.7915,
+        "delta_psnr": 2.3573,
+        "ssim_baseline": 0.7971,
+        "ssim_ours": 0.8064,
+        "mae_baseline": 15.2278,
+        "mae_ours": 9.6796,
+        "mae_drop": 5.5482,
+        "improved_pixel_ratio": 0.7328,
+        "edge_retention_score": 0.2645
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/029/00000021.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/029/00000021.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/029/00000021.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/029/00000021.png"
+      }
+    },
+    {
+      "rank": 12,
+      "rel_path": "025/00000092.png",
+      "clip": "025",
+      "frame": "00000092",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.723181,
+      "metrics": {
+        "psnr_baseline": 22.9549,
+        "psnr_ours": 25.2019,
+        "delta_psnr": 2.247,
+        "ssim_baseline": 0.862,
+        "ssim_ours": 0.8851,
+        "mae_baseline": 15.251,
+        "mae_ours": 10.9115,
+        "mae_drop": 4.3395,
+        "improved_pixel_ratio": 0.7253,
+        "edge_retention_score": 0.3999
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/025/00000092.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/025/00000092.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/025/00000092.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/025/00000092.png"
+      }
+    },
+    {
+      "rank": 9,
+      "rel_path": "025/00000072.png",
+      "clip": "025",
+      "frame": "00000072",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.673732,
+      "metrics": {
+        "psnr_baseline": 20.8714,
+        "psnr_ours": 23.2177,
+        "delta_psnr": 2.3463,
+        "ssim_baseline": 0.887,
+        "ssim_ours": 0.9003,
+        "mae_baseline": 16.355,
+        "mae_ours": 12.4447,
+        "mae_drop": 3.9103,
+        "improved_pixel_ratio": 0.6386,
+        "edge_retention_score": 0.409
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/025/00000072.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/025/00000072.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/025/00000072.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/025/00000072.png"
+      }
+    },
+    {
+      "rank": 21,
+      "rel_path": "025/00000095.png",
+      "clip": "025",
+      "frame": "00000095",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.557214,
+      "metrics": {
+        "psnr_baseline": 23.7884,
+        "psnr_ours": 25.911,
+        "delta_psnr": 2.1225,
+        "ssim_baseline": 0.882,
+        "ssim_ours": 0.8966,
+        "mae_baseline": 14.1699,
+        "mae_ours": 10.3692,
+        "mae_drop": 3.8007,
+        "improved_pixel_ratio": 0.7659,
+        "edge_retention_score": 0.3947
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/025/00000095.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/025/00000095.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/025/00000095.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/025/00000095.png"
+      }
+    },
+    {
+      "rank": 26,
+      "rel_path": "025/00000093.png",
+      "clip": "025",
+      "frame": "00000093",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.521225,
+      "metrics": {
+        "psnr_baseline": 23.3799,
+        "psnr_ours": 25.4604,
+        "delta_psnr": 2.0805,
+        "ssim_baseline": 0.889,
+        "ssim_ours": 0.9049,
+        "mae_baseline": 14.8369,
+        "mae_ours": 10.9275,
+        "mae_drop": 3.9095,
+        "improved_pixel_ratio": 0.7521,
+        "edge_retention_score": 0.4087
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/025/00000093.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/025/00000093.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/025/00000093.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/025/00000093.png"
+      }
+    },
+    {
+      "rank": 17,
+      "rel_path": "012/00000024.png",
+      "clip": "012",
+      "frame": "00000024",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.517957,
+      "metrics": {
+        "psnr_baseline": 21.2155,
+        "psnr_ours": 23.3651,
+        "delta_psnr": 2.1496,
+        "ssim_baseline": 0.86,
+        "ssim_ours": 0.8728,
+        "mae_baseline": 14.8278,
+        "mae_ours": 10.8544,
+        "mae_drop": 3.9734,
+        "improved_pixel_ratio": 0.6614,
+        "edge_retention_score": 0.4439
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000024.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000024.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000024.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000024.png"
+      }
+    },
+    {
+      "rank": 28,
+      "rel_path": "029/00000022.png",
+      "clip": "029",
+      "frame": "00000022",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.50928,
+      "metrics": {
+        "psnr_baseline": 21.8337,
+        "psnr_ours": 23.8572,
+        "delta_psnr": 2.0235,
+        "ssim_baseline": 0.7923,
+        "ssim_ours": 0.8031,
+        "mae_baseline": 14.4109,
+        "mae_ours": 9.7145,
+        "mae_drop": 4.6964,
+        "improved_pixel_ratio": 0.7172,
+        "edge_retention_score": 0.2566
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/029/00000022.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/029/00000022.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/029/00000022.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/029/00000022.png"
+      }
+    },
+    {
+      "rank": 23,
+      "rel_path": "012/00000023.png",
+      "clip": "012",
+      "frame": "00000023",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.504297,
+      "metrics": {
+        "psnr_baseline": 20.0714,
+        "psnr_ours": 22.1808,
+        "delta_psnr": 2.1094,
+        "ssim_baseline": 0.8619,
+        "ssim_ours": 0.876,
+        "mae_baseline": 16.3278,
+        "mae_ours": 12.2054,
+        "mae_drop": 4.1224,
+        "improved_pixel_ratio": 0.662,
+        "edge_retention_score": 0.4583
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000023.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000023.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000023.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000023.png"
+      }
+    },
+    {
+      "rank": 22,
+      "rel_path": "005/00000077.png",
+      "clip": "005",
+      "frame": "00000077",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.504176,
+      "metrics": {
+        "psnr_baseline": 22.7673,
+        "psnr_ours": 24.8787,
+        "delta_psnr": 2.1113,
+        "ssim_baseline": 0.8854,
+        "ssim_ours": 0.895,
+        "mae_baseline": 15.1318,
+        "mae_ours": 11.3121,
+        "mae_drop": 3.8197,
+        "improved_pixel_ratio": 0.7164,
+        "edge_retention_score": 0.4141
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/005/00000077.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/005/00000077.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/005/00000077.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/005/00000077.png"
+      }
+    },
+    {
+      "rank": 19,
+      "rel_path": "012/00000009.png",
+      "clip": "012",
+      "frame": "00000009",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.49202,
+      "metrics": {
+        "psnr_baseline": 22.7989,
+        "psnr_ours": 24.9413,
+        "delta_psnr": 2.1424,
+        "ssim_baseline": 0.893,
+        "ssim_ours": 0.9021,
+        "mae_baseline": 13.0623,
+        "mae_ours": 9.2899,
+        "mae_drop": 3.7724,
+        "improved_pixel_ratio": 0.6692,
+        "edge_retention_score": 0.4581
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000009.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000009.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000009.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000009.png"
+      }
+    },
+    {
+      "rank": 7,
+      "rel_path": "010/00000090.png",
+      "clip": "010",
+      "frame": "00000090",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.460163,
+      "metrics": {
+        "psnr_baseline": 24.1159,
+        "psnr_ours": 26.4808,
+        "delta_psnr": 2.3649,
+        "ssim_baseline": 0.8602,
+        "ssim_ours": 0.8688,
+        "mae_baseline": 11.3641,
+        "mae_ours": 8.4996,
+        "mae_drop": 2.8645,
+        "improved_pixel_ratio": 0.5832,
+        "edge_retention_score": 0.3293
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/010/00000090.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/010/00000090.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/010/00000090.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/010/00000090.png"
+      }
+    },
+    {
+      "rank": 29,
+      "rel_path": "018/00000098.png",
+      "clip": "018",
+      "frame": "00000098",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.459401,
+      "metrics": {
+        "psnr_baseline": 22.6981,
+        "psnr_ours": 24.7123,
+        "delta_psnr": 2.0142,
+        "ssim_baseline": 0.889,
+        "ssim_ours": 0.9025,
+        "mae_baseline": 15.956,
+        "mae_ours": 11.8155,
+        "mae_drop": 4.1405,
+        "improved_pixel_ratio": 0.7152,
+        "edge_retention_score": 0.4358
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/018/00000098.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/018/00000098.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/018/00000098.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/018/00000098.png"
+      }
+    },
+    {
+      "rank": 15,
+      "rel_path": "012/00000054.png",
+      "clip": "012",
+      "frame": "00000054",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.456977,
+      "metrics": {
+        "psnr_baseline": 21.7737,
+        "psnr_ours": 23.9435,
+        "delta_psnr": 2.1698,
+        "ssim_baseline": 0.8731,
+        "ssim_ours": 0.8818,
+        "mae_baseline": 13.0721,
+        "mae_ours": 9.5597,
+        "mae_drop": 3.5125,
+        "improved_pixel_ratio": 0.6478,
+        "edge_retention_score": 0.4498
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000054.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000054.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000054.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000054.png"
+      }
+    },
+    {
+      "rank": 13,
+      "rel_path": "005/00000080.png",
+      "clip": "005",
+      "frame": "00000080",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.438195,
+      "metrics": {
+        "psnr_baseline": 22.5307,
+        "psnr_ours": 24.7692,
+        "delta_psnr": 2.2385,
+        "ssim_baseline": 0.8565,
+        "ssim_ours": 0.873,
+        "mae_baseline": 13.2694,
+        "mae_ours": 10.0896,
+        "mae_drop": 3.1798,
+        "improved_pixel_ratio": 0.6256,
+        "edge_retention_score": 0.3884
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/005/00000080.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/005/00000080.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/005/00000080.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/005/00000080.png"
+      }
+    },
+    {
+      "rank": 11,
+      "rel_path": "010/00000092.png",
+      "clip": "010",
+      "frame": "00000092",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.412068,
+      "metrics": {
+        "psnr_baseline": 24.2308,
+        "psnr_ours": 26.4803,
+        "delta_psnr": 2.2496,
+        "ssim_baseline": 0.8703,
+        "ssim_ours": 0.8772,
+        "mae_baseline": 11.4016,
+        "mae_ours": 8.3963,
+        "mae_drop": 3.0053,
+        "improved_pixel_ratio": 0.6249,
+        "edge_retention_score": 0.347
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/010/00000092.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/010/00000092.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/010/00000092.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/010/00000092.png"
+      }
+    },
+    {
+      "rank": 31,
+      "rel_path": "025/00000094.png",
+      "clip": "025",
+      "frame": "00000094",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.356075,
+      "metrics": {
+        "psnr_baseline": 23.6841,
+        "psnr_ours": 25.6446,
+        "delta_psnr": 1.9606,
+        "ssim_baseline": 0.8917,
+        "ssim_ours": 0.9073,
+        "mae_baseline": 14.4745,
+        "mae_ours": 10.9099,
+        "mae_drop": 3.5646,
+        "improved_pixel_ratio": 0.7584,
+        "edge_retention_score": 0.4096
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/025/00000094.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/025/00000094.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/025/00000094.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/025/00000094.png"
+      }
+    },
+    {
+      "rank": 18,
+      "rel_path": "012/00000055.png",
+      "clip": "012",
+      "frame": "00000055",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.346296,
+      "metrics": {
+        "psnr_baseline": 22.6789,
+        "psnr_ours": 24.8223,
+        "delta_psnr": 2.1435,
+        "ssim_baseline": 0.8905,
+        "ssim_ours": 0.9059,
+        "mae_baseline": 11.5111,
+        "mae_ours": 8.3441,
+        "mae_drop": 3.1671,
+        "improved_pixel_ratio": 0.6116,
+        "edge_retention_score": 0.4646
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000055.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000055.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000055.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000055.png"
+      }
+    },
+    {
+      "rank": 16,
+      "rel_path": "012/00000083.png",
+      "clip": "012",
+      "frame": "00000083",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.333528,
+      "metrics": {
+        "psnr_baseline": 19.3827,
+        "psnr_ours": 21.5524,
+        "delta_psnr": 2.1697,
+        "ssim_baseline": 0.8276,
+        "ssim_ours": 0.8518,
+        "mae_baseline": 18.3185,
+        "mae_ours": 15.0827,
+        "mae_drop": 3.2359,
+        "improved_pixel_ratio": 0.5663,
+        "edge_retention_score": 0.4484
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000083.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000083.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000083.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000083.png"
+      }
+    },
+    {
+      "rank": 27,
+      "rel_path": "025/00000071.png",
+      "clip": "025",
+      "frame": "00000071",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.332399,
+      "metrics": {
+        "psnr_baseline": 21.181,
+        "psnr_ours": 23.2173,
+        "delta_psnr": 2.0363,
+        "ssim_baseline": 0.8758,
+        "ssim_ours": 0.8946,
+        "mae_baseline": 15.894,
+        "mae_ours": 12.2028,
+        "mae_drop": 3.6912,
+        "improved_pixel_ratio": 0.6457,
+        "edge_retention_score": 0.3869
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/025/00000071.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/025/00000071.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/025/00000071.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/025/00000071.png"
+      }
+    },
+    {
+      "rank": 14,
+      "rel_path": "010/00000096.png",
+      "clip": "010",
+      "frame": "00000096",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.306201,
+      "metrics": {
+        "psnr_baseline": 24.4278,
+        "psnr_ours": 26.622,
+        "delta_psnr": 2.1942,
+        "ssim_baseline": 0.8642,
+        "ssim_ours": 0.876,
+        "mae_baseline": 11.3263,
+        "mae_ours": 8.5818,
+        "mae_drop": 2.7445,
+        "improved_pixel_ratio": 0.6128,
+        "edge_retention_score": 0.3503
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/010/00000096.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/010/00000096.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/010/00000096.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/010/00000096.png"
+      }
+    },
+    {
+      "rank": 35,
+      "rel_path": "025/00000068.png",
+      "clip": "025",
+      "frame": "00000068",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.300857,
+      "metrics": {
+        "psnr_baseline": 21.62,
+        "psnr_ours": 23.5004,
+        "delta_psnr": 1.8804,
+        "ssim_baseline": 0.8697,
+        "ssim_ours": 0.8936,
+        "mae_baseline": 16.53,
+        "mae_ours": 12.4945,
+        "mae_drop": 4.0355,
+        "improved_pixel_ratio": 0.7135,
+        "edge_retention_score": 0.4065
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/025/00000068.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/025/00000068.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/025/00000068.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/025/00000068.png"
+      }
+    },
+    {
+      "rank": 25,
+      "rel_path": "010/00000091.png",
+      "clip": "010",
+      "frame": "00000091",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.22604,
+      "metrics": {
+        "psnr_baseline": 24.4829,
+        "psnr_ours": 26.5751,
+        "delta_psnr": 2.0922,
+        "ssim_baseline": 0.8683,
+        "ssim_ours": 0.8711,
+        "mae_baseline": 11.1732,
+        "mae_ours": 8.2075,
+        "mae_drop": 2.9657,
+        "improved_pixel_ratio": 0.6058,
+        "edge_retention_score": 0.3327
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/010/00000091.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/010/00000091.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/010/00000091.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/010/00000091.png"
+      }
+    },
+    {
+      "rank": 30,
+      "rel_path": "012/00000022.png",
+      "clip": "012",
+      "frame": "00000022",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.206421,
+      "metrics": {
+        "psnr_baseline": 19.793,
+        "psnr_ours": 21.7802,
+        "delta_psnr": 1.9872,
+        "ssim_baseline": 0.8659,
+        "ssim_ours": 0.8871,
+        "mae_baseline": 16.1966,
+        "mae_ours": 12.8684,
+        "mae_drop": 3.3282,
+        "improved_pixel_ratio": 0.607,
+        "edge_retention_score": 0.452
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000022.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000022.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000022.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000022.png"
+      }
+    },
+    {
+      "rank": 41,
+      "rel_path": "012/00000010.png",
+      "clip": "012",
+      "frame": "00000010",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.15054,
+      "metrics": {
+        "psnr_baseline": 23.0315,
+        "psnr_ours": 24.88,
+        "delta_psnr": 1.8484,
+        "ssim_baseline": 0.8961,
+        "ssim_ours": 0.9057,
+        "mae_baseline": 13.1224,
+        "mae_ours": 9.6578,
+        "mae_drop": 3.4646,
+        "improved_pixel_ratio": 0.6674,
+        "edge_retention_score": 0.4603
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000010.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000010.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000010.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000010.png"
+      }
+    },
+    {
+      "rank": 24,
+      "rel_path": "012/00000028.png",
+      "clip": "012",
+      "frame": "00000028",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.134455,
+      "metrics": {
+        "psnr_baseline": 21.3662,
+        "psnr_ours": 23.4674,
+        "delta_psnr": 2.1012,
+        "ssim_baseline": 0.8699,
+        "ssim_ours": 0.8861,
+        "mae_baseline": 12.0489,
+        "mae_ours": 9.6577,
+        "mae_drop": 2.3912,
+        "improved_pixel_ratio": 0.562,
+        "edge_retention_score": 0.4504
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000028.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000028.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000028.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000028.png"
+      }
+    },
+    {
+      "rank": 33,
+      "rel_path": "005/00000076.png",
+      "clip": "005",
+      "frame": "00000076",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.133942,
+      "metrics": {
+        "psnr_baseline": 24.413,
+        "psnr_ours": 26.3005,
+        "delta_psnr": 1.8874,
+        "ssim_baseline": 0.8963,
+        "ssim_ours": 0.9018,
+        "mae_baseline": 12.3557,
+        "mae_ours": 9.2283,
+        "mae_drop": 3.1274,
+        "improved_pixel_ratio": 0.674,
+        "edge_retention_score": 0.4136
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/005/00000076.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/005/00000076.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/005/00000076.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/005/00000076.png"
+      }
+    },
+    {
+      "rank": 32,
+      "rel_path": "025/00000073.png",
+      "clip": "025",
+      "frame": "00000073",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.114161,
+      "metrics": {
+        "psnr_baseline": 22.0262,
+        "psnr_ours": 23.9847,
+        "delta_psnr": 1.9585,
+        "ssim_baseline": 0.89,
+        "ssim_ours": 0.8974,
+        "mae_baseline": 14.3586,
+        "mae_ours": 11.368,
+        "mae_drop": 2.9906,
+        "improved_pixel_ratio": 0.6044,
+        "edge_retention_score": 0.4108
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/025/00000073.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/025/00000073.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/025/00000073.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/025/00000073.png"
+      }
+    },
+    {
+      "rank": 36,
+      "rel_path": "025/00000097.png",
+      "clip": "025",
+      "frame": "00000097",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.099872,
+      "metrics": {
+        "psnr_baseline": 24.23,
+        "psnr_ours": 26.0987,
+        "delta_psnr": 1.8687,
+        "ssim_baseline": 0.8758,
+        "ssim_ours": 0.8809,
+        "mae_baseline": 12.833,
+        "mae_ours": 9.7629,
+        "mae_drop": 3.07,
+        "improved_pixel_ratio": 0.6714,
+        "edge_retention_score": 0.3971
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/025/00000097.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/025/00000097.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/025/00000097.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/025/00000097.png"
+      }
+    },
+    {
+      "rank": 48,
+      "rel_path": "012/00000051.png",
+      "clip": "012",
+      "frame": "00000051",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.058685,
+      "metrics": {
+        "psnr_baseline": 22.1427,
+        "psnr_ours": 23.9294,
+        "delta_psnr": 1.7867,
+        "ssim_baseline": 0.8848,
+        "ssim_ours": 0.894,
+        "mae_baseline": 13.7013,
+        "mae_ours": 10.2941,
+        "mae_drop": 3.4072,
+        "improved_pixel_ratio": 0.6471,
+        "edge_retention_score": 0.4551
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000051.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000051.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000051.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000051.png"
+      }
+    },
+    {
+      "rank": 49,
+      "rel_path": "024/00000096.png",
+      "clip": "024",
+      "frame": "00000096",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.056724,
+      "metrics": {
+        "psnr_baseline": 22.7693,
+        "psnr_ours": 24.5478,
+        "delta_psnr": 1.7784,
+        "ssim_baseline": 0.8962,
+        "ssim_ours": 0.9071,
+        "mae_baseline": 13.79,
+        "mae_ours": 10.5254,
+        "mae_drop": 3.2646,
+        "improved_pixel_ratio": 0.6779,
+        "edge_retention_score": 0.4431
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/024/00000096.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/024/00000096.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/024/00000096.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/024/00000096.png"
+      }
+    },
+    {
+      "rank": 47,
+      "rel_path": "025/00000070.png",
+      "clip": "025",
+      "frame": "00000070",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.045922,
+      "metrics": {
+        "psnr_baseline": 21.6385,
+        "psnr_ours": 23.4277,
+        "delta_psnr": 1.7893,
+        "ssim_baseline": 0.8849,
+        "ssim_ours": 0.9016,
+        "mae_baseline": 15.3533,
+        "mae_ours": 11.9587,
+        "mae_drop": 3.3946,
+        "improved_pixel_ratio": 0.6447,
+        "edge_retention_score": 0.4109
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/025/00000070.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/025/00000070.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/025/00000070.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/025/00000070.png"
+      }
+    },
+    {
+      "rank": 45,
+      "rel_path": "012/00000014.png",
+      "clip": "012",
+      "frame": "00000014",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.036369,
+      "metrics": {
+        "psnr_baseline": 21.8314,
+        "psnr_ours": 23.6237,
+        "delta_psnr": 1.7923,
+        "ssim_baseline": 0.8818,
+        "ssim_ours": 0.8879,
+        "mae_baseline": 14.1654,
+        "mae_ours": 10.9967,
+        "mae_drop": 3.1687,
+        "improved_pixel_ratio": 0.6558,
+        "edge_retention_score": 0.452
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000014.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000014.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000014.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000014.png"
+      }
+    },
+    {
+      "rank": 43,
+      "rel_path": "012/00000025.png",
+      "clip": "012",
+      "frame": "00000025",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 3.01976,
+      "metrics": {
+        "psnr_baseline": 21.9415,
+        "psnr_ours": 23.7626,
+        "delta_psnr": 1.8211,
+        "ssim_baseline": 0.8773,
+        "ssim_ours": 0.8929,
+        "mae_baseline": 13.1478,
+        "mae_ours": 10.124,
+        "mae_drop": 3.0238,
+        "improved_pixel_ratio": 0.6308,
+        "edge_retention_score": 0.4574
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000025.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000025.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000025.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000025.png"
+      }
+    },
+    {
+      "rank": 46,
+      "rel_path": "012/00000015.png",
+      "clip": "012",
+      "frame": "00000015",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 2.942532,
+      "metrics": {
+        "psnr_baseline": 22.8433,
+        "psnr_ours": 24.6356,
+        "delta_psnr": 1.7923,
+        "ssim_baseline": 0.8874,
+        "ssim_ours": 0.9015,
+        "mae_baseline": 12.1828,
+        "mae_ours": 9.4442,
+        "mae_drop": 2.7386,
+        "improved_pixel_ratio": 0.626,
+        "edge_retention_score": 0.4539
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000015.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000015.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000015.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000015.png"
+      }
+    },
+    {
+      "rank": 37,
+      "rel_path": "010/00000094.png",
+      "clip": "010",
+      "frame": "00000094",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 2.931419,
+      "metrics": {
+        "psnr_baseline": 25.0346,
+        "psnr_ours": 26.8965,
+        "delta_psnr": 1.8618,
+        "ssim_baseline": 0.8661,
+        "ssim_ours": 0.8733,
+        "mae_baseline": 10.4699,
+        "mae_ours": 8.0406,
+        "mae_drop": 2.4293,
+        "improved_pixel_ratio": 0.6192,
+        "edge_retention_score": 0.344
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/010/00000094.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/010/00000094.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/010/00000094.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/010/00000094.png"
+      }
+    },
+    {
+      "rank": 42,
+      "rel_path": "010/00000093.png",
+      "clip": "010",
+      "frame": "00000093",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 2.928067,
+      "metrics": {
+        "psnr_baseline": 24.6382,
+        "psnr_ours": 26.463,
+        "delta_psnr": 1.8248,
+        "ssim_baseline": 0.8586,
+        "ssim_ours": 0.8638,
+        "mae_baseline": 10.953,
+        "mae_ours": 8.3324,
+        "mae_drop": 2.6206,
+        "improved_pixel_ratio": 0.6277,
+        "edge_retention_score": 0.3297
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/010/00000093.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/010/00000093.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/010/00000093.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/010/00000093.png"
+      }
+    },
+    {
+      "rank": 34,
+      "rel_path": "012/00000027.png",
+      "clip": "012",
+      "frame": "00000027",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 2.925913,
+      "metrics": {
+        "psnr_baseline": 22.605,
+        "psnr_ours": 24.4919,
+        "delta_psnr": 1.8869,
+        "ssim_baseline": 0.876,
+        "ssim_ours": 0.8926,
+        "mae_baseline": 11.4885,
+        "mae_ours": 9.1382,
+        "mae_drop": 2.3503,
+        "improved_pixel_ratio": 0.5715,
+        "edge_retention_score": 0.46
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000027.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000027.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000027.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000027.png"
+      }
+    },
+    {
+      "rank": 44,
+      "rel_path": "005/00000079.png",
+      "clip": "005",
+      "frame": "00000079",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 2.909847,
+      "metrics": {
+        "psnr_baseline": 23.0263,
+        "psnr_ours": 24.8388,
+        "delta_psnr": 1.8125,
+        "ssim_baseline": 0.8807,
+        "ssim_ours": 0.8952,
+        "mae_baseline": 13.2472,
+        "mae_ours": 10.6839,
+        "mae_drop": 2.5633,
+        "improved_pixel_ratio": 0.6125,
+        "edge_retention_score": 0.4012
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/005/00000079.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/005/00000079.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/005/00000079.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/005/00000079.png"
+      }
+    },
+    {
+      "rank": 50,
+      "rel_path": "010/00000095.png",
+      "clip": "010",
+      "frame": "00000095",
+      "passes": true,
+      "reject_reasons": [],
+      "score": 2.789114,
+      "metrics": {
+        "psnr_baseline": 24.6322,
+        "psnr_ours": 26.3947,
+        "delta_psnr": 1.7624,
+        "ssim_baseline": 0.8414,
+        "ssim_ours": 0.848,
+        "mae_baseline": 10.9826,
+        "mae_ours": 8.7265,
+        "mae_drop": 2.256,
+        "improved_pixel_ratio": 0.6044,
+        "edge_retention_score": 0.3355
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/010/00000095.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/010/00000095.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/010/00000095.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/010/00000095.png"
+      }
+    },
+    {
+      "rank": 3,
+      "rel_path": "012/00000020.png",
+      "clip": "012",
+      "frame": "00000020",
+      "passes": false,
+      "reject_reasons": [
+        "improved_pixel_ratio<0.55"
+      ],
+      "score": 4.01345,
+      "metrics": {
+        "psnr_baseline": 20.6325,
+        "psnr_ours": 23.592,
+        "delta_psnr": 2.9595,
+        "ssim_baseline": 0.8692,
+        "ssim_ours": 0.8883,
+        "mae_baseline": 12.6152,
+        "mae_ours": 9.9189,
+        "mae_drop": 2.6963,
+        "improved_pixel_ratio": 0.538,
+        "edge_retention_score": 0.4461
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000020.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000020.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000020.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000020.png"
+      }
+    },
+    {
+      "rank": 5,
+      "rel_path": "012/00000019.png",
+      "clip": "012",
+      "frame": "00000019",
+      "passes": false,
+      "reject_reasons": [
+        "improved_pixel_ratio<0.55"
+      ],
+      "score": 3.521607,
+      "metrics": {
+        "psnr_baseline": 21.1204,
+        "psnr_ours": 23.7912,
+        "delta_psnr": 2.6708,
+        "ssim_baseline": 0.8656,
+        "ssim_ours": 0.8758,
+        "mae_baseline": 11.4278,
+        "mae_ours": 9.7396,
+        "mae_drop": 1.6882,
+        "improved_pixel_ratio": 0.4878,
+        "edge_retention_score": 0.4391
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000019.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000019.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000019.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000019.png"
+      }
+    },
+    {
+      "rank": 38,
+      "rel_path": "029/00000020.png",
+      "clip": "029",
+      "frame": "00000020",
+      "passes": false,
+      "reject_reasons": [
+        "ssim_ours<ssim_baseline"
+      ],
+      "score": 3.225857,
+      "metrics": {
+        "psnr_baseline": 22.5885,
+        "psnr_ours": 24.4496,
+        "delta_psnr": 1.8611,
+        "ssim_baseline": 0.8178,
+        "ssim_ours": 0.816,
+        "mae_baseline": 12.5496,
+        "mae_ours": 8.4358,
+        "mae_drop": 4.1138,
+        "improved_pixel_ratio": 0.6771,
+        "edge_retention_score": 0.2823
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/029/00000020.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/029/00000020.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/029/00000020.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/029/00000020.png"
+      }
+    },
+    {
+      "rank": 10,
+      "rel_path": "009/00000065.png",
+      "clip": "009",
+      "frame": "00000065",
+      "passes": false,
+      "reject_reasons": [
+        "improved_pixel_ratio<0.55"
+      ],
+      "score": 3.129171,
+      "metrics": {
+        "psnr_baseline": 18.4946,
+        "psnr_ours": 20.8258,
+        "delta_psnr": 2.3312,
+        "ssim_baseline": 0.8289,
+        "ssim_ours": 0.8409,
+        "mae_baseline": 14.0938,
+        "mae_ours": 12.41,
+        "mae_drop": 1.6839,
+        "improved_pixel_ratio": 0.4419,
+        "edge_retention_score": 0.4139
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/009/00000065.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/009/00000065.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/009/00000065.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/009/00000065.png"
+      }
+    },
+    {
+      "rank": 20,
+      "rel_path": "001/00000034.png",
+      "clip": "001",
+      "frame": "00000034",
+      "passes": false,
+      "reject_reasons": [
+        "improved_pixel_ratio<0.55"
+      ],
+      "score": 2.896398,
+      "metrics": {
+        "psnr_baseline": 21.7155,
+        "psnr_ours": 23.8406,
+        "delta_psnr": 2.125,
+        "ssim_baseline": 0.8762,
+        "ssim_ours": 0.8768,
+        "mae_baseline": 10.6766,
+        "mae_ours": 9.4746,
+        "mae_drop": 1.202,
+        "improved_pixel_ratio": 0.4834,
+        "edge_retention_score": 0.4306
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/001/00000034.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/001/00000034.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/001/00000034.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/001/00000034.png"
+      }
+    },
+    {
+      "rank": 40,
+      "rel_path": "012/00000082.png",
+      "clip": "012",
+      "frame": "00000082",
+      "passes": false,
+      "reject_reasons": [
+        "improved_pixel_ratio<0.55"
+      ],
+      "score": 2.766314,
+      "metrics": {
+        "psnr_baseline": 21.4737,
+        "psnr_ours": 23.3251,
+        "delta_psnr": 1.8514,
+        "ssim_baseline": 0.8329,
+        "ssim_ours": 0.8458,
+        "mae_baseline": 14.0877,
+        "mae_ours": 12.0291,
+        "mae_drop": 2.0587,
+        "improved_pixel_ratio": 0.4943,
+        "edge_retention_score": 0.4474
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000082.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000082.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000082.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000082.png"
+      }
+    },
+    {
+      "rank": 39,
+      "rel_path": "012/00000018.png",
+      "clip": "012",
+      "frame": "00000018",
+      "passes": false,
+      "reject_reasons": [
+        "improved_pixel_ratio<0.55"
+      ],
+      "score": 2.544737,
+      "metrics": {
+        "psnr_baseline": 22.508,
+        "psnr_ours": 24.3643,
+        "delta_psnr": 1.8563,
+        "ssim_baseline": 0.8814,
+        "ssim_ours": 0.8854,
+        "mae_baseline": 10.4464,
+        "mae_ours": 9.6791,
+        "mae_drop": 0.7673,
+        "improved_pixel_ratio": 0.4633,
+        "edge_retention_score": 0.4402
+      },
+      "paths": {
+        "input": "projects/007-waveletmask/Exp/vis_output/top20/lq/012/00000018.png",
+        "baseline": "projects/007-waveletmask/Exp/vis_output/top20/a0/012/00000018.png",
+        "ours": "projects/007-waveletmask/Exp/vis_output/top20/a3/012/00000018.png",
+        "gt": "projects/007-waveletmask/Exp/vis_output/top20/gt/012/00000018.png"
+      }
+    }
+  ]
+}

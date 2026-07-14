@@ -1,0 +1,85 @@
+{
+  "_doc": "Round-2 response docx builder config. Run: python3 .claude/skills/ofr-paper-mdpi-review-web/scripts/build_response_docx.py --config review/round2/response_build.json",
+  "manuscript_id": "applsci-4348902",
+  "title": "WaveletMask: Wavelet-Domain Mask-Guided Degradation Detection for Old Film Restoration",
+  "journal": "Applied Sciences",
+  "questions": [
+    "Does the introduction provide sufficient background and include all relevant references?",
+    "Is the research design appropriate?",
+    "Are the methods adequately described?",
+    "Are the results clearly presented?",
+    "Are the conclusions supported by the results?",
+    "Are all figures and tables clear and well-presented?"
+  ],
+  "reviewers": {
+    "1": {
+      "md": "response-letter-reviewer1.md",
+      "out": "submission/Response-to-reviewer1-round2.docx",
+      "ratings": [
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes"
+      ],
+      "gen_responses": [
+        "We thank the reviewer. The Introduction and Related Work already provide the background and references needed for the revised scope.",
+        "We thank the reviewer. The research design was strengthened with paired statistical testing, three-seed re-testing, and controlled diagnostic probes.",
+        "We thank the reviewer. The Methods section includes the Response Analysis subsection and all diagnostic protocols.",
+        "We thank the reviewer. The Results section now separates the paired same-protocol comparison from the unified re-training benchmark.",
+        "We thank the reviewer. The Conclusions were qualified to reflect the narrow CLIPIQA+ margin and the scope of the evidence.",
+        "We thank the reviewer. All figures and tables were checked for clarity and consistency."
+      ],
+      "english_rating": "The English is fine and does not require any improvement.",
+      "english_response": "We thank the reviewer for this positive assessment. The revised manuscript was carefully proofread for clarity and consistency.",
+      "additional": "We sincerely thank Reviewer 1 for the constructive and rigorous evaluation, which has substantially improved the manuscript. A marked-up version with all changes highlighted has been uploaded together with the revised manuscript."
+    },
+    "2": {
+      "md": "response-letter-reviewer2.md",
+      "out": "submission/Response-to-reviewer2-round2.docx",
+      "ratings": [
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes"
+      ],
+      "gen_responses": [
+        "We thank the reviewer. The Introduction and Related Work were kept up to date with the suggested wavelet-detection reference.",
+        "We thank the reviewer. The research design was validated with the requested motion/occlusion-binned and cross-content experiments.",
+        "We thank the reviewer. The Methods section now includes the expanded diagnostic probes and runtime measurement protocol.",
+        "We thank the reviewer. The Results section reports the requested failure-mode and interpretability analyses.",
+        "We thank the reviewer. The Conclusions remain conservative and explicitly scoped to the evaluated protocol.",
+        "We thank the reviewer. All figures and tables were checked for clarity and consistency."
+      ],
+      "english_rating": "The English is fine and does not require any improvement.",
+      "english_response": "We thank the reviewer for this positive assessment. The revised manuscript was carefully proofread for clarity and consistency.",
+      "additional": "We sincerely thank Reviewer 2 for the detailed and constructive feedback, which has substantially improved the manuscript. A marked-up version with all changes highlighted has been uploaded together with the revised manuscript."
+    },
+    "3": {
+      "md": "response-letter-reviewer3.md",
+      "out": "submission/Response-to-reviewer3-round2.docx",
+      "ratings": [
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes",
+        "Yes"
+      ],
+      "gen_responses": [
+        "We thank the reviewer. The Introduction provides sufficient background for the wavelet-domain gating approach.",
+        "We thank the reviewer. The research design was validated with multi-seed paired statistics and the requested cross-domain frequency diagnostic.",
+        "We thank the reviewer. The Methods section clearly describes the detector modules and their boundary conditions.",
+        "We thank the reviewer. The Results section clearly presents the controlled comparisons and diagnostic ablations.",
+        "We thank the reviewer. The Conclusions are supported by the results and explicitly scoped.",
+        "We thank the reviewer. All figures and tables were checked for clarity and consistency."
+      ],
+      "english_rating": "The English is fine and does not require any improvement.",
+      "english_response": "We thank the reviewer for this positive assessment. The revised manuscript was carefully proofread for clarity and consistency.",
+      "additional": "We sincerely thank Reviewer 3 for the rigorous technical suggestions, which have substantially improved the manuscript. A marked-up version with all changes highlighted has been uploaded together with the revised manuscript."
+    }
+  }
+}

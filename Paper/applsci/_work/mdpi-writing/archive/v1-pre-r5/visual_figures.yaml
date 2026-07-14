@@ -1,0 +1,167 @@
+# Visual figure plan for 007-WaveletMask ApplSci draft.
+# Final assets are governed by figure_manifest.yaml. This file records data and redraw inputs.
+
+- figure_id: Figure1
+  dataset: REDS_synthetic_and_SRWOV_realworld
+  status: final-manual-redraw
+  final_pdf: projects/007-waveletmask/Paper/applsci/figures/Figure1.pdf
+  final_sha256: c246b9d4056b8ff76f8c8c1d8e5e61ef943681e157b1c0eb2f2983d67327e36c
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1
+  trace_metadata: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/metadata.json
+  raw_assets_package: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/package/Fig1_real_motivation_complete_assets_20260512.tar.gz
+  archived_auto_outputs: projects/007-waveletmask/Paper/_work/mdpi-writing/archive/pre_redraw_20260512/Figure1_auto_attempt
+  clip: synthetic=013; real=6ZCNaCHPacE/236-241/frames
+  frame: synthetic_index_97; real_index_113
+  roi: synthetic_xyxy_336_192_432_288; real_full_frame_0_0_464_352
+  method_order:
+    - degraded input
+    - RAFT-warped pixel-domain indicator
+    - LH/HL/HH temporal response
+    - LL temporal response
+    - m_local
+    - m_flicker
+    - m_wavelet=max(m_local,m_flicker)
+  metric_source: none_qualitative_motivation_only
+
+- figure_id: Figure2
+  dataset: method_schematic
+  status: needs-diagram-route-e
+  final_pdf: projects/007-waveletmask/Paper/applsci/figures/Figure2.pdf
+  final_pdf_status: placeholder_until_diagram_route_gate_passes
+  final_sha256: 2701f02626375290ac2a31f11b86f9d12936660db53f86bdd74a757acf82d792
+  source_asset: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure2/draft/Figure2.v01.architecture_draft.pdf
+  production_route: ofr-paper-diagram Route E
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure2
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure2
+  method_order:
+    - WaveletNoiseMask
+    - max-fused WaveletMask indicator
+    - RTN gated aggregation
+  metric_source: none_method_diagram
+
+- figure_id: Figure3
+  dataset: method_schematic
+  status: needs-diagram-route-e
+  final_pdf: projects/007-waveletmask/Paper/applsci/figures/Figure3.pdf
+  final_pdf_status: placeholder_until_diagram_route_gate_passes
+  final_sha256: 33dd0db194b8a27f5f925170cfa82e6e28a6f7e14b3f5ed6d2527c28c503ecbb
+  source_asset: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3/draft/Figure3.v01.wavelet_noise_mask_module.pdf
+  production_route: ofr-paper-diagram Route E
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3
+  method_order:
+    - Local High-Frequency Mask
+    - Global Flicker Mask
+    - max fusion
+    - RTN gated aggregation
+  metric_source: none_method_diagram
+
+- figure_id: Figure4
+  dataset: motivation_asset
+  status: optional-needs-traceable-decision
+  final_pdf: projects/007-waveletmask/Paper/applsci/figures/Figure4.pdf
+  final_pdf_status: placeholder_until_keep_or_drop_decision
+  final_sha256: 17949b37074c1a8a1d7ed662cc6c136a98d8a0cea7f551faf43106d3a993f72c
+  source_asset: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure4/draft/Figure4.v01.motivation_only.pdf
+  production_route: ofr-paper-visual-studio traceable export or drop
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure4
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure4
+  clip: traceable_visual_exports_to_be_selected
+  frame: traceable_visual_exports_to_be_selected
+  roi: traceable_visual_exports_to_be_selected
+  method_order:
+    - input degradation examples
+  metric_source: none_qualitative_motivation_only
+
+- figure_id: Figure5
+  dataset: method_schematic_and_ablation_data
+  status: needs-route-decision
+  final_pdf: projects/007-waveletmask/Paper/applsci/figures/Figure5.pdf
+  final_pdf_status: placeholder_until_route_decision
+  final_sha256: 7a3b1cbd56be534f9b63a663559a182728c585d911dfe39e3c73c432b023452f
+  source_asset: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure5/draft/Figure5.v01.mask_path_schematic.pdf
+  production_route: ofr-paper-visual-studio real mask export or ofr-paper-diagram schematic
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure5
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure5
+  method_order:
+    - high-frequency response
+    - low-frequency response
+    - spatial RTN indicator
+    - max-fused WaveletMask indicator
+    - learned-fusion controls as ablation-only variants
+  metric_source: Exp/paper_data/section_synth_8variants.yaml
+
+- figure_id: Figure6
+  dataset: SRWOV_realworld
+  status: blocked-visual-studio-regeneration
+  final_pdf: projects/007-waveletmask/Paper/applsci/figures/Figure6.pdf
+  final_pdf_status: placeholder_until_visual_studio_export
+  final_sha256: ee179460b9d1efb8b4c8be0a5c422405d1ff7443247c192cc52abb8420db9b67
+  source_asset: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/draft/Figure6.v01.realworld_l40_trace.pdf
+  production_route: ofr-paper-visual-studio Real-world SOTA full-frame export
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6
+  clip: to_be_selected_from_traceable_visual_exports
+  frame: to_be_selected_from_traceable_visual_exports
+  roi: to_be_exported_by_visual_studio
+  method_order:
+    - input
+    - RTN
+    - MambaOFR
+    - WaveletMask
+  metric_source: provisional_visual_only_until_realworld_refresh
+
+- figure_id: Figure7
+  dataset: REDS_synthetic
+  status: pending-export
+  target_pdf: projects/007-waveletmask/Paper/applsci/figures/Figure7.pdf
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure7
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure7
+  clip: to_be_selected_from_synthetic_test_results
+  frame: to_be_selected_from_synthetic_test_results
+  roi: to_be_exported_by_visual_studio
+  method_order:
+    - input
+    - RTN
+    - SOTA baselines from quantitative table
+    - WaveletMask
+    - ground truth
+  metric_source: Exp/paper_data/main_results.yaml
+
+- figure_id: Figure8
+  dataset: REDS_synthetic
+  status: pending-export
+  target_pdf: projects/007-waveletmask/Paper/applsci/figures/Figure8.pdf
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure8
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure8
+  clip: to_be_selected_from_synthetic_test_results
+  frame: to_be_selected_from_synthetic_test_results
+  roi: to_be_exported_by_visual_studio
+  method_order:
+    - input
+    - Baseline
+    - +Local
+    - +Flicker
+    - WaveletMask
+    - ground truth
+  metric_source: Exp/paper_data/section_synth_8variants.yaml
+
+- figure_id: Figure9
+  dataset: REDS_synthetic
+  status: needs-visual-studio-finalization
+  final_pdf: projects/007-waveletmask/Paper/applsci/figures/Figure9.pdf
+  final_pdf_status: placeholder_until_figure9_route_confirmation
+  final_sha256: e260254fbf1a586f5395e05cb648951a1996951ba31a8b117bbdf7ece01b20dd
+  source_asset: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9/draft/Figure9.v01.error_map.pdf
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9
+  clip: selected_in_Fig9_selection_record
+  frame: selected_in_Fig9_selection_record
+  roi: full_error_map
+  method_order:
+    - baseline absolute error
+    - WaveletMask absolute error
+    - error reduction map
+  metric_source: Paper/_work/mdpi-writing/figures/Figure9/source/fig9/Fig9_selection_record.json
+  production_route: ofr-paper-visual-studio Figure 9 tab or generate_fig9.py

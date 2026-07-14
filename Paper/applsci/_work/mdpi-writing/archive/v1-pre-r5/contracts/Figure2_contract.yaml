@@ -1,0 +1,72 @@
+schema_version: 2
+figure_id: Figure2
+latex_label: fig:pipeline
+title: WaveletMask processing pipeline
+role: method
+status: blocked
+slot_id: METHOD_OVERVIEW
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A2]
+selected_option:
+  option_id: A
+  archetype: pipeline_overview
+  source_protocol: .claude/skills/ofr-paper-mdpi-writing/references/figure-options-protocol.md
+archetype: pipeline_overview
+core_conclusion: WaveletMask replaces RTN's pixel residual indicator with a max-fused wavelet-domain degradation mask while preserving the recurrent restoration backbone.
+evidence_data_path:
+  - projects/007-waveletmask/archs/waveletmask_ab_arch.py
+  - projects/007-waveletmask/Idea/04-框架对齐.md
+  - projects/007-waveletmask/Paper/applsci/figures/Figure2.pdf
+evidence_gate:
+  required: true
+  status: blocked
+  missing:
+    - approved Route E ASCII wireframe
+    - approved layout.json
+    - final diagram export from ofr-paper-diagram
+reviewer_risk:
+  - The current placeholder includes PixelWiseMaskFusion and may imply the learned fusion block is part of the submitted model.
+forbidden_scene: Do not present PixelWiseMaskFusion as a core component of WaveletMaskABNet.
+production_owner: user
+production_route: ofr-paper-diagram Route E Phase 1-2
+target_path: projects/007-waveletmask/Paper/applsci/figures/Figure2.pdf
+current_asset_path: projects/007-waveletmask/Paper/applsci/figures/Figure2.pdf
+current_asset_status: placeholder_from_noncompliant_draft_promotion
+ascii_preview: |
+  [Input frames] -> [WaveletNoiseMask]
+         |                 |
+         |                 v
+         +----------> [RTN gated aggregation] -> [Restored frames]
+dependencies:
+  code:
+    - projects/007-waveletmask/archs/waveletmask_ab_arch.py
+    - projects/007-waveletmask/archs/components/wavelet_mask/wavelet_mask.py
+  experiments: []
+  assets:
+    - projects/007-waveletmask/Paper/applsci/figures/Figure2.pdf
+    - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure2/draft/Figure2.v01.architecture_draft.pdf
+sync_targets:
+  introduction:
+    required_refs: ["\\ref{fig:pipeline}"]
+    claim_to_sync: The paper introduces WaveletMask as an RTN residual-indicator replacement.
+  method:
+    required_refs: ["\\ref{fig:pipeline}"]
+    claim_to_sync: Method prose follows the same module order as the pipeline.
+  results:
+    required_refs: []
+    claim_to_sync: ""
+caption_contract:
+  tense: present
+  required_terms: [WaveletNoiseMask, RTN, residual indicator, max-fused]
+  banned_terms: [submitted learned fusion, full model]
+  draft_caption: Overview of the WaveletMask processing pipeline.
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by:
+  - Route E ASCII/layout approval missing
+  - final ofr-paper-diagram export missing
+notes: Scheme B keeps Figure2 as the fixed method overview, but the current Figure2.pdf is only a LaTeX placeholder from a noncompliant draft promotion.

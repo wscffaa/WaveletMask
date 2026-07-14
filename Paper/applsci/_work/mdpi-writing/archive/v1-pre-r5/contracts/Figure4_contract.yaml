@@ -1,0 +1,69 @@
+schema_version: 2
+figure_id: Figure4
+latex_label: fig:degradation_examples
+title: Old-film degradation examples
+role: motivation
+status: blocked
+slot_id: PROBLEM_MOTIVATION
+fixed_level: optional
+drop_policy: user_confirmed
+motivation_anchor_ids: [A1]
+selected_option:
+  option_id: A
+  archetype: qualitative_grid
+  source_protocol: .claude/skills/ofr-paper-mdpi-writing/references/figure-options-protocol.md
+archetype: qualitative_grid
+core_conclusion: Old-film footage contains diverse visible degradations that motivate WaveletMask but do not themselves prove restoration superiority.
+evidence_data_path:
+  - projects/007-waveletmask/Paper/applsci/figures/Figure4.pdf
+  - projects/007-waveletmask/Paper/applsci/figures_review.md
+evidence_gate:
+  required: false
+  status: blocked_if_kept_in_main_text
+  missing:
+    - user decision to keep, move to supplement, or drop
+    - traceable 007 visual export if kept as a main-text figure
+reviewer_risk:
+  - Current asset is motivation-only and has provenance risk if read as WaveletMask-specific result evidence.
+forbidden_scene: Do not use this figure to support SOTA or ablation claims.
+production_owner: user
+production_route: ofr-paper-visual-studio traceable export or user-confirmed drop
+target_path: projects/007-waveletmask/Paper/applsci/figures/Figure4.pdf
+current_asset_path: projects/007-waveletmask/Paper/applsci/figures/Figure4.pdf
+current_asset_status: placeholder_from_noncompliant_motivation_asset_promotion
+ascii_preview: |
+  scratch / dust / flicker / noise
+  +------+ +------+ +------+ +------+
+  | case | | case | | case | | case |
+  +------+ +------+ +------+ +------+
+dependencies:
+  code: []
+  experiments:
+    - projects/007-waveletmask/Paper/applsci/figures_review.md
+  assets:
+    - projects/007-waveletmask/Paper/applsci/figures/Figure4.pdf
+    - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure4/draft/Figure4.v01.motivation_only.pdf
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: []
+    claim_to_sync: ""
+  results:
+    required_refs: ["\\ref{fig:degradation_examples}"]
+    claim_to_sync: The figure is motivation-only and cannot prove SOTA.
+caption_contract:
+  tense: present
+  required_terms: [motivation, WaveletMask, qualitative degradation]
+  banned_terms: [outperforms, quantitative, SOTA]
+  draft_caption: Qualitative degradation examples used to motivate the visual failure modes targeted by WaveletMask.
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: true
+blocked_by:
+  - optional keep/drop decision missing
+  - traceable 007 regeneration missing if kept
+notes: Scheme B initially kept Figure4, but it is now treated as optional and blocked until provenance-safe regeneration or user-confirmed removal.

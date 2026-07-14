@@ -1,0 +1,62 @@
+schema_version: 2
+figure_id: Fig3
+latex_label: fig:lhfm
+title: "LHFM module architecture"
+role: method
+status: planned
+slot_id: MODULE_DETAIL_LHFM
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A2]
+selected_option:
+  option_id: A
+  archetype: module_detail
+  source_protocol: references/02-figure/figure-options-protocol.md
+archetype: module_detail
+core_conclusion: "LHFM converts geometric-mean temporal differences from LH/HL/HH detail sub-bands into a half-resolution local damage mask through high_freq_conv and sigmoid activation."
+evidence_data_path:
+  - Paper/applsci/figures/Figure3.pdf
+  - archs/components/wavelet_mask.py
+evidence_gate:
+  required: true
+  status: available
+  missing: []
+reviewer_risk:
+  - "Subband-level operations must be clearly explained → geometric mean temporal filtering for HF."
+  - "DWT boundary handling (even-sized input requirement) must be addressed in text."
+forbidden_scene: "Not suitable when the method has no internal module structure worth detailing."
+figure_priority: secondary
+production_owner: user
+production_route: ppt
+production_status: ready
+ascii_preview: |
+  [ΔLH_geo, ΔHL_geo, ΔHH_geo] → [concat] → [high_freq_conv] → [sigmoid] → local_mask
+dependencies:
+  code:
+    - archs/components/wavelet_mask.py
+    - archs/components/haar_dwt.py
+  experiments: []
+  assets:
+    - Paper/applsci/figures/Figure3.pdf
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: ["\\ref{fig:lhfm}"]
+    claim_to_sync: "Method text describes LHFM geometric-mean detail-band processing in the order illustrated in Figure 3."
+  results:
+    required_refs: []
+    claim_to_sync: ""
+caption_contract:
+  tense: present
+  required_terms: ["LHFM", "geometric-mean", "LH", "HL", "HH", "high_freq_conv", "sigmoid"]
+  banned_terms: ["clearly", "obviously", "as shown"]
+  draft_caption: "LHFM architecture. Geometric-mean temporal differences from the LH, HL, and HH detail sub-bands are channel-concatenated and processed by high_freq_conv with a 3x3 3-to-16 convolution, LeakyReLU, a 3x3 16-to-1 convolution, and sigmoid activation to produce the half-resolution local mask before upsampling."
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by: []
+notes: "User PPT hand-drawn; file present and verified. Figure 3 now covers LHFM only after architecture-figure update."

@@ -1,0 +1,34 @@
+{
+  "project": "projects/007-waveletmask",
+  "timestamp": "2026-06-07T17:20:31",
+  "checkpoint": {
+    "round1_reds_y_t1_ab_seed2021": "projects/007-waveletmask/Exp/experiments/waveletmask/waveletmask_ab/models/net_g_best.pth"
+  },
+  "datasets_tested": [
+    "round1_reds_y_t1_ab_seed2021"
+  ],
+  "test_configs": [
+    {
+      "name": "round1_reds_y_t1_ab_seed2021",
+      "option": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Exp/options/test/round1_reds_y_t1_ab_seed2021.yml",
+      "results_subdir": "round1_reds_y_t1_ab_seed2021",
+      "dataset": "REDS_synthetic",
+      "checkpoint": "projects/007-waveletmask/Exp/experiments/waveletmask/waveletmask_ab/models/net_g_best.pth",
+      "iter": 7,
+      "manual_seed": 2021,
+      "metric_protocol": {
+        "psnr_test_y_channel": true,
+        "ssim_test_y_channel": true,
+        "lpips_convert_to_grayscale": true,
+        "dists_convert_to_grayscale": true
+      }
+    }
+  ],
+  "exit_code": 0,
+  "metrics_path": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Exp/metrics.yaml",
+  "gate_path": null,
+  "source_logs": [
+    "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Exp/results/round1_reds_y_t1_ab_seed2021/test_round1_reds_y_t1_ab_seed2021_20260607_155022.log"
+  ],
+  "note": "Regenerated from completed Exp/results test logs; inference was not rerun."
+}

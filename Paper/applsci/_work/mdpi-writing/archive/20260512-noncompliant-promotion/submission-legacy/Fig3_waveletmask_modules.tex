@@ -1,0 +1,30 @@
+\begin{tikzpicture}[
+  font=\small,
+  node distance=0.7cm,
+  block/.style={draw, rounded corners=2pt, align=center, minimum height=0.9cm, minimum width=2.4cm, fill=gray!8},
+  local/.style={block, fill=blue!10, draw=blue!55!black},
+  flicker/.style={block, fill=green!10, draw=green!45!black},
+  fusion/.style={block, fill=orange!12, draw=orange!65!black},
+  arrow/.style={-{Latex[length=2mm]}, thick}
+]
+\node[block] (frames) {Three adjacent\\degraded frames};
+\node[block, right=1.0cm of frames] (dwt) {Haar wavelet\\decomposition};
+
+\node[local, right=1.0cm of dwt, yshift=1.1cm] (hf) {Local high-frequency mask\\LH/HL/HH geometric mean};
+\node[flicker, right=1.0cm of dwt, yshift=-1.1cm] (lf) {Global flicker mask\\LL minimum difference};
+
+\node[fusion, right=1.2cm of hf, yshift=-1.1cm] (fuse) {Pixel-wise mask fusion\\biased confidence map};
+\node[block, right=1.0cm of fuse] (indicator) {Frequency-aware\\degradation indicator};
+\node[block, right=1.0cm of indicator] (rtn) {RTN gated\\temporal aggregation};
+
+\draw[arrow] (frames) -- (dwt);
+\draw[arrow] (dwt) -- (hf);
+\draw[arrow] (dwt) -- (lf);
+\draw[arrow] (hf) -- (fuse);
+\draw[arrow] (lf) -- (fuse);
+\draw[arrow] (fuse) -- (indicator);
+\draw[arrow] (indicator) -- (rtn);
+
+\node[align=center, font=\footnotesize, below=0.35cm of dwt] {Fixed transform; no learnable parameters};
+\node[align=center, font=\footnotesize, below=0.35cm of fuse] {Learns spatial confidence, not a final restoration head};
+\end{tikzpicture}

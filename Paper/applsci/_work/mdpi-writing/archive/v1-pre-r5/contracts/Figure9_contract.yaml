@@ -1,0 +1,72 @@
+schema_version: 2
+figure_id: Figure9
+latex_label: fig:error_map_analysis
+title: Pixel-wise error-map analysis
+role: discussion
+status: blocked
+slot_id: DIFFERENCE_OR_ERROR_MAP
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A3]
+selected_option:
+  option_id: A
+  slot_id: DIFFERENCE_OR_ERROR_MAP
+  archetype: heatmap_pair
+  source_protocol: .claude/skills/ofr-paper-mdpi-writing/references/figure-options-protocol.md
+archetype: heatmap_pair
+core_conclusion: Error maps must show whether WaveletMask reduces reconstruction error on selected synthetic frames beyond isolated local artifacts.
+evidence_data_path:
+  - projects/007-waveletmask/Paper/applsci/figures/Figure9.pdf
+  - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9/source/fig9/Fig9_selection_record.json
+  - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9/source/fig9/Fig9b_error_map.pdf
+  - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9/source/fig9/Fig9b_error_map.png
+evidence_gate:
+  required: true
+  status: blocked
+  missing:
+    - final Figure 9 export confirmation after directory restructure
+reviewer_risk:
+  - The selected frames must remain traceable to the ranking record to avoid cherry-pick risk.
+forbidden_scene: Do not use this figure for RealWorld claims because it depends on synthetic GT.
+production_owner: ofr-paper-visual-studio
+production_route: Figure 9 tab, error-map export
+target_path: projects/007-waveletmask/Paper/applsci/figures/Figure9.pdf
+current_asset_path: projects/007-waveletmask/Paper/applsci/figures/Figure9.pdf
+current_asset_status: placeholder_from_existing_fig9_export_promotion
+ascii_preview: |
+  |Baseline-GT| |WaveletMask-GT| |Improvement|
+  red = lower error after WaveletMask
+dependencies:
+  code: []
+  experiments:
+    - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9/source/fig9/Fig9_selection_record.json
+  assets:
+    - projects/007-waveletmask/Paper/applsci/figures/Figure9.pdf
+    - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9/draft/Figure9.v01.error_map.pdf
+    - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9/source/fig9/Fig9b_error_map.pdf
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: []
+    claim_to_sync: ""
+  results:
+    required_refs: []
+    claim_to_sync: ""
+  discussion:
+    required_refs: ["\\ref{fig:error_map_analysis}"]
+    claim_to_sync: Error-map analysis explains where synthetic reconstruction gains occur.
+caption_contract:
+  tense: present
+  required_terms: [error map, baseline, WaveletMask, ground truth]
+  banned_terms: [RealWorld, no-reference, random]
+  draft_caption: Pixel-wise absolute-error comparison between the baseline and WaveletMask on gate-selected synthetic frames.
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by:
+  - final Figure 9 export confirmation missing
+notes: Figure9 is now fixed evidence for the difference/error-map slot. The current PDF is a placeholder until the Figure 9 route confirms the final export after restructure.

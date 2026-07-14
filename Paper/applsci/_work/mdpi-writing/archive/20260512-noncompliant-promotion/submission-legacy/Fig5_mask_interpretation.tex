@@ -1,0 +1,24 @@
+\begin{tikzpicture}[
+  font=\small,
+  block/.style={draw, rounded corners=2pt, align=center, minimum height=0.85cm, minimum width=2.5cm, fill=gray!8},
+  mask/.style={draw, rounded corners=2pt, align=center, minimum height=0.85cm, minimum width=2.5cm, fill=purple!10, draw=purple!55!black},
+  arrow/.style={-{Latex[length=2mm]}, thick}
+]
+\node[block] (input) {Input frame\\with mixed defects};
+\node[mask, right=0.8cm of input] (scratch) {High-frequency response\\scratches and dust};
+\node[mask, right=0.8cm of scratch] (flicker) {Low-frequency response\\global flicker};
+\node[block, right=0.8cm of flicker] (spatial) {Spatial-domain\\RTN indicator};
+\node[block, below=0.8cm of flicker] (fusion) {Confidence-weighted mask fusion};
+\node[block, right=0.8cm of fusion] (out) {Guided restoration\\with reduced false alarms};
+
+\draw[arrow] (input) -- (scratch);
+\draw[arrow] (scratch) -- (flicker);
+\draw[arrow] (flicker) -- (spatial);
+\draw[arrow] (scratch) -- (fusion);
+\draw[arrow] (flicker) -- (fusion);
+\draw[arrow] (spatial) -- (fusion);
+\draw[arrow] (fusion) -- (out);
+
+\node[font=\footnotesize, align=center, below=0.25cm of input] {The two wavelet responses separate defect types before fusion.};
+\node[font=\footnotesize, align=center, below=0.25cm of out] {The output remains a degradation indicator, not a hallucinated image prior.};
+\end{tikzpicture}

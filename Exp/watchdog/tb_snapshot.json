@@ -1,0 +1,3456 @@
+{
+  "project": "007-waveletmask",
+  "generated_at": "2026-06-20T17:11:06",
+  "source": "tensorboard_event_files",
+  "available": true,
+  "project_exp": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp",
+  "roots": [
+    "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger",
+    "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/experiments",
+    "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/autoresearch/trials",
+    "/mnt/data/Antigravity_OFR/tb_logger/007-waveletmask",
+    "/mnt/data/Antigravity_OFR/tb_logger"
+  ],
+  "event_dir_count": 8,
+  "active_event_dir_count": 8,
+  "archived_event_dir_count": 0,
+  "tb_url": "http://localhost:6007",
+  "variants": {
+    "waveletmask_ab_normalization_aware": {
+      "log_dir": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_normalization_aware",
+      "event_files": [
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_normalization_aware/events.out.tfevents.1780907721.inspur-NF5468M6.3977518.0",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_normalization_aware/events.out.tfevents.1780908179.inspur-NF5468M6.3977518.1",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_normalization_aware/events.out.tfevents.1780914571.inspur-NF5468M6.4038536.0",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_normalization_aware/events.out.tfevents.1780915005.inspur-NF5468M6.4038536.1",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_normalization_aware/events.out.tfevents.1780915102.inspur-NF5468M6.4045050.0",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_normalization_aware/events.out.tfevents.1780915559.inspur-NF5468M6.4045050.1"
+      ],
+      "scalar_tags": [
+        "losses/l_d",
+        "losses/l_d_fake",
+        "losses/l_d_real",
+        "losses/l_g_gan",
+        "losses/l_g_percep",
+        "losses/l_g_pix",
+        "metrics/psnr",
+        "metrics/ssim",
+        "out_d_fake",
+        "out_d_real"
+      ],
+      "image_tags": [
+        "training/GT_LQ_Restored"
+      ],
+      "scalars": {
+        "losses/l_d": {
+          "latest": {
+            "step": 200000,
+            "value": 0.38594305515289307,
+            "wall_time": 1780998364.4112988
+          },
+          "best": {
+            "step": 120700,
+            "value": 0.037629157304763794,
+            "wall_time": 1780963649.192819
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.4827399253845215,
+              "wall_time": 1780998187.6707876
+            },
+            {
+              "step": 199700,
+              "value": 0.13991771638393402,
+              "wall_time": 1780998231.9984055
+            },
+            {
+              "step": 199800,
+              "value": 0.8007698059082031,
+              "wall_time": 1780998275.2770967
+            },
+            {
+              "step": 199900,
+              "value": 0.9668335914611816,
+              "wall_time": 1780998318.8025594
+            },
+            {
+              "step": 200000,
+              "value": 0.38594305515289307,
+              "wall_time": 1780998364.4112988
+            }
+          ]
+        },
+        "losses/l_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": 0.3759053349494934,
+            "wall_time": 1780998364.4112656
+          },
+          "best": {
+            "step": 144400,
+            "value": 0.017466528341174126,
+            "wall_time": 1780973983.5470343
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.2662919759750366,
+              "wall_time": 1780998187.6707644
+            },
+            {
+              "step": 199700,
+              "value": 0.11062467843294144,
+              "wall_time": 1780998231.9983826
+            },
+            {
+              "step": 199800,
+              "value": 0.32510215044021606,
+              "wall_time": 1780998275.2770731
+            },
+            {
+              "step": 199900,
+              "value": 0.2496098428964615,
+              "wall_time": 1780998318.8025362
+            },
+            {
+              "step": 200000,
+              "value": 0.3759053349494934,
+              "wall_time": 1780998364.4112656
+            }
+          ]
+        },
+        "losses/l_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 0.39598074555397034,
+            "wall_time": 1780998364.4112055
+          },
+          "best": {
+            "step": 156600,
+            "value": 6.843720620963722e-05,
+            "wall_time": 1780979305.6147575
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.6991878747940063,
+              "wall_time": 1780998187.67071
+            },
+            {
+              "step": 199700,
+              "value": 0.169210746884346,
+              "wall_time": 1780998231.9983068
+            },
+            {
+              "step": 199800,
+              "value": 1.276437520980835,
+              "wall_time": 1780998275.2770042
+            },
+            {
+              "step": 199900,
+              "value": 1.684057354927063,
+              "wall_time": 1780998318.802473
+            },
+            {
+              "step": 200000,
+              "value": 0.39598074555397034,
+              "wall_time": 1780998364.4112055
+            }
+          ]
+        },
+        "losses/l_g_gan": {
+          "latest": {
+            "step": 200000,
+            "value": 0.011845482513308525,
+            "wall_time": 1780998364.411353
+          },
+          "best": {
+            "step": 175000,
+            "value": 1.5842699212953448e-05,
+            "wall_time": 1780987326.9372528
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.015581818297505379,
+              "wall_time": 1780998187.6708179
+            },
+            {
+              "step": 199700,
+              "value": 0.02363329753279686,
+              "wall_time": 1780998231.9984355
+            },
+            {
+              "step": 199800,
+              "value": 0.012706884182989597,
+              "wall_time": 1780998275.2771258
+            },
+            {
+              "step": 199900,
+              "value": 0.016217295080423355,
+              "wall_time": 1780998318.80259
+            },
+            {
+              "step": 200000,
+              "value": 0.011845482513308525,
+              "wall_time": 1780998364.411353
+            }
+          ]
+        },
+        "losses/l_g_percep": {
+          "latest": {
+            "step": 200000,
+            "value": 0.237504780292511,
+            "wall_time": 1780998364.411329
+          },
+          "best": {
+            "step": 114500,
+            "value": 0.092359259724617,
+            "wall_time": 1780960944.2674623
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.6987032890319824,
+              "wall_time": 1780998187.670808
+            },
+            {
+              "step": 199700,
+              "value": 0.7931275367736816,
+              "wall_time": 1780998231.9984252
+            },
+            {
+              "step": 199800,
+              "value": 0.34679746627807617,
+              "wall_time": 1780998275.2771163
+            },
+            {
+              "step": 199900,
+              "value": 0.5009679794311523,
+              "wall_time": 1780998318.80258
+            },
+            {
+              "step": 200000,
+              "value": 0.237504780292511,
+              "wall_time": 1780998364.411329
+            }
+          ]
+        },
+        "losses/l_g_pix": {
+          "latest": {
+            "step": 200000,
+            "value": 0.26095885038375854,
+            "wall_time": 1780998364.4113133
+          },
+          "best": {
+            "step": 159300,
+            "value": 0.02739824913442135,
+            "wall_time": 1780980479.3082688
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.09634823352098465,
+              "wall_time": 1780998187.6707978
+            },
+            {
+              "step": 199700,
+              "value": 0.16038009524345398,
+              "wall_time": 1780998231.9984155
+            },
+            {
+              "step": 199800,
+              "value": 0.06319515407085419,
+              "wall_time": 1780998275.2771068
+            },
+            {
+              "step": 199900,
+              "value": 0.05236496403813362,
+              "wall_time": 1780998318.8025699
+            },
+            {
+              "step": 200000,
+              "value": 0.26095885038375854,
+              "wall_time": 1780998364.4113133
+            }
+          ]
+        },
+        "metrics/psnr": {
+          "latest": {
+            "step": 10000,
+            "value": 22.047122955322266,
+            "wall_time": 1780913698.7644763
+          },
+          "best": {
+            "step": 10000,
+            "value": 22.047122955322266,
+            "wall_time": 1780913698.7644763
+          },
+          "recent": [
+            {
+              "step": 5000,
+              "value": 21.921531677246094,
+              "wall_time": 1780910692.2910433
+            },
+            {
+              "step": 10000,
+              "value": 22.047122955322266,
+              "wall_time": 1780913698.7644763
+            }
+          ]
+        },
+        "metrics/ssim": {
+          "latest": {
+            "step": 10000,
+            "value": 0.8644251227378845,
+            "wall_time": 1780913698.7646384
+          },
+          "best": {
+            "step": 10000,
+            "value": 0.8644251227378845,
+            "wall_time": 1780913698.7646384
+          },
+          "recent": [
+            {
+              "step": 5000,
+              "value": 0.859363853931427,
+              "wall_time": 1780910692.2911975
+            },
+            {
+              "step": 10000,
+              "value": 0.8644251227378845,
+              "wall_time": 1780913698.7646384
+            }
+          ]
+        },
+        "out_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": -0.809529185295105,
+            "wall_time": 1780998364.4112828
+          },
+          "best": {
+            "step": 35900,
+            "value": 7.923279285430908,
+            "wall_time": 1780926423.0698087
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": -1.338458776473999,
+              "wall_time": 1780998187.6707768
+            },
+            {
+              "step": 199700,
+              "value": -2.254513740539551,
+              "wall_time": 1780998231.998395
+            },
+            {
+              "step": 199800,
+              "value": -0.9651511311531067,
+              "wall_time": 1780998275.277086
+            },
+            {
+              "step": 199900,
+              "value": -1.3398468494415283,
+              "wall_time": 1780998318.8025484
+            },
+            {
+              "step": 200000,
+              "value": -0.809529185295105,
+              "wall_time": 1780998364.4112828
+            }
+          ]
+        },
+        "out_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 1.5302374362945557,
+            "wall_time": 1780998364.411245
+          },
+          "best": {
+            "step": 176900,
+            "value": 19.64533805847168,
+            "wall_time": 1780988152.899732
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.054973818361759186,
+              "wall_time": 1780998187.6707494
+            },
+            {
+              "step": 199700,
+              "value": 1.8825994729995728,
+              "wall_time": 1780998231.9983664
+            },
+            {
+              "step": 199800,
+              "value": -0.940896213054657,
+              "wall_time": 1780998275.277057
+            },
+            {
+              "step": 199900,
+              "value": -1.4537798166275024,
+              "wall_time": 1780998318.8025205
+            },
+            {
+              "step": 200000,
+              "value": 1.5302374362945557,
+              "wall_time": 1780998364.411245
+            }
+          ]
+        }
+      },
+      "latest_step": 200000,
+      "latest": {
+        "psnr": 22.047122955322266,
+        "iter": 10000,
+        "ssim": 0.8644251227378845
+      },
+      "best": {
+        "psnr": 22.047122955322266,
+        "iter": 10000,
+        "ssim": 0.8644251227378845
+      },
+      "recent_trend": [
+        {
+          "iter": 5000,
+          "psnr": 21.921531677246094,
+          "ssim": 0.859363853931427
+        },
+        {
+          "iter": 10000,
+          "psnr": 22.047122955322266,
+          "ssim": 0.8644251227378845
+        }
+      ],
+      "latest_losses": {
+        "l_d": 0.38594305515289307,
+        "l_d_fake": 0.3759053349494934,
+        "l_d_real": 0.39598074555397034,
+        "l_g_gan": 0.011845482513308525,
+        "l_g_percep": 0.237504780292511,
+        "l_g_pix": 0.26095885038375854
+      },
+      "images": {
+        "training/GT_LQ_Restored": {
+          "latest": {
+            "step": 200000,
+            "wall_time": 1780998364.3649344
+          }
+        }
+      }
+    },
+    "waveletmask_ab_scalar_gate": {
+      "log_dir": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_scalar_gate",
+      "event_files": [
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_scalar_gate/events.out.tfevents.1780907721.inspur-NF5468M6.3977512.0",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_scalar_gate/events.out.tfevents.1780908160.inspur-NF5468M6.3977512.1",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_scalar_gate/events.out.tfevents.1780914569.inspur-NF5468M6.4038406.0",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_scalar_gate/events.out.tfevents.1780915030.inspur-NF5468M6.4038406.1",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_scalar_gate/events.out.tfevents.1780915100.inspur-NF5468M6.4044902.0",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_scalar_gate/events.out.tfevents.1780915552.inspur-NF5468M6.4044902.1"
+      ],
+      "scalar_tags": [
+        "losses/l_d",
+        "losses/l_d_fake",
+        "losses/l_d_real",
+        "losses/l_g_gan",
+        "losses/l_g_percep",
+        "losses/l_g_pix",
+        "metrics/psnr",
+        "metrics/ssim",
+        "out_d_fake",
+        "out_d_real"
+      ],
+      "image_tags": [
+        "training/GT_LQ_Restored"
+      ],
+      "scalars": {
+        "losses/l_d": {
+          "latest": {
+            "step": 200000,
+            "value": 0.4087076783180237,
+            "wall_time": 1780998471.1198754
+          },
+          "best": {
+            "step": 20100,
+            "value": 0.028395771980285645,
+            "wall_time": 1780919551.0673184
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.5252233147621155,
+              "wall_time": 1780998295.6021647
+            },
+            {
+              "step": 199700,
+              "value": 0.22763043642044067,
+              "wall_time": 1780998339.039442
+            },
+            {
+              "step": 199800,
+              "value": 0.639948844909668,
+              "wall_time": 1780998382.5603325
+            },
+            {
+              "step": 199900,
+              "value": 0.9248230457305908,
+              "wall_time": 1780998425.9926493
+            },
+            {
+              "step": 200000,
+              "value": 0.4087076783180237,
+              "wall_time": 1780998471.1198754
+            }
+          ]
+        },
+        "losses/l_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": 0.41669315099716187,
+            "wall_time": 1780998471.1198518
+          },
+          "best": {
+            "step": 174100,
+            "value": 0.024443818256258965,
+            "wall_time": 1780987122.358345
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.23758211731910706,
+              "wall_time": 1780998295.6021414
+            },
+            {
+              "step": 199700,
+              "value": 0.12066574394702911,
+              "wall_time": 1780998339.0394185
+            },
+            {
+              "step": 199800,
+              "value": 0.4048227369785309,
+              "wall_time": 1780998382.560309
+            },
+            {
+              "step": 199900,
+              "value": 0.3492470979690552,
+              "wall_time": 1780998425.9926262
+            },
+            {
+              "step": 200000,
+              "value": 0.41669315099716187,
+              "wall_time": 1780998471.1198518
+            }
+          ]
+        },
+        "losses/l_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 0.4007222354412079,
+            "wall_time": 1780998471.1198015
+          },
+          "best": {
+            "step": 156600,
+            "value": 0.00010724656749516726,
+            "wall_time": 1780979456.4582653
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.8128644824028015,
+              "wall_time": 1780998295.6020844
+            },
+            {
+              "step": 199700,
+              "value": 0.3345951437950134,
+              "wall_time": 1780998339.0393503
+            },
+            {
+              "step": 199800,
+              "value": 0.8750749826431274,
+              "wall_time": 1780998382.5602484
+            },
+            {
+              "step": 199900,
+              "value": 1.5003989934921265,
+              "wall_time": 1780998425.9925635
+            },
+            {
+              "step": 200000,
+              "value": 0.4007222354412079,
+              "wall_time": 1780998471.1198015
+            }
+          ]
+        },
+        "losses/l_g_gan": {
+          "latest": {
+            "step": 200000,
+            "value": 0.011129179038107395,
+            "wall_time": 1780998471.1199067
+          },
+          "best": {
+            "step": 175000,
+            "value": 2.8305068553891033e-05,
+            "wall_time": 1780987515.149035
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.016429899260401726,
+              "wall_time": 1780998295.6021967
+            },
+            {
+              "step": 199700,
+              "value": 0.02228999324142933,
+              "wall_time": 1780998339.0394745
+            },
+            {
+              "step": 199800,
+              "value": 0.011110993102192879,
+              "wall_time": 1780998382.5603726
+            },
+            {
+              "step": 199900,
+              "value": 0.013418181799352169,
+              "wall_time": 1780998425.992679
+            },
+            {
+              "step": 200000,
+              "value": 0.011129179038107395,
+              "wall_time": 1780998471.1199067
+            }
+          ]
+        },
+        "losses/l_g_percep": {
+          "latest": {
+            "step": 200000,
+            "value": 0.24093182384967804,
+            "wall_time": 1780998471.1198964
+          },
+          "best": {
+            "step": 114500,
+            "value": 0.09324545413255692,
+            "wall_time": 1780961033.7988017
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.7004534006118774,
+              "wall_time": 1780998295.6021864
+            },
+            {
+              "step": 199700,
+              "value": 0.7907607555389404,
+              "wall_time": 1780998339.039464
+            },
+            {
+              "step": 199800,
+              "value": 0.3439023792743683,
+              "wall_time": 1780998382.560362
+            },
+            {
+              "step": 199900,
+              "value": 0.500192403793335,
+              "wall_time": 1780998425.9926696
+            },
+            {
+              "step": 200000,
+              "value": 0.24093182384967804,
+              "wall_time": 1780998471.1198964
+            }
+          ]
+        },
+        "losses/l_g_pix": {
+          "latest": {
+            "step": 200000,
+            "value": 0.26928672194480896,
+            "wall_time": 1780998471.119886
+          },
+          "best": {
+            "step": 186300,
+            "value": 0.02703644521534443,
+            "wall_time": 1780992468.8468757
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.09709563106298447,
+              "wall_time": 1780998295.6021755
+            },
+            {
+              "step": 199700,
+              "value": 0.15966853499412537,
+              "wall_time": 1780998339.039453
+            },
+            {
+              "step": 199800,
+              "value": 0.06386245042085648,
+              "wall_time": 1780998382.5603502
+            },
+            {
+              "step": 199900,
+              "value": 0.05177249759435654,
+              "wall_time": 1780998425.9926596
+            },
+            {
+              "step": 200000,
+              "value": 0.26928672194480896,
+              "wall_time": 1780998471.119886
+            }
+          ]
+        },
+        "metrics/psnr": {
+          "latest": {
+            "step": 10000,
+            "value": 21.990724563598633,
+            "wall_time": 1780913555.9824588
+          },
+          "best": {
+            "step": 5000,
+            "value": 22.01921844482422,
+            "wall_time": 1780910629.3261013
+          },
+          "recent": [
+            {
+              "step": 5000,
+              "value": 22.01921844482422,
+              "wall_time": 1780910629.3261013
+            },
+            {
+              "step": 10000,
+              "value": 21.990724563598633,
+              "wall_time": 1780913555.9824588
+            }
+          ]
+        },
+        "metrics/ssim": {
+          "latest": {
+            "step": 10000,
+            "value": 0.8629639148712158,
+            "wall_time": 1780913555.9825547
+          },
+          "best": {
+            "step": 10000,
+            "value": 0.8629639148712158,
+            "wall_time": 1780913555.9825547
+          },
+          "recent": [
+            {
+              "step": 5000,
+              "value": 0.8622491359710693,
+              "wall_time": 1780910629.3262324
+            },
+            {
+              "step": 10000,
+              "value": 0.8629639148712158,
+              "wall_time": 1780913555.9825547
+            }
+          ]
+        },
+        "out_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": -0.702745795249939,
+            "wall_time": 1780998471.1198642
+          },
+          "best": {
+            "step": 175000,
+            "value": 6.982546806335449,
+            "wall_time": 1780987515.1489906
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": -1.4371644258499146,
+              "wall_time": 1780998295.6021535
+            },
+            {
+              "step": 199700,
+              "value": -2.1511313915252686,
+              "wall_time": 1780998339.0394313
+            },
+            {
+              "step": 199800,
+              "value": -0.7209044694900513,
+              "wall_time": 1780998382.5603213
+            },
+            {
+              "step": 199900,
+              "value": -1.0433876514434814,
+              "wall_time": 1780998425.9926383
+            },
+            {
+              "step": 200000,
+              "value": -0.702745795249939,
+              "wall_time": 1780998471.1198642
+            }
+          ]
+        },
+        "out_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 1.345906138420105,
+            "wall_time": 1780998471.1198356
+          },
+          "best": {
+            "step": 176900,
+            "value": 17.238231658935547,
+            "wall_time": 1780988348.194728
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": -0.11557639390230179,
+              "wall_time": 1780998295.6021264
+            },
+            {
+              "step": 199700,
+              "value": 1.1819195747375488,
+              "wall_time": 1780998339.0394027
+            },
+            {
+              "step": 199800,
+              "value": -0.3132566213607788,
+              "wall_time": 1780998382.5602937
+            },
+            {
+              "step": 199900,
+              "value": -1.1632804870605469,
+              "wall_time": 1780998425.99261
+            },
+            {
+              "step": 200000,
+              "value": 1.345906138420105,
+              "wall_time": 1780998471.1198356
+            }
+          ]
+        }
+      },
+      "latest_step": 200000,
+      "latest": {
+        "psnr": 21.990724563598633,
+        "iter": 10000,
+        "ssim": 0.8629639148712158
+      },
+      "best": {
+        "psnr": 22.01921844482422,
+        "iter": 5000,
+        "ssim": 0.8629639148712158
+      },
+      "recent_trend": [
+        {
+          "iter": 5000,
+          "psnr": 22.01921844482422,
+          "ssim": 0.8622491359710693
+        },
+        {
+          "iter": 10000,
+          "psnr": 21.990724563598633,
+          "ssim": 0.8629639148712158
+        }
+      ],
+      "latest_losses": {
+        "l_d": 0.4087076783180237,
+        "l_d_fake": 0.41669315099716187,
+        "l_d_real": 0.4007222354412079,
+        "l_g_gan": 0.011129179038107395,
+        "l_g_percep": 0.24093182384967804,
+        "l_g_pix": 0.26928672194480896
+      },
+      "images": {
+        "training/GT_LQ_Restored": {
+          "latest": {
+            "step": 200000,
+            "wall_time": 1780998471.0764482
+          }
+        }
+      }
+    },
+    "waveletmask_ab_seed2022": {
+      "log_dir": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_seed2022",
+      "event_files": [
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_seed2022/events.out.tfevents.1780724001.inspur-NF5468M6.2145543.0",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_seed2022/events.out.tfevents.1780724463.inspur-NF5468M6.2145543.1"
+      ],
+      "scalar_tags": [
+        "losses/l_d",
+        "losses/l_d_fake",
+        "losses/l_d_real",
+        "losses/l_g_gan",
+        "losses/l_g_percep",
+        "losses/l_g_pix",
+        "metrics/psnr",
+        "metrics/ssim",
+        "out_d_fake",
+        "out_d_real"
+      ],
+      "image_tags": [
+        "training/GT_LQ_Restored"
+      ],
+      "scalars": {
+        "losses/l_d": {
+          "latest": {
+            "step": 200000,
+            "value": 0.13154256343841553,
+            "wall_time": 1780818410.0576339
+          },
+          "best": {
+            "step": 42200,
+            "value": 0.002794533036649227,
+            "wall_time": 1780744155.3948247
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.09565886855125427,
+              "wall_time": 1780818225.2426794
+            },
+            {
+              "step": 199700,
+              "value": 1.1760668754577637,
+              "wall_time": 1780818271.1474996
+            },
+            {
+              "step": 199800,
+              "value": 0.5701151490211487,
+              "wall_time": 1780818317.0779517
+            },
+            {
+              "step": 199900,
+              "value": 0.2638760507106781,
+              "wall_time": 1780818363.150055
+            },
+            {
+              "step": 200000,
+              "value": 0.13154256343841553,
+              "wall_time": 1780818410.0576339
+            }
+          ]
+        },
+        "losses/l_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": 0.17533288896083832,
+            "wall_time": 1780818410.0576088
+          },
+          "best": {
+            "step": 81900,
+            "value": 0.0011208156356588006,
+            "wall_time": 1780763020.5839074
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.030679943040013313,
+              "wall_time": 1780818225.2426553
+            },
+            {
+              "step": 199700,
+              "value": 1.3656880855560303,
+              "wall_time": 1780818271.1474752
+            },
+            {
+              "step": 199800,
+              "value": 1.0625648498535156,
+              "wall_time": 1780818317.0779274
+            },
+            {
+              "step": 199900,
+              "value": 0.45162177085876465,
+              "wall_time": 1780818363.1500309
+            },
+            {
+              "step": 200000,
+              "value": 0.17533288896083832,
+              "wall_time": 1780818410.0576088
+            }
+          ]
+        },
+        "losses/l_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 0.08775223046541214,
+            "wall_time": 1780818410.0575554
+          },
+          "best": {
+            "step": 62600,
+            "value": 0.0002839486987795681,
+            "wall_time": 1780753890.7927265
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.16063779592514038,
+              "wall_time": 1780818225.2425897
+            },
+            {
+              "step": 199700,
+              "value": 0.9864457845687866,
+              "wall_time": 1780818271.147414
+            },
+            {
+              "step": 199800,
+              "value": 0.07766540348529816,
+              "wall_time": 1780818317.077865
+            },
+            {
+              "step": 199900,
+              "value": 0.07613032311201096,
+              "wall_time": 1780818363.149972
+            },
+            {
+              "step": 200000,
+              "value": 0.08775223046541214,
+              "wall_time": 1780818410.0575554
+            }
+          ]
+        },
+        "losses/l_g_gan": {
+          "latest": {
+            "step": 200000,
+            "value": 0.0209636427462101,
+            "wall_time": 1780818410.0576673
+          },
+          "best": {
+            "step": 47400,
+            "value": 0.00010208282037638128,
+            "wall_time": 1780746628.5071235
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.040676575154066086,
+              "wall_time": 1780818225.2427104
+            },
+            {
+              "step": 199700,
+              "value": 0.003975514322519302,
+              "wall_time": 1780818271.1475303
+            },
+            {
+              "step": 199800,
+              "value": 0.005262888036668301,
+              "wall_time": 1780818317.077985
+            },
+            {
+              "step": 199900,
+              "value": 0.012267538346350193,
+              "wall_time": 1780818363.150087
+            },
+            {
+              "step": 200000,
+              "value": 0.0209636427462101,
+              "wall_time": 1780818410.0576673
+            }
+          ]
+        },
+        "losses/l_g_percep": {
+          "latest": {
+            "step": 200000,
+            "value": 0.8985565304756165,
+            "wall_time": 1780818410.057657
+          },
+          "best": {
+            "step": 197600,
+            "value": 0.16945728659629822,
+            "wall_time": 1780817307.4807444
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.8319936990737915,
+              "wall_time": 1780818225.2427006
+            },
+            {
+              "step": 199700,
+              "value": 0.45496153831481934,
+              "wall_time": 1780818271.1475205
+            },
+            {
+              "step": 199800,
+              "value": 0.6550013422966003,
+              "wall_time": 1780818317.0779746
+            },
+            {
+              "step": 199900,
+              "value": 0.5463087558746338,
+              "wall_time": 1780818363.1500769
+            },
+            {
+              "step": 200000,
+              "value": 0.8985565304756165,
+              "wall_time": 1780818410.057657
+            }
+          ]
+        },
+        "losses/l_g_pix": {
+          "latest": {
+            "step": 200000,
+            "value": 0.19690178334712982,
+            "wall_time": 1780818410.0576453
+          },
+          "best": {
+            "step": 144000,
+            "value": 0.027641557157039642,
+            "wall_time": 1780792280.7900465
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.10879454016685486,
+              "wall_time": 1780818225.2426898
+            },
+            {
+              "step": 199700,
+              "value": 0.06690356135368347,
+              "wall_time": 1780818271.1475098
+            },
+            {
+              "step": 199800,
+              "value": 0.1029948741197586,
+              "wall_time": 1780818317.0779626
+            },
+            {
+              "step": 199900,
+              "value": 0.08067652583122253,
+              "wall_time": 1780818363.150066
+            },
+            {
+              "step": 200000,
+              "value": 0.19690178334712982,
+              "wall_time": 1780818410.0576453
+            }
+          ]
+        },
+        "metrics/psnr": {
+          "latest": {
+            "step": 200002,
+            "value": 20.37394905090332,
+            "wall_time": 1780818582.4950137
+          },
+          "best": {
+            "step": 150000,
+            "value": 20.632417678833008,
+            "wall_time": 1780795140.516836
+          },
+          "recent": [
+            {
+              "step": 185000,
+              "value": 20.095998764038086,
+              "wall_time": 1780811383.5427287
+            },
+            {
+              "step": 190000,
+              "value": 20.081642150878906,
+              "wall_time": 1780813742.0734227
+            },
+            {
+              "step": 195000,
+              "value": 20.311311721801758,
+              "wall_time": 1780816123.1467788
+            },
+            {
+              "step": 200000,
+              "value": 20.37394905090332,
+              "wall_time": 1780818496.529507
+            },
+            {
+              "step": 200002,
+              "value": 20.37394905090332,
+              "wall_time": 1780818582.4950137
+            }
+          ]
+        },
+        "metrics/ssim": {
+          "latest": {
+            "step": 200002,
+            "value": 0.863949179649353,
+            "wall_time": 1780818582.4951117
+          },
+          "best": {
+            "step": 150000,
+            "value": 0.8753317594528198,
+            "wall_time": 1780795140.5168986
+          },
+          "recent": [
+            {
+              "step": 185000,
+              "value": 0.8492001295089722,
+              "wall_time": 1780811383.542779
+            },
+            {
+              "step": 190000,
+              "value": 0.8535845279693604,
+              "wall_time": 1780813742.0734744
+            },
+            {
+              "step": 195000,
+              "value": 0.863480806350708,
+              "wall_time": 1780816123.1468294
+            },
+            {
+              "step": 200000,
+              "value": 0.863949179649353,
+              "wall_time": 1780818496.529571
+            },
+            {
+              "step": 200002,
+              "value": 0.863949179649353,
+              "wall_time": 1780818582.4951117
+            }
+          ]
+        },
+        "out_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": -1.930187463760376,
+            "wall_time": 1780818410.057622
+          },
+          "best": {
+            "step": 47400,
+            "value": 6.176213264465332,
+            "wall_time": 1780746628.5070796
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": -3.9015536308288574,
+              "wall_time": 1780818225.2426684
+            },
+            {
+              "step": 199700,
+              "value": 0.9754378795623779,
+              "wall_time": 1780818271.147488
+            },
+            {
+              "step": 199800,
+              "value": 0.5357184410095215,
+              "wall_time": 1780818317.0779405
+            },
+            {
+              "step": 199900,
+              "value": -0.6202468872070312,
+              "wall_time": 1780818363.1500437
+            },
+            {
+              "step": 200000,
+              "value": -1.930187463760376,
+              "wall_time": 1780818410.057622
+            }
+          ]
+        },
+        "out_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 2.530430316925049,
+            "wall_time": 1780818410.057594
+          },
+          "best": {
+            "step": 56200,
+            "value": 16.906810760498047,
+            "wall_time": 1780750860.94994
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 2.0745906829833984,
+              "wall_time": 1780818225.2426393
+            },
+            {
+              "step": 199700,
+              "value": -0.4583979547023773,
+              "wall_time": 1780818271.1474593
+            },
+            {
+              "step": 199800,
+              "value": 4.039666175842285,
+              "wall_time": 1780818317.0779116
+            },
+            {
+              "step": 199900,
+              "value": 2.7948849201202393,
+              "wall_time": 1780818363.1500156
+            },
+            {
+              "step": 200000,
+              "value": 2.530430316925049,
+              "wall_time": 1780818410.057594
+            }
+          ]
+        }
+      },
+      "latest_step": 200002,
+      "latest": {
+        "psnr": 20.37394905090332,
+        "iter": 200002,
+        "ssim": 0.863949179649353
+      },
+      "best": {
+        "psnr": 20.632417678833008,
+        "iter": 150000,
+        "ssim": 0.8753317594528198
+      },
+      "recent_trend": [
+        {
+          "iter": 185000,
+          "psnr": 20.095998764038086,
+          "ssim": 0.8492001295089722
+        },
+        {
+          "iter": 190000,
+          "psnr": 20.081642150878906,
+          "ssim": 0.8535845279693604
+        },
+        {
+          "iter": 195000,
+          "psnr": 20.311311721801758,
+          "ssim": 0.863480806350708
+        },
+        {
+          "iter": 200000,
+          "psnr": 20.37394905090332,
+          "ssim": 0.863949179649353
+        },
+        {
+          "iter": 200002,
+          "psnr": 20.37394905090332,
+          "ssim": 0.863949179649353
+        }
+      ],
+      "latest_losses": {
+        "l_d": 0.13154256343841553,
+        "l_d_fake": 0.17533288896083832,
+        "l_d_real": 0.08775223046541214,
+        "l_g_gan": 0.0209636427462101,
+        "l_g_percep": 0.8985565304756165,
+        "l_g_pix": 0.19690178334712982
+      },
+      "images": {
+        "training/GT_LQ_Restored": {
+          "latest": {
+            "step": 200000,
+            "wall_time": 1780818410.0061626
+          }
+        }
+      }
+    },
+    "waveletmask_ab_seed2023": {
+      "log_dir": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_seed2023",
+      "event_files": [
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_seed2023/events.out.tfevents.1780724001.inspur-NF5468M6.2145485.0",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_ab_seed2023/events.out.tfevents.1780724457.inspur-NF5468M6.2145485.1"
+      ],
+      "scalar_tags": [
+        "losses/l_d",
+        "losses/l_d_fake",
+        "losses/l_d_real",
+        "losses/l_g_gan",
+        "losses/l_g_percep",
+        "losses/l_g_pix",
+        "metrics/psnr",
+        "metrics/ssim",
+        "out_d_fake",
+        "out_d_real"
+      ],
+      "image_tags": [
+        "training/GT_LQ_Restored"
+      ],
+      "scalars": {
+        "losses/l_d": {
+          "latest": {
+            "step": 200000,
+            "value": 0.18292661011219025,
+            "wall_time": 1780816632.6806424
+          },
+          "best": {
+            "step": 79000,
+            "value": 0.0038868586998432875,
+            "wall_time": 1780761193.969336
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.08309643715620041,
+              "wall_time": 1780816447.7209182
+            },
+            {
+              "step": 199700,
+              "value": 1.1492021083831787,
+              "wall_time": 1780816493.3962271
+            },
+            {
+              "step": 199800,
+              "value": 0.24519753456115723,
+              "wall_time": 1780816539.0948691
+            },
+            {
+              "step": 199900,
+              "value": 0.4023744761943817,
+              "wall_time": 1780816585.1563814
+            },
+            {
+              "step": 200000,
+              "value": 0.18292661011219025,
+              "wall_time": 1780816632.6806424
+            }
+          ]
+        },
+        "losses/l_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": 0.052484411746263504,
+            "wall_time": 1780816632.680616
+          },
+          "best": {
+            "step": 24500,
+            "value": 1.0046642273664474e-06,
+            "wall_time": 1780735309.6267202
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.05823559686541557,
+              "wall_time": 1780816447.7208936
+            },
+            {
+              "step": 199700,
+              "value": 1.4873297214508057,
+              "wall_time": 1780816493.3962033
+            },
+            {
+              "step": 199800,
+              "value": 0.19989211857318878,
+              "wall_time": 1780816539.0948462
+            },
+            {
+              "step": 199900,
+              "value": 0.5659047365188599,
+              "wall_time": 1780816585.1563575
+            },
+            {
+              "step": 200000,
+              "value": 0.052484411746263504,
+              "wall_time": 1780816632.680616
+            }
+          ]
+        },
+        "losses/l_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 0.3133687973022461,
+            "wall_time": 1780816632.6805522
+          },
+          "best": {
+            "step": 18200,
+            "value": 0.0013380360323935747,
+            "wall_time": 1780732396.870605
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.10795728117227554,
+              "wall_time": 1780816447.720833
+            },
+            {
+              "step": 199700,
+              "value": 0.8110745549201965,
+              "wall_time": 1780816493.3961442
+            },
+            {
+              "step": 199800,
+              "value": 0.2905029356479645,
+              "wall_time": 1780816539.0947828
+            },
+            {
+              "step": 199900,
+              "value": 0.23884420096874237,
+              "wall_time": 1780816585.1562872
+            },
+            {
+              "step": 200000,
+              "value": 0.3133687973022461,
+              "wall_time": 1780816632.6805522
+            }
+          ]
+        },
+        "losses/l_g_gan": {
+          "latest": {
+            "step": 200000,
+            "value": 0.034143414348363876,
+            "wall_time": 1780816632.6806767
+          },
+          "best": {
+            "step": 177200,
+            "value": 0.00017830944852903485,
+            "wall_time": 1780806017.9785328
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.0324198380112648,
+              "wall_time": 1780816447.7209494
+            },
+            {
+              "step": 199700,
+              "value": 0.0038836009334772825,
+              "wall_time": 1780816493.3962586
+            },
+            {
+              "step": 199800,
+              "value": 0.017900584265589714,
+              "wall_time": 1780816539.0949004
+            },
+            {
+              "step": 199900,
+              "value": 0.009023482911288738,
+              "wall_time": 1780816585.1564126
+            },
+            {
+              "step": 200000,
+              "value": 0.034143414348363876,
+              "wall_time": 1780816632.6806767
+            }
+          ]
+        },
+        "losses/l_g_percep": {
+          "latest": {
+            "step": 200000,
+            "value": 1.208716630935669,
+            "wall_time": 1780816632.680665
+          },
+          "best": {
+            "step": 51700,
+            "value": 0.1317385584115982,
+            "wall_time": 1780748446.1688907
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.7688277959823608,
+              "wall_time": 1780816447.7209396
+            },
+            {
+              "step": 199700,
+              "value": 0.36547785997390747,
+              "wall_time": 1780816493.396248
+            },
+            {
+              "step": 199800,
+              "value": 0.8607481122016907,
+              "wall_time": 1780816539.0948908
+            },
+            {
+              "step": 199900,
+              "value": 0.39296358823776245,
+              "wall_time": 1780816585.1564026
+            },
+            {
+              "step": 200000,
+              "value": 1.208716630935669,
+              "wall_time": 1780816632.680665
+            }
+          ]
+        },
+        "losses/l_g_pix": {
+          "latest": {
+            "step": 200000,
+            "value": 0.21094240248203278,
+            "wall_time": 1780816632.6806538
+          },
+          "best": {
+            "step": 137200,
+            "value": 0.02760588936507702,
+            "wall_time": 1780788090.6786916
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.1068834587931633,
+              "wall_time": 1780816447.7209294
+            },
+            {
+              "step": 199700,
+              "value": 0.03923480212688446,
+              "wall_time": 1780816493.3962376
+            },
+            {
+              "step": 199800,
+              "value": 0.2453654706478119,
+              "wall_time": 1780816539.0948803
+            },
+            {
+              "step": 199900,
+              "value": 0.05033719167113304,
+              "wall_time": 1780816585.1563914
+            },
+            {
+              "step": 200000,
+              "value": 0.21094240248203278,
+              "wall_time": 1780816632.6806538
+            }
+          ]
+        },
+        "metrics/psnr": {
+          "latest": {
+            "step": 200002,
+            "value": 20.40081787109375,
+            "wall_time": 1780816807.4340713
+          },
+          "best": {
+            "step": 50000,
+            "value": 20.542940139770508,
+            "wall_time": 1780747685.4434419
+          },
+          "recent": [
+            {
+              "step": 185000,
+              "value": 20.392105102539062,
+              "wall_time": 1780809571.618436
+            },
+            {
+              "step": 190000,
+              "value": 20.4316349029541,
+              "wall_time": 1780811942.0231428
+            },
+            {
+              "step": 195000,
+              "value": 20.172649383544922,
+              "wall_time": 1780814331.0761886
+            },
+            {
+              "step": 200000,
+              "value": 20.40081787109375,
+              "wall_time": 1780816719.334668
+            },
+            {
+              "step": 200002,
+              "value": 20.40081787109375,
+              "wall_time": 1780816807.4340713
+            }
+          ]
+        },
+        "metrics/ssim": {
+          "latest": {
+            "step": 200002,
+            "value": 0.8732234239578247,
+            "wall_time": 1780816807.434157
+          },
+          "best": {
+            "step": 130000,
+            "value": 0.881020724773407,
+            "wall_time": 1780784900.959151
+          },
+          "recent": [
+            {
+              "step": 185000,
+              "value": 0.8687083125114441,
+              "wall_time": 1780809571.6185017
+            },
+            {
+              "step": 190000,
+              "value": 0.8703055381774902,
+              "wall_time": 1780811942.0231936
+            },
+            {
+              "step": 195000,
+              "value": 0.8658000230789185,
+              "wall_time": 1780814331.0762744
+            },
+            {
+              "step": 200000,
+              "value": 0.8732234239578247,
+              "wall_time": 1780816719.3347194
+            },
+            {
+              "step": 200002,
+              "value": 0.8732234239578247,
+              "wall_time": 1780816807.434157
+            }
+          ]
+        },
+        "out_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": -3.4055628776550293,
+            "wall_time": 1780816632.6806302
+          },
+          "best": {
+            "step": 24300,
+            "value": 5.177412033081055,
+            "wall_time": 1780735220.8564556
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": -3.2928659915924072,
+              "wall_time": 1780816447.7209067
+            },
+            {
+              "step": 199700,
+              "value": 1.1065492630004883,
+              "wall_time": 1780816493.3962164
+            },
+            {
+              "step": 199800,
+              "value": -1.6195578575134277,
+              "wall_time": 1780816539.0948584
+            },
+            {
+              "step": 199900,
+              "value": -0.29224473237991333,
+              "wall_time": 1780816585.15637
+            },
+            {
+              "step": 200000,
+              "value": -3.4055628776550293,
+              "wall_time": 1780816632.6806302
+            }
+          ]
+        },
+        "out_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 1.1186434030532837,
+            "wall_time": 1780816632.6806006
+          },
+          "best": {
+            "step": 123700,
+            "value": 11.131369590759277,
+            "wall_time": 1780782013.6568875
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 2.3870949745178223,
+              "wall_time": 1780816447.7208786
+            },
+            {
+              "step": 199700,
+              "value": 0.0689958855509758,
+              "wall_time": 1780816493.3961873
+            },
+            {
+              "step": 199800,
+              "value": 2.538780927658081,
+              "wall_time": 1780816539.0948303
+            },
+            {
+              "step": 199900,
+              "value": 1.4637395143508911,
+              "wall_time": 1780816585.156333
+            },
+            {
+              "step": 200000,
+              "value": 1.1186434030532837,
+              "wall_time": 1780816632.6806006
+            }
+          ]
+        }
+      },
+      "latest_step": 200002,
+      "latest": {
+        "psnr": 20.40081787109375,
+        "iter": 200002,
+        "ssim": 0.8732234239578247
+      },
+      "best": {
+        "psnr": 20.542940139770508,
+        "iter": 50000,
+        "ssim": 0.881020724773407
+      },
+      "recent_trend": [
+        {
+          "iter": 185000,
+          "psnr": 20.392105102539062,
+          "ssim": 0.8687083125114441
+        },
+        {
+          "iter": 190000,
+          "psnr": 20.4316349029541,
+          "ssim": 0.8703055381774902
+        },
+        {
+          "iter": 195000,
+          "psnr": 20.172649383544922,
+          "ssim": 0.8658000230789185
+        },
+        {
+          "iter": 200000,
+          "psnr": 20.40081787109375,
+          "ssim": 0.8732234239578247
+        },
+        {
+          "iter": 200002,
+          "psnr": 20.40081787109375,
+          "ssim": 0.8732234239578247
+        }
+      ],
+      "latest_losses": {
+        "l_d": 0.18292661011219025,
+        "l_d_fake": 0.052484411746263504,
+        "l_d_real": 0.3133687973022461,
+        "l_g_gan": 0.034143414348363876,
+        "l_g_percep": 1.208716630935669,
+        "l_g_pix": 0.21094240248203278
+      },
+      "images": {
+        "training/GT_LQ_Restored": {
+          "latest": {
+            "step": 200000,
+            "wall_time": 1780816632.613794
+          }
+        }
+      }
+    },
+    "waveletmask_base_seed2022": {
+      "log_dir": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_base_seed2022",
+      "event_files": [
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_base_seed2022/events.out.tfevents.1780682919.inspur-NF5468M6.1584510.0",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_base_seed2022/events.out.tfevents.1780683358.inspur-NF5468M6.1584510.1"
+      ],
+      "scalar_tags": [
+        "losses/l_d",
+        "losses/l_d_fake",
+        "losses/l_d_real",
+        "losses/l_g_gan",
+        "losses/l_g_percep",
+        "losses/l_g_pix",
+        "metrics/psnr",
+        "metrics/ssim",
+        "out_d_fake",
+        "out_d_real"
+      ],
+      "image_tags": [
+        "training/GT_LQ_Restored"
+      ],
+      "scalars": {
+        "losses/l_d": {
+          "latest": {
+            "step": 200000,
+            "value": 0.13441085815429688,
+            "wall_time": 1780776426.864255
+          },
+          "best": {
+            "step": 10500,
+            "value": 0.007827380672097206,
+            "wall_time": 1780687711.9652803
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.043088410049676895,
+              "wall_time": 1780776243.2241325
+            },
+            {
+              "step": 199700,
+              "value": 0.8416142463684082,
+              "wall_time": 1780776288.3554738
+            },
+            {
+              "step": 199800,
+              "value": 0.3235669732093811,
+              "wall_time": 1780776333.4959936
+            },
+            {
+              "step": 199900,
+              "value": 0.24329882860183716,
+              "wall_time": 1780776378.652892
+            },
+            {
+              "step": 200000,
+              "value": 0.13441085815429688,
+              "wall_time": 1780776426.864255
+            }
+          ]
+        },
+        "losses/l_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": 0.17407938838005066,
+            "wall_time": 1780776426.86423
+          },
+          "best": {
+            "step": 40400,
+            "value": 0.0007680223206989467,
+            "wall_time": 1780701432.827895
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.017250699922442436,
+              "wall_time": 1780776243.2241085
+            },
+            {
+              "step": 199700,
+              "value": 0.8687125444412231,
+              "wall_time": 1780776288.3554509
+            },
+            {
+              "step": 199800,
+              "value": 0.5475241541862488,
+              "wall_time": 1780776333.4959705
+            },
+            {
+              "step": 199900,
+              "value": 0.3906847834587097,
+              "wall_time": 1780776378.6528687
+            },
+            {
+              "step": 200000,
+              "value": 0.17407938838005066,
+              "wall_time": 1780776426.86423
+            }
+          ]
+        },
+        "losses/l_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 0.09474233537912369,
+            "wall_time": 1780776426.864175
+          },
+          "best": {
+            "step": 62600,
+            "value": 0.0003189303679391742,
+            "wall_time": 1780711588.0300877
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.0689261183142662,
+              "wall_time": 1780776243.2240455
+            },
+            {
+              "step": 199700,
+              "value": 0.8145158886909485,
+              "wall_time": 1780776288.3553917
+            },
+            {
+              "step": 199800,
+              "value": 0.09960978478193283,
+              "wall_time": 1780776333.4958968
+            },
+            {
+              "step": 199900,
+              "value": 0.095912866294384,
+              "wall_time": 1780776378.652806
+            },
+            {
+              "step": 200000,
+              "value": 0.09474233537912369,
+              "wall_time": 1780776426.864175
+            }
+          ]
+        },
+        "losses/l_g_gan": {
+          "latest": {
+            "step": 200000,
+            "value": 0.020008394494652748,
+            "wall_time": 1780776426.8642871
+          },
+          "best": {
+            "step": 181400,
+            "value": 6.977735756663606e-05,
+            "wall_time": 1780767746.1835718
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.04831968992948532,
+              "wall_time": 1780776243.2241647
+            },
+            {
+              "step": 199700,
+              "value": 0.006252363324165344,
+              "wall_time": 1780776288.3555052
+            },
+            {
+              "step": 199800,
+              "value": 0.011119748465716839,
+              "wall_time": 1780776333.496026
+            },
+            {
+              "step": 199900,
+              "value": 0.013315248303115368,
+              "wall_time": 1780776378.6529243
+            },
+            {
+              "step": 200000,
+              "value": 0.020008394494652748,
+              "wall_time": 1780776426.8642871
+            }
+          ]
+        },
+        "losses/l_g_percep": {
+          "latest": {
+            "step": 200000,
+            "value": 0.9012556076049805,
+            "wall_time": 1780776426.864277
+          },
+          "best": {
+            "step": 197600,
+            "value": 0.157681405544281,
+            "wall_time": 1780775339.6403584
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.8121265172958374,
+              "wall_time": 1780776243.2241547
+            },
+            {
+              "step": 199700,
+              "value": 0.45074886083602905,
+              "wall_time": 1780776288.3554952
+            },
+            {
+              "step": 199800,
+              "value": 0.6561925411224365,
+              "wall_time": 1780776333.4960155
+            },
+            {
+              "step": 199900,
+              "value": 0.5477571487426758,
+              "wall_time": 1780776378.6529138
+            },
+            {
+              "step": 200000,
+              "value": 0.9012556076049805,
+              "wall_time": 1780776426.864277
+            }
+          ]
+        },
+        "losses/l_g_pix": {
+          "latest": {
+            "step": 200000,
+            "value": 0.19834865629673004,
+            "wall_time": 1780776426.8642662
+          },
+          "best": {
+            "step": 144000,
+            "value": 0.029440097510814667,
+            "wall_time": 1780750072.9613848
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.10777544975280762,
+              "wall_time": 1780776243.224144
+            },
+            {
+              "step": 199700,
+              "value": 0.06462503969669342,
+              "wall_time": 1780776288.3554842
+            },
+            {
+              "step": 199800,
+              "value": 0.10464321076869965,
+              "wall_time": 1780776333.4960046
+            },
+            {
+              "step": 199900,
+              "value": 0.0823640301823616,
+              "wall_time": 1780776378.6529026
+            },
+            {
+              "step": 200000,
+              "value": 0.19834865629673004,
+              "wall_time": 1780776426.8642662
+            }
+          ]
+        },
+        "metrics/psnr": {
+          "latest": {
+            "step": 200002,
+            "value": 19.623577117919922,
+            "wall_time": 1780776629.5840387
+          },
+          "best": {
+            "step": 170000,
+            "value": 20.240903854370117,
+            "wall_time": 1780762393.6764433
+          },
+          "recent": [
+            {
+              "step": 185000,
+              "value": 19.49935531616211,
+              "wall_time": 1780769476.9161165
+            },
+            {
+              "step": 190000,
+              "value": 19.886816024780273,
+              "wall_time": 1780771812.4190068
+            },
+            {
+              "step": 195000,
+              "value": 20.13955307006836,
+              "wall_time": 1780774167.1275628
+            },
+            {
+              "step": 200000,
+              "value": 19.623577117919922,
+              "wall_time": 1780776542.7534964
+            },
+            {
+              "step": 200002,
+              "value": 19.623577117919922,
+              "wall_time": 1780776629.5840387
+            }
+          ]
+        },
+        "metrics/ssim": {
+          "latest": {
+            "step": 200002,
+            "value": 0.8557220697402954,
+            "wall_time": 1780776629.5841475
+          },
+          "best": {
+            "step": 150000,
+            "value": 0.8699877262115479,
+            "wall_time": 1780752967.8187146
+          },
+          "recent": [
+            {
+              "step": 185000,
+              "value": 0.8369213938713074,
+              "wall_time": 1780769476.916178
+            },
+            {
+              "step": 190000,
+              "value": 0.8497524261474609,
+              "wall_time": 1780771812.419091
+            },
+            {
+              "step": 195000,
+              "value": 0.8629288077354431,
+              "wall_time": 1780774167.1276286
+            },
+            {
+              "step": 200000,
+              "value": 0.8557220697402954,
+              "wall_time": 1780776542.7535448
+            },
+            {
+              "step": 200002,
+              "value": 0.8557220697402954,
+              "wall_time": 1780776629.5841475
+            }
+          ]
+        },
+        "out_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": -1.8162404298782349,
+            "wall_time": 1780776426.8642437
+          },
+          "best": {
+            "step": 181400,
+            "value": 5.671061038970947,
+            "wall_time": 1780767746.1835265
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": -4.732961654663086,
+              "wall_time": 1780776243.2241216
+            },
+            {
+              "step": 199700,
+              "value": 0.2631773352622986,
+              "wall_time": 1780776288.355463
+            },
+            {
+              "step": 199800,
+              "value": -0.5899686813354492,
+              "wall_time": 1780776333.4959826
+            },
+            {
+              "step": 199900,
+              "value": -0.8003666400909424,
+              "wall_time": 1780776378.6528814
+            },
+            {
+              "step": 200000,
+              "value": -1.8162404298782349,
+              "wall_time": 1780776426.8642437
+            }
+          ]
+        },
+        "out_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 2.4530627727508545,
+            "wall_time": 1780776426.864215
+          },
+          "best": {
+            "step": 56200,
+            "value": 16.326576232910156,
+            "wall_time": 1780708675.192762
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 3.0408213138580322,
+              "wall_time": 1780776243.224093
+            },
+            {
+              "step": 199700,
+              "value": -0.14289169013500214,
+              "wall_time": 1780776288.3554356
+            },
+            {
+              "step": 199800,
+              "value": 3.786125659942627,
+              "wall_time": 1780776333.4959548
+            },
+            {
+              "step": 199900,
+              "value": 2.563901424407959,
+              "wall_time": 1780776378.6528535
+            },
+            {
+              "step": 200000,
+              "value": 2.4530627727508545,
+              "wall_time": 1780776426.864215
+            }
+          ]
+        }
+      },
+      "latest_step": 200002,
+      "latest": {
+        "psnr": 19.623577117919922,
+        "iter": 200002,
+        "ssim": 0.8557220697402954
+      },
+      "best": {
+        "psnr": 20.240903854370117,
+        "iter": 170000,
+        "ssim": 0.8699877262115479
+      },
+      "recent_trend": [
+        {
+          "iter": 185000,
+          "psnr": 19.49935531616211,
+          "ssim": 0.8369213938713074
+        },
+        {
+          "iter": 190000,
+          "psnr": 19.886816024780273,
+          "ssim": 0.8497524261474609
+        },
+        {
+          "iter": 195000,
+          "psnr": 20.13955307006836,
+          "ssim": 0.8629288077354431
+        },
+        {
+          "iter": 200000,
+          "psnr": 19.623577117919922,
+          "ssim": 0.8557220697402954
+        },
+        {
+          "iter": 200002,
+          "psnr": 19.623577117919922,
+          "ssim": 0.8557220697402954
+        }
+      ],
+      "latest_losses": {
+        "l_d": 0.13441085815429688,
+        "l_d_fake": 0.17407938838005066,
+        "l_d_real": 0.09474233537912369,
+        "l_g_gan": 0.020008394494652748,
+        "l_g_percep": 0.9012556076049805,
+        "l_g_pix": 0.19834865629673004
+      },
+      "images": {
+        "training/GT_LQ_Restored": {
+          "latest": {
+            "step": 200000,
+            "wall_time": 1780776426.8176277
+          }
+        }
+      }
+    },
+    "waveletmask_base_seed2023": {
+      "log_dir": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_base_seed2023",
+      "event_files": [
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_base_seed2023/events.out.tfevents.1780682920.inspur-NF5468M6.1584574.0",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_base_seed2023/events.out.tfevents.1780683366.inspur-NF5468M6.1584574.1"
+      ],
+      "scalar_tags": [
+        "losses/l_d",
+        "losses/l_d_fake",
+        "losses/l_d_real",
+        "losses/l_g_gan",
+        "losses/l_g_percep",
+        "losses/l_g_pix",
+        "metrics/psnr",
+        "metrics/ssim",
+        "out_d_fake",
+        "out_d_real"
+      ],
+      "image_tags": [
+        "training/GT_LQ_Restored"
+      ],
+      "scalars": {
+        "losses/l_d": {
+          "latest": {
+            "step": 200000,
+            "value": 0.23381884396076202,
+            "wall_time": 1780778555.7072246
+          },
+          "best": {
+            "step": 50800,
+            "value": 0.013859684579074383,
+            "wall_time": 1780706870.3891265
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.08180394768714905,
+              "wall_time": 1780778373.6565862
+            },
+            {
+              "step": 199700,
+              "value": 1.3358280658721924,
+              "wall_time": 1780778418.6218216
+            },
+            {
+              "step": 199800,
+              "value": 0.31862974166870117,
+              "wall_time": 1780778463.8439958
+            },
+            {
+              "step": 199900,
+              "value": 0.3816320300102234,
+              "wall_time": 1780778509.1698806
+            },
+            {
+              "step": 200000,
+              "value": 0.23381884396076202,
+              "wall_time": 1780778555.7072246
+            }
+          ]
+        },
+        "losses/l_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": 0.033599283546209335,
+            "wall_time": 1780778555.7071989
+          },
+          "best": {
+            "step": 24500,
+            "value": 1.006530237646075e-05,
+            "wall_time": 1780694253.3389285
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.08648581057786942,
+              "wall_time": 1780778373.656563
+            },
+            {
+              "step": 199700,
+              "value": 2.016885280609131,
+              "wall_time": 1780778418.6217995
+            },
+            {
+              "step": 199800,
+              "value": 0.30045193433761597,
+              "wall_time": 1780778463.8439727
+            },
+            {
+              "step": 199900,
+              "value": 0.5161229968070984,
+              "wall_time": 1780778509.169858
+            },
+            {
+              "step": 200000,
+              "value": 0.033599283546209335,
+              "wall_time": 1780778555.7071989
+            }
+          ]
+        },
+        "losses/l_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 0.4340384006500244,
+            "wall_time": 1780778555.707144
+          },
+          "best": {
+            "step": 123700,
+            "value": 0.0004656636156141758,
+            "wall_time": 1780742025.0102139
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.07712209224700928,
+              "wall_time": 1780778373.6565049
+            },
+            {
+              "step": 199700,
+              "value": 0.6547708511352539,
+              "wall_time": 1780778418.621743
+            },
+            {
+              "step": 199800,
+              "value": 0.3368075489997864,
+              "wall_time": 1780778463.8439152
+            },
+            {
+              "step": 199900,
+              "value": 0.2471410632133484,
+              "wall_time": 1780778509.1697986
+            },
+            {
+              "step": 200000,
+              "value": 0.4340384006500244,
+              "wall_time": 1780778555.707144
+            }
+          ]
+        },
+        "losses/l_g_gan": {
+          "latest": {
+            "step": 200000,
+            "value": 0.040956512093544006,
+            "wall_time": 1780778555.7072577
+          },
+          "best": {
+            "step": 177200,
+            "value": 7.823553460184485e-05,
+            "wall_time": 1780767763.483194
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.030472006648778915,
+              "wall_time": 1780778373.656617
+            },
+            {
+              "step": 199700,
+              "value": 0.002744165947660804,
+              "wall_time": 1780778418.6218529
+            },
+            {
+              "step": 199800,
+              "value": 0.01477763056755066,
+              "wall_time": 1780778463.8440292
+            },
+            {
+              "step": 199900,
+              "value": 0.01030435785651207,
+              "wall_time": 1780778509.169912
+            },
+            {
+              "step": 200000,
+              "value": 0.040956512093544006,
+              "wall_time": 1780778555.7072577
+            }
+          ]
+        },
+        "losses/l_g_percep": {
+          "latest": {
+            "step": 200000,
+            "value": 1.2020105123519897,
+            "wall_time": 1780778555.7072477
+          },
+          "best": {
+            "step": 51700,
+            "value": 0.12504275143146515,
+            "wall_time": 1780707273.6620827
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.7752121686935425,
+              "wall_time": 1780778373.656607
+            },
+            {
+              "step": 199700,
+              "value": 0.3626253008842468,
+              "wall_time": 1780778418.6218426
+            },
+            {
+              "step": 199800,
+              "value": 0.8661903738975525,
+              "wall_time": 1780778463.8440185
+            },
+            {
+              "step": 199900,
+              "value": 0.39713799953460693,
+              "wall_time": 1780778509.169902
+            },
+            {
+              "step": 200000,
+              "value": 1.2020105123519897,
+              "wall_time": 1780778555.7072477
+            }
+          ]
+        },
+        "losses/l_g_pix": {
+          "latest": {
+            "step": 200000,
+            "value": 0.20914936065673828,
+            "wall_time": 1780778555.7072363
+          },
+          "best": {
+            "step": 137200,
+            "value": 0.03053276613354683,
+            "wall_time": 1780748699.9144025
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.106343574821949,
+              "wall_time": 1780778373.6565964
+            },
+            {
+              "step": 199700,
+              "value": 0.03953241929411888,
+              "wall_time": 1780778418.621832
+            },
+            {
+              "step": 199800,
+              "value": 0.25316521525382996,
+              "wall_time": 1780778463.8440065
+            },
+            {
+              "step": 199900,
+              "value": 0.05020703747868538,
+              "wall_time": 1780778509.1698914
+            },
+            {
+              "step": 200000,
+              "value": 0.20914936065673828,
+              "wall_time": 1780778555.7072363
+            }
+          ]
+        },
+        "metrics/psnr": {
+          "latest": {
+            "step": 200002,
+            "value": 18.980098724365234,
+            "wall_time": 1780778726.8336954
+          },
+          "best": {
+            "step": 50000,
+            "value": 20.49393081665039,
+            "wall_time": 1780706512.5058703
+          },
+          "recent": [
+            {
+              "step": 185000,
+              "value": 19.016672134399414,
+              "wall_time": 1780771507.2288563
+            },
+            {
+              "step": 190000,
+              "value": 18.647727966308594,
+              "wall_time": 1780773868.4874508
+            },
+            {
+              "step": 195000,
+              "value": 18.40105628967285,
+              "wall_time": 1780776252.136579
+            },
+            {
+              "step": 200000,
+              "value": 18.980098724365234,
+              "wall_time": 1780778640.9242537
+            },
+            {
+              "step": 200002,
+              "value": 18.980098724365234,
+              "wall_time": 1780778726.8336954
+            }
+          ]
+        },
+        "metrics/ssim": {
+          "latest": {
+            "step": 200002,
+            "value": 0.8426598906517029,
+            "wall_time": 1780778726.8337774
+          },
+          "best": {
+            "step": 50000,
+            "value": 0.8611714243888855,
+            "wall_time": 1780706512.5059192
+          },
+          "recent": [
+            {
+              "step": 185000,
+              "value": 0.8409979343414307,
+              "wall_time": 1780771507.2289054
+            },
+            {
+              "step": 190000,
+              "value": 0.8354178667068481,
+              "wall_time": 1780773868.487501
+            },
+            {
+              "step": 195000,
+              "value": 0.8208630084991455,
+              "wall_time": 1780776252.1366372
+            },
+            {
+              "step": 200000,
+              "value": 0.8426598906517029,
+              "wall_time": 1780778640.9243038
+            },
+            {
+              "step": 200002,
+              "value": 0.8426598906517029,
+              "wall_time": 1780778726.8337774
+            }
+          ]
+        },
+        "out_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": -4.151971340179443,
+            "wall_time": 1780778555.7072127
+          },
+          "best": {
+            "step": 177200,
+            "value": 5.783237934112549,
+            "wall_time": 1780767763.4831522
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": -3.0350754261016846,
+              "wall_time": 1780778373.6565754
+            },
+            {
+              "step": 199700,
+              "value": 1.7609926462173462,
+              "wall_time": 1780778418.6218112
+            },
+            {
+              "step": 199800,
+              "value": -1.1809157133102417,
+              "wall_time": 1780778463.8439848
+            },
+            {
+              "step": 199900,
+              "value": -0.4534616768360138,
+              "wall_time": 1780778509.1698701
+            },
+            {
+              "step": 200000,
+              "value": -4.151971340179443,
+              "wall_time": 1780778555.7072127
+            }
+          ]
+        },
+        "out_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 0.7104730010032654,
+            "wall_time": 1780778555.7071836
+          },
+          "best": {
+            "step": 123700,
+            "value": 12.37407398223877,
+            "wall_time": 1780742025.0102715
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 2.858048915863037,
+              "wall_time": 1780778373.656547
+            },
+            {
+              "step": 199700,
+              "value": 0.6578689813613892,
+              "wall_time": 1780778418.621785
+            },
+            {
+              "step": 199800,
+              "value": 4.220277786254883,
+              "wall_time": 1780778463.8439574
+            },
+            {
+              "step": 199900,
+              "value": 1.580917477607727,
+              "wall_time": 1780778509.1698432
+            },
+            {
+              "step": 200000,
+              "value": 0.7104730010032654,
+              "wall_time": 1780778555.7071836
+            }
+          ]
+        }
+      },
+      "latest_step": 200002,
+      "latest": {
+        "psnr": 18.980098724365234,
+        "iter": 200002,
+        "ssim": 0.8426598906517029
+      },
+      "best": {
+        "psnr": 20.49393081665039,
+        "iter": 50000,
+        "ssim": 0.8611714243888855
+      },
+      "recent_trend": [
+        {
+          "iter": 185000,
+          "psnr": 19.016672134399414,
+          "ssim": 0.8409979343414307
+        },
+        {
+          "iter": 190000,
+          "psnr": 18.647727966308594,
+          "ssim": 0.8354178667068481
+        },
+        {
+          "iter": 195000,
+          "psnr": 18.40105628967285,
+          "ssim": 0.8208630084991455
+        },
+        {
+          "iter": 200000,
+          "psnr": 18.980098724365234,
+          "ssim": 0.8426598906517029
+        },
+        {
+          "iter": 200002,
+          "psnr": 18.980098724365234,
+          "ssim": 0.8426598906517029
+        }
+      ],
+      "latest_losses": {
+        "l_d": 0.23381884396076202,
+        "l_d_fake": 0.033599283546209335,
+        "l_d_real": 0.4340384006500244,
+        "l_g_gan": 0.040956512093544006,
+        "l_g_percep": 1.2020105123519897,
+        "l_g_pix": 0.20914936065673828
+      },
+      "images": {
+        "training/GT_LQ_Restored": {
+          "latest": {
+            "step": 200000,
+            "wall_time": 1780778555.6505897
+          }
+        }
+      }
+    },
+    "waveletmask_fc_ab_seed2022": {
+      "log_dir": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_fc_ab_seed2022",
+      "event_files": [
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_fc_ab_seed2022/events.out.tfevents.1780808760.inspur-NF5468M6.3213411.0",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_fc_ab_seed2022/events.out.tfevents.1780809205.inspur-NF5468M6.3213411.1"
+      ],
+      "scalar_tags": [
+        "losses/l_d",
+        "losses/l_d_fake",
+        "losses/l_d_real",
+        "losses/l_g_gan",
+        "losses/l_g_percep",
+        "losses/l_g_pix",
+        "out_d_fake",
+        "out_d_real"
+      ],
+      "image_tags": [
+        "training/GT_LQ_Restored"
+      ],
+      "scalars": {
+        "losses/l_d": {
+          "latest": {
+            "step": 200000,
+            "value": 0.18887539207935333,
+            "wall_time": 1780835441.458537
+          },
+          "best": {
+            "step": 197100,
+            "value": 0.0472145602107048,
+            "wall_time": 1780834164.7039855
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.39513909816741943,
+              "wall_time": 1780835265.4406013
+            },
+            {
+              "step": 199700,
+              "value": 0.2671789228916168,
+              "wall_time": 1780835308.8439987
+            },
+            {
+              "step": 199800,
+              "value": 0.44297945499420166,
+              "wall_time": 1780835352.4268134
+            },
+            {
+              "step": 199900,
+              "value": 0.9510258436203003,
+              "wall_time": 1780835396.1587808
+            },
+            {
+              "step": 200000,
+              "value": 0.18887539207935333,
+              "wall_time": 1780835441.458537
+            }
+          ]
+        },
+        "losses/l_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": 0.3195330500602722,
+            "wall_time": 1780835441.458512
+          },
+          "best": {
+            "step": 179400,
+            "value": 0.013420544564723969,
+            "wall_time": 1780826371.110853
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.43381553888320923,
+              "wall_time": 1780835265.4405775
+            },
+            {
+              "step": 199700,
+              "value": 0.4836985170841217,
+              "wall_time": 1780835308.8439753
+            },
+            {
+              "step": 199800,
+              "value": 0.8338051438331604,
+              "wall_time": 1780835352.4267883
+            },
+            {
+              "step": 199900,
+              "value": 1.1619396209716797,
+              "wall_time": 1780835396.1587574
+            },
+            {
+              "step": 200000,
+              "value": 0.3195330500602722,
+              "wall_time": 1780835441.458512
+            }
+          ]
+        },
+        "losses/l_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 0.058217745274305344,
+            "wall_time": 1780835441.4584596
+          },
+          "best": {
+            "step": 188600,
+            "value": 0.0004797957371920347,
+            "wall_time": 1780830416.8402529
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.35646265745162964,
+              "wall_time": 1780835265.4405057
+            },
+            {
+              "step": 199700,
+              "value": 0.05065935105085373,
+              "wall_time": 1780835308.8439023
+            },
+            {
+              "step": 199800,
+              "value": 0.052153751254081726,
+              "wall_time": 1780835352.4267116
+            },
+            {
+              "step": 199900,
+              "value": 0.7401121258735657,
+              "wall_time": 1780835396.1586843
+            },
+            {
+              "step": 200000,
+              "value": 0.058217745274305344,
+              "wall_time": 1780835441.4584596
+            }
+          ]
+        },
+        "losses/l_g_gan": {
+          "latest": {
+            "step": 200000,
+            "value": 0.013576794415712357,
+            "wall_time": 1780835441.4585707
+          },
+          "best": {
+            "step": 181600,
+            "value": 0.0001230022171512246,
+            "wall_time": 1780827343.922304
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.01101512648165226,
+              "wall_time": 1780835265.4406316
+            },
+            {
+              "step": 199700,
+              "value": 0.010730664245784283,
+              "wall_time": 1780835308.8440294
+            },
+            {
+              "step": 199800,
+              "value": 0.00621830252930522,
+              "wall_time": 1780835352.4268441
+            },
+            {
+              "step": 199900,
+              "value": 0.004593569319695234,
+              "wall_time": 1780835396.1588116
+            },
+            {
+              "step": 200000,
+              "value": 0.013576794415712357,
+              "wall_time": 1780835441.4585707
+            }
+          ]
+        },
+        "losses/l_g_percep": {
+          "latest": {
+            "step": 200000,
+            "value": 0.728854775428772,
+            "wall_time": 1780835441.4585602
+          },
+          "best": {
+            "step": 144600,
+            "value": 0.1280224621295929,
+            "wall_time": 1780810778.1205187
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.4116627275943756,
+              "wall_time": 1780835265.4406219
+            },
+            {
+              "step": 199700,
+              "value": 0.8568894863128662,
+              "wall_time": 1780835308.8440197
+            },
+            {
+              "step": 199800,
+              "value": 0.6318947076797485,
+              "wall_time": 1780835352.426834
+            },
+            {
+              "step": 199900,
+              "value": 0.49637773633003235,
+              "wall_time": 1780835396.1588013
+            },
+            {
+              "step": 200000,
+              "value": 0.728854775428772,
+              "wall_time": 1780835441.4585602
+            }
+          ]
+        },
+        "losses/l_g_pix": {
+          "latest": {
+            "step": 200000,
+            "value": 0.07885093986988068,
+            "wall_time": 1780835441.4585483
+          },
+          "best": {
+            "step": 166300,
+            "value": 0.02663738653063774,
+            "wall_time": 1780820517.4881933
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.04837159812450409,
+              "wall_time": 1780835265.4406116
+            },
+            {
+              "step": 199700,
+              "value": 0.2167033702135086,
+              "wall_time": 1780835308.8440092
+            },
+            {
+              "step": 199800,
+              "value": 0.1320546418428421,
+              "wall_time": 1780835352.4268236
+            },
+            {
+              "step": 199900,
+              "value": 0.052620649337768555,
+              "wall_time": 1780835396.158791
+            },
+            {
+              "step": 200000,
+              "value": 0.07885093986988068,
+              "wall_time": 1780835441.4585483
+            }
+          ]
+        },
+        "out_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": -1.0614559650421143,
+            "wall_time": 1780835441.4585257
+          },
+          "best": {
+            "step": 181600,
+            "value": 6.576552867889404,
+            "wall_time": 1780827343.9222622
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": -0.622990071773529,
+              "wall_time": 1780835265.4405906
+            },
+            {
+              "step": 199700,
+              "value": -0.5337750911712646,
+              "wall_time": 1780835308.8439875
+            },
+            {
+              "step": 199800,
+              "value": 0.21361581981182098,
+              "wall_time": 1780835352.426802
+            },
+            {
+              "step": 199900,
+              "value": 0.7327547669410706,
+              "wall_time": 1780835396.1587698
+            },
+            {
+              "step": 200000,
+              "value": -1.0614559650421143,
+              "wall_time": 1780835441.4585257
+            }
+          ]
+        },
+        "out_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 3.2033512592315674,
+            "wall_time": 1780835441.4584951
+          },
+          "best": {
+            "step": 188600,
+            "value": 10.446362495422363,
+            "wall_time": 1780830416.8403153
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.926353931427002,
+              "wall_time": 1780835265.4405613
+            },
+            {
+              "step": 199700,
+              "value": 3.5552663803100586,
+              "wall_time": 1780835308.8439596
+            },
+            {
+              "step": 199800,
+              "value": 3.882681369781494,
+              "wall_time": 1780835352.4267719
+            },
+            {
+              "step": 199900,
+              "value": 0.6252754330635071,
+              "wall_time": 1780835396.1587408
+            },
+            {
+              "step": 200000,
+              "value": 3.2033512592315674,
+              "wall_time": 1780835441.4584951
+            }
+          ]
+        }
+      },
+      "latest_step": 200000,
+      "latest": {},
+      "best": {},
+      "recent_trend": [],
+      "latest_losses": {
+        "l_d": 0.18887539207935333,
+        "l_d_fake": 0.3195330500602722,
+        "l_d_real": 0.058217745274305344,
+        "l_g_gan": 0.013576794415712357,
+        "l_g_percep": 0.728854775428772,
+        "l_g_pix": 0.07885093986988068
+      },
+      "images": {
+        "training/GT_LQ_Restored": {
+          "latest": {
+            "step": 200000,
+            "wall_time": 1780835441.414997
+          }
+        }
+      }
+    },
+    "waveletmask_fc_ab_seed2023": {
+      "log_dir": "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_fc_ab_seed2023",
+      "event_files": [
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_fc_ab_seed2023/events.out.tfevents.1780809644.inspur-NF5468M6.3220495.0",
+        "/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tb_logger/waveletmask_fc_ab_seed2023/events.out.tfevents.1780810104.inspur-NF5468M6.3220495.1"
+      ],
+      "scalar_tags": [
+        "losses/l_d",
+        "losses/l_d_fake",
+        "losses/l_d_real",
+        "losses/l_g_gan",
+        "losses/l_g_percep",
+        "losses/l_g_pix",
+        "out_d_fake",
+        "out_d_real"
+      ],
+      "image_tags": [
+        "training/GT_LQ_Restored"
+      ],
+      "scalars": {
+        "losses/l_d": {
+          "latest": {
+            "step": 200000,
+            "value": 0.3404747247695923,
+            "wall_time": 1780834413.3708482
+          },
+          "best": {
+            "step": 155900,
+            "value": 0.0435820147395134,
+            "wall_time": 1780814571.2875059
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.6392149925231934,
+              "wall_time": 1780834236.0516603
+            },
+            {
+              "step": 199700,
+              "value": 0.7355313301086426,
+              "wall_time": 1780834280.0258563
+            },
+            {
+              "step": 199800,
+              "value": 0.07677529007196426,
+              "wall_time": 1780834323.9221985
+            },
+            {
+              "step": 199900,
+              "value": 0.5359921455383301,
+              "wall_time": 1780834367.9050937
+            },
+            {
+              "step": 200000,
+              "value": 0.3404747247695923,
+              "wall_time": 1780834413.3708482
+            }
+          ]
+        },
+        "losses/l_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": 0.3418048024177551,
+            "wall_time": 1780834413.3708231
+          },
+          "best": {
+            "step": 176600,
+            "value": 0.026336466893553734,
+            "wall_time": 1780824064.241211
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.38334590196609497,
+              "wall_time": 1780834236.0516355
+            },
+            {
+              "step": 199700,
+              "value": 1.0439231395721436,
+              "wall_time": 1780834280.0258315
+            },
+            {
+              "step": 199800,
+              "value": 0.13550543785095215,
+              "wall_time": 1780834323.9221756
+            },
+            {
+              "step": 199900,
+              "value": 0.07355277985334396,
+              "wall_time": 1780834367.9050689
+            },
+            {
+              "step": 200000,
+              "value": 0.3418048024177551,
+              "wall_time": 1780834413.3708231
+            }
+          ]
+        },
+        "losses/l_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 0.33914461731910706,
+            "wall_time": 1780834413.370773
+          },
+          "best": {
+            "step": 187700,
+            "value": 0.000756663444917649,
+            "wall_time": 1780828974.9410498
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.8950841426849365,
+              "wall_time": 1780834236.051569
+            },
+            {
+              "step": 199700,
+              "value": 0.4271395802497864,
+              "wall_time": 1780834280.0257688
+            },
+            {
+              "step": 199800,
+              "value": 0.018045146018266678,
+              "wall_time": 1780834323.9221122
+            },
+            {
+              "step": 199900,
+              "value": 0.9984315633773804,
+              "wall_time": 1780834367.9050093
+            },
+            {
+              "step": 200000,
+              "value": 0.33914461731910706,
+              "wall_time": 1780834413.370773
+            }
+          ]
+        },
+        "losses/l_g_gan": {
+          "latest": {
+            "step": 200000,
+            "value": 0.01259313803166151,
+            "wall_time": 1780834413.3708832
+          },
+          "best": {
+            "step": 187500,
+            "value": 0.0008956919191405177,
+            "wall_time": 1780828886.5068808
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.011846045032143593,
+              "wall_time": 1780834236.0516915
+            },
+            {
+              "step": 199700,
+              "value": 0.005666846875101328,
+              "wall_time": 1780834280.025888
+            },
+            {
+              "step": 199800,
+              "value": 0.021788273006677628,
+              "wall_time": 1780834323.92223
+            },
+            {
+              "step": 199900,
+              "value": 0.027930401265621185,
+              "wall_time": 1780834367.9051254
+            },
+            {
+              "step": 200000,
+              "value": 0.01259313803166151,
+              "wall_time": 1780834413.3708832
+            }
+          ]
+        },
+        "losses/l_g_percep": {
+          "latest": {
+            "step": 200000,
+            "value": 0.8024933338165283,
+            "wall_time": 1780834413.3708725
+          },
+          "best": {
+            "step": 178800,
+            "value": 0.17017540335655212,
+            "wall_time": 1780825035.1232846
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.47574809193611145,
+              "wall_time": 1780834236.0516815
+            },
+            {
+              "step": 199700,
+              "value": 0.5074752569198608,
+              "wall_time": 1780834280.0258777
+            },
+            {
+              "step": 199800,
+              "value": 0.7970271110534668,
+              "wall_time": 1780834323.92222
+            },
+            {
+              "step": 199900,
+              "value": 0.8204827308654785,
+              "wall_time": 1780834367.9051151
+            },
+            {
+              "step": 200000,
+              "value": 0.8024933338165283,
+              "wall_time": 1780834413.3708725
+            }
+          ]
+        },
+        "losses/l_g_pix": {
+          "latest": {
+            "step": 200000,
+            "value": 0.11973526328802109,
+            "wall_time": 1780834413.3708606
+          },
+          "best": {
+            "step": 196400,
+            "value": 0.03104153461754322,
+            "wall_time": 1780832820.426997
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": 0.0828835666179657,
+              "wall_time": 1780834236.051671
+            },
+            {
+              "step": 199700,
+              "value": 0.09414691478013992,
+              "wall_time": 1780834280.0258672
+            },
+            {
+              "step": 199800,
+              "value": 0.13277281820774078,
+              "wall_time": 1780834323.9222093
+            },
+            {
+              "step": 199900,
+              "value": 0.17120833694934845,
+              "wall_time": 1780834367.9051049
+            },
+            {
+              "step": 200000,
+              "value": 0.11973526328802109,
+              "wall_time": 1780834413.3708606
+            }
+          ]
+        },
+        "out_d_fake": {
+          "latest": {
+            "step": 200000,
+            "value": -0.9330922961235046,
+            "wall_time": 1780834413.3708365
+          },
+          "best": {
+            "step": 187500,
+            "value": 3.0589239597320557,
+            "wall_time": 1780828886.5068367
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": -0.8052565455436707,
+              "wall_time": 1780834236.0516486
+            },
+            {
+              "step": 199700,
+              "value": 0.5018600821495056,
+              "wall_time": 1780834280.0258448
+            },
+            {
+              "step": 199800,
+              "value": -2.051849365234375,
+              "wall_time": 1780834323.9221878
+            },
+            {
+              "step": 199900,
+              "value": -2.7436938285827637,
+              "wall_time": 1780834367.9050817
+            },
+            {
+              "step": 200000,
+              "value": -0.9330922961235046,
+              "wall_time": 1780834413.3708365
+            }
+          ]
+        },
+        "out_d_real": {
+          "latest": {
+            "step": 200000,
+            "value": 1.097567081451416,
+            "wall_time": 1780834413.370807
+          },
+          "best": {
+            "step": 187700,
+            "value": 15.320709228515625,
+            "wall_time": 1780828974.9410925
+          },
+          "recent": [
+            {
+              "step": 199600,
+              "value": -0.3203069269657135,
+              "wall_time": 1780834236.0516193
+            },
+            {
+              "step": 199700,
+              "value": 0.820546567440033,
+              "wall_time": 1780834280.0258148
+            },
+            {
+              "step": 199800,
+              "value": 5.10135555267334,
+              "wall_time": 1780834323.9221604
+            },
+            {
+              "step": 199900,
+              "value": -0.23814478516578674,
+              "wall_time": 1780834367.9050531
+            },
+            {
+              "step": 200000,
+              "value": 1.097567081451416,
+              "wall_time": 1780834413.370807
+            }
+          ]
+        }
+      },
+      "latest_step": 200000,
+      "latest": {},
+      "best": {},
+      "recent_trend": [],
+      "latest_losses": {
+        "l_d": 0.3404747247695923,
+        "l_d_fake": 0.3418048024177551,
+        "l_d_real": 0.33914461731910706,
+        "l_g_gan": 0.01259313803166151,
+        "l_g_percep": 0.8024933338165283,
+        "l_g_pix": 0.11973526328802109
+      },
+      "images": {
+        "training/GT_LQ_Restored": {
+          "latest": {
+            "step": 200000,
+            "wall_time": 1780834413.3324435
+          }
+        }
+      }
+    }
+  },
+  "archived_runs": [],
+  "errors": []
+}

@@ -1,0 +1,4 @@
+degraded clip -> bidirectional optical flow -> forward/backward flow warp
+degraded clip -> WaveletNoiseMask -> m_t^w --\
+flow warp + x_t + m_t^w -> Wavelet-guided gate -> Swin spatial refinement -> f_t^f / f_t^b
+f_t^f + f_t^b -> Concat -> Reconstruction -> restored clip

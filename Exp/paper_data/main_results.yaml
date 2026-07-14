@@ -1,0 +1,69 @@
+# 007-waveletmask 主结果（synth + realworld 合并 6 指标）
+# 收集自 D1 任务 2026-04-19
+#
+# - synth metrics: L40 wm_synth_test 2026-04-15（PSNR/SSIM/LPIPS/DISTS）
+# - realworld metrics: L40 测试 2026-03-19~21（NIQE/BRISQUE/CLIPIQA），
+#   原始来源详见 Exp/ablation/ablation_results.yaml 及 Exp/results/best/*_realworld_best/
+#
+# ⚠️  PSNR 排序与旧记录有显著变化，详见 synth_results_apr15.yaml 的 discrepancy_with_old_muxi 段
+# ⚠️  clipiqa 键的数值实为 CLIPIQA+：测试管线 calculate_clipiqa 内部创建的是
+#     pyiqa.create_metric('clipiqa+')（L40 framework/basicofr/metrics/pyiqa_metrics.py，
+#     2026-06-11 服务器核实），与 benchmarks.yaml / SRWOV.yaml 同源同义；旧注释"非 CLIPIQA+"有误，已更正
+
+project: 007-waveletmask
+collection_date: '2026-04-19'
+extraction_task: D1-007-synth-8variants-test (system-audit/exec-prompts)
+
+results:
+  waveletmask_base:
+    synthetic: { psnr: 26.1580, ssim: 0.8917, lpips: 0.1034, dists: 0.0953 }
+    realworld: { niqe: 5.3340,  brisque: 29.3119, clipiqa: 0.4359 }
+  waveletmask_local:
+    synthetic: { psnr: 26.3778, ssim: 0.8966, lpips: 0.0914, dists: 0.0790 }
+    realworld: { niqe: 5.3392,  brisque: 19.5562, clipiqa: 0.4115 }
+  waveletmask_flicker:
+    synthetic: { psnr: 26.1024, ssim: 0.8980, lpips: 0.0969, dists: 0.0916 }
+    realworld: { niqe: 5.0400,  brisque: 28.7878, clipiqa: 0.4388 }
+  waveletmask_ab:
+    synthetic: { psnr: 26.6017, ssim: 0.8951, lpips: 0.0891, dists: 0.0831 }
+    realworld: { niqe: 5.2288,  brisque: 24.2023, clipiqa: 0.4356 }
+  waveletmask_local_fusion:
+    synthetic: { psnr: 25.9858, ssim: 0.8978, lpips: 0.0889, dists: 0.0830 }
+    realworld: { niqe: 5.2014,  brisque: 22.6684, clipiqa: 0.4435 }
+  waveletmask_flicker_fusion:
+    synthetic: { psnr: 25.9488, ssim: 0.8956, lpips: 0.0946, dists: 0.0814 }
+    realworld: { niqe: 5.4037,  brisque: 18.3536, clipiqa: 0.4265 }
+  waveletmask_gated_flicker:
+    synthetic: { psnr: 26.3515, ssim: 0.8966, lpips: 0.0869, dists: 0.0842 }
+    realworld: { niqe: 5.3316,  brisque: 24.4794, clipiqa: 0.4503 }
+  waveletmask_full:
+    synthetic: { psnr: 24.9827, ssim: 0.8896, lpips: 0.1068, dists: 0.0867 }
+    realworld: { niqe: 4.9948,  brisque: 20.9054, clipiqa: 0.4351 }
+
+best_per_metric:
+  synthetic:
+    psnr_best:  { variant: waveletmask_ab,             value: 26.6017 }
+    ssim_best:  { variant: waveletmask_flicker,        value: 0.8980 }
+    lpips_best: { variant: waveletmask_gated_flicker,  value: 0.0869 }
+    dists_best: { variant: waveletmask_local,          value: 0.0790 }
+  realworld:
+    niqe_best:    { variant: waveletmask_full,          value: 4.9948 }
+    brisque_best: { variant: waveletmask_flicker_fusion, value: 18.3536 }
+    clipiqa_best: { variant: waveletmask_gated_flicker, value: 0.4503 }
+
+verification_status:
+  synth: complete   # PSNR/SSIM/LPIPS/DISTS 4 指标 × 8 变体（L40 wm_synth_test 2026-04-15）
+  realworld: complete_with_caveat   # 数据来自 L40 2026-03-19~21 测试（NIQE/BRISQUE/CLIPIQA 3 指标 × 8 变体）。
+                                     # 2026-04-19 在 A4000/4090_0/4090_1 三机启动了 realworld 重测
+                                     # （tmux: wm_d1_a4000 / wm_d1_4090_0 / wm_d1_4090_1），
+                                     # A4000 完成 3 变体 (base/local/flicker, 59-60 clips each)，
+                                     # 4090_0 和 4090_1 仅处理 1 clip 后中断。
+                                     # 现有数据与 ablation_matrix.json 一致，可用于论文。
+                                     # 全量重测待后续完成。
+  paper_data_yaml: this file
+  benchmarks_yaml_synced: '2026-04-19'   # synth 段已写回 memory/core/benchmarks.yaml；realworld 段待重测后追加
+  related_files:
+    - synth_results_apr15.yaml          # 含与旧 MUXI 数据的 discrepancy_with_old_muxi 历史对比
+    - section_synth_8variants.yaml      # 含每变体 arch + innovation 描述 + test_started/finished 时间戳
+    - ../ablation/ablation_results.yaml # 消融汇总（synth+realworld，replaces 旧 MUXI 数据）
+    - ../../../../papers/shuphd-ofr-latex/archive/sessions-20260509/2026-04-19-d1-007-synth-realworld-launch.md  # 并行 agent 的 realworld 启动 launch log

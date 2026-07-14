@@ -1,0 +1,141 @@
+# Figure governance manifest for 007-WaveletMask ApplSci draft.
+# Final manuscript assets use figures/FigureX.pdf.
+# A present FigureX.pdf is only a LaTeX placeholder until the status and route gate mark it final.
+- id: Figure1
+  role: motivation
+  status: final-manual-redraw
+  final_path: projects/007-waveletmask/Paper/applsci/figures/Figure1.pdf
+  sha256: c246b9d4056b8ff76f8c8c1d8e5e61ef943681e157b1c0eb2f2983d67327e36c
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1
+  latex_refs:
+  - projects/007-waveletmask/Paper/applsci/sections/introduction.tex
+  archived_previous_assets:
+  - projects/007-waveletmask/Paper/_work/mdpi-writing/archive/pre_redraw_20260512/Figure1_auto_attempt/Fig2_wavelet_frequency_motivation.pdf
+  - projects/007-waveletmask/Paper/_work/mdpi-writing/archive/pre_redraw_20260512/Figure1_auto_attempt/Fig2_wavelet_frequency_motivation.svg
+  - projects/007-waveletmask/Paper/_work/mdpi-writing/archive/pre_redraw_20260512/Figure1_auto_attempt/Fig2_wavelet_frequency_motivation.png
+  provenance:
+    type: manual_redraw_from_real_assets
+    raw_assets_package: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/package/Fig1_real_motivation_complete_assets_20260512.tar.gz
+    checkpoint_sha256: 662bf4ae334a8f41fd69f39c3698b1ca8b3d0f2607fa148bd8bdab300744a873
+  claim_ids:
+  - C-pixel-domain-frequency-limitation
+  - C-wavelet-subband-separation
+- id: Figure2
+  role: pipeline
+  status: needs-diagram-route-e
+  final_path: projects/007-waveletmask/Paper/applsci/figures/Figure2.pdf
+  sha256: 2701f02626375290ac2a31f11b86f9d12936660db53f86bdd74a757acf82d792
+  source_asset: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure2/draft/Figure2.v01.architecture_draft.pdf
+  source_asset_status: placeholder_from_noncompliant_draft_promotion
+  required_route: ofr-paper-diagram Route E
+  final_gate: blocked_until_ascii_layout_and_final_export_are_approved
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure2
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure2
+  latex_refs:
+  - projects/007-waveletmask/Paper/applsci/sections/introduction.tex
+  claim_ids:
+  - C-method-overview
+  - C-frequency-aware-indicator
+- id: Figure3
+  role: module-detail
+  status: needs-diagram-route-e
+  final_path: projects/007-waveletmask/Paper/applsci/figures/Figure3.pdf
+  sha256: 33dd0db194b8a27f5f925170cfa82e6e28a6f7e14b3f5ed6d2527c28c503ecbb
+  source_asset: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3/draft/Figure3.v01.wavelet_noise_mask_module.pdf
+  source_asset_status: placeholder_from_noncompliant_draft_promotion
+  required_route: ofr-paper-diagram Route E
+  final_gate: blocked_until_ascii_layout_and_final_export_are_approved
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3
+  latex_refs:
+  - projects/007-waveletmask/Paper/applsci/sections/method.tex
+  claim_ids:
+  - C-local-hf-mask
+  - C-global-flicker-mask
+  - C-pixelwise-fusion
+- id: Figure4
+  role: qualitative-motivation
+  status: optional-needs-traceable-decision
+  final_path: projects/007-waveletmask/Paper/applsci/figures/Figure4.pdf
+  sha256: 17949b37074c1a8a1d7ed662cc6c136a98d8a0cea7f551faf43106d3a993f72c
+  source_asset: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure4/draft/Figure4.v01.motivation_only.pdf
+  source_asset_status: placeholder_from_optional_motivation_asset
+  required_route: ofr-paper-visual-studio traceable export or user-confirmed drop
+  final_gate: blocked_until_main_text_keep_or_drop_decision
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure4
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure4
+  latex_refs:
+  - projects/007-waveletmask/Paper/applsci/sections/results.tex
+  claim_ids:
+  - C-old-film-defect-types
+  - C-visual-failure-modes
+- id: Figure5
+  role: mask-interpretation
+  status: needs-route-decision
+  final_path: projects/007-waveletmask/Paper/applsci/figures/Figure5.pdf
+  sha256: 7a3b1cbd56be534f9b63a663559a182728c585d911dfe39e3c73c432b023452f
+  source_asset: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure5/draft/Figure5.v01.mask_path_schematic.pdf
+  source_asset_status: placeholder_schematic_from_noncompliant_tikz_generation
+  required_route: ofr-paper-visual-studio real mask export or ofr-paper-diagram schematic route
+  final_gate: blocked_until_user_selects_real_mask_or_schematic
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure5
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure5
+  latex_refs:
+  - projects/007-waveletmask/Paper/applsci/sections/results.tex
+  claim_ids:
+  - C-ablation-variant-interpretation
+  - C-fusion-unresolved
+- id: Figure6
+  role: real-world-qualitative-comparison
+  status: blocked-visual-studio-regeneration
+  final_path: projects/007-waveletmask/Paper/applsci/figures/Figure6.pdf
+  sha256: ee179460b9d1efb8b4c8be0a5c422405d1ff7443247c192cc52abb8420db9b67
+  source_asset: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/draft/Figure6.v01.realworld_l40_trace.pdf
+  source_asset_status: placeholder_from_noncompliant_raster_pdf_promotion
+  required_route: ofr-paper-visual-studio Real-world SOTA full-frame export
+  final_gate: blocked_until_visual_studio_export_and_refreshed_realworld_logs
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6
+  latex_refs:
+  - projects/007-waveletmask/Paper/applsci/sections/results.tex
+  claim_ids:
+  - C-realworld-visual-comparison
+- id: Figure7
+  role: synthetic-sota-qualitative-comparison
+  status: pending-export
+  target_path: projects/007-waveletmask/Paper/applsci/figures/Figure7.pdf
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure7
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure7
+  latex_refs: []
+  claim_ids:
+  - C-synthetic-visual-comparison
+  - C-synthetic-table-alignment
+- id: Figure8
+  role: visual-ablation-comparison
+  status: pending-export
+  target_path: projects/007-waveletmask/Paper/applsci/figures/Figure8.pdf
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure8
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure8
+  latex_refs: []
+  claim_ids:
+  - C-local-hf-mask-ablation
+  - C-global-flicker-mask-ablation
+  - C-max-fusion-ablation
+- id: Figure9
+  role: difference-error-map-analysis
+  status: needs-visual-studio-finalization
+  final_path: projects/007-waveletmask/Paper/applsci/figures/Figure9.pdf
+  sha256: e260254fbf1a586f5395e05cb648951a1996951ba31a8b117bbdf7ece01b20dd
+  source_asset: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9/draft/Figure9.v01.error_map.pdf
+  source_asset_status: placeholder_from_existing_fig9_export_promotion
+  selection_record: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9/source/fig9/Fig9_selection_record.json
+  required_route: ofr-paper-visual-studio Figure 9 tab or generate_fig9.py
+  final_gate: blocked_until_final_error_map_export_is_confirmed
+  source_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9
+  work_dir: projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure9
+  latex_refs:
+  - projects/007-waveletmask/Paper/applsci/sections/discussion.tex
+  claim_ids:
+  - C-error-map-analysis
+  - C-synthetic-spatial-gain

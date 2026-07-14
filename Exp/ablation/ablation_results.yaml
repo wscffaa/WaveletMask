@@ -1,0 +1,108 @@
+# 007-waveletmask 8 变体测试指标汇总（权威版本）
+#
+# Synthetic: L40 wm_synth_test session 2026-04-15（PSNR/SSIM/LPIPS/DISTS 全 4 指标）
+#   原始 logs: Exp/results/waveletmask_<var>_reds_synthetic_best/test_*.log
+#   注：与旧 MUXI 测试结果（仅 PSNR）排序差异较大，详见文末 历史对比 段
+#
+# Realworld: L40 测试 2026-03-19~21（NIQE/BRISQUE/CLIPIQA）
+#   原始 logs: Exp/results/best/waveletmask_<var>_realworld_best/test_*.log
+#
+# 提取/合并: D1 任务 2026-04-19
+# 配套数据: Exp/paper_data/{main_results,synth_results_apr15}.yaml
+
+# ============================================================
+# Synthetic (L40 2026-04-15, 4 指标)
+# ============================================================
+synthetic:
+  waveletmask_base:
+    psnr: 26.1580
+    ssim: 0.8917
+    lpips: 0.1034
+    dists: 0.0953
+  waveletmask_local:
+    psnr: 26.3778
+    ssim: 0.8966
+    lpips: 0.0914
+    dists: 0.0790
+  waveletmask_flicker:
+    psnr: 26.1024
+    ssim: 0.8980
+    lpips: 0.0969
+    dists: 0.0916
+  waveletmask_ab:
+    psnr: 26.6017
+    ssim: 0.8951
+    lpips: 0.0891
+    dists: 0.0831
+  waveletmask_local_fusion:
+    psnr: 25.9858
+    ssim: 0.8978
+    lpips: 0.0889
+    dists: 0.0830
+  waveletmask_flicker_fusion:
+    psnr: 25.9488
+    ssim: 0.8956
+    lpips: 0.0946
+    dists: 0.0814
+  waveletmask_gated_flicker:
+    psnr: 26.3515
+    ssim: 0.8966
+    lpips: 0.0869
+    dists: 0.0842
+  waveletmask_full:
+    psnr: 24.9827
+    ssim: 0.8896
+    lpips: 0.1068
+    dists: 0.0867
+
+# ============================================================
+# Realworld (L40 2026-03-19~21, 3 指标)
+# ============================================================
+realworld:
+  waveletmask_full:
+    niqe: 4.9948
+    brisque: 20.9054
+    clipiqa: 0.4351
+  waveletmask_gated_flicker:
+    niqe: 5.3316
+    brisque: 24.4794
+    clipiqa: 0.4503
+  waveletmask_local:
+    niqe: 5.3392
+    brisque: 19.5562
+    clipiqa: 0.4115
+  waveletmask_ab:
+    niqe: 5.2288
+    brisque: 24.2023
+    clipiqa: 0.4356
+  waveletmask_base:
+    niqe: 5.3340
+    brisque: 29.3119
+    clipiqa: 0.4359
+  waveletmask_flicker:
+    niqe: 5.0400
+    brisque: 28.7878
+    clipiqa: 0.4388
+  waveletmask_flicker_fusion:
+    niqe: 5.4037
+    brisque: 18.3536
+    clipiqa: 0.4265
+  waveletmask_local_fusion:
+    niqe: 5.2014
+    brisque: 22.6684
+    clipiqa: 0.4435
+
+# ============================================================
+# 历史对比 — 旧 MUXI 测试 PSNR（2026-03-21，仅供回顾，不再用于论文引用）
+# ============================================================
+# 旧记录排序: full(26.60) > local(26.01) > flicker_fusion(25.99) > local_fusion(25.90)
+#           > gated_flicker(25.87) > flicker(25.72) > ab(25.13) > base(24.98)
+# 新记录排序: ab(26.60)   > local(26.38) > gated_flicker(26.35)  > base(26.16)
+#           > flicker(26.10) > local_fusion(25.99) > flicker_fusion(25.95) > full(24.98)
+#
+# 关键差异:
+#   - 新 ab=26.6017 与旧 full=26.60 数值完全一致
+#   - 新 full=24.98 与旧 base=24.98 数值完全一致
+#   推测: 旧记录可能在 "full" / "ab" / "base" 标签上发生混淆，或 full ckpt 在
+#   3-4 月间被回退/覆盖。需所有者复核 full 变体 best ckpt 选取后再用于论文。
+#   完整对比与排查路径见: Exp/paper_data/synth_results_apr15.yaml

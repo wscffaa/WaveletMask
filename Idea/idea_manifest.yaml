@@ -1,0 +1,67 @@
+schema: project_idea_manifest/v3
+project_id: 007-waveletmask
+project_name: WaveletMask
+created_at: '2025-12-23T00:00:00'
+revised_at: '2026-04-23T00:00:00'
+bundle_id: ''
+bundle_path: ''
+baseline: RTN (Swin Spatial)
+target_venue: Applied Sciences (MDPI)
+approach: native_design
+slots_covered:
+- spatial
+source_ids: []
+innovation_ids:
+- waveletmask_local_hf
+- waveletmask_flicker
+archived_innovation_ids:
+- waveletmask_pixel_fusion
+sources: []
+innovations:
+- id: waveletmask_local_hf
+  name: 局部高频掩码 (Local High-Frequency Mask)
+  slot: spatial
+  mount_point: Video_Backbone → forward/backward loop → residual_indicator
+  strategy: 利用 Haar DWT 高频子带 (LH/HL/HH) 的几何均值差异检测划痕/灰尘等局部高频退化
+  status: active
+- id: waveletmask_flicker
+  name: 全局闪烁掩码 (Global Flicker Mask)
+  slot: spatial
+  mount_point: Video_Backbone → forward/backward loop → residual_indicator
+  strategy: 利用 LL 子带差异的 min 策略检测全局亮度闪烁，区分闪烁和场景切换
+  status: active
+archived_innovations:
+- id: waveletmask_pixel_fusion
+  name: 像素级 Alpha 融合 (Pixel-Wise Mask Fusion)
+  slot: spatial
+  mount_point: Video_Backbone → forward/backward loop → fused_indicator
+  strategy: 4 层 CNN 学习像素级 alpha 权重自适应融合空间域掩码和频域掩码，bias=+5 初始化偏向空间掩码
+  status: archived
+  archived_reason: L40 权威数据确认在所有对照中有害 (2026-04-23)
+artifacts:
+  source_map: ''
+  diff_plan: Idea/diff_plan.json
+  ablation_matrix: Idea/ablation_matrix.json
+  method_name: Idea/method_name.json
+  module_names: Idea/module_names.json
+phase: exp
+note: 'Framework-native 创新，无外部源论文。8 个消融变体训练+测试完成。 2026-04-23 决策：ab (A+B, max fusion)
+  为最终方案 (PSNR=26.60)， C 模块 (PixelWiseMaskFusion) 确认有害已淘汰。 论文从 3 创新 (A+B+C) 精简为 2 创新
+  (A+B)。
+
+  '
+project_type: slot_standalone
+slot_coverage:
+- slot: spatial
+  depth: full
+  innovations:
+  - waveletmask_local_hf
+  - waveletmask_flicker
+source_projects: []
+paper_readiness:
+  target_venue: Applied Sciences (MDPI)
+  venue_tier: Q3
+  estimated_slots_needed: 1
+  current_slot_count: 1
+  gap: 0
+combination_history: []

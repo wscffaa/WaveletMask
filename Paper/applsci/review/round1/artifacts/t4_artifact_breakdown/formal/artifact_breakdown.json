@@ -1,0 +1,418 @@
+{
+  "features": [
+    {
+      "clip": "000",
+      "dust_count_mpx": 610.5610561056105,
+      "flicker_shift": 0.048395566118415445,
+      "label": "dust",
+      "lowfreq_ratio": 0.6931781897161209,
+      "residual_area": 0.16762651265126516,
+      "residual_mean": 0.05644750078208745,
+      "scratch_area": 0.00023308580858085807
+    },
+    {
+      "clip": "001",
+      "dust_count_mpx": 534.9284928492849,
+      "flicker_shift": 0.0579800323350355,
+      "label": "mixed",
+      "lowfreq_ratio": 0.6834333431222412,
+      "residual_area": 0.19302117711771177,
+      "residual_mean": 0.0623718841932714,
+      "scratch_area": 0.000682068206820682
+    },
+    {
+      "clip": "002",
+      "dust_count_mpx": 720.5720572057207,
+      "flicker_shift": 0.08827668610028923,
+      "label": "mixed",
+      "lowfreq_ratio": 0.8319814940851401,
+      "residual_area": 0.40168798129812977,
+      "residual_mean": 0.08953765919432044,
+      "scratch_area": 0.00046204620462046204
+    },
+    {
+      "clip": "003",
+      "dust_count_mpx": 481.2981298129813,
+      "flicker_shift": 0.05070582376793027,
+      "label": "scratch",
+      "lowfreq_ratio": 0.6699835180949767,
+      "residual_area": 0.14952970297029705,
+      "residual_mean": 0.06014921404421329,
+      "scratch_area": 0.004115786578657866
+    },
+    {
+      "clip": "004",
+      "dust_count_mpx": 437.2937293729372,
+      "flicker_shift": 0.14102053884416818,
+      "label": "flicker",
+      "lowfreq_ratio": 0.857699960389764,
+      "residual_area": 0.6871988448844886,
+      "residual_mean": 0.14771895278245212,
+      "scratch_area": 0.0016405390539053905
+    },
+    {
+      "clip": "005",
+      "dust_count_mpx": 481.98569856985694,
+      "flicker_shift": 0.06326834579231218,
+      "label": "scratch",
+      "lowfreq_ratio": 0.7215727979490085,
+      "residual_area": 0.20348941144114416,
+      "residual_mean": 0.06664989730343222,
+      "scratch_area": 0.0025605060506050602
+    },
+    {
+      "clip": "006",
+      "dust_count_mpx": 429.042904290429,
+      "flicker_shift": 0.055016355332918467,
+      "label": "mixed",
+      "lowfreq_ratio": 0.716811043667398,
+      "residual_area": 0.18198776127612765,
+      "residual_mean": 0.061216893047094344,
+      "scratch_area": 0.000132013201320132
+    },
+    {
+      "clip": "007",
+      "dust_count_mpx": 396.72717271727174,
+      "flicker_shift": 0.05302591477520764,
+      "label": "mixed",
+      "lowfreq_ratio": 0.7034438795686647,
+      "residual_area": 0.221100797579758,
+      "residual_mean": 0.05775108286179602,
+      "scratch_area": 0.00020764576457645766
+    },
+    {
+      "clip": "008",
+      "dust_count_mpx": 682.068206820682,
+      "flicker_shift": 0.081446682382375,
+      "label": "mixed",
+      "lowfreq_ratio": 0.8113861337087099,
+      "residual_area": 0.30742367986798674,
+      "residual_mean": 0.08380678491666912,
+      "scratch_area": 0.020340346534653463
+    },
+    {
+      "clip": "009",
+      "dust_count_mpx": 510.86358635863587,
+      "flicker_shift": 0.06202423212234862,
+      "label": "scratch",
+      "lowfreq_ratio": 0.7450807974548386,
+      "residual_area": 0.20726278877887788,
+      "residual_mean": 0.0669180028140545,
+      "scratch_area": 0.010378850385038501
+    },
+    {
+      "clip": "010",
+      "dust_count_mpx": 594.059405940594,
+      "flicker_shift": 0.05980690360302106,
+      "label": "flicker",
+      "lowfreq_ratio": 0.805789067675191,
+      "residual_area": 0.2668041804180418,
+      "residual_mean": 0.07321055037900806,
+      "scratch_area": 0.0011372387238723872
+    },
+    {
+      "clip": "011",
+      "dust_count_mpx": 2507.563256325632,
+      "flicker_shift": 0.06577081881114281,
+      "label": "dust",
+      "lowfreq_ratio": 0.6106551058079137,
+      "residual_area": 0.24511551155115519,
+      "residual_mean": 0.07227001423016191,
+      "scratch_area": 0.00034584708470847085
+    },
+    {
+      "clip": "012",
+      "dust_count_mpx": 858.7733773377338,
+      "flicker_shift": 0.06067342045716941,
+      "label": "dust",
+      "lowfreq_ratio": 0.7616364561067808,
+      "residual_area": 0.18254194169416943,
+      "residual_mean": 0.06364897186867893,
+      "scratch_area": 0.0012314356435643564
+    },
+    {
+      "clip": "013",
+      "dust_count_mpx": 748.7623762376237,
+      "flicker_shift": 0.07688337043509819,
+      "label": "mixed",
+      "lowfreq_ratio": 0.7706898640256072,
+      "residual_area": 0.3447284103410341,
+      "residual_mean": 0.07945287390612066,
+      "scratch_area": 0.0016756050605060506
+    },
+    {
+      "clip": "014",
+      "dust_count_mpx": 548.6798679867986,
+      "flicker_shift": 0.05172108646365814,
+      "label": "mixed",
+      "lowfreq_ratio": 0.7177017409129524,
+      "residual_area": 0.18281490649064908,
+      "residual_mean": 0.05559625816531479,
+      "scratch_area": 0.00029084158415841583
+    },
+    {
+      "clip": "015",
+      "dust_count_mpx": 906.2156215621562,
+      "flicker_shift": 0.06803026735578896,
+      "label": "dust",
+      "lowfreq_ratio": 0.6391074013712046,
+      "residual_area": 0.2920757700770077,
+      "residual_mean": 0.07574699786491693,
+      "scratch_area": 0.0007425742574257426
+    },
+    {
+      "clip": "016",
+      "dust_count_mpx": 957.7832783278329,
+      "flicker_shift": 0.05353308380581438,
+      "label": "mixed",
+      "lowfreq_ratio": 0.7137086292519809,
+      "residual_area": 0.19079139163916392,
+      "residual_mean": 0.0562100627925247,
+      "scratch_area": 0.006276815181518153
+    },
+    {
+      "clip": "017",
+      "dust_count_mpx": 1173.6798679867986,
+      "flicker_shift": 0.045164785312954335,
+      "label": "dust",
+      "lowfreq_ratio": 0.647856899815286,
+      "residual_area": 0.10933443344334434,
+      "residual_mean": 0.05074399611912668,
+      "scratch_area": 0.0002358360836083608
+    },
+    {
+      "clip": "018",
+      "dust_count_mpx": 1210.8085808580859,
+      "flicker_shift": 0.062170411087572576,
+      "label": "dust",
+      "lowfreq_ratio": 0.7164636329122328,
+      "residual_area": 0.25659103410341033,
+      "residual_mean": 0.06697243298403918,
+      "scratch_area": 0.0010272277227722773
+    },
+    {
+      "clip": "019",
+      "dust_count_mpx": 493.67436743674364,
+      "flicker_shift": 0.07564236822072416,
+      "label": "flicker",
+      "lowfreq_ratio": 0.7497365039166207,
+      "residual_area": 0.32674504950495054,
+      "residual_mean": 0.08097002236172557,
+      "scratch_area": 5.6380638063806386e-05
+    },
+    {
+      "clip": "020",
+      "dust_count_mpx": 580.3080308030802,
+      "flicker_shift": 0.059727517556166274,
+      "label": "scratch",
+      "lowfreq_ratio": 0.7066990665349369,
+      "residual_area": 0.2315807205720572,
+      "residual_mean": 0.06580390986055136,
+      "scratch_area": 0.0026045104510451045
+    },
+    {
+      "clip": "021",
+      "dust_count_mpx": 694.4444444444445,
+      "flicker_shift": 0.0485529994009994,
+      "label": "dust",
+      "lowfreq_ratio": 0.7760227934399543,
+      "residual_area": 0.182162403740374,
+      "residual_mean": 0.054825456952676176,
+      "scratch_area": 0.0006270627062706271
+    },
+    {
+      "clip": "022",
+      "dust_count_mpx": 317.65676567656766,
+      "flicker_shift": 0.15573590956628322,
+      "label": "flicker",
+      "lowfreq_ratio": 0.9510555962092122,
+      "residual_area": 0.7716350385038504,
+      "residual_mean": 0.15585892125964165,
+      "scratch_area": 4.056655665566557e-05
+    },
+    {
+      "clip": "023",
+      "dust_count_mpx": 1109.7359735973598,
+      "flicker_shift": 0.04852298038313165,
+      "label": "mixed",
+      "lowfreq_ratio": 0.683467286519158,
+      "residual_area": 0.19816281628162813,
+      "residual_mean": 0.05712577006779611,
+      "scratch_area": 0.002158965896589659
+    },
+    {
+      "clip": "024",
+      "dust_count_mpx": 519.1144114411442,
+      "flicker_shift": 0.06242218734696507,
+      "label": "flicker",
+      "lowfreq_ratio": 0.7880132710955671,
+      "residual_area": 0.23054386688668865,
+      "residual_mean": 0.065654640737921,
+      "scratch_area": 0.0002544004400440044
+    },
+    {
+      "clip": "025",
+      "dust_count_mpx": 390.53905390539046,
+      "flicker_shift": 0.0684257298707962,
+      "label": "flicker",
+      "lowfreq_ratio": 0.7736929144311714,
+      "residual_area": 0.25878850385038504,
+      "residual_mean": 0.07419731412082911,
+      "scratch_area": 0.000724009900990099
+    },
+    {
+      "clip": "026",
+      "dust_count_mpx": 448.98239823982397,
+      "flicker_shift": 0.07352427889127285,
+      "label": "mixed",
+      "lowfreq_ratio": 0.8140683115584484,
+      "residual_area": 0.2512218096809681,
+      "residual_mean": 0.07587089147418738,
+      "scratch_area": 0.011190181518151815
+    },
+    {
+      "clip": "027",
+      "dust_count_mpx": 843.6468646864687,
+      "flicker_shift": 0.0707279356662184,
+      "label": "mixed",
+      "lowfreq_ratio": 0.7568142843405982,
+      "residual_area": 0.2600708195819582,
+      "residual_mean": 0.07275230172090233,
+      "scratch_area": 0.002992299229922992
+    },
+    {
+      "clip": "028",
+      "dust_count_mpx": 381.6006600660066,
+      "flicker_shift": 0.05009446223266423,
+      "label": "scratch",
+      "lowfreq_ratio": 0.686917754474675,
+      "residual_area": 0.11753231573157315,
+      "residual_mean": 0.05394987212494016,
+      "scratch_area": 0.001617161716171617
+    },
+    {
+      "clip": "029",
+      "dust_count_mpx": 1955.445544554455,
+      "flicker_shift": 0.031029834470245987,
+      "label": "dust",
+      "lowfreq_ratio": 0.40155707740695334,
+      "residual_area": 0.10341240374037404,
+      "residual_mean": 0.041926153004169464,
+      "scratch_area": 0.0011695544554455445
+    }
+  ],
+  "protocol": {
+    "base_log": "projects/007-waveletmask/Exp/results/waveletmask_base_reds_synthetic_best/test_waveletmask_base_reds_synthetic_best_20260415_174118.log",
+    "frames_per_clip": 20,
+    "gt_root": "framework/datasets/val/REDS/GT/val_sharp",
+    "label_note": "Clip strata are residual-derived descriptors, not pixel-level generator labels.",
+    "lq_root": "framework/datasets/val/REDS/LQ/val_sharp_degraded",
+    "max_side": 360,
+    "residual_threshold": 0.1,
+    "wavelet_log": "projects/007-waveletmask/Exp/results/waveletmask_ab_reds_synthetic_best/test_waveletmask_ab_reds_synthetic_best_20260415_191427.log"
+  },
+  "summary": [
+    {
+      "base_dists": 0.08615999999999999,
+      "base_lpips": 0.07705999999999999,
+      "base_psnr": 27.473399999999998,
+      "base_ssim": 0.91394,
+      "clips": [
+        "003",
+        "005",
+        "009",
+        "020",
+        "028"
+      ],
+      "delta_dists": 0.011559999999999987,
+      "delta_lpips": 0.010999999999999996,
+      "delta_psnr": 0.6388399999999983,
+      "delta_ssim": 0.0020400000000000418,
+      "label": "scratch",
+      "n": 5,
+      "wavelet_dists": 0.0746,
+      "wavelet_lpips": 0.06606,
+      "wavelet_psnr": 28.112239999999996,
+      "wavelet_ssim": 0.91598
+    },
+    {
+      "base_dists": 0.1057375,
+      "base_lpips": 0.1271375,
+      "base_psnr": 26.1036875,
+      "base_ssim": 0.87135,
+      "clips": [
+        "000",
+        "011",
+        "012",
+        "015",
+        "017",
+        "018",
+        "021",
+        "029"
+      ],
+      "delta_dists": 0.011999999999999997,
+      "delta_lpips": 0.01959999999999998,
+      "delta_psnr": 0.44651250000000076,
+      "delta_ssim": 0.004862499999999992,
+      "label": "dust",
+      "n": 8,
+      "wavelet_dists": 0.0937375,
+      "wavelet_lpips": 0.10753750000000001,
+      "wavelet_psnr": 26.5502,
+      "wavelet_ssim": 0.8762125
+    },
+    {
+      "base_dists": 0.10566666666666667,
+      "base_lpips": 0.12821666666666667,
+      "base_psnr": 23.90438333333333,
+      "base_ssim": 0.87125,
+      "clips": [
+        "004",
+        "010",
+        "019",
+        "022",
+        "024",
+        "025"
+      ],
+      "delta_dists": 0.015266666666666678,
+      "delta_lpips": 0.017616666666666683,
+      "delta_psnr": 0.46669999999999945,
+      "delta_ssim": 0.00550000000000006,
+      "label": "flicker",
+      "n": 6,
+      "wavelet_dists": 0.0904,
+      "wavelet_lpips": 0.11059999999999999,
+      "wavelet_psnr": 24.37108333333333,
+      "wavelet_ssim": 0.87675
+    },
+    {
+      "base_dists": 0.08617272727272728,
+      "base_lpips": 0.0846909090909091,
+      "base_psnr": 26.82890909090909,
+      "base_ssim": 0.9076909090909091,
+      "clips": [
+        "001",
+        "002",
+        "006",
+        "007",
+        "008",
+        "013",
+        "014",
+        "016",
+        "023",
+        "026",
+        "027"
+      ],
+      "delta_dists": 0.010881818181818187,
+      "delta_lpips": 0.01023636363636364,
+      "delta_psnr": 0.3403454545454565,
+      "delta_ssim": 0.0017090909090907713,
+      "label": "mixed",
+      "n": 11,
+      "wavelet_dists": 0.07529090909090909,
+      "wavelet_lpips": 0.07445454545454545,
+      "wavelet_psnr": 27.169254545454546,
+      "wavelet_ssim": 0.9093999999999999
+    }
+  ]
+}

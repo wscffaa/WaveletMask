@@ -1,0 +1,72 @@
+schema_version: 2
+figure_id: Figure8
+latex_label: fig:ablation_qualitative
+title: Visual ablation comparison
+role: results
+status: blocked
+slot_id: ABLATION_QUALITATIVE
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A3]
+selected_option:
+  option_id: A
+  slot_id: ABLATION_QUALITATIVE
+  archetype: ablation_table_visual
+  source_protocol: .claude/skills/ofr-paper-mdpi-writing/references/figure-options-protocol.md
+archetype: ablation_table_visual
+core_conclusion: Visual ablation must show how local high-frequency masking, global flicker masking, and max fusion change restoration behavior relative to the baseline.
+evidence_data_path:
+  - projects/007-waveletmask/Idea/ablation_matrix.json
+  - projects/007-waveletmask/Exp/paper_data/section_synth_8variants.yaml
+  - projects/007-waveletmask/Exp/ablation/ablation_results.yaml
+  - projects/007-waveletmask/Exp/results/test_results
+evidence_gate:
+  required: true
+  status: blocked
+  missing:
+    - projects/007-waveletmask/Paper/applsci/figures/Figure8.pdf
+reviewer_risk:
+  - The figure must use the same variant names as the ablation table; otherwise it will look cherry-picked.
+forbidden_scene: Do not include archived PixelWiseMaskFusion as a submitted core module; it is an ablation-only learned-fusion control.
+production_owner: ofr-paper-visual-studio
+production_route: Synthetic tab, Ablation context, ROI/zoom export
+target_path: projects/007-waveletmask/Paper/applsci/figures/Figure8.pdf
+current_asset_path: ""
+ascii_preview: |
+  Input | Baseline | +Local | +Flicker | WaveletMask | GT
+        |          | ROI    | ROI      | ROI         |
+dependencies:
+  code:
+    - projects/007-waveletmask/archs/waveletmask_base_arch.py
+    - projects/007-waveletmask/archs/waveletmask_local_arch.py
+    - projects/007-waveletmask/archs/waveletmask_flicker_arch.py
+    - projects/007-waveletmask/archs/waveletmask_ab_arch.py
+  experiments:
+    - projects/007-waveletmask/Idea/ablation_matrix.json
+    - projects/007-waveletmask/Exp/paper_data/section_synth_8variants.yaml
+  assets:
+    - projects/007-waveletmask/Exp/results/test_results
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: []
+    claim_to_sync: ""
+  results:
+    required_refs: ["\\ref{fig:ablation_qualitative}"]
+    claim_to_sync: Visual ablation uses the same controlled variants as the ablation table.
+caption_contract:
+  tense: present
+  required_terms: [Baseline, Local High-Frequency Mask, Global Flicker Mask, WaveletMask, ablation]
+  banned_terms: [Setting A, Setting B, core learned fusion]
+  draft_caption: Visual ablation of WaveletMask variants on synthetic old-film restoration scenes.
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by:
+  - target_path missing
+  - scene selection not yet exported
+notes: Added during fixed OFR skeleton migration; required to align visual evidence with the ablation table.

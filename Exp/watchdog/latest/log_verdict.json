@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-06-20T17:16:55",
+  "project": "007-waveletmask",
+  "generation_id": "unknown",
+  "server": "unknown",
+  "severity": "WATCH",
+  "action": "watch",
+  "target": "waveletmask_base_seed2023",
+  "summary": "1 个日志/指标风险信号",
+  "issues": [
+    {
+      "severity": "WATCH",
+      "variant": "waveletmask_base_seed2023",
+      "reason": "psnr_regression_warn",
+      "evidence": "best-latest gap=1.5138dB"
+    }
+  ],
+  "variant_status": {
+    "waveletmask_ab_normalization_aware": {
+      "severity": "NORMAL"
+    },
+    "waveletmask_ab_scalar_gate": {
+      "severity": "NORMAL"
+    },
+    "waveletmask_ab_seed2022": {
+      "severity": "NORMAL"
+    },
+    "waveletmask_ab_seed2023": {
+      "severity": "NORMAL"
+    },
+    "waveletmask_base_seed2022": {
+      "severity": "NORMAL"
+    },
+    "waveletmask_base_seed2023": {
+      "severity": "WATCH"
+    },
+    "waveletmask_fc_ab_seed2022": {
+      "severity": "NORMAL"
+    },
+    "waveletmask_fc_ab_seed2023": {
+      "severity": "NORMAL"
+    }
+  },
+  "source": "tensorboard_first_log_verdict",
+  "tb_snapshot": {
+    "available": true,
+    "variant_count": 8,
+    "tb_url": "http://localhost:6007"
+  }
+}

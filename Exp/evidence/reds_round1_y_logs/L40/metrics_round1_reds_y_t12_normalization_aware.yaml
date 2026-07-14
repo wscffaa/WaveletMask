@@ -1,0 +1,21 @@
+best_model:
+  checkpoint: net_g_200000.pth
+  metric: psnr
+  value: 25.01
+datasets:
+  reds-synthetic:
+    psnr: 25.0074
+    ssim: 0.8898
+    lpips: 0.0898
+    dists: 0.0798
+test_configs:
+- name: round1_reds_y_t12_normalization_aware
+  dataset: REDS_synthetic
+  checkpoint: Exp/experiments/waveletmask_ab_normalization_aware/models/net_g_200000.pth
+  iter: 200000
+  manual_seed: 2021
+  metric_protocol:
+    psnr_test_y_channel: true
+    ssim_test_y_channel: true
+    lpips_convert_to_grayscale: true
+    dists_convert_to_grayscale: true

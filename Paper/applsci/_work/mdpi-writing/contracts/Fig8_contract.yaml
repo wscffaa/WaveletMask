@@ -1,0 +1,61 @@
+schema_version: 2
+figure_id: Fig8
+latex_label: fig:error_map
+title: "Error map: complementary spatial coverage evidence"
+role: discussion
+status: planned
+slot_id: DIFFERENCE_OR_ERROR_MAP
+fixed_level: conditional
+drop_policy: condition_absent
+motivation_anchor_ids: [A3]
+selected_option:
+  option_id: A
+  archetype: heatmap_pair
+  source_protocol: references/02-figure/figure-options-protocol.md
+archetype: heatmap_pair
+core_conclusion: "The error reduction map of WaveletMask vs. the RTN-style baseline illustrates where the max-fused wavelet mask reduces reconstruction error under synthetic ground truth."
+evidence_data_path:
+  - Paper/applsci/figures/Figure8.pdf
+  - Idea/ablation_matrix.json
+evidence_gate:
+  required: false
+  status: available
+  missing: []
+reviewer_risk:
+  - "Error map interpretation may be subjective; frame-selection criteria must remain explicit."
+  - "Conditional slot: enabled only because the synthetic ground-truth analysis benefits from spatial diagnostics."
+forbidden_scene: "Skip if the error-map figure cannot be tied to synthetic ground truth."
+figure_priority: secondary
+production_owner: user
+production_route: ppt
+production_status: ready
+ascii_preview: |
+  [Baseline absolute error] [WaveletMask absolute error] [WaveletMask lower-error pixels]
+dependencies:
+  code: []
+  experiments:
+    - Idea/ablation_matrix.json
+  assets:
+    - Paper/applsci/figures/Figure8.pdf
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: []
+    claim_to_sync: ""
+  results:
+    required_refs: ["\\ref{fig:error_map}"]
+    claim_to_sync: "Error map visualization provides synthetic-ground-truth diagnostics for WaveletMask error reduction."
+caption_contract:
+  tense: present
+  required_terms: ["error map", "RTN-style baseline", "WaveletMask", "synthetic"]
+  banned_terms: ["clearly shows", "obviously complementary"]
+  draft_caption: "Error map comparison between the RTN-style baseline and WaveletMask on selected synthetic frames. The first two columns compare absolute error with respect to ground truth, and the third column highlights pixels where WaveletMask has lower error. The maps are qualitative diagnostics rather than statistical evidence."
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: true
+blocked_by: []
+notes: "Conditional slot shifted from Fig7 to Fig8 after adding the GFM module figure."

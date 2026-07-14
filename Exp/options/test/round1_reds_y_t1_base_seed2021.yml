@@ -1,0 +1,48 @@
+name: round1_reds_y_t1_base_seed2021
+model_type: WaveletMaskModel
+scale: 1
+num_gpu: 1
+manual_seed: 2021
+dist: false
+find_unused_parameters: true
+datasets:
+  test:
+    name: REDS_synthetic
+    type: Film_dataset_1
+    dataroot_gt: datasets/OldFilmRestoration/val/REDS/GT/val_sharp
+    dataroot_lq: datasets/OldFilmRestoration/val/REDS/LQ/val_sharp_degraded
+    num_frame: -1
+    cache_data: false
+    normalizing: true
+    io_backend:
+      type: disk
+network_g:
+  type: WaveletMaskBaseNet
+  num_feat: 16
+  num_block: 6
+  flow_type: raft
+val:
+  save_img: true
+  metrics:
+    psnr:
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: true
+    lpips:
+      type: calculate_lpips
+      crop_border: 0
+      convert_to_grayscale: true
+    dists:
+      type: calculate_dists
+      crop_border: 0
+      convert_to_grayscale: true
+logger:
+  print_freq: 100
+path:
+  pretrain_network_g: Exp/experiments/waveletmask/waveletmask_base/models/net_g_best.pth
+  results_root: Exp/results
+results_subdir: round1_reds_y_t1_base_seed2021

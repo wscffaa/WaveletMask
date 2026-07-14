@@ -1,0 +1,49 @@
+{
+  "source_dir": "/Users/caifeifan/VibeScholar/Paper_1/Images/Framework/GT",
+  "outputs": [
+    {
+      "figure": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure4/source/real_damage_extract/Fig2_wavelet_frequency_motivation_script.png",
+      "source_frames": [
+        "/Users/caifeifan/VibeScholar/Paper_1/Images/Framework/GT/2.png",
+        "/Users/caifeifan/VibeScholar/Paper_1/Images/Framework/GT/3.png",
+        "/Users/caifeifan/VibeScholar/Paper_1/Images/Framework/GT/4.png"
+      ]
+    },
+    {
+      "figure": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure4/source/real_damage_extract/Fig4_degradation_examples_script.png",
+      "rows": [
+        {
+          "label": "Sparse defects",
+          "source": "/Users/caifeifan/VibeScholar/Paper_1/Images/Framework/GT/1.png",
+          "roi_xyxy": [
+            480,
+            816,
+            740,
+            1076
+          ]
+        },
+        {
+          "label": "Dense blotches",
+          "source": "/Users/caifeifan/VibeScholar/Paper_1/Images/Framework/GT/4.png",
+          "roi_xyxy": [
+            816,
+            480,
+            1076,
+            740
+          ]
+        },
+        {
+          "label": "Frame variation",
+          "source": "/Users/caifeifan/VibeScholar/Paper_1/Images/Framework/GT/5.png",
+          "roi_xyxy": [
+            672,
+            816,
+            932,
+            1076
+          ]
+        }
+      ]
+    }
+  ],
+  "f6_status": "not_generated: requires paired RTN and WaveletMask restoration outputs; input frames alone are insufficient."
+}

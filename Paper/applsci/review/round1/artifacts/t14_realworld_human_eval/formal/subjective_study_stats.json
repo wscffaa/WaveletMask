@@ -1,0 +1,71 @@
+{
+  "meta": {
+    "participants": 34,
+    "total_responses": 476,
+    "chance_level": 0.25,
+    "tests": [
+      "chi-square goodness-of-fit vs uniform distribution over 4 methods",
+      "one-sided exact binomial test of WaveletMask share vs 0.25",
+      "Wilson 95% CI for WaveletMask share"
+    ],
+    "caveat": "Votes are treated as independent; participant-level clustering (34 participants x 14 clips) is not modelled because only aggregated counts are released."
+  },
+  "results": [
+    {
+      "scope": "overall_preference",
+      "labels": "WaveletMask/MambaOFR/RRTN/RTN",
+      "counts": "215/114/86/61",
+      "total": 476,
+      "wm_count": 215,
+      "wm_share": 0.45168067226890757,
+      "wilson95_lo": 0.4075379700968359,
+      "wilson95_hi": 0.4965970329246744,
+      "chi2_stat": 115.07563025210084,
+      "chi2_df": 3,
+      "chi2_p": 8.867518829087136e-25,
+      "binom_p_greater_chance": 1.1448438150248503e-21
+    },
+    {
+      "scope": "rank1_degradation",
+      "labels": "WaveletMask/MambaOFR/RRTN/RTN",
+      "counts": "264/112/70/30",
+      "total": 476,
+      "wm_count": 264,
+      "wm_share": 0.5546218487394958,
+      "wilson95_lo": 0.509712923662578,
+      "wilson95_hi": 0.5986562033565845,
+      "chi2_stat": 263.83193277310926,
+      "chi2_df": 3,
+      "chi2_p": 6.665984647650578e-57,
+      "binom_p_greater_chance": 2.1045083364832424e-45
+    },
+    {
+      "scope": "rank1_style",
+      "labels": "WaveletMask/MambaOFR/RRTN/RTN",
+      "counts": "247/132/67/30",
+      "total": 476,
+      "wm_count": 247,
+      "wm_share": 0.5189075630252101,
+      "wilson95_lo": 0.4740506945836502,
+      "wilson95_hi": 0.5634616955383677,
+      "chi2_stat": 228.38655462184875,
+      "chi2_df": 3,
+      "chi2_p": 3.0878369760806708e-49,
+      "binom_p_greater_chance": 3.5069112269875524e-36
+    },
+    {
+      "scope": "rank1_temporal",
+      "labels": "WaveletMask/MambaOFR/RRTN/RTN",
+      "counts": "273/107/69/27",
+      "total": 476,
+      "wm_count": 273,
+      "wm_share": 0.5735294117647058,
+      "wilson95_lo": 0.5286859955559735,
+      "wilson95_hi": 0.6171955215852065,
+      "chi2_stat": 292.6386554621849,
+      "chi2_df": 3,
+      "chi2_p": 3.898574244889896e-63,
+      "binom_p_greater_chance": 1.0287396040397191e-50
+    }
+  ]
+}

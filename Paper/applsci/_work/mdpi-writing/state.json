@@ -1,0 +1,169 @@
+{
+  "project": "007-waveletmask",
+  "method_name": "WaveletMask",
+  "journal": "Applied Sciences",
+  "current_step": 11,
+  "current_substep": "5.1",
+  "workflow_status": "finished",
+  "steps": {
+    "0": {
+      "status": "done",
+      "completed_at": "2026-05-13",
+      "motivation_anchor_id": "M1",
+      "note": "Frequency decoupling: wavelet decomposes local HF damage vs global LF flicker"
+    },
+    "0.5": {
+      "status": "done",
+      "completed_at": "2026-05-13",
+      "note": "Dual-track guides pre-exist from v1"
+    },
+    "1": {
+      "status": "done",
+      "completed_at": "2026-05-13T22:45:00+08:00",
+      "substeps": {
+        "1.1": "done",
+        "1.2": "done",
+        "1.3": "done",
+        "1.4": "done"
+      },
+      "note": "All 8 figures PPT-produced by user. Contracts written for Fig1-8. Figure9.pdf is orphan from old plan — excluded.",
+      "revisit_count": 0
+    },
+    "2": {
+      "status": "done"
+    },
+    "3": {
+      "status": "done",
+      "completed_at": "2026-05-13T23:00:00+08:00",
+      "note": "Method reviewed. 2 issues: Fig2 not cited in §3.1, HaarDWT vs HaarDWT2d naming. Experiments complete — skip training launch."
+    },
+    "4": {
+      "status": "done",
+      "completed_at": "2026-05-13T23:10:00+08:00",
+      "note": "Fixed P1 (Fig2 ref in §3.1) and P2 (HaarDWT→HaarDWT2d). Experiments complete — skip waiting point B."
+    },
+    "5": {
+      "status": "done",
+      "completed_at": "2026-05-13T23:30:00+08:00",
+      "note": "Results+Discussion reviewed. Fixed 4 figure path drifts. All data consistent with ablation_matrix.json and main_results.yaml."
+    },
+    "6": {
+      "status": "done",
+      "completed_at": "2026-05-13T23:45:00+08:00",
+      "note": "All 8 figures caption_synced=true after architecture figure update. Figure3=LHFM, Figure4=GFM, result figures shifted by display number only. Zero drift."
+    },
+    "7": {
+      "status": "done",
+      "note": "Related Work reviewed. 3 subsections, 2025+ citations, Table 1 comparison. No issues."
+    },
+    "8": {
+      "status": "done",
+      "completed_at": "2026-05-13",
+      "note": "Mode A review completed (review-report.md). P0:2 fixed, P1:7 fixed, P2:6 fixed. CONDITIONAL-GO upgraded to GO after LaTeX compile pass."
+    },
+    "9": {
+      "status": "done",
+      "note": "Abstract reviewed. ~180 words, zero numbers, zero abbreviations. OK."
+    },
+    "10": {
+      "status": "done",
+      "note": "Title confirmed: WaveletMask: Wavelet-Domain Mask-Guided Degradation Detection for Old Film Restoration"
+    },
+    "11": {
+      "status": "done",
+      "completed_at": "2026-05-14",
+      "note": "Final polish complete. LaTeX: 0err/0warn/0undefined. DOI: 95.7%. 8figs+7tabs all reachable. All declarations present. Paper submission-ready."
+    }
+  },
+  "figures_status": {
+    "Fig1": {
+      "file_present": true,
+      "caption_synced": true,
+      "file": "Figure1.pdf"
+    },
+    "Fig2": {
+      "file_present": true,
+      "caption_synced": true,
+      "file": "Figure2.pdf"
+    },
+    "Fig3": {
+      "file_present": true,
+      "caption_synced": true,
+      "file": "Figure3.pdf"
+    },
+    "Fig4": {
+      "file_present": true,
+      "caption_synced": true,
+      "file": "Figure4.pdf"
+    },
+    "Fig5": {
+      "file_present": true,
+      "caption_synced": true,
+      "file": "Figure5.pdf"
+    },
+    "Fig6": {
+      "file_present": true,
+      "caption_synced": true,
+      "file": "Figure6.pdf"
+    },
+    "Fig7": {
+      "file_present": true,
+      "caption_synced": true,
+      "file": "Figure7.pdf"
+    },
+    "Fig8": {
+      "file_present": true,
+      "caption_synced": true,
+      "file": "Figure8.pdf"
+    }
+  },
+  "production_routes": {
+    "Fig1": {
+      "status": "completed",
+      "route": "ppt",
+      "owner": "user"
+    },
+    "Fig2": {
+      "status": "completed",
+      "route": "ppt",
+      "owner": "user"
+    },
+    "Fig3": {
+      "status": "completed",
+      "route": "ppt",
+      "owner": "user"
+    },
+    "Fig4": {
+      "status": "completed",
+      "route": "ppt",
+      "owner": "user"
+    },
+    "Fig5": {
+      "status": "completed",
+      "route": "ppt",
+      "owner": "user"
+    },
+    "Fig6": {
+      "status": "completed",
+      "route": "ppt",
+      "owner": "user"
+    },
+    "Fig7": {
+      "status": "completed",
+      "route": "ppt",
+      "owner": "user"
+    },
+    "Fig8": {
+      "status": "completed",
+      "route": "ppt",
+      "owner": "user"
+    }
+  },
+  "blocked_by": [],
+  "waiting_point_A_passed": true,
+  "waiting_point_A_note": "Fig1 (core motivation) + Fig2 (core pipeline) both file_present=true. Proceeding to Step 2.",
+  "review_round": 0,
+  "last_session": "2026-05-14T12:00:00+08:00",
+  "waiting_point_B_passed": true,
+  "waiting_point_B_note": "All 8 figures file_present=true. Experiment data (ablation_matrix.json, main_results.yaml) available. Proceeding to Step 5."
+}

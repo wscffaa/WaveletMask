@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1300" viewBox="0 0 2200 1300">
+<defs>
+<marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="5" orient="auto" markerUnits="strokeWidth">
+<path d="M 0 0 L 12 5 L 0 10 z" fill="#1f2937"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="2200" height="1300" fill="white"/>
+<text x="1100" y="76" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" fill="#1f2937" text-anchor="middle">Fig. 3. Mask fusion and gated aggregation module</text>
+<rect x="80" y="145" width="900" height="1015" rx="24" fill="#f8fafc" stroke="#c2410c" stroke-width="3"/>
+<text x="108" y="189" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#c2410c" text-anchor="start">Investigated alpha fusion path</text>
+<rect x="1060" y="145" width="1040" height="1015" rx="24" fill="#f8fafc" stroke="#2563eb" stroke-width="3"/>
+<text x="1088" y="189" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#2563eb" text-anchor="start">RTN gated feature update</text>
+<rect x="150" y="280" width="320" height="120" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+<text x="310" y="312" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Spatial residual</text>
+<text x="310" y="348" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">mask</text>
+<text x="310" y="394" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">|warp(I_neighbor) - I_t|</text>
+<rect x="150" y="555" width="320" height="120" rx="18" fill="#ccfbf1" stroke="#0f766e" stroke-width="4"/>
+<text x="310" y="605" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Wavelet mask</text>
+<text x="310" y="651" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">from Fig. 2</text>
+<rect x="575" y="415" width="300" height="120" rx="18" fill="#ffedd5" stroke="#c2410c" stroke-width="4"/>
+<text x="725" y="447" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Concatenate</text>
+<text x="725" y="483" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">masks</text>
+<text x="725" y="529" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">2 channels</text>
+<rect x="575" y="620" width="300" height="130" rx="18" fill="#ffedd5" stroke="#c2410c" stroke-width="4"/>
+<text x="725" y="675" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Alpha CNN</text>
+<text x="725" y="721" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">2 -&gt; 32 -&gt; 32 -&gt; 16 -&gt; 1</text>
+<rect x="575" y="830" width="300" height="110" rx="18" fill="#ffedd5" stroke="#c2410c" stroke-width="4"/>
+<text x="725" y="875" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Sigmoid alpha</text>
+<text x="725" y="921" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">bias = +5 warm start</text>
+<rect x="1035" y="620" width="360" height="130" rx="18" fill="#ffedd5" stroke="#c2410c" stroke-width="6"/>
+<text x="1215" y="660" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">Weighted indicator</text>
+<text x="1215" y="712" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">alpha m_spatial + (1-alpha)</text>
+<text x="1215" y="742" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">m_wavelet</text>
+<rect x="1125" y="280" width="305" height="110" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+<text x="1277" y="307" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Warped hidden</text>
+<text x="1277" y="343" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">state</text>
+<text x="1277" y="389" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">h_{t-1} or h_{t+1}</text>
+<rect x="1125" y="460" width="305" height="110" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+<text x="1277" y="487" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Current frame</text>
+<text x="1277" y="523" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">feature</text>
+<text x="1277" y="569" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">projection head</text>
+<rect x="1515" y="415" width="360" height="150" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="6"/>
+<text x="1695" y="465" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">Gated aggregation</text>
+<text x="1695" y="517" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">concat -&gt; conv -&gt; sigmoid</text>
+<text x="1695" y="547" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">gate</text>
+<rect x="1515" y="725" width="360" height="125" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+<text x="1695" y="777" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Swin spatial block</text>
+<text x="1695" y="823" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">updated propagation feature</text>
+<rect x="1515" y="960" width="360" height="110" rx="18" fill="#ffffff" stroke="#1f2937" stroke-width="4"/>
+<text x="1695" y="1005" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Frame reconstruction</text>
+<text x="1695" y="1051" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">bi-directional fusion + tail</text>
+<line x1="470" y1="340" x2="575" y2="475" stroke="#2563eb" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="470" y1="615" x2="575" y2="475" stroke="#0f766e" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="725" y1="535" x2="725" y2="620" stroke="#c2410c" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="725" y1="750" x2="725" y2="830" stroke="#c2410c" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="875" y1="885" x2="1035" y2="685" stroke="#c2410c" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="470" y1="340" x2="1035" y2="655" stroke="#2563eb" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" stroke-dasharray="14 12"/>
+<line x1="470" y1="615" x2="1035" y2="690" stroke="#0f766e" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)" stroke-dasharray="14 12"/>
+<line x1="1430" y1="335" x2="1515" y2="490" stroke="#2563eb" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="1430" y1="515" x2="1515" y2="490" stroke="#2563eb" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="1395" y1="685" x2="1515" y2="490" stroke="#c2410c" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="1695" y1="565" x2="1695" y2="725" stroke="#2563eb" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="1695" y1="850" x2="1695" y2="960" stroke="#2563eb" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="580" y="1056" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="400" fill="#b91c1c" text-anchor="middle">Use this figure only if the manuscript discusses the C/fusion ablation explicitly.</text>
+<text x="1580" y="1138" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="400" fill="#64748b" text-anchor="middle">Selected A+B model bypasses alpha fusion and feeds m_wavelet directly to gated aggregation.</text>
+</svg>

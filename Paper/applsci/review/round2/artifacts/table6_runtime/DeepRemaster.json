@@ -1,0 +1,25 @@
+{
+  "method": "DeepRemaster",
+  "arch": "RemasterNetR",
+  "status": "ok",
+  "input_shape": [
+    1,
+    7,
+    3,
+    256,
+    256
+  ],
+  "protocol": "FP32, eval, inference_mode, warmup=3, runs=10",
+  "gpu": "NVIDIA L40",
+  "torch": "2.7.0+cu126",
+  "cuda": "12.6",
+  "params_reg_m": 9.8781,
+  "params_flow_m": 0.0,
+  "params_full_m": 9.8781,
+  "flops_g": 914.0,
+  "latency_ms_per_clip": 17.876,
+  "latency_std_ms": 0.248,
+  "throughput_fps": 391.589,
+  "throughput_clips_per_s": 55.941,
+  "peak_mem_gb": 0.35
+}

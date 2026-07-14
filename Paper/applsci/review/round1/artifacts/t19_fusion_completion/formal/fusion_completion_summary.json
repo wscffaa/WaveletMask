@@ -1,0 +1,121 @@
+{
+  "reference_variant": "max_fusion_main_seed2021",
+  "reference_metrics": {
+    "psnr": 26.61,
+    "ssim": 0.8954,
+    "lpips": 0.0886,
+    "dists": 0.0827
+  },
+  "tested_variants": [
+    {
+      "variant": "channel_attention",
+      "source": "projects/007-waveletmask/Exp/evidence/reds_round1_y_logs/4090_1/metrics_round1_reds_y_t12_attention_fusion.yaml",
+      "metrics": {
+        "psnr": 23.25,
+        "ssim": 0.8281,
+        "lpips": 0.1768,
+        "dists": 0.1359
+      },
+      "delta_vs_reference": {
+        "psnr": -3.3599999999999994,
+        "ssim": -0.06730000000000003,
+        "lpips": -0.08820000000000001,
+        "dists": -0.0532
+      }
+    },
+    {
+      "variant": "residual",
+      "source": "projects/007-waveletmask/Exp/evidence/reds_round1_y_logs/A100/metrics_round1_reds_y_t12_residual_fusion.yaml",
+      "metrics": {
+        "psnr": 25.98,
+        "ssim": 0.8929,
+        "lpips": 0.0966,
+        "dists": 0.0811
+      },
+      "delta_vs_reference": {
+        "psnr": -0.629999999999999,
+        "ssim": -0.0024999999999999467,
+        "lpips": -0.008000000000000007,
+        "dists": 0.0015999999999999903
+      }
+    },
+    {
+      "variant": "bias0",
+      "source": "projects/007-waveletmask/Exp/evidence/reds_round1_y_logs/A100/metrics_round1_reds_y_t12_bias0.yaml",
+      "metrics": {
+        "psnr": 26.5013,
+        "ssim": 0.8981,
+        "lpips": 0.0857,
+        "dists": 0.0781
+      },
+      "delta_vs_reference": {
+        "psnr": -0.10869999999999891,
+        "ssim": 0.0027000000000000357,
+        "lpips": 0.0029,
+        "dists": 0.004599999999999993
+      }
+    },
+    {
+      "variant": "bias2",
+      "source": "projects/007-waveletmask/Exp/evidence/reds_round1_y_logs/A100/metrics_round1_reds_y_t12_bias2.yaml",
+      "metrics": {
+        "psnr": 23.8376,
+        "ssim": 0.842,
+        "lpips": 0.1598,
+        "dists": 0.1246
+      },
+      "delta_vs_reference": {
+        "psnr": -2.772400000000001,
+        "ssim": -0.0534,
+        "lpips": -0.0712,
+        "dists": -0.04190000000000001
+      }
+    },
+    {
+      "variant": "scalar_gate",
+      "source": "projects/007-waveletmask/Exp/evidence/reds_round1_y_logs/L40/metrics_round1_reds_y_t12_scalar_gate.yaml",
+      "metrics": {
+        "psnr": 25.2362,
+        "ssim": 0.8911,
+        "lpips": 0.09,
+        "dists": 0.0795
+      },
+      "delta_vs_reference": {
+        "psnr": -1.3737999999999992,
+        "ssim": -0.0042999999999999705,
+        "lpips": -0.0013999999999999985,
+        "dists": 0.0031999999999999945
+      }
+    },
+    {
+      "variant": "normalization_aware",
+      "source": "projects/007-waveletmask/Exp/evidence/reds_round1_y_logs/L40/metrics_round1_reds_y_t12_normalization_aware.yaml",
+      "metrics": {
+        "psnr": 25.0074,
+        "ssim": 0.8898,
+        "lpips": 0.0898,
+        "dists": 0.0798
+      },
+      "delta_vs_reference": {
+        "psnr": -1.602599999999999,
+        "ssim": -0.005599999999999938,
+        "lpips": -0.0012000000000000066,
+        "dists": 0.0029
+      }
+    }
+  ],
+  "missing_variants": [],
+  "status": {
+    "attention_tested": true,
+    "residual_tested": true,
+    "bias0_tested": true,
+    "bias2_tested": true,
+    "scalar_gate_tested": true,
+    "normalization_aware_tested": true,
+    "ready_for_submission_promotion": true
+  },
+  "notes": [
+    "Current local evidence includes the fusion metrics that can be resolved under reds_round1_y_logs.",
+    "Missing stronger fusion variants remain blocked until their metrics YAMLs exist in the current workspace."
+  ]
+}

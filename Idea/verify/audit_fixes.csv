@@ -1,0 +1,2 @@
+fix_id,date,category,severity,description,file_path,old_value,new_value,status,knowledge_tag
+F001,2026-04-12,scaffold,P3,__pycache__ 残留清理 (4处),archs/ + components/,存在 .pyc,已删除,fixed,pycache-cleanup

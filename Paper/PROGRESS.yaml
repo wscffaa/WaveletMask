@@ -1,0 +1,11 @@
+project: 007-waveletmask
+updated: 2026-06-24
+papers:
+  - journal: Applied Sciences (MDPI)
+    root: applsci/
+    manuscript_id: applsci-4348902
+    stage: final_proof_author_proofreading
+    status: proof uploaded to SuSy Step 2; awaiting human Submit
+    canonical_source: applsci/waveletmask.tex
+    accepted_date: 2026-06-22
+    last_milestone: 2026-06-23 final proof package (applsci/lifecycle/2026-06-23_final-proof-applsci-4348902)

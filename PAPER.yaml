@@ -1,0 +1,16 @@
+paper_id: waveletmask
+method: WaveletMask
+title: "WaveletMask: Wavelet-Domain Mask-Guided Degradation Detection for Old Film Restoration"
+venue: "Applied Sciences (MDPI)"
+manuscript_id: ""
+stage: paper
+sub_phase: accepted
+thesis_chapter: ""
+legacy_source: [007-waveletmask]
+basicofr_version: "1.0.0"
+release_repo: null
+github: "git@github.com:wscffaa/WaveletMask-dev.git"
+servers: {}
+training:
+  status: idle
+  note: ""

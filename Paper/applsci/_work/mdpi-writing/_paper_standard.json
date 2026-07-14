@@ -1,0 +1,32 @@
+{
+  "order": [
+    "Input",
+    "deoldify",
+    "shiftnet",
+    "vrt",
+    "rvrt",
+    "oldphoto",
+    "remasternet",
+    "rtn",
+    "rrtn",
+    "mambaofr",
+    "ab",
+    "GT",
+    "base",
+    "flicker",
+    "full",
+    "gated_flicker",
+    "local"
+  ],
+  "name_map": {
+    "deoldify": "DeOldify",
+    "mambaofr": "MambaOFR",
+    "remasternet": "DeepRemaster",
+    "rrtn": "RRTN",
+    "rtn": "RTN",
+    "rvrt": "RVRT",
+    "shiftnet": "ShiftNet",
+    "vrt": "VRT"
+  },
+  "unchecked": []
+}

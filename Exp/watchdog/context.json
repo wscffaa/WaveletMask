@@ -1,0 +1,197 @@
+{
+  "ablation_log_snippet": null,
+  "baseline_reference": null,
+  "generated_at": "2026-06-20T17:11:03",
+  "idea_context": {
+    "ablation_matrix": "{\n  \"schema_version\": \"ablation_matrix/v3\",\n  \"project_id\": \"007-waveletmask\",\n  \"fixed_variables\": {\n    \"num_feat\": 16,\n    \"num_block\": 6,\n    \"_source\": \"Exp/options/train/waveletmask_base.yml network_g field\"\n  },\n  \"variants\": [\n    {\n      \"id\": \"base\",\n      \"name\": \"Baseline (no masks)\",\n      \"config\": \"waveletmask_base.yml\",\n      \"params\": {\"A\": false, \"B\": false, \"C\": false, \"fusion\": \"none\"},\n      \"role\": \"baseline\",\n      \"comparison_target\": null,\n      \"metrics\": {\n        \"psnr_syn\": 26.158, \"ssim_syn\": 0.8917, \"lpips_syn\": 0.1034, \"dists_syn\": 0.0953,\n        \"niqe_real\": 5.334, \"brisque_real\": 29.312, \"clipiqa_real\": 0.4359\n      }\n    },\n    {\n      \"id\": \"local\",\n      \"name\": \"A only: Local HF Mask (direct replace)\",\n      \"config\": \"waveletmask_local.yml\",\n      \"params\": {\"A\": true, \"B\": false, \"C\": false, \"fusion\": \"direct_replace\"},\n      \"role\": \"ablation\",\n      \"comparison_target\": \"base\",\n      \"metrics\": {\n        \"psnr_syn\": 26.378, \"ssim_syn\": 0.8966, \"lpips_syn\": 0.0914, \"dists_syn\": 0.079,\n        \"niqe_real\": 5.339, \"brisque_real\": 19.556, \"clipiqa_real\": 0.4115\n      }\n    },\n    {\n      \"id\": \"flicker\",\n      \"name\": \"B only: Flicker Mask (direct replace)\",\n      \"config\": \"waveletmask_flicker.yml\",\n      \"params\": {\"A\": false, \"B\": true, \"C\": false, \"fusion\": \"direct_replace\"},\n      \"role\": \"ablation\",\n      \"comparison_target\": \"base\",\n      \"metrics\": {\n        \"psnr_syn\": 26.102, \"ssim_syn\": 0.898, \"lpips_syn\": 0.0969, \"dists_syn\": 0.0916,\n        \"niqe_real\": 5.04, \"brisque_real\": 28.788, \"clipiqa_real\": 0.4388\n      }\n    },\n    {\n      \"id\": \"ab\",\n      \"name\": \"A+B: max fusion — FINAL METHOD\",\n      \"config\": \"waveletmask_ab.yml\",\n      \"params\": {\"A\": true, \"B\": true, \"C\": false, \"fusion\": \"max\"},\n      \"role\": \"final\",\n      \"comparison_target\": \"base\",\n      \"metrics\": {\n        \"psnr_syn\": 26.602, \"ssim_syn\": 0.8951, \"lpips_syn\": 0.0891, \"dists_syn\": 0.0831,\n        \"niqe_real\": 5.229, \"brisque_real\": 24.202, \"clipiqa_real\": 0.4356\n      }\n    },\n    {\n      \"id\": \"local_fusion\",\n      \"name\": \"A+C: Local + CNN alpha fusion (C harmful)\",\n      \"config\": \"waveletmask_local_fusion.yml\",\n      \"params\": {\"A\": true, \"B\": false, \"C\": true, \"fusion\": \"cnn_alpha\"},\n      \"role\": \"ablation_negative\",\n      \"comparison_target\": \"local\",\n      \"metrics\": {\n        \"psnr_syn\": 25.986, \"ssim_syn\": 0.8978, \"lpips_syn\": 0.0889, \"dists_syn\": 0.083,\n        \"niqe_real\": 5.201, \"brisque_real\": 22.668, \"clipiqa_real\": 0.4435\n      }\n    },\n    {\n      \"id\": \"flicker_fusion\",\n      \"name\": \"B+C: Flicker + CNN alpha fusion (C harmful)\",\n      \"config\": \"waveletmask_flicker_fusion.yml\",\n      \"params\": {\"A\": false, \"B\": true, \"C\": true, \"fusion\": \"cnn_alpha\"},\n      \"role\": \"ablation_negative\",\n      \"comparison_target\": \"flicker\",\n      \"metrics\": {\n        \"psnr_syn\": 25.949, \"ssim_syn\": 0.8956, \"lpips_syn\": 0.0946, \"dists_syn\": 0.0814,\n        \"niqe_real\": 5.404, \"brisque_real\": 18.354, \"clipiqa_real\": 0.4265\n  \n... (truncated)",
+    "diff_plan": "{\n  \"project_id\": \"007-waveletmask\",\n  \"display_name\": \"WaveletMask (Wavelet-Domain Degradation-Aware Masking for Old Film Restoration)\",\n  \"baseline\": \"RTN (Swin Spatial) — Video_Backbone in waveletmask_base_arch.py\",\n  \"target_slot\": \"S2-Spatial (residual_indicator in Gated_Aggregation)\",\n  \"final_arch\": \"WaveletMaskABNet (A+B, max fusion)\",\n  \"new_files\": [\n    {\n      \"path\": \"archs/components/haar_dwt.py\",\n      \"classes\": [\"HaarDWT2d\", \"HaarIDWT2d\"],\n      \"description\": \"Haar 小波 2D 正/逆变换，纯 PyTorch 卷积实现\"\n    },\n    {\n      \"path\": \"archs/components/wavelet_mask.py\",\n      \"classes\": [\"WaveletNoiseMask\"],\n      \"description\": \"小波域噪声掩码检测（创新 A 局部高频 + 创新 B 全局闪烁 + max 融合）\"\n    }\n  ],\n  \"archived_files\": [\n    {\n      \"path\": \"archs/components/mask_fusion.py\",\n      \"classes\": [\"PixelWiseMaskFusion\"],\n      \"description\": \"像素级 alpha 融合网络（创新 C）— 已淘汰，仅消融变体使用\",\n      \"archived_reason\": \"L40 权威数据确认在所有对照中有害 (2026-04-23)\"\n    }\n  ],\n  \"modified_files\": [\n    {\n      \"path\": \"archs/waveletmask_ab_arch.py\",\n      \"changes\": [\n        \"最终架构：继承 Video_Backbone，新增 wavelet_mask 模块\",\n        \"forward() 中：预计算 wavelet_masks → 循环内直接使用 wavelet_masks[:, i] 作为 residual_indicator\"\n      ]\n    }\n  ],\n  \"architecture_variants\": {\n    \"base\": {\"innovations\": [], \"net_class\": \"WaveletMaskBaseNet\", \"role\": \"baseline\"},\n    \"simple\": {\"innovations\": [\"A\"], \"net_class\": \"WaveletMaskSimpleNet\", \"fusion\": \"fixed_weight_0.3\", \"role\": \"ablation\"},\n    \"local\": {\"innovations\": [\"A\"], \"net_class\": \"WaveletMaskLocalNet\", \"fusion\": \"direct_replace\", \"role\": \"ablation\"},\n    \"flicker\": {\"innovations\": [\"B\"], \"net_class\": \"WaveletMaskFlickerNet\", \"fusion\": \"direct_replace\", \"role\": \"ablation\"},\n    \"ab\": {\"innovations\": [\"A\", \"B\"], \"net_class\": \"WaveletMaskABNet\", \"fusion\": \"max\", \"role\": \"final\"},\n    \"local_fusion\": {\"innovations\": [\"A\", \"C\"], \"net_class\": \"WaveletMaskLocalFusionNet\", \"fusion\": \"cnn_alpha\", \"role\": \"ablation_archived\"},\n    \"flicker_fusion\": {\"innovations\": [\"B\", \"C\"], \"net_class\": \"WaveletMaskFlickerFusionNet\", \"fusion\": \"cnn_alpha\", \"role\": \"ablation_archived\"},\n    \"full\": {\"innovations\": [\"A\", \"B\", \"C\"], \"net_class\": \"WaveletMaskFullNet\", \"fusion\": \"max_ab_then_cnn_alpha\", \"role\": \"ablation_archived\"},\n    \"gated_flicker\": {\"innovations\": [\"A\", \"B\", \"C\"], \"net_class\": \"WaveletMaskGatedFlickerNet\", \"fusion\": \"gated_weighted_then_cnn_alpha\", \"role\": \"ablation_archived\"}\n  },\n  \"new_params\": {\n    \"wavelet_weight\": {\"type\": \"float\", \"default\": 0.3, \"used_by\": [\"simple\"]}\n  },\n  \"archived_params\": {\n    \"fusion_mid_channels\": {\"type\": \"int\", \"default\": 32, \"used_by\": [\"full\", \"local_fusion\", \"flicker_fusion\", \"gated_flicker\"]},\n    \"local_weight\": {\"type\": \"float\", \"default\": 0.7, \"used_by\": [\"gated_flicker\"]},\n    \"flicker_weight\": {\"type\": \"float\", \"default\": 0.3, \"used_by\": [\"gated_flicker\"]},\n    \"flicker_threshold\": {\"type\": \"float\", \"default\": 0.5, \"used_by\": [\"gated_flicker\"]}\n  },\n  \"_revision\": {\n    \"date\": \"2026-04-23\",\n    \"reason\": \"Final arch changed \n... (truncated)",
+    "innovation_analysis": "# WaveletMask OFR: 小波域掩码引导老电影修复\n\n> 修订日期：2026-04-23\n> 修订原因：L40 权威数据修正，最优变体从 full(A+B+C) 改为 ab(A+B)\n\n## 创新概要\n\n**全称**: Wavelet-Domain Degradation-Aware Masking for Old Film Restoration (WaveletMask)\n**目标**: 改进 RTN (Swin) 的退化感知机制——原始 `residual_indicator` 仅用像素级差分检测退化区域，对划痕/灰尘等高频噪声和全局闪烁等低频退化均不敏感。WaveletMask 利用 Haar 小波变换在频域分别检测局部高频噪声和全局闪烁，通过简单 max 融合替换原始退化指示符。\n\n## 技术创新点\n\n### 插入点\n\n`RTN → Video_Backbone → forward/backward propagation loop → residual_indicator → Gated_Aggregation`\n\n原始 RTN 的退化检测：`residual_indicator = |warped_frame - current_frame|`，这是一个简单的像素级差分，仅在空间域工作。\n\n### 创新 A: 局部高频掩码 (Local High-Frequency Mask)\n\n利用 Haar 小波变换的高频子带 (LH/HL/HH) 检测划痕、灰尘等局部噪声：\n\n1. 将灰度帧进行 Haar DWT 分解 → LL, LH, HL, HH 四个子带\n2. 计算当前帧与前后帧的几何均值差异：`sqrt(|curr - prev| * |curr - next| + eps)`\n3. 几何均值的关键性质：只有当前帧同时与前后帧不同时才有高响应，有效区分噪声（仅当前帧有）和运动（所有帧都有）\n4. 三个高频子带差异 cat 后通过 2 层 CNN → Sigmoid 输出掩码\n\n### 创新 B: 全局闪烁掩码 (Global Flicker Mask)\n\n利用低频子带 (LL) 检测全局亮度闪烁：\n\n1. 提取 LL 子带（低频近似，反映全局亮度）\n2. 分别计算与前后帧的 LL 差异\n3. 取最小值：`min(|LL_curr - LL_prev|, |LL_curr - LL_next|)` — 两个方向都有差异才认定为闪烁（排除渐变场景）\n4. 通过 2 层 CNN → Sigmoid 输出闪烁掩码\n\n### ~~创新 C: 像素级 Alpha 融合 (Pixel-Wise Mask Fusion)~~ — 已淘汰\n\n> **淘汰决定**（2026-04-23）：L40 权威数据确认 C 模块在所有对照中均有害。\n> 详见 `sessions/2026-04-23-full-failure-analysis-and-story-redesign.md`\n\n### 掩码融合：Element-wise Max\n\n最终方案使用 `max(local_mask, flicker_mask)` 作为 residual_indicator，取每个像素上退化更严重的检测结果。\n\n## Slot 映射\n\n| OFR Slot | 改动 | 说明 |\n|----------|------|------|\n| S1-Temporal | - | 双向 RNN 传播不变 |\n| S2-Spatial | **✓ 改了** | 替换 residual_indicator 的计算方式 |\n| S3-Alignment | - | RAFT 光流对齐不变 |\n| S4-Fusion | - | concat + conv 融合不变 |\n| S5-Loss | - | L1 + VGG + nsGAN 不变 |\n\n## 消融设计（8 变体 + 1 baseline = 9 总）\n\n> 以下数据为 L40 权威测试数据（2026-04-15）\n\n| 变体 | 创新 | 掩码来源 | 融合策略 | PSNR (Syn) |\n|------|------|---------|---------|:----------:|\n| base | 无 | pixel diff | — | 26.16 |\n| local | A | local only | 直接替换 | 26.38 |\n| flicker | B | flicker only | 直接替换 | 26.10 |\n| **ab** | **A+B** | **local+flicker** | **max 融合** | **26.60** |\n| local_fusion | A+C | local + spatial | CNN alpha | 25.99 |\n| flicker_fusion | B+C | flicker + spatial | CNN alpha | 25.95 |\n| full | A+B+C | local+flicker + spatial | max(A,B) → CNN alpha | 24.98 |\n| gated_flicker | A+B+C | local+flicker + spatial | 门控加权 → CNN alpha | 26.35 |\n\n### 关键发现（L40 权威数据）\n\n1. **创新 A 有效**: local (26.38) vs base (26.16) = **+0.22 dB**\n2. **创新 B 互补**: flicker SSIM=0.8980 vs base SSIM=0.8917 = **+0.0063**（结构一致性显著提升）\n3. **A+B max 融合最优**: ab (26.60) = 全局最佳，且呈超可加效应 (+0.44 > +0.22 + (-0.06))\n4. **C 模块有害**: 在所有对照中添加 C 均降低 PSNR（local→local_fusion -0.39, ab→full -1.62）\n5. **Simple is better**: max 融合优于所有 4 种学习型融合变体\n\n## 论文定位\n\nSCI 期刊叙事：\n> \"RTN 等循环视频修复网络使用像素级差分作为退化指示符，无法区分运动与噪声，且对全局闪烁不敏感。本文提出 WaveletMask，利用 Haar DWT 高频子带和低频子带分别构建局部噪声掩码和全局闪烁掩码，通过简单 max 融合取每个像素上退化更严重的检测结果。两个掩码呈超可加互补效应（+0.44 dB > 各自贡献之和），且 max 融合优于 4 种学习型融合方案。\"\n",
+    "innovation_filter": "# 创新筛选\n\n> 修订日期：2026-04-23\n> 修订原因：L40 权威数据修正，C 模块确认有害，从入选创新中移除\n\n## 入选创新\n\n### 创新 A: 局部高频掩码 (WaveletNoiseMask - Local)\n\n**入选理由**：\n- 核心创新点，单独贡献 +0.22 dB (local 26.38 vs base 26.16)\n- 利用小波高频子带的几何均值差异，物理含义清晰\n- 仅增加轻量 2 层 CNN，推理开销极小\n- 感知指标大幅提升：LPIPS -0.012, DISTS -0.0163\n\n**技术细节**：\n- Haar DWT 分解 → LH (水平高频), HL (垂直高频), HH (对角高频)\n- 几何均值: `sqrt(|curr_sub - prev_sub| * |curr_sub - next_sub| + eps)`\n- 3 通道差异 → Conv(3→16) → LeakyReLU → Conv(16→1) → Sigmoid\n\n### 创新 B: 全局闪烁掩码 (WaveletNoiseMask - Flicker)\n\n**入选理由**：\n- 解决老电影特有的亮度闪烁问题\n- SSIM 提升 +0.0063 (flicker 0.8980 vs base 0.8917)，结构一致性显著改善\n- 与创新 A 互补：A 检测空间局部退化，B 检测时间全局退化\n- A+B 呈超可加效应：联合增益 +0.44 dB > A(+0.22) + B(-0.06) = +0.16\n\n**技术细节**：\n- LL 子带差异的最小值策略排除渐变场景\n- 1 通道差异 → Conv(1→16) → LeakyReLU → Conv(16→1) → Sigmoid\n\n## 已淘汰创新\n\n### ~~创新 C: 像素级 Alpha 融合 (PixelWiseMaskFusion)~~ — 已淘汰\n\n**淘汰理由**（L40 权威数据 2026-04-15）：\n- C 模块在所有对照中都有害：\n  - local vs local_fusion: 26.38 → 25.99 (**-0.39 dB**)\n  - flicker vs flicker_fusion: 26.10 → 25.95 (**-0.15 dB**)\n  - ab vs full: 26.60 → 24.98 (**-1.62 dB**)\n  - ab vs gated_flicker: 26.60 → 26.35 (**-0.25 dB**)\n- 根因：alpha 初始化死锁 + max 不连续梯度被 CNN 放大 + GAN 放大不稳定性\n- 详细分析见：`sessions/2026-04-23-full-failure-analysis-and-story-redesign.md`\n\n**历史注释**：旧 MUXI 数据（2026-03-21）中 full=26.60 / ab=25.13 的标签被确认混淆。\nL40 数据 ab=26.60 与旧 full=26.60 数值完全一致，证实标签互换。\n\n## 消融验证路径（L40 权威数据）\n\n```\nbase (26.16)\n├── +A: local (26.38) = +0.22 dB ✓\n├── +B: flicker (26.10) = -0.06 dB ⚠️ (PSNR 略降但 SSIM +0.0063)\n├── +A+B (max): ab (26.60) = +0.44 dB ✓✓✓ (最佳，超可加效应)\n├── +A+C: local_fusion (25.99) = -0.17 dB ✗ (C 有害)\n├── +B+C: flicker_fusion (25.95) = -0.21 dB ✗ (C 有害)\n├── +A+B+gated_C: gated_flicker (26.35) = +0.19 dB ⚠️ (改进 C 仍不及 max)\n└── +A+B+C: full (24.98) = -1.18 dB ✗✗✗ (最差，C 严重有害)\n```\n",
+    "integration_plan": "# 集成计划\n\n> 修订日期：2026-04-23\n> 修订原因：最终方案从 full(A+B+C) 改为 ab(A+B)，C 模块标记为已淘汰\n\n## 集成概览\n\nFramework-native 创新（无外部源论文），直接在 RTN baseline 上开发 2 个新组件（A+B），max 融合。\n\n## 组件清单\n\n### 最终方案使用的组件\n\n| 文件 | 类 | 功能 |\n|------|----|----- |\n| `components/haar_dwt.py` | HaarDWT2d | Haar 小波正变换（卷积实现） |\n| `components/haar_dwt.py` | HaarIDWT2d | Haar 小波逆变换（可选） |\n| `components/wavelet_mask.py` | WaveletNoiseMask | 小波域噪声掩码（A+B），内含 max 融合 |\n\n### 已淘汰组件\n\n| 文件 | 类 | 状态 |\n|------|----|----- |\n| `components/mask_fusion.py` | PixelWiseMaskFusion | **已淘汰** — 消融实验证明有害，仅保留供消融变体引用 |\n\n## 变体架构\n\n### 最终方案\n\n| 变体 | 继承 | 新增模块 | 改动点 | L40 PSNR |\n|------|------|---------|--------|----------|\n| **ab (最终)** | nn.Module | WaveletNoiseMask | full forward → max(local,flicker) → 替换 indicator | **26.60** |\n\n### 消融变体\n\n| 变体 | 继承 | 新增模块 | L40 PSNR | 角色 |\n|------|------|---------|----------|------|\n| base | Video_Backbone | 无 | 26.16 | baseline |\n| local | Video_Backbone | WaveletNoiseMask(local) | 26.38 | A 独立贡献 |\n| flicker | nn.Module | FlickerOnlyMask | 26.10 | B 独立贡献 |\n| local_fusion | Video_Backbone | WaveletNoiseMask + PixelWiseMaskFusion | 25.99 | A+C（C 有害反证） |\n| flicker_fusion | Video_Backbone | FlickerOnlyMask + PixelWiseMaskFusion | 25.95 | B+C（C 有害反证） |\n| full | Video_Backbone | WaveletNoiseMask + PixelWiseMaskFusion | 24.98 | A+B+C（C 严重有害反证） |\n| gated_flicker | Video_Backbone | WaveletNoiseMask + PixelWiseMaskFusion | 26.35 | 改进 C（仍不及 max） |\n\n## 训练配置差异\n\n| 配置项 | 所有变体共享 |\n|--------|-------------|\n| 数据集 | REDS_FilmDamage (Film_dataset_damage) |\n| 损失 | L1 + VGG + nsGAN |\n| 优化器 | Adam (lr=2e-4) |\n| 总迭代 | 200K |\n| 光流 | RAFT (freeze 前 500 iter) |\n| 验证集 | miniREDS (val_freq=5K) |\n\n## 依赖关系（最终方案）\n\n```\nHaarDWT2d (无依赖)\n    ↓\nWaveletNoiseMask (依赖 HaarDWT2d, 内含 max 融合)\n    ↓\nWaveletMaskABNet (依赖 WaveletNoiseMask + Video_Backbone)\n    ↓\nWaveletMaskModel (继承 RTNGANModel)\n```\n\n## 实施状态\n\n**全部 9 个变体已完成**：代码编写 → 训练 (200K iter) → 测试 (synthetic + realworld)。\n**最终方案确定**: ab (A+B, max) — L40 PSNR=26.60，全局最优。\n\n---\n\n## 变体对比关系\n\n| 变体 | 对比目标 | role | 验证假设 |\n|------|:-------:|:----:|---------|\n| `base` | — | baseline | — |\n| `local` | `base` | ablation | A 独立有效性 |\n| `flicker` | `base` | ablation | B 独立有效性 |\n| `ab` | `base` | **final** | A+B max 融合最优 |\n| `local_fusion` | `local` | ablation | C 对 A 的影响（有害 -0.39） |\n| `flicker_fusion` | `flicker` | ablation | C 对 B 的影响（有害 -0.15） |\n| `full` | `ab` | ablation | C 对 A+B 的影响（严重有害 -1.62） |\n| `gated_flicker` | `ab` | ablation | 改进 C 仍不及 max（-0.25） |\n",
+    "storyline": "# SCI 故事线\n\n> 修订日期：2026-04-23\n> 修订原因：L40 权威数据确认 AB (A+B, max) 为最优变体 (PSNR=26.60)，\n>           Full (A+B+C) 为最差变体 (PSNR=24.98)，C 模块有害。\n>           论文从 3 创新 (A+B+C) 精简为 2 创新 (A+B)。\n\n## 方法命名\n\n**方法全称**: WaveletMask — Wavelet-Domain Degradation-Aware Masking for Old Film Restoration\n**方法简称**: WaveletMask\n\n## 故事线设计\n\n### 任务 (Task)\n\n老电影修复 (Old Film Restoration, OFR): 将受划痕、灰尘、闪烁、噪点等退化损伤的老电影视频恢复为高质量视频。\n\n### 挑战 (Challenge)\n\n现有循环视频修复网络（如 RTN）使用像素级帧差作为退化指示符 (`residual_indicator = |warped - current|`)，存在两个根本缺陷：\n\n1. **噪声-运动混淆**: 划痕/灰尘引起的像素差异被误判为运动/遮挡，导致时序信息被错误抑制\n2. **闪烁不可感知**: 全局亮度闪烁在帧差中表现为均匀偏移，幅度不足以触发时序修正\n\n### 洞察 (Insight)\n\n小波变换自然地将图像分解为频率子带，实现退化类型的**频率解耦**：\n- **高频子带 (LH/HL/HH)**: 对应划痕、灰尘等局部结构性退化\n- **低频子带 (LL)**: 反映全局亮度信息，是检测闪烁的天然信号\n- **几何均值差异** `sqrt(|curr-prev| * |curr-next|)`: 瞬时噪声两方向都有差异→满响应；连续运动至少一方向小→被抑制\n\n### 贡献 (Contributions)\n\n1. 首次将小波域频率分解引入视频修复的时序聚合掩码设计，实现局部/全局退化的频率解耦\n2. 提出几何均值时序滤波器，利用信号处理原理有效区分瞬时噪声与连续运动\n3. 发现局部/全局掩码的**超可加互补效应**（A+B=+0.44 dB > A单独+0.22 + B单独-0.06），并通过系统消融验证简单 max 融合优于 4 种学习型融合\n4. 所提模块零额外训练参数、即插即用，可泛化至任何使用 residual indicator 的循环修复网络\n\n### 优势 (Advantages)\n\n- 合成数据集 PSNR 提升 +0.44 dB (ab vs base: 26.60 vs 26.16)\n- 感知指标全面提升: LPIPS -0.0143, DISTS -0.0122\n- 零额外可训练参数（仅轻量 CNN 无需从主干梯度回传）\n- 即插即用：可应用于任何使用 residual_indicator 的循环修复网络\n- \"Learned fusion is not always better\" — 4 种学习型融合全部劣于简单 max\n\n## 论文结构规划\n\n| 章节 | 要点 |\n|------|------|\n| Abstract | 空间掩码的噪声-运动混淆 → 小波域频率解耦 → A+B → +0.44dB |\n| Introduction | 像素差分的两个缺陷 → 小波域洞察 → 两个互补掩码 → 超可加效应 |\n| Related Work | OFR 方法综述 + 小波在图像处理中的应用 + 退化感知机制 |\n| Method | 3.1 Baseline RTN 回顾 / 3.2 Local Noise Mask (A) / 3.3 Global Flicker Mask (B) / 3.4 Max 融合与集成 |\n| Results | 4.1 Setup / 4.2 主结果 / 4.3 消融(主表4变体+辅表4种fusion) / 4.4 可视化 |\n| Discussion | 超可加效应分析 + Learned fusion 有害分析 + 局限性 |\n| Conclusion | 频率域退化解耦 + 简单优于复杂 |\n\n## 消融实验结构\n\n### 主消融表（4 变体）\n\n| 变体 | A | B | 融合 | PSNR↑ | SSIM↑ | LPIPS↓ | DISTS↓ |\n|------|---|---|------|-------|-------|--------|--------|\n| Baseline | - | - | spatial diff | 26.16 | 0.8917 | 0.1034 | 0.0953 |\n| +Local (A only) | ✓ | - | direct | 26.38 | 0.8966 | 0.0914 | 0.0790 |\n| +Flicker (B only) | - | ✓ | direct | 26.10 | 0.8980 | 0.0969 | 0.0916 |\n| WaveletMask (Ours) | ✓ | ✓ | max | **26.60** | 0.8951 | 0.0891 | 0.0831 |\n\n### 辅助消融：Fusion 策略对比\n\n| 融合策略 | PSNR | vs AB (max) |\n|---------|------|-------------|\n| max (Ours) | **26.60** | — |\n| Gated weighted | 26.35 | -0.25 |\n| CNN alpha (local) | 25.99 | -0.61 |\n| CNN alpha (flicker) | 25.95 | -0.65 |\n| CNN alpha (full) | 24.98 | -1.62 |\n"
+  },
+  "latest_vis_image": "projects/007-waveletmask/Exp/experiments/waveletmask_ab_seed2022/visualization/training/training_show_200000.png",
+  "metrics_summary": {
+    "waveletmask_ab_seed2022": {
+      "best": {
+        "iter": 150000,
+        "psnr": 22.5496,
+        "ssim": 0.9218
+      },
+      "current_iter": 200000,
+      "label": "waveletmask_ab_seed2022",
+      "latest": {
+        "iter": 200000,
+        "psnr": 22.2976,
+        "ssim": 0.9132
+      },
+      "num_checkpoints": 40,
+      "recent_trend": [
+        {
+          "iter": 180000,
+          "psnr": 22.0582,
+          "ssim": 0.9031
+        },
+        {
+          "iter": 185000,
+          "psnr": 22.016,
+          "ssim": 0.8919
+        },
+        {
+          "iter": 190000,
+          "psnr": 21.5423,
+          "ssim": 0.8904
+        },
+        {
+          "iter": 195000,
+          "psnr": 22.0209,
+          "ssim": 0.9092
+        },
+        {
+          "iter": 200000,
+          "psnr": 22.2976,
+          "ssim": 0.9132
+        }
+      ],
+      "total_iter": 200000
+    },
+    "waveletmask_ab_seed2023": {
+      "best": {
+        "iter": 130000,
+        "psnr": 22.6118,
+        "ssim": 0.9326
+      },
+      "current_iter": 200000,
+      "label": "waveletmask_ab_seed2023",
+      "latest": {
+        "iter": 200000,
+        "psnr": 22.252,
+        "ssim": 0.9207
+      },
+      "num_checkpoints": 40,
+      "recent_trend": [
+        {
+          "iter": 180000,
+          "psnr": 21.8548,
+          "ssim": 0.8956
+        },
+        {
+          "iter": 185000,
+          "psnr": 22.4136,
+          "ssim": 0.9179
+        },
+        {
+          "iter": 190000,
+          "psnr": 22.282,
+          "ssim": 0.9176
+        },
+        {
+          "iter": 195000,
+          "psnr": 22.3004,
+          "ssim": 0.9158
+        },
+        {
+          "iter": 200000,
+          "psnr": 22.252,
+          "ssim": 0.9207
+        }
+      ],
+      "total_iter": 200000
+    },
+    "waveletmask_base_seed2022": {
+      "best": {
+        "iter": 135000,
+        "psnr": 22.3333,
+        "ssim": 0.9113
+      },
+      "current_iter": 200000,
+      "label": "waveletmask_base_seed2022",
+      "latest": {
+        "iter": 200000,
+        "psnr": 21.8967,
+        "ssim": 0.9056
+      },
+      "num_checkpoints": 40,
+      "recent_trend": [
+        {
+          "iter": 180000,
+          "psnr": 21.837,
+          "ssim": 0.8967
+        },
+        {
+          "iter": 185000,
+          "psnr": 21.5877,
+          "ssim": 0.8761
+        },
+        {
+          "iter": 190000,
+          "psnr": 21.6654,
+          "ssim": 0.8895
+        },
+        {
+          "iter": 195000,
+          "psnr": 22.2897,
+          "ssim": 0.9104
+        },
+        {
+          "iter": 200000,
+          "psnr": 21.8967,
+          "ssim": 0.9056
+        }
+      ],
+      "total_iter": 200000
+    },
+    "waveletmask_base_seed2023": {
+      "best": {
+        "iter": 50000,
+        "psnr": 22.6858,
+        "ssim": 0.9153
+      },
+      "current_iter": 200000,
+      "label": "waveletmask_base_seed2023",
+      "latest": {
+        "iter": 200000,
+        "psnr": 21.5381,
+        "ssim": 0.8914
+      },
+      "num_checkpoints": 40,
+      "recent_trend": [
+        {
+          "iter": 180000,
+          "psnr": 21.0663,
+          "ssim": 0.8696
+        },
+        {
+          "iter": 185000,
+          "psnr": 21.5851,
+          "ssim": 0.8952
+        },
+        {
+          "iter": 190000,
+          "psnr": 21.3407,
+          "ssim": 0.8903
+        },
+        {
+          "iter": 195000,
+          "psnr": 20.8226,
+          "ssim": 0.8652
+        },
+        {
+          "iter": 200000,
+          "psnr": 21.5381,
+          "ssim": 0.8914
+        }
+      ],
+      "total_iter": 200000
+    }
+  },
+  "project": "007-waveletmask",
+  "recent_vis_images": [
+    "projects/007-waveletmask/Exp/experiments/waveletmask_ab_seed2022/visualization/training/training_show_200000.png",
+    "projects/007-waveletmask/Exp/experiments/waveletmask_ab_seed2022/visualization/training/training_show_199000.png",
+    "projects/007-waveletmask/Exp/experiments/waveletmask_ab_seed2022/visualization/training/training_show_198000.png",
+    "projects/007-waveletmask/Exp/experiments/waveletmask_ab_seed2022/visualization/training/training_show_197000.png",
+    "projects/007-waveletmask/Exp/experiments/waveletmask_ab_seed2023/visualization/training/training_show_200000.png",
+    "projects/007-waveletmask/Exp/experiments/waveletmask_ab_seed2022/visualization/training/training_show_196000.png"
+  ]
+}

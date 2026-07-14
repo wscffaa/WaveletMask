@@ -1,0 +1,75 @@
+schema_version: 2
+figure_id: Figure3
+latex_label: fig:module_detail
+title: WaveletMask module detail
+role: method
+status: blocked
+slot_id: MODULE_DETAIL_WaveletNoiseMask
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A2]
+selected_option:
+  option_id: A
+  archetype: module_detail
+  source_protocol: .claude/skills/ofr-paper-mdpi-writing/references/figure-options-protocol.md
+archetype: module_detail
+core_conclusion: Local high-frequency and global flicker branches are separate wavelet-domain detectors before max fusion creates the submitted degradation signal.
+evidence_data_path:
+  - projects/007-waveletmask/archs/components/wavelet_mask/wavelet_mask.py
+  - projects/007-waveletmask/Idea/module_names.json
+  - projects/007-waveletmask/Paper/applsci/figures/Figure3.pdf
+evidence_gate:
+  required: true
+  status: blocked
+  missing:
+    - approved Route E ASCII wireframe
+    - approved layout.json
+    - final module-detail export from ofr-paper-diagram
+reviewer_risk:
+  - A plain TikZ draft may be accepted by compile gates but remain visually weak for MDPI submission.
+forbidden_scene: Do not describe the archived PixelWiseMaskFusion branch as part of the submitted module.
+production_owner: user
+production_route: ofr-paper-diagram Route E Phase 1-2
+target_path: projects/007-waveletmask/Paper/applsci/figures/Figure3.pdf
+current_asset_path: projects/007-waveletmask/Paper/applsci/figures/Figure3.pdf
+current_asset_status: placeholder_from_noncompliant_draft_promotion
+ascii_preview: |
+  Frames t-1,t,t+1
+         |
+     HaarDWT2d
+     /       \
+  LH/HL/HH    LL
+   local      flicker
+     \       /
+      max fusion -> residual_indicator
+dependencies:
+  code:
+    - projects/007-waveletmask/archs/components/wavelet_mask/wavelet_mask.py
+  experiments: []
+  assets:
+    - projects/007-waveletmask/Paper/applsci/figures/Figure3.pdf
+    - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3/draft/Figure3.v01.wavelet_noise_mask_module.pdf
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: ["\\ref{fig:module_detail}"]
+    claim_to_sync: Method module names match code and the figure.
+  results:
+    required_refs: []
+    claim_to_sync: ""
+caption_contract:
+  tense: present
+  required_terms: [Local High-Frequency Mask, Global Flicker Mask, max-fused]
+  banned_terms: [core PixelWiseMaskFusion]
+  draft_caption: Module-level structure of WaveletMask.
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by:
+  - Route E ASCII/layout approval missing
+  - final ofr-paper-diagram export missing
+notes: Scheme B keeps Figure3 as the fixed WaveletNoiseMask module detail, but the current Figure3.pdf is only a LaTeX placeholder from a noncompliant draft promotion.

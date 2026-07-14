@@ -1,0 +1,122 @@
+\section{Detector Diagnostic Probes}\label{app:diagnostics}
+
+This appendix isolates the behavior of the proposed detector under controlled probe conditions referenced from Section~\ref{subsec:ablation}: abrupt temporal transitions for GFM, persistent scratches for LHFM, residual-proxy localization for mask interpretability, and pairwise cue relations for branch complementarity. A cross-domain frequency-operator diagnostic then situates Haar among alternative frequency operators. Representative visual examples for the probes are summarized in Supplementary Figure~S6, and complete example grids are provided in Supplementary Figures~S1--S3.
+
+\subsection{GFM Failure-Mode Probe}\label{subsec:gfm_failure_probe}
+
+A natural concern for the GFM minimum-difference rule is that it may confuse brightness flicker with scene transitions, flashes, and abrupt illumination changes. To isolate this behavior, we generated synthetic seven-frame probe sequences from held-out REDS ground-truth clips: (1) scene cuts by replacing the second half of a clip with another clip, (2) single-frame exposure flashes, and (3) monotonic illumination ramps. We then measured the trained GFM branch response only. The false-positive rate (FPR) is computed relative to each clean source clip's 99th-percentile GFM response, and the guard column reports a simple frame-level cut detector based on mean absolute luminance differences.
+
+\begin{table}[H]
+\caption{GFM response on synthetic failure-mode probes. Activation is the mean GFM mask value on non-boundary frames. Ratio compares probe activation with the corresponding clean clip. Suppression reports the activation reduction after a simple luminance-difference cut guard, which is evaluated post hoc and is not part of the deployed WaveletMask model.\label{tab:gfm_failure_probe}}
+\footnotesize
+\begin{tabularx}{\textwidth}{lccCCCCC}
+\toprule
+\textbf{Probe} & \textbf{Clips} & \textbf{Clean act.} & \textbf{Probe act.} & \textbf{Ratio} & \textbf{FPR} & \textbf{Guarded act.} & \textbf{Suppression} \\
+\midrule
+Scene cut            & 12 & 0.0041 & 0.0066 & 2.35$\times$ & 0.0505 & 0.0024 & 0.6141 \\
+Exposure flash       & 12 & 0.0041 & 0.0257 & 10.41$\times$ & 0.1574 & 0.0015 & 0.9470 \\
+Illumination ramp    & 12 & 0.0041 & 0.0051 & 1.52$\times$ & 0.0352 & 0.0049 & 0.0247 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+Table~\ref{tab:gfm_failure_probe} confirms the expected failure mode: the trained GFM branch responds more strongly to scene cuts and flashes than to clean clips, and the response is especially large for single-frame flashes. This is because the minimum-difference rule is sensitive to abrupt luminance discontinuities. A simple luminance-difference guard suppresses most of the scene-cut and flash activation, but it barely affects gradual illumination ramps, indicating that cut-aware GFM is a practical direction for further improvement.
+
+\subsection{Persistent-Scratch Response Probe}\label{subsec:persistent_scratch_probe}
+
+A complementary mechanism-level question is whether the LHFM geometric-mean criterion suppresses scratches that persist across multiple frames. To test this mechanism directly, we injected controlled synthetic scratches into clean held-out REDS clips and measured detector response at the center frame. The persistence length is $L\in\{1,2,3,5\}$ over a seven-frame clip. The \emph{fixed} mode keeps the scratch at the same image-plane location across active frames, whereas the \emph{drift} mode shifts it by two pixels per frame. Table~\ref{tab:persistent_scratch_probe} reports the raw LHFM geometric response before the learned convolutional branch and the final max-fused $m_{\mathrm{wavelet}}$ response.
+
+\begin{table}[H]
+\caption{Detector response to controlled persistent scratches. Relative response is normalized by the same mode's single-frame ($L=1$) response. Suppression is $1-\mathrm{relative}$ for the raw LHFM response.\label{tab:persistent_scratch_probe}}
+\footnotesize
+\begin{tabularx}{\textwidth}{lccCCCC}
+\toprule
+\textbf{Mode} & \textbf{$L$} & \textbf{Clips} & \textbf{Raw LHFM} & \textbf{Raw rel.} & \textbf{Raw suppression} & \textbf{$m_{\mathrm{wavelet}}$ rel.} \\
+\midrule
+Fixed & 1 & 12 & 0.0862 & 1.0000 & 0.0000 & 1.0000 \\
+Fixed & 2 & 12 & 0.0462 & 0.5355 & 0.4645 & 0.0167 \\
+Fixed & 3 & 12 & 0.0302 & 0.3498 & 0.6502 & 0.0108 \\
+Fixed & 5 & 12 & 0.0302 & 0.3498 & 0.6502 & 0.0108 \\
+\midrule
+Drift & 1 & 12 & 0.0862 & 1.0000 & 0.0000 & 1.0000 \\
+Drift & 2 & 12 & 0.0894 & 1.0364 & -0.0364 & 0.1363 \\
+Drift & 3 & 12 & 0.0957 & 1.1097 & -0.1097 & 0.0419 \\
+Drift & 5 & 12 & 0.0957 & 1.1097 & -0.1097 & 0.0419 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+Table~\ref{tab:persistent_scratch_probe} confirms the expected limitation of Equation~\eqref{eq:geomean}: when the same scratch persists at the same image location, both temporal differences become smaller and the raw LHFM response drops to 0.35 of the single-frame response for $L\ge3$. This is because the geometric mean attenuates locations where both bilateral differences become small. The drift mode behaves differently because the scratch moves relative to the current frame, so the bilateral difference remains large. The final $m_{\mathrm{wavelet}}$ response is likewise strongly reduced for persistent fixed scratches, identifying this case as a failure mode of the current detector.
+Complete persistent-scratch visualization grids are provided in Supplementary Figure~S1.
+
+\subsection{Mask Interpretability and Residual-Proxy Overlap}\label{subsec:mask_interpretability}
+
+Because the SRWOV/REDS synthetic split used in this study does not expose generator-side pixel annotations, we evaluate mask interpretability against paired input--ground-truth residual proxies rather than true artifact masks. For each sampled non-boundary frame, local proxy regions are derived from high-pass residuals, flicker proxy regions from low-frequency residual shifts, and the wavelet proxy from their union. We then measure the trained $m_{\mathrm{local}}$, $m_{\mathrm{flicker}}$, and max-fused $m_{\mathrm{wavelet}}$ masks on 30 clips with 20 sampled frames per clip. Table~\ref{tab:mask_interpretability} reports area-normalized localization statistics; the random top-5\% hit rate equals the corresponding proxy area.
+
+\begin{table}[H]
+\caption{Mask interpretability probe on SRWOV/REDS synthetic frames. Proxy regions are derived from paired input--ground-truth residuals rather than generator-side artifact annotations. AUPRC, F1, IoU, precision, and recall are computed against these residual proxies.\label{tab:mask_interpretability}}
+\footnotesize
+\begin{tabularx}{\textwidth}{lCCCCCCCC}
+\toprule
+\textbf{Mask} & \textbf{Proxy area} & \textbf{AUPRC} & \textbf{Best F1} & \textbf{Best IoU} & \textbf{Prec.} & \textbf{Rec.} & \textbf{In/Out} & \textbf{Top-5 hit} \\
+\midrule
+$m_{\mathrm{local}}$   & 0.0820 & 0.0552 & 0.1515 & 0.0820 & 0.0820 & 1.0000 & 0.6103 & 0.0412 \\
+$m_{\mathrm{flicker}}$ & 0.2858 & 0.4888 & 0.4949 & 0.3288 & 0.4087 & 0.6271 & 3.5714 & 0.6854 \\
+$m_{\mathrm{wavelet}}$ & 0.2907 & 0.4943 & 0.4996 & 0.3330 & 0.4128 & 0.6328 & 3.5638 & 0.6908 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+Table~\ref{tab:mask_interpretability} shows that the flicker and max-fused masks are strongly concentrated in residual-proxy regions: $m_{\mathrm{wavelet}}$ reaches an AUPRC of 0.4943, an inside/outside activation ratio of 3.56, and a top-5\% hit rate of 0.6908 compared with the 0.2907 random-area baseline. The local mask behaves differently under this proxy, with a top-5\% hit rate below the random-area baseline and an inside/outside ratio below one. This suggests that the current residual proxy captures the global flicker cue more faithfully than fine local scratches or dust, even though Table~\ref{tab:ablation_core} shows that LHFM still improves restoration quality. Stronger generator-side labels or manual annotations would enable a more direct localization study.
+Additional residual-proxy overlap examples are provided in Supplementary Figure~S2.
+
+\subsection{Cue Complementarity Analysis}\label{subsec:cue_complementarity}
+
+To test whether the wavelet cues simply reproduce the original RTN spatial indicator, we compared the trained $m_{\mathrm{local}}$ and $m_{\mathrm{flicker}}$ masks with a flow-aligned RTN spatial indicator. The spatial indicator was computed with RAFT flow and forward warping, matching the baseline mask contract. The analysis uses 12 SRWOV/REDS synthetic clips, seven frames per clip, and the five non-boundary frames in each clip. As in Appendix~\ref{subsec:mask_interpretability}, residual-proxy hits are derived from paired input--ground-truth residuals rather than generator-side artifact labels.
+
+\begin{table}[H]
+\caption{Pairwise cue relation in the flow-aligned complementarity analysis. Top-5 overlap and Jaccard are computed from each cue's top 5\% response pixels on the same frame. Low overlap indicates that two cues emphasize different spatial regions.\label{tab:cue_complementarity}}
+\footnotesize
+\begin{tabularx}{\textwidth}{lCCCC}
+\toprule
+\textbf{Cue pair} & \textbf{Frames} & \textbf{Pearson} & \textbf{Spearman} & \textbf{Top-5 overlap / Jaccard} \\
+\midrule
+Spatial / $m_{\mathrm{local}}$   & 60 & 0.0717  & -0.0418 & 0.1641 / 0.0938 \\
+Spatial / $m_{\mathrm{flicker}}$ & 60 & 0.3763  & 0.4850  & 0.2300 / 0.1408 \\
+$m_{\mathrm{local}}$ / $m_{\mathrm{flicker}}$ & 60 & -0.1635 & -0.3364 & 0.0024 / 0.0012 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+Table~\ref{tab:cue_complementarity} shows that the two wavelet branches are complementary rather than redundant: the local and flicker masks have negative rank correlation and almost no top-5\% spatial overlap. The RTN spatial indicator is moderately related to the flicker branch but only weakly related to the local branch. In the residual-proxy top-5\% test, the hit rates are 0.4236 for the spatial indicator, 0.3146 for $m_{\mathrm{local}}$, 0.4276 for $m_{\mathrm{flicker}}$, and 0.4276 for $m_{\mathrm{wavelet}}$, against a residual-proxy area of 0.2887. Together, these results indicate that LHFM and GFM emphasize different regions of the degraded frames, which helps explain the gain of the fused model in Table~\ref{tab:ablation_core}.
+Additional cue-complementarity examples are provided in Supplementary Figure~S3.
+
+We also trained a flow-compensated WaveletMask pilot to test whether explicit motion compensation helps the wavelet detector. Across three seeds, the pilot reaches 23.5, 22.2, and 26.2~dB PSNR, trailing the standard WaveletMask model on average by about 2.6~dB. This is consistent with flow-estimation errors being amplified after wavelet decomposition: small spatial misalignment in the warped frame creates high-frequency boundary artifacts across sub-bands and contaminates LHFM and GFM. Together with Table~\ref{tab:gfm_failure_probe}, this identifies abrupt temporal transitions such as scene cuts and flashes as the clearest quantified motion-related boundary cases in the current evidence. The impact of ordinary camera and object motion is isolated directly in Appendix~\ref{subsec:motion_binning}.
+
+\subsection{Cross-Domain Frequency-Operator Diagnostic}\label{subsec:cross_domain_frequency}
+
+To further check whether the diagnostic evidence is specific to Haar wavelets, we added a frozen residual-proxy comparison across frequency operators. The test uses the same 30 SRWOV/REDS synthetic clips and 20 sampled frames per clip as Table~\ref{tab:mask_interpretability}. It compares Haar DWT, Sobel/Laplacian edge filters, Gaussian-pyramid low/high-frequency responses, Fourier temporal low/high-pass differences, and a shallow learned frequency probe trained with five-fold clip-level splits on residual-proxy labels. The Haar entries in this diagnostic measure single-frame wavelet sub-band energy without the temporal geometric-mean differencing used by the deployed LHFM/GFM modules; the Fourier-temporal entries inherently include a temporal-difference step as part of their operator definition. This diagnostic therefore isolates frequency-operator behavior from the full restoration-gating pipeline, and it does not replace the end-to-end restoration ablations in Section~\ref{subsec:ablation}.
+
+\begin{table}[t]
+\caption{Cross-domain frequency-operator diagnostic on SRWOV/REDS residual proxies. Top-5 non-proxy reports the fraction of top-5\% response pixels outside the residual-proxy region; lower is better. AUPRC is the primary ranking metric because several deterministic operators reach their best F1 only at a near-all-positive threshold. Learned shallow values report the five-fold mean.\label{tab:cross_domain_frequency_ablation}}
+\footnotesize
+\begin{tabularx}{\textwidth}{lCCCC}
+\toprule
+\textbf{Operator} & \textbf{Family} & \textbf{AUPRC$\uparrow$} & \textbf{Top-5 hit$\uparrow$} & \textbf{Top-5 non-proxy$\downarrow$} \\
+\midrule
+Haar fused & Haar DWT & 0.3166 & 0.3685 & 0.6315 \\
+Sobel & Gradient edge & 0.3062 & 0.3470 & 0.6530 \\
+Laplacian & Gradient edge & 0.2993 & 0.3352 & 0.6648 \\
+Gaussian fused & Gaussian pyramid & 0.3270 & 0.3815 & 0.6185 \\
+Fourier temporal fused & Fourier temporal & 0.3885 & 0.4384 & 0.5616 \\
+Learned shallow frequency & Proxy-supervised & 0.4265 & 0.5278 & 0.4722 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+Table~\ref{tab:cross_domain_frequency_ablation} shows two points. First, Haar is competitive with Sobel and Laplacian and close to the Gaussian-pyramid diagnostic, but Fourier temporal responses and the proxy-supervised learned probe align more strongly with residual-proxy labels. The Fourier low-pass temporal row in the full artifact reaches an AUPRC of 0.4019, slightly above the fused Fourier row reported here. Second, this result narrows the claim: the restoration gain is not evidence that Haar is the universally strongest frozen detector. Instead, Haar is the most stable zero-parameter wavelet choice in the end-to-end restoration ablations, while Fourier and supervised learned filters remain useful alternatives for future detector designs.

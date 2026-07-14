@@ -1,0 +1,35 @@
+\section{Statistical Reliability of the Paired Comparison}\label{app:stats}
+
+Under the strict paired protocol, RTN and WaveletMask are trained and evaluated with the same data, degradation pipeline, implementation, and metric scripts, which isolates the contribution of the proposed wavelet-domain gate from confounding training differences. Table~\ref{tab:same_protocol_main} reports this primary seed-2021 comparison together with its clip-level paired statistics: relative to the RTN, WaveletMask improves PSNR by $+0.45$~dB and also improves SSIM, LPIPS, and DISTS, and all four paired clip-level gains are statistically significant under two-sided permutation tests. This controlled comparison complements the unified re-training benchmark over all ten methods in Section~\ref{subsec:sota_quant} (Table~\ref{tab:literature_context}).
+
+\begin{table}[t]
+\caption{Paired controlled comparison on the SRWOV synthetic benchmark (seed 2021, Y-channel protocol, 30 clips). RTN and WaveletMask share the same data, degradation pipeline, implementation, and metric scripts, so this strict paired comparison is the controlled evidence for the proposed gate. The paired improvement reports WaveletMask minus RTN for PSNR/SSIM and RTN minus WaveletMask for LPIPS/DISTS (positive favors WaveletMask); confidence intervals use clip-level bootstrap resampling and $p$-values use a two-sided paired permutation test. The WaveletMask paired-protocol PSNR (26.6125~dB) differs slightly from the unified-benchmark value in Table~\ref{tab:literature_context} (26.6017~dB) because the two protocols use different training checkpoints and metric configurations. Best values in each row are in \textcolor{red}{red}.\label{tab:same_protocol_main}\label{tab:paired_seed2021_stats}}
+\footnotesize
+\begin{tabularx}{\textwidth}{lCCCC}
+\toprule
+\textbf{Metric} & \textbf{RTN} & \textbf{WaveletMask} & \textbf{Paired improvement} & \textbf{95\% CI / two-sided $p$} \\
+\midrule
+PSNR$\uparrow$  & 26.1648 & \textcolor{red}{26.6125} & $+0.4477$ & $[0.2955, 0.5981]$, $p=5\times10^{-5}$ \\
+SSIM$\uparrow$  & 0.8923  & \textcolor{red}{0.8954}  & $+0.0031$ & $[0.0014, 0.0050]$, $p=1.5\times10^{-3}$ \\
+LPIPS$\downarrow$ & 0.1023 & \textcolor{red}{0.0886} & $+0.0137$ & $[0.0108, 0.0166]$, $p=5\times10^{-5}$ \\
+DISTS$\downarrow$ & 0.0946 & \textcolor{red}{0.0827} & $+0.0119$ & $[0.0103, 0.0136]$, $p=5\times10^{-5}$ \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+\begin{table}[H]
+\caption{Three-seed same-protocol Y-channel re-test on the SRWOV synthetic benchmark. Values are mean$\pm$standard deviation over seeds 2021, 2022, and 2023. Best results are in \textcolor{red}{red}.\label{tab:three_seed_summary}}
+\begin{tabularx}{\textwidth}{lCCCC}
+\toprule
+\textbf{Method} & \textbf{PSNR$\uparrow$} & \textbf{SSIM$\uparrow$} & \textbf{LPIPS$\downarrow$} & \textbf{DISTS$\downarrow$} \\
+\midrule
+RTN~\cite{rtn2022} & 24.5570$\pm$1.6667 & 0.8808$\pm$0.0129 & 0.1083$\pm$0.0118 & 0.0922$\pm$0.0040 \\
+\textbf{WaveletMask (ours)} & \textcolor{red}{26.2183$\pm$0.3725} & \textcolor{red}{0.8983$\pm$0.0045} & \textcolor{red}{0.0879$\pm$0.0026} & \textcolor{red}{0.0831$\pm$0.0015} \\
+\midrule
+Mean difference & +1.6613 & +0.0175 & -0.0205 & -0.0091 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Table~\ref{tab:three_seed_summary} shows that the advantage persists across seeds and that WaveletMask is markedly more stable than the baseline: the PSNR standard deviation drops from 1.67~dB (RTN) to 0.37~dB (WaveletMask), and all four metric means improve. For transparency, the per-seed PSNR values under seeds 2021/2022/2023 are 26.1648/24.6691/22.8370~dB for the RTN and 26.6125/26.1702/25.8721~dB for WaveletMask, so WaveletMask outperforms the baseline under every individual seed rather than only on average. The paired controlled comparison in Table~\ref{tab:same_protocol_main} uses seed 2021, under which the baseline attains its strongest result, making the reported $+0.45$~dB gain the most conservative of the three seeds.

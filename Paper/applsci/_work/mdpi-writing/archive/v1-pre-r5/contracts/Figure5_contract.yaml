@@ -1,0 +1,69 @@
+schema_version: 2
+figure_id: Figure5
+latex_label: fig:mask_interpretation
+title: WaveletMask mask interpretation
+role: results
+status: blocked
+slot_id: MECHANISM_ANALYSIS_MASK_PATH
+fixed_level: conditional
+drop_policy: condition_absent
+motivation_anchor_ids: [A2, A3]
+selected_option:
+  option_id: A
+  archetype: mask_overlay
+  source_protocol: .claude/skills/ofr-paper-mdpi-writing/references/figure-options-protocol.md
+archetype: mask_overlay
+core_conclusion: The local and flicker mask paths explain the submitted A+B max evidence chain and keep learned-fusion variants separate.
+evidence_data_path:
+  - projects/007-waveletmask/Exp/ablation/ablation_results.yaml
+  - projects/007-waveletmask/Paper/applsci/figures/Figure5.pdf
+evidence_gate:
+  required: true
+  status: blocked
+  missing:
+    - user route decision: real mask visualization or schematic
+    - final export from the selected route
+reviewer_risk:
+  - A diagrammatic mask explanation may be mistaken for real mask visualization.
+forbidden_scene: Do not imply the figure contains quantitative image restoration output.
+production_owner: user
+production_route: ofr-paper-visual-studio real mask export or ofr-paper-diagram schematic route
+target_path: projects/007-waveletmask/Paper/applsci/figures/Figure5.pdf
+current_asset_path: projects/007-waveletmask/Paper/applsci/figures/Figure5.pdf
+current_asset_status: placeholder_schematic_from_noncompliant_tikz_generation
+ascii_preview: |
+  Input -> local mask
+        -> flicker mask
+        -> max-fused WaveletMask -> ablation explanation
+dependencies:
+  code:
+    - projects/007-waveletmask/archs/components/wavelet_mask/wavelet_mask.py
+  experiments:
+    - projects/007-waveletmask/Exp/ablation/ablation_results.yaml
+  assets:
+    - projects/007-waveletmask/Paper/applsci/figures/Figure5.pdf
+    - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure5/draft/Figure5.v01.mask_path_schematic.pdf
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: []
+    claim_to_sync: ""
+  results:
+    required_refs: ["\\ref{fig:mask_interpretation}"]
+    claim_to_sync: Results discussion separates A+B max from learned-fusion variants.
+caption_contract:
+  tense: present
+  required_terms: [local mask, flicker mask, max fusion, ablation]
+  banned_terms: [real mask output, SOTA comparison]
+  draft_caption: Interpretation of the WaveletMask degradation indicator path.
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by:
+  - route decision missing
+  - final selected-route export missing
+notes: Scheme B keeps Figure5 only conditionally. The current TikZ schematic is a placeholder and must not be treated as real mask visualization.

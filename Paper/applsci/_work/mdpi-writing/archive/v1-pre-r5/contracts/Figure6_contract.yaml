@@ -1,0 +1,72 @@
+schema_version: 2
+figure_id: Figure6
+latex_label: fig:realworld_qualitative
+title: RealWorld qualitative comparison
+role: results
+status: blocked
+slot_id: SOTA_REALWORLD_QUALITATIVE
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A3]
+selected_option:
+  option_id: A
+  archetype: qualitative_grid
+  source_protocol: .claude/skills/ofr-paper-mdpi-writing/references/figure-options-protocol.md
+archetype: qualitative_grid
+core_conclusion: Traceable RealWorld qualitative examples are required before the manuscript can make any final RealWorld visual comparison claim.
+evidence_data_path:
+  - projects/007-waveletmask/Paper/applsci/figures/Figure6.pdf
+  - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/draft/Figure6.v01.realworld_l40_trace.pdf
+  - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/Fig6_realworld_comparison_l40_script.png
+  - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/Fig6_realworld_comparison_l40_metadata.json
+evidence_gate:
+  required: true
+  status: blocked
+  missing:
+    - refreshed RealWorld metric logs
+    - Visual Studio Real-world SOTA full-frame export
+reviewer_risk:
+  - RealWorld metrics are stale; final ranking claims are unsafe even though Figure6 is inserted as qualitative evidence.
+forbidden_scene: Do not claim RealWorld superiority until refreshed logs and traceable figure insertion are complete.
+production_owner: user
+production_route: ofr-paper-visual-studio Real-world tab, SOTA context, full-frame export
+target_path: projects/007-waveletmask/Paper/applsci/figures/Figure6.pdf
+current_asset_path: projects/007-waveletmask/Paper/applsci/figures/Figure6.pdf
+current_asset_status: placeholder_from_noncompliant_raster_pdf_promotion
+ascii_preview: |
+  Scene 1       Scene 2       Scene 3
+  Input         Input         Input
+  RTN           RTN           RTN
+  WaveletMask   WaveletMask   WaveletMask
+dependencies:
+  code: []
+  experiments:
+    - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/Fig6_realworld_comparison_l40_metadata.json
+  assets:
+    - projects/007-waveletmask/Paper/applsci/figures/Figure6.pdf
+    - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/draft/Figure6.v01.realworld_l40_trace.pdf
+    - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/Fig6_realworld_comparison_l40_script.png
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: []
+    claim_to_sync: ""
+  results:
+    required_refs: ["\\ref{fig:realworld_qualitative}"]
+    claim_to_sync: RealWorld evidence is qualitative and traceable, not final metric ranking.
+caption_contract:
+  tense: present
+  required_terms: [RealWorld, qualitative, traceable]
+  banned_terms: [best, final ranking, SOTA]
+  draft_caption: RealWorld qualitative comparison for WaveletMask, pending refreshed metric logs.
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by:
+  - refreshed RealWorld logs missing
+  - Visual Studio final export missing
+notes: Figure6.pdf remains only a placeholder. Final RealWorld ranking and final qualitative claim remain blocked until refreshed logs and Visual Studio export exist.

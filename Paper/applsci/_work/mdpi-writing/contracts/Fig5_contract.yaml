@@ -1,0 +1,62 @@
+schema_version: 2
+figure_id: Fig5
+latex_label: fig:sota_synthetic
+title: "Qualitative comparison on synthetic old film degradation (REDS-val4)"
+role: results
+status: planned
+slot_id: SOTA_SYNTHETIC_QUALITATIVE
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A3]
+selected_option:
+  option_id: A
+  archetype: qualitative_grid
+  source_protocol: references/02-figure/figure-options-protocol.md
+archetype: qualitative_grid
+core_conclusion: "WaveletMask (ours) removes local scratch/dust damage more completely than RTN, RVRT, and MambaOFR, while avoiding motion-region false positives that plague pixel-domain indicators."
+evidence_data_path:
+  - Paper/applsci/figures/Figure5.pdf
+  - Exp/paper_data/main_results.yaml
+evidence_gate:
+  required: true
+  status: available
+  missing: []
+reviewer_risk:
+  - "Selection bias: reviewer may request random sampling protocol."
+  - "REDS-val4 may not cover all degradation types → scope claim accordingly."
+forbidden_scene: "Do not show frames where all methods produce near-identical outputs."
+figure_priority: secondary
+production_owner: user
+production_route: ppt
+production_status: ready
+ascii_preview: |
+  [Input] [DeOldify] [ShiftNet] [VRT] [RVRT] [OldPhoto] [DeepRemaster] [RTN] [RRTN] [MambaOFR] [WaveletMask (ours)] [GT]
+  + ROI crops below each column
+dependencies:
+  code: []
+  experiments:
+    - Exp/paper_data/main_results.yaml
+  assets:
+    - Paper/applsci/figures/Figure5.pdf
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: []
+    claim_to_sync: ""
+  results:
+    required_refs: ["\\ref{fig:sota_synthetic}"]
+    claim_to_sync: "Qualitative results on synthetic degradation; WaveletMask (ours) shows more complete damage removal without motion-region artifacts."
+caption_contract:
+  tense: present
+  required_terms: ["WaveletMask (ours)", "DeOldify", "ShiftNet", "VRT", "RVRT", "OldPhoto", "DeepRemaster", "RTN", "RRTN", "MambaOFR", "GT", "ROI"]
+  banned_terms: ["clearly outperforms", "obviously better"]
+  draft_caption: "Qualitative comparison on synthetic old film degradation (REDS synthetic). Columns: (a) Input, (b) DeOldify, (c) ShiftNet, (d) VRT, (e) RVRT, (f) OldPhoto, (g) DeepRemaster, (h) RTN, (i) RRTN, (j) MambaOFR, (k) WaveletMask (ours), and (l) GT. ROI crops highlight damage regions. WaveletMask removes local scratches and dust more completely while avoiding motion-region false positives visible in pixel-domain methods."
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by: []
+notes: "User PPT/comparison tool; file uses ROI tile special layout. Display figure number shifted from 4 to 5 after adding GFM module figure."

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1300" viewBox="0 0 2200 1300">
+<defs>
+<marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="5" orient="auto" markerUnits="strokeWidth">
+<path d="M 0 0 L 12 5 L 0 10 z" fill="#1f2937"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="2200" height="1300" fill="white"/>
+<rect x="136" y="535" width="190" height="145" rx="0" fill="#ebebeb" stroke="#1f2937" stroke-width="2"/>
+<rect x="122" y="525" width="190" height="145" rx="0" fill="#d9d9d9" stroke="#1f2937" stroke-width="2"/>
+<rect x="108" y="515" width="190" height="145" rx="0" fill="#c7c7c7" stroke="#1f2937" stroke-width="2"/>
+<rect x="94" y="505" width="190" height="145" rx="0" fill="#b5b5b5" stroke="#1f2937" stroke-width="2"/>
+<rect x="80" y="495" width="190" height="145" rx="0" fill="#a3a3a3" stroke="#1f2937" stroke-width="2"/>
+<text x="203" y="750" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#1f2937" text-anchor="middle">degraded clip</text>
+<rect x="1956" y="540" width="145" height="120" rx="0" fill="#ebebeb" stroke="#1f2937" stroke-width="2"/>
+<rect x="1942" y="530" width="145" height="120" rx="0" fill="#d9d9d9" stroke="#1f2937" stroke-width="2"/>
+<rect x="1928" y="520" width="145" height="120" rx="0" fill="#c7c7c7" stroke="#1f2937" stroke-width="2"/>
+<rect x="1914" y="510" width="145" height="120" rx="0" fill="#b5b5b5" stroke="#1f2937" stroke-width="2"/>
+<rect x="1900" y="500" width="145" height="120" rx="0" fill="#a3a3a3" stroke="#1f2937" stroke-width="2"/>
+<text x="2000" y="730" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#1f2937" text-anchor="middle">restored clip</text>
+<rect x="330" y="500" width="270" height="135" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="6"/>
+<text x="465" y="540" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">Bidirectional</text>
+<text x="465" y="578" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">optical flow</text>
+<text x="465" y="626" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">RAFT</text>
+<rect x="650" y="130" width="870" height="285" rx="24" fill="#f8fafc" stroke="#2563eb" stroke-width="3"/>
+<text x="678" y="174" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#2563eb" text-anchor="start">forward recurrent pass</text>
+<rect x="650" y="570" width="870" height="285" rx="24" fill="#f8fafc" stroke="#b91c1c" stroke-width="3"/>
+<text x="678" y="614" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#b91c1c" text-anchor="start">backward recurrent pass</text>
+<rect x="820" y="440" width="360" height="110" rx="18" fill="#ffedd5" stroke="#c2410c" stroke-width="6"/>
+<text x="1000" y="487" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">WaveletNoiseMask</text>
+<text x="1000" y="535" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">Local HF + Flicker -&gt; max</text>
+<rect x="700" y="230" width="180" height="95" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+<text x="790" y="269" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Flow warp</text>
+<text x="790" y="313" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">s[t-1-&gt;t]</text>
+<rect x="935" y="220" width="260" height="115" rx="18" fill="#ffedd5" stroke="#c2410c" stroke-width="6"/>
+<text x="1065" y="269" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">Wavelet-guided</text>
+<text x="1065" y="307" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">gate</text>
+<rect x="1255" y="230" width="220" height="95" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+<text x="1365" y="271" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Swin spatial</text>
+<text x="1365" y="305" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">refinement</text>
+<rect x="700" y="670" width="180" height="95" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+<text x="790" y="709" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Flow warp</text>
+<text x="790" y="753" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">s[t+1-&gt;t]</text>
+<rect x="935" y="660" width="260" height="115" rx="18" fill="#ffedd5" stroke="#c2410c" stroke-width="6"/>
+<text x="1065" y="709" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">Wavelet-guided</text>
+<text x="1065" y="747" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">gate</text>
+<rect x="1255" y="670" width="220" height="95" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+<text x="1365" y="711" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Swin spatial</text>
+<text x="1365" y="745" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">refinement</text>
+<rect x="1560" y="500" width="165" height="100" rx="18" fill="#ffffff" stroke="#1f2937" stroke-width="6"/>
+<text x="1642" y="542" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">Concat</text>
+<text x="1642" y="590" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">f_f + f_b</text>
+<rect x="1745" y="500" width="190" height="100" rx="18" fill="#ffffff" stroke="#1f2937" stroke-width="6"/>
+<text x="1840" y="542" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">Reconstruction</text>
+<text x="1840" y="590" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">residual tail</text>
+<line x1="270" y1="585" x2="330" y2="567" stroke="#1f2937" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<polyline points="600,567 635,568 635,278 700,277" fill="none" stroke="#1f2937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="600,567 635,568 635,718 700,717" fill="none" stroke="#1f2937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<line x1="880" y1="277" x2="935" y2="277" stroke="#1f2937" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="1195" y1="277" x2="1255" y2="277" stroke="#1f2937" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="880" y1="717" x2="935" y2="717" stroke="#1f2937" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="1195" y1="717" x2="1255" y2="717" stroke="#1f2937" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<polyline points="1475,277 1535,278 1535,535 1560,550" fill="none" stroke="#1f2937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="1475,717 1535,718 1535,565 1560,550" fill="none" stroke="#1f2937" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<line x1="1725" y1="550" x2="1745" y2="550" stroke="#1f2937" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="1935" y1="550" x2="1900" y2="565" stroke="#1f2937" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<polyline points="270,500 500,420 820,495" fill="none" stroke="#c2410c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<line x1="1000" y1="440" x2="1065" y2="335" stroke="#c2410c" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)" stroke-dasharray="14 12"/>
+<line x1="1000" y1="550" x2="1065" y2="660" stroke="#c2410c" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)" stroke-dasharray="14 12"/>
+</svg>

@@ -1,0 +1,52 @@
+{
+  "source": "L40_aliyun:/mnt/data/Antigravity_OFR/projects/007-waveletmask/Exp/tmp_f6_realworld_mini",
+  "models": {
+    "base": "projects/007-waveletmask/Exp/checkpoints/waveletmask_base/net_g_best.pth",
+    "waveletmask_ab": "projects/007-waveletmask/Exp/checkpoints/waveletmask_ab/net_g_best.pth"
+  },
+  "commands": [
+    "CUDA_VISIBLE_DEVICES=2 python test.py -opt projects/007-waveletmask/Exp/tmp_f6_realworld_mini/configs/f6_waveletmask_base_realworld_mini.yml",
+    "CUDA_VISIBLE_DEVICES=3 python test.py -opt projects/007-waveletmask/Exp/tmp_f6_realworld_mini/configs/f6_waveletmask_ab_realworld_mini.yml"
+  ],
+  "scenes": [
+    {
+      "scene": "scene_gRaos_1586",
+      "frame": "00015",
+      "roi_xyxy": [
+        220,
+        0,
+        330,
+        110
+      ],
+      "input": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/raw/input/scene_gRaos_1586/00015.jpg",
+      "base": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/raw/base/scene_gRaos_1586/outputs/00015_f6_waveletmask_base_realworld_mini.png",
+      "waveletmask_ab": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/raw/ab/scene_gRaos_1586/outputs/00015_f6_waveletmask_ab_realworld_mini.png"
+    },
+    {
+      "scene": "scene_rJl_720",
+      "frame": "00015",
+      "roi_xyxy": [
+        120,
+        40,
+        230,
+        150
+      ],
+      "input": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/raw/input/scene_rJl_720/00015.jpg",
+      "base": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/raw/base/scene_rJl_720/outputs/00015_f6_waveletmask_base_realworld_mini.png",
+      "waveletmask_ab": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/raw/ab/scene_rJl_720/outputs/00015_f6_waveletmask_ab_realworld_mini.png"
+    },
+    {
+      "scene": "scene_uqj_86",
+      "frame": "00015",
+      "roi_xyxy": [
+        0,
+        60,
+        110,
+        170
+      ],
+      "input": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/raw/input/scene_uqj_86/00015.jpg",
+      "base": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/raw/base/scene_uqj_86/outputs/00015_f6_waveletmask_base_realworld_mini.png",
+      "waveletmask_ab": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure6/source/realworld_l40/raw/ab/scene_uqj_86/outputs/00015_f6_waveletmask_ab_realworld_mini.png"
+    }
+  ]
+}

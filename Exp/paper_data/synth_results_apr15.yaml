@@ -1,0 +1,93 @@
+# 007-waveletmask 8 变体 — REDS Synthetic 完整 4 指标
+# 数据来源:
+#   L40 wm_synth_test session（创建于 2026-04-15 17:41，结束于 2026-04-15 22:02）
+#   每变体单独 log: Exp/results/waveletmask_<var>_reds_synthetic_best/test_*.log
+# 测试配置: REDS_synthetic 30 clips, num_frame=-1, Y-channel PSNR/SSIM, AlexNet LPIPS, VGG16 DISTS
+# 提取时间: 2026-04-19（D1 任务收集）
+#
+# ⚠️  与旧 MUXI 测试结果（Exp/ablation/ablation_results.yaml）相比，
+#     PSNR 排序发生显著变化（详见 sessions/2026-04-19-ch5-D1-007-synth-evidence.md），
+#     需项目所有者复核 best ckpt 选取与 full 变体训练健康度。
+
+source:
+  server: L40_aliyun
+  exp_dir: /mnt/data/Antigravity_OFR/Exp/results/
+  ckpt_template: Exp/experiments/waveletmask/<variant>/models/net_g_best.pth
+  test_config_template: Exp/options/test/waveletmask_<variant>_synthetic_best.yml
+  dataset: REDS_synthetic (30 clips × 100 frames)
+  metrics_lib: pyiqa (PSNR/SSIM Y-channel, LPIPS AlexNet, DISTS VGG16)
+  num_gpu: 1 (L40 46GB)
+
+variants_synth:
+  waveletmask_base:
+    psnr: 26.1580
+    ssim: 0.8917
+    lpips: 0.1034
+    dists: 0.0953
+    log_time: '2026-04-15 18:18:29'
+  waveletmask_local:
+    psnr: 26.3778
+    ssim: 0.8966
+    lpips: 0.0914
+    dists: 0.0790
+    log_time: '2026-04-15 18:55:45'
+  waveletmask_flicker:
+    psnr: 26.1024
+    ssim: 0.8980
+    lpips: 0.0969
+    dists: 0.0916
+    log_time: '2026-04-15 19:14:21'
+  waveletmask_ab:
+    psnr: 26.6017
+    ssim: 0.8951
+    lpips: 0.0891
+    dists: 0.0831
+    log_time: '2026-04-15 19:32:54'
+  waveletmask_local_fusion:
+    psnr: 25.9858
+    ssim: 0.8978
+    lpips: 0.0889
+    dists: 0.0830
+    log_time: '2026-04-15 20:10:12'
+  waveletmask_flicker_fusion:
+    psnr: 25.9488
+    ssim: 0.8956
+    lpips: 0.0946
+    dists: 0.0814
+    log_time: '2026-04-15 20:47:17'
+  waveletmask_gated_flicker:
+    psnr: 26.3515
+    ssim: 0.8966
+    lpips: 0.0869
+    dists: 0.0842
+    log_time: '2026-04-15 21:24:49'
+  waveletmask_full:
+    psnr: 24.9827
+    ssim: 0.8896
+    lpips: 0.1068
+    dists: 0.0867
+    log_time: '2026-04-15 22:02:10'
+
+ranking:
+  psnr:  'ab(26.60) > local(26.38) > gated_flicker(26.35) > base(26.16) > flicker(26.10) > local_fusion(25.99) > flicker_fusion(25.95) > full(24.98)'
+  ssim:  'flicker(0.8980) > local_fusion(0.8978) > local(0.8966)≈gated_flicker(0.8966) > flicker_fusion(0.8956) > ab(0.8951) > base(0.8917) > full(0.8896)'
+  lpips: 'gated_flicker(0.0869) > local_fusion(0.0889) > ab(0.0891) > local(0.0914) > flicker(0.0969) > flicker_fusion(0.0946) > base(0.1034) > full(0.1068)'
+  dists: 'local(0.0790) > flicker_fusion(0.0814) > local_fusion(0.0830) > ab(0.0831) > gated_flicker(0.0842) > full(0.0867) > flicker(0.0916) > base(0.0953)'
+
+discrepancy_with_old_muxi:
+  note: |
+    旧 MUXI 测试（2026-03-21）记录 full=26.60 为最优。新 L40 测试 full=24.98 反而最差，
+    而 ab=26.60 数值与旧 full 完全一致（怀疑旧记录中 "full" 标签可能与 ab 混淆，
+    或 full 变体 net_g_best.pth 在 3-4 月间被覆盖/回退）。
+    需项目所有者：(1) 核对 full 变体训练 log 的 best psnr 出现 iter；
+                  (2) 比对 net_g_best.pth 时间戳与训练完成时间；
+                  (3) 必要时重选 full 的 best ckpt 后重测。
+  old_muxi_synth_psnr:
+    full: 26.60
+    local: 26.01
+    flicker_fusion: 25.99
+    local_fusion: 25.90
+    gated_flicker: 25.87
+    flicker: 25.72
+    ab: 25.13
+    base: 24.98

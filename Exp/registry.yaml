@@ -1,0 +1,226 @@
+schema_version: ofr_experiment_registry/v1
+project_id: 007-waveletmask
+source:
+  type: ablation-matrix
+  path: projects/007-waveletmask/Idea/ablation_matrix.json
+created_at: '2026-05-06T19:15:50+08:00'
+updated_at: '2026-07-02T21:48:02+08:00'
+updated_by: ofr-exp-test.launch
+handoff_status: legacy_needs_repair
+variants:
+- id: base
+  name: Baseline (no masks)
+  role: baseline
+  config: Exp/options/train/waveletmask_base.yml
+  params:
+    A: false
+    B: false
+    C: false
+    fusion: none
+- id: waveletmask_base_seed2022
+  name: Baseline seed 2022
+  role: seed_replicate
+  config: Exp/options/train/seed_variants/waveletmask_base_seed2022.yml
+  comparison_target: base
+  params:
+    A: false
+    B: false
+    C: false
+    fusion: none
+    seed: 2022
+- id: waveletmask_base_seed2023
+  name: Baseline seed 2023
+  role: seed_replicate
+  config: Exp/options/train/seed_variants/waveletmask_base_seed2023.yml
+  comparison_target: base
+  params:
+    A: false
+    B: false
+    C: false
+    fusion: none
+    seed: 2023
+- id: local
+  name: 'A only: Local HF Mask (direct replace)'
+  role: ablation
+  config: Exp/options/train/waveletmask_local.yml
+  comparison_target: base
+  params:
+    A: true
+    B: false
+    C: false
+    fusion: direct_replace
+- id: flicker
+  name: 'B only: Flicker Mask (direct replace)'
+  role: ablation
+  config: Exp/options/train/waveletmask_flicker.yml
+  comparison_target: base
+  params:
+    A: false
+    B: true
+    C: false
+    fusion: direct_replace
+- id: ab
+  name: 'A+B: max fusion — FINAL METHOD'
+  role: final
+  config: Exp/options/train/waveletmask_ab.yml
+  comparison_target: base
+  params:
+    A: true
+    B: true
+    C: false
+    fusion: max
+- id: waveletmask_ab_seed2022
+  name: A+B seed 2022
+  role: seed_replicate
+  config: Exp/options/train/seed_variants/waveletmask_ab_seed2022.yml
+  comparison_target: waveletmask_base_seed2022
+  params:
+    A: true
+    B: true
+    C: false
+    fusion: max
+    seed: 2022
+- id: waveletmask_ab_seed2023
+  name: A+B seed 2023
+  role: seed_replicate
+  config: Exp/options/train/seed_variants/waveletmask_ab_seed2023.yml
+  comparison_target: waveletmask_base_seed2023
+  params:
+    A: true
+    B: true
+    C: false
+    fusion: max
+    seed: 2023
+- id: local_fusion
+  name: 'A+C: Local + CNN alpha fusion (C harmful)'
+  role: ablation_negative
+  config: Exp/options/train/waveletmask_local_fusion.yml
+  comparison_target: local
+  params:
+    A: true
+    B: false
+    C: true
+    fusion: cnn_alpha
+- id: flicker_fusion
+  name: 'B+C: Flicker + CNN alpha fusion (C harmful)'
+  role: ablation_negative
+  config: Exp/options/train/waveletmask_flicker_fusion.yml
+  comparison_target: flicker
+  params:
+    A: false
+    B: true
+    C: true
+    fusion: cnn_alpha
+- id: full
+  name: 'Full: A+B+C with max→CNN alpha (C severely harmful)'
+  role: ablation_negative
+  config: Exp/options/train/waveletmask_full.yml
+  comparison_target: ab
+  params:
+    A: true
+    B: true
+    C: true
+    fusion: max_then_cnn_alpha
+- id: gated_flicker
+  name: A+B+improved-C with gated→CNN alpha (still worse than max)
+  role: ablation_negative
+  config: Exp/options/train/waveletmask_gated_flicker.yml
+  comparison_target: ab
+  params:
+    A: true
+    B: true
+    C: true
+    fusion: gated_then_cnn_alpha
+runs:
+- run_id: waveletmask_base_seed2022::l40::007_waveletmask_base_seed2022
+  variant: waveletmask_base_seed2022
+  created_at: '2026-06-06T13:47:32+08:00'
+  variant_source: waveletmask_base_seed2022
+  status: running
+  server: l40
+  gpu: 0
+  tmux: 007_waveletmask_base_seed2022
+  config: Exp/options/train/seed_variants/waveletmask_base_seed2022.yml
+  source: ofr-exp-train.registry-repair
+  updated_at: '2026-06-06T13:47:32+08:00'
+  observed_at: '2026-06-06T13:47:32+08:00'
+  ssh_host: L40_aliyun
+- run_id: waveletmask_base_seed2023::l40::007_waveletmask_base_seed2023
+  variant: waveletmask_base_seed2023
+  created_at: '2026-06-06T13:47:32+08:00'
+  variant_source: waveletmask_base_seed2023
+  status: running
+  server: l40
+  gpu: 1
+  tmux: 007_waveletmask_base_seed2023
+  config: Exp/options/train/seed_variants/waveletmask_base_seed2023.yml
+  source: ofr-exp-train.registry-repair
+  updated_at: '2026-06-06T13:47:32+08:00'
+  observed_at: '2026-06-06T13:47:32+08:00'
+  ssh_host: L40_aliyun
+- run_id: waveletmask_ab_seed2022::l40::007-waveletmask_waveletmask_ab_seed2022
+  variant: waveletmask_ab_seed2022
+  created_at: '2026-06-06T13:31:05+08:00'
+  variant_source: waveletmask_ab_seed2022
+  status: running
+  server: l40
+  gpu: 2
+  tmux: 007-waveletmask_waveletmask_ab_seed2022
+  config: Exp/options/train/seed_variants/waveletmask_ab_seed2022.yml
+  source: ofr-exp-train.post-start
+  updated_at: '2026-06-06T13:47:32+08:00'
+  started_at: '2026-06-06T13:31:05.787410'
+  ssh_host: L40_aliyun
+- run_id: waveletmask_ab_seed2023::l40::007-waveletmask_waveletmask_ab_seed2023
+  variant: waveletmask_ab_seed2023
+  created_at: '2026-06-06T13:31:05+08:00'
+  variant_source: waveletmask_ab_seed2023
+  status: running
+  server: l40
+  gpu: 3
+  tmux: 007-waveletmask_waveletmask_ab_seed2023
+  config: Exp/options/train/seed_variants/waveletmask_ab_seed2023.yml
+  source: ofr-exp-train.post-start
+  updated_at: '2026-06-06T13:47:32+08:00'
+  started_at: '2026-06-06T13:31:05.976580'
+  ssh_host: L40_aliyun
+- run_id: test_run_round1_reds::a100::reds_a100_g2
+  variant: test_run_round1_reds
+  created_at: '2026-07-02T21:48:02+08:00'
+  variant_source: test_run_round1_reds
+  status: running
+  server: a100
+  gpu: null
+  tmux: reds_a100_g2
+  config: null
+  source: ofr-exp-test.launch
+  updated_at: '2026-07-02T21:48:02+08:00'
+  kind: test
+best_metrics:
+  waveletmask_ab_seed2022:
+    reds-synthetic: &id001
+      dataset: reds-synthetic
+      metrics:
+        psnr: 22.23
+        ssim: 0.797
+        lpips: 0.2217
+        dists: 0.1731
+      checkpoint: /mnt/data/Antigravity_OFR/Exp/experiments/waveletmask_ab_seed2022/models/net_g_150000.pth
+      tested_at: '2026-06-07T21:00:47+08:00'
+      source: ofr-exp-test.metrics_collector
+      PSNR: 22.23
+      SSIM: 0.797
+      LPIPS: 0.2217
+      DISTS: 0.1731
+test_results:
+  waveletmask_ab_seed2022:
+    reds-synthetic: *id001
+anomalies: []
+sync_state:
+  status: synced
+  last_synced_at: '2026-07-02T21:48:02+08:00'
+  deprecated_sources:
+    remote_status_json: read-only fallback; registry-first migration active
+    project_index_variant_fields: compatibility fallback; registry owns variant runtime
+      state
+baseline: null

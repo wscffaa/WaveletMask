@@ -1,0 +1,25 @@
+{
+  "method": "WaveletMask",
+  "arch": "WaveletMaskABNet",
+  "status": "ok",
+  "input_shape": [
+    4,
+    7,
+    3,
+    256,
+    256
+  ],
+  "protocol": "FP32, eval, inference_mode, warmup=3, runs=10",
+  "gpu": "NVIDIA L40",
+  "torch": "2.7.0+cu126",
+  "cuda": "12.6",
+  "params_reg_m": 0.9221,
+  "params_flow_m": 4.8139,
+  "params_full_m": 5.736,
+  "flops_g": 8739.6,
+  "latency_ms_per_clip": 113.088,
+  "latency_std_ms": 1.096,
+  "throughput_fps": 61.898,
+  "throughput_clips_per_s": 8.843,
+  "peak_mem_gb": 0.854
+}

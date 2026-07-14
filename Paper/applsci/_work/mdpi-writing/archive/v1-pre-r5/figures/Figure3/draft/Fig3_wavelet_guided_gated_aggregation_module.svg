@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1300" viewBox="0 0 2200 1300">
+<defs>
+<marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="5" orient="auto" markerUnits="strokeWidth">
+<path d="M 0 0 L 12 5 L 0 10 z" fill="#1f2937"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="2200" height="1300" fill="white"/>
+<rect x="90" y="150" width="700" height="930" rx="24" fill="#f8fafc" stroke="#2563eb" stroke-width="3"/>
+<text x="118" y="194" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#2563eb" text-anchor="start">gated aggregation inputs</text>
+<rect x="880" y="150" width="1220" height="930" rx="24" fill="#f8fafc" stroke="#c2410c" stroke-width="3"/>
+<text x="908" y="194" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#c2410c" text-anchor="start">wavelet-guided feature update</text>
+<rect x="190" y="265" width="420" height="115" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="6"/>
+<text x="400" y="314" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">Warped hidden state</text>
+<text x="400" y="362" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">flow-aligned h</text>
+<rect x="190" y="520" width="420" height="115" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="6"/>
+<text x="400" y="569" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">Current frame</text>
+<text x="400" y="617" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">projection head phi(x_t)</text>
+<rect x="190" y="775" width="420" height="115" rx="18" fill="#ccfbf1" stroke="#0f766e" stroke-width="6"/>
+<text x="400" y="824" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">Wavelet indicator</text>
+<text x="400" y="872" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">m_w from Fig. 2</text>
+<rect x="945" y="420" width="330" height="115" rx="18" fill="#ffedd5" stroke="#c2410c" stroke-width="4"/>
+<text x="1110" y="469" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Concatenate</text>
+<text x="1110" y="513" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">h, phi, m_w</text>
+<rect x="1355" y="330" width="290" height="105" rx="18" fill="#ffedd5" stroke="#c2410c" stroke-width="4"/>
+<text x="1500" y="374" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Gate conv</text>
+<text x="1500" y="418" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">(2C + 1) -&gt; C/2</text>
+<rect x="1355" y="555" width="290" height="105" rx="18" fill="#ffedd5" stroke="#c2410c" stroke-width="4"/>
+<text x="1500" y="599" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Sigmoid gate</text>
+<text x="1500" y="643" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">C/2 -&gt; 1</text>
+<rect x="1725" y="420" width="300" height="130" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="6"/>
+<text x="1875" y="477" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#1f2937" text-anchor="middle">Feature blend</text>
+<text x="1875" y="525" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">g h + (1-g) phi</text>
+<rect x="1725" y="725" width="300" height="115" rx="18" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+<text x="1875" y="774" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#1f2937" text-anchor="middle">Swin spatial block</text>
+<text x="1875" y="818" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" fill="#64748b" text-anchor="middle">updated feature</text>
+<line x1="610" y1="322" x2="945" y2="477" stroke="#2563eb" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="610" y1="577" x2="945" y2="477" stroke="#2563eb" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="610" y1="832" x2="945" y2="477" stroke="#0f766e" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="1275" y1="477" x2="1355" y2="382" stroke="#c2410c" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="1500" y1="435" x2="1500" y2="555" stroke="#c2410c" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="1645" y1="607" x2="1725" y2="485" stroke="#c2410c" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<line x1="1875" y1="550" x2="1875" y2="725" stroke="#2563eb" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+</svg>

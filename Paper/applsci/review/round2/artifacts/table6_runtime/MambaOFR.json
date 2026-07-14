@@ -1,0 +1,25 @@
+{
+  "method": "MambaOFR",
+  "arch": "MambaOFRNet",
+  "status": "ok",
+  "input_shape": [
+    1,
+    7,
+    3,
+    256,
+    256
+  ],
+  "protocol": "FP32, eval, inference_mode, warmup=3, runs=10",
+  "gpu": "NVIDIA L40",
+  "torch": "2.7.0+cu126",
+  "cuda": "12.6",
+  "params_reg_m": 3.4845,
+  "params_flow_m": 4.8139,
+  "params_full_m": 8.2984,
+  "flops_g": 2832.8,
+  "latency_ms_per_clip": 404.827,
+  "latency_std_ms": 0.711,
+  "throughput_fps": 17.291,
+  "throughput_clips_per_s": 2.47,
+  "peak_mem_gb": 0.603
+}

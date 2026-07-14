@@ -1,0 +1,62 @@
+schema_version: 2
+figure_id: Fig4
+latex_label: fig:gfm
+title: "GFM module architecture"
+role: method
+status: planned
+slot_id: MODULE_DETAIL_GFM
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A2]
+selected_option:
+  option_id: A
+  archetype: module_detail
+  source_protocol: references/02-figure/figure-options-protocol.md
+archetype: module_detail
+core_conclusion: "GFM converts the minimum LL temporal response into a half-resolution flicker mask through low_freq_conv and sigmoid activation."
+evidence_data_path:
+  - Paper/applsci/figures/Figure4.pdf
+  - archs/components/wavelet_mask.py
+evidence_gate:
+  required: true
+  status: available
+  missing: []
+reviewer_risk:
+  - "Minimum-strategy temporal criterion must be explained before the CNN block."
+  - "Scene-cut false positives must remain bounded as a limitation rather than claimed solved behavior."
+forbidden_scene: "Not suitable when the method has no explicit flicker branch."
+figure_priority: secondary
+production_owner: user
+production_route: ppt
+production_status: ready
+ascii_preview: |
+  [ΔLL_min] → [low_freq_conv] → [sigmoid] → flicker_mask
+dependencies:
+  code:
+    - archs/components/wavelet_mask.py
+    - archs/components/haar_dwt.py
+  experiments: []
+  assets:
+    - Paper/applsci/figures/Figure4.pdf
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: ["\\ref{fig:gfm}"]
+    claim_to_sync: "Method text describes GFM minimum LL temporal response and low_freq_conv processing in the order illustrated in Figure 4."
+  results:
+    required_refs: []
+    claim_to_sync: ""
+caption_contract:
+  tense: present
+  required_terms: ["GFM", "minimum LL temporal response", "low_freq_conv", "sigmoid"]
+  banned_terms: ["clearly", "obviously", "as shown"]
+  draft_caption: "GFM architecture. The minimum LL temporal response is processed by low_freq_conv with a 3x3 1-to-16 convolution, LeakyReLU, a 3x3 16-to-1 convolution, and sigmoid activation to produce the half-resolution flicker mask before upsampling."
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by: []
+notes: "User PPT hand-drawn; file present and verified. Figure 4 now covers GFM after architecture-figure update."

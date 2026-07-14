@@ -1,0 +1,439 @@
+\relax 
+\providecommand*\new@tpo@label[2]{}
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\bibstyle{Definitions/mdpi}
+\citation{kokaram1998motion}
+\citation{iizuka2019deepremaster}
+\citation{rtn2022,wan2020bringing}
+\citation{su2022survey,tian2020deep_denoising}
+\citation{iizuka2019deepremaster}
+\citation{rtn2022}
+\citation{rrtn2024}
+\citation{mao2025mambaofr}
+\citation{guo2024mambair}
+\citation{rtn2022}
+\newmarginnote{note.1.1}{{1}{10945661sp}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:introduction}{{1}{1}{Introduction}{section.1}{}}
+\newlabel{sec:introduction@cref}{{[section][1][]1}{[1][1][]1}}
+\citation{mallat1989theory}
+\citation{bernardini2025driveby}
+\citation{liu2018mwcnn}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Motivation examples for wavelet-domain degradation sensing. (a) Sparse structural damage in a synthetic validation region of interest (ROI) produces clearer Haar detail-band responses (LH/HL/HH) than the warped pixel-domain cue. (b) Brightness flicker in a real triplet from the Synthetic and Real-World Old Video (SRWOV) benchmark is emphasized by the LL temporal response and carried into the fused WaveletMask indicator. The branch-mask column reports $m_{\mathrm  {local}}$ in (a) and $m_{\mathrm  {flicker}}$ in (b). Except for the fixed-scale pixel cue, response and mask panels are display-normalized for visualization. The panels are qualitative motivation examples and are not used as quantitative evidence.\relax }}{2}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:motivation}{{1}{2}{Motivation examples for wavelet-domain degradation sensing. (a) Sparse structural damage in a synthetic validation region of interest (ROI) produces clearer Haar detail-band responses (LH/HL/HH) than the warped pixel-domain cue. (b) Brightness flicker in a real triplet from the Synthetic and Real-World Old Video (SRWOV) benchmark is emphasized by the LL temporal response and carried into the fused WaveletMask indicator. The branch-mask column reports $m_{\mathrm {local}}$ in (a) and $m_{\mathrm {flicker}}$ in (b). Except for the fixed-scale pixel cue, response and mask panels are display-normalized for visualization. The panels are qualitative motivation examples and are not used as quantitative evidence.\relax }{figure.caption.1}{}}
+\newlabel{fig:motivation@cref}{{[figure][1][]1}{[1][2][]2}}
+\citation{kokaram1998motion}
+\citation{kokaram1998motion}
+\citation{kokaram1995blotch}
+\citation{joyeux2001scratch}
+\citation{vanroosmalen1999flicker}
+\citation{wan2020bringing}
+\citation{iizuka2019deepremaster}
+\citation{rtn2022}
+\citation{rrtn2024}
+\citation{mao2025mambaofr}
+\citation{guo2024mambair}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{3}{section.2}\protected@file@percent }
+\newlabel{sec:related_work}{{2}{3}{Related Work}{section.2}{}}
+\newlabel{sec:related_work@cref}{{[section][2][]2}{[1][3][]3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Old Film Restoration Methods}{3}{subsection.2.1}\protected@file@percent }
+\citation{liu2022video_survey}
+\citation{chan2021basicvsr}
+\citation{chan2022basicvsrpp}
+\citation{ranjan2017spynet}
+\citation{teed2020raft}
+\citation{vaswani2017attention}
+\citation{liu2021swin}
+\citation{liang2022rvrt}
+\citation{liang2024vrt}
+\citation{li2023shiftnet}
+\citation{liang2021swinir}
+\citation{zamir2022restormer}
+\citation{wang2021realesrgan}
+\citation{zeng2020sttn}
+\citation{zhou2023propainter}
+\citation{iizuka2019deepremaster}
+\citation{rtn2022}
+\citation{rrtn2024}
+\citation{mao2025mambaofr}
+\citation{mallat1989theory}
+\citation{liu2018mwcnn}
+\citation{huang2017wavelet}
+\citation{deng2019swd}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Method-level comparison of representative old film restoration methods, focusing on the degradation-gating cue. ``--'' denotes that the method does not use a recurrent degradation-gating cue of this type.\relax }}{4}{table.caption.2}\protected@file@percent }
+\newlabel{tab:method_comparison}{{1}{4}{Method-level comparison of representative old film restoration methods, focusing on the degradation-gating cue. ``--'' denotes that the method does not use a recurrent degradation-gating cue of this type.\relax }{table.caption.2}{}}
+\newlabel{tab:method_comparison@cref}{{[table][1][]1}{[1][4][]4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Wavelet Transforms in Image and Video Restoration}{4}{subsection.2.2}\protected@file@percent }
+\citation{chen2002wavelet}
+\citation{selesnick2005dual}
+\citation{li2022airnet}
+\citation{potlapalli2023promptir}
+\citation{chan2022basicvsrpp}
+\citation{liang2022rvrt}
+\citation{rtn2022}
+\citation{mao2025mambaofr}
+\citation{li2022airnet,potlapalli2023promptir,mao2025mambaofr}
+\citation{rtn2022}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Degradation Detection and Adaptive Mechanisms}{5}{subsection.2.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Conceptual comparison of pixel-domain and wavelet-domain degradation cues for recurrent OFR gating. The entries summarize the design motivation rather than a separate quantitative experiment.\relax }}{5}{table.caption.3}\protected@file@percent }
+\newlabel{tab:feature_comparison}{{2}{5}{Conceptual comparison of pixel-domain and wavelet-domain degradation cues for recurrent OFR gating. The entries summarize the design motivation rather than a separate quantitative experiment.\relax }{table.caption.3}{}}
+\newlabel{tab:feature_comparison@cref}{{[table][2][]2}{[1][5][]5}}
+\citation{teed2020raft}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Materials and Methods}{6}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{6}{Materials and Methods}{section.3}{}}
+\newlabel{sec:method@cref}{{[section][3][]3}{[1][5][]6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Problem Setup}{6}{subsection.3.1}\protected@file@percent }
+\newlabel{subsec:problem_setup}{{3.1}{6}{Problem Setup}{subsection.3.1}{}}
+\newlabel{subsec:problem_setup@cref}{{[subsection][1][3]3.1}{[1][5][]6}}
+\newlabel{eq:baseline_indicator}{{1}{6}{Problem Setup}{equation.3.1}{}}
+\newlabel{eq:baseline_indicator@cref}{{[equation][1][]1}{[1][6][]6}}
+\newlabel{eq:gate_mask}{{2}{6}{Problem Setup}{equation.3.2}{}}
+\newlabel{eq:gate_mask@cref}{{[equation][2][]2}{[1][6][]6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Pipeline Overview}{6}{subsection.3.2}\protected@file@percent }
+\newlabel{subsec:overview}{{3.2}{6}{Pipeline Overview}{subsection.3.2}{}}
+\newlabel{subsec:overview@cref}{{[subsection][2][3]3.2}{[1][6][]6}}
+\newlabel{eq:gated_agg}{{3}{6}{Pipeline Overview}{equation.3.3}{}}
+\newlabel{eq:gated_agg@cref}{{[equation][3][]3}{[1][6][]6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Overview of the final WaveletMask pipeline. The WaveletNoiseMask module pre-computes the branch-max wavelet mask $m_t^{\mathrm  {wavelet}}$ from neighboring frames, and the resulting mask is injected directly into the forward and backward recurrent gates. Learned CNN fusion variants that additionally use the RTN spatial indicator are ablated in Table\nobreakspace  {}\ref {tab:fusion_comparison} and are not part of the proposed model.\relax }}{7}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:pipeline}{{2}{7}{Overview of the final WaveletMask pipeline. The WaveletNoiseMask module pre-computes the branch-max wavelet mask $m_t^{\mathrm {wavelet}}$ from neighboring frames, and the resulting mask is injected directly into the forward and backward recurrent gates. Learned CNN fusion variants that additionally use the RTN spatial indicator are ablated in Table~\ref {tab:fusion_comparison} and are not part of the proposed model.\relax }{figure.caption.4}{}}
+\newlabel{fig:pipeline@cref}{{[figure][2][]2}{[1][6][]7}}
+\newlabel{eq:reconstruction}{{4}{7}{Pipeline Overview}{equation.3.4}{}}
+\newlabel{eq:reconstruction@cref}{{[equation][4][]4}{[1][7][]7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Local High-Frequency Mask Module (LHFM)}{7}{subsection.3.3}\protected@file@percent }
+\newlabel{subsec:local}{{3.3}{7}{Local High-Frequency Mask Module (LHFM)}{subsection.3.3}{}}
+\newlabel{subsec:local@cref}{{[subsection][3][3]3.3}{[1][7][]7}}
+\newlabel{eq:haar_dwt}{{5}{7}{Local High-Frequency Mask Module (LHFM)}{equation.3.5}{}}
+\newlabel{eq:haar_dwt@cref}{{[equation][5][]5}{[1][7][]7}}
+\newlabel{eq:geomean}{{6}{7}{Local High-Frequency Mask Module (LHFM)}{equation.3.6}{}}
+\newlabel{eq:geomean@cref}{{[equation][6][]6}{[1][7][]7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces LHFM architecture. Geometric-mean temporal differences from the LH, HL, and HH detail sub-bands are concatenated and processed by \texttt  {high\_freq\_conv}, consisting of a 3$\times $3 3$\to $16 convolution, LeakyReLU, a 3$\times $3 16$\to $1 convolution, and sigmoid activation. The half-resolution output $\tilde  {m}_t^{\mathrm  {local}}\in [0,1]^{1\times H/2\times W/2}$ is bilinearly upsampled before fusion.\relax }}{8}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:lhfm}{{3}{8}{LHFM architecture. Geometric-mean temporal differences from the LH, HL, and HH detail sub-bands are concatenated and processed by \texttt {high\_freq\_conv}, consisting of a 3$\times $3 3$\to $16 convolution, LeakyReLU, a 3$\times $3 16$\to $1 convolution, and sigmoid activation. The half-resolution output $\tilde {m}_t^{\mathrm {local}}\in [0,1]^{1\times H/2\times W/2}$ is bilinearly upsampled before fusion.\relax }{figure.caption.5}{}}
+\newlabel{fig:lhfm@cref}{{[figure][3][]3}{[1][7][]8}}
+\newlabel{eq:local_mask}{{7}{8}{Local High-Frequency Mask Module (LHFM)}{equation.3.7}{}}
+\newlabel{eq:local_mask@cref}{{[equation][7][]7}{[1][8][]8}}
+\newlabel{eq:local_mask_up}{{8}{8}{Local High-Frequency Mask Module (LHFM)}{equation.3.8}{}}
+\newlabel{eq:local_mask_up@cref}{{[equation][8][]8}{[1][8][]8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Global Flicker Mask Module (GFM)}{8}{subsection.3.4}\protected@file@percent }
+\newlabel{subsec:flicker}{{3.4}{8}{Global Flicker Mask Module (GFM)}{subsection.3.4}{}}
+\newlabel{subsec:flicker@cref}{{[subsection][4][3]3.4}{[1][8][]8}}
+\newlabel{eq:flicker_diff}{{9}{8}{Global Flicker Mask Module (GFM)}{equation.3.9}{}}
+\newlabel{eq:flicker_diff@cref}{{[equation][9][]9}{[1][8][]8}}
+\newlabel{eq:flicker_min}{{10}{9}{Global Flicker Mask Module (GFM)}{equation.3.10}{}}
+\newlabel{eq:flicker_min@cref}{{[equation][10][]10}{[1][8][]9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces GFM architecture. The minimum LL temporal response is processed by \texttt  {low\_freq\_conv}, consisting of a 3$\times $3 1$\to $16 convolution, LeakyReLU, a 3$\times $3 16$\to $1 convolution, and sigmoid activation. The half-resolution output $\tilde  {m}_t^{\mathrm  {flicker}}\in [0,1]^{1\times H/2\times W/2}$ is bilinearly upsampled before fusion.\relax }}{9}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:gfm}{{4}{9}{GFM architecture. The minimum LL temporal response is processed by \texttt {low\_freq\_conv}, consisting of a 3$\times $3 1$\to $16 convolution, LeakyReLU, a 3$\times $3 16$\to $1 convolution, and sigmoid activation. The half-resolution output $\tilde {m}_t^{\mathrm {flicker}}\in [0,1]^{1\times H/2\times W/2}$ is bilinearly upsampled before fusion.\relax }{figure.caption.6}{}}
+\newlabel{fig:gfm@cref}{{[figure][4][]4}{[1][9][]9}}
+\newlabel{eq:flicker_mask}{{11}{9}{Global Flicker Mask Module (GFM)}{equation.3.11}{}}
+\newlabel{eq:flicker_mask@cref}{{[equation][11][]11}{[1][9][]9}}
+\newlabel{eq:flicker_mask_up}{{12}{9}{Global Flicker Mask Module (GFM)}{equation.3.12}{}}
+\newlabel{eq:flicker_mask_up@cref}{{[equation][12][]12}{[1][9][]9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Mask Fusion and Integration}{9}{subsection.3.5}\protected@file@percent }
+\newlabel{subsec:integration}{{3.5}{9}{Mask Fusion and Integration}{subsection.3.5}{}}
+\newlabel{subsec:integration@cref}{{[subsection][5][3]3.5}{[1][9][]9}}
+\newlabel{eq:wavelet_mask}{{13}{9}{Mask Fusion and Integration}{equation.3.13}{}}
+\newlabel{eq:wavelet_mask@cref}{{[equation][13][]13}{[1][9][]9}}
+\citation{rtn2022}
+\citation{johnson2016perceptual,simonyan2014vgg}
+\citation{goodfellow2014gan}
+\citation{rtn2022}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Response Analysis}{10}{subsection.3.6}\protected@file@percent }
+\newlabel{subsec:response_analysis}{{3.6}{10}{Response Analysis}{subsection.3.6}{}}
+\newlabel{subsec:response_analysis@cref}{{[subsection][6][3]3.6}{[1][10][]10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Training Objective}{10}{subsection.3.7}\protected@file@percent }
+\newlabel{subsec:training}{{3.7}{10}{Training Objective}{subsection.3.7}{}}
+\newlabel{subsec:training@cref}{{[subsection][7][3]3.7}{[1][10][]10}}
+\newlabel{eq:loss_total}{{14}{10}{Training Objective}{equation.3.14}{}}
+\newlabel{eq:loss_total@cref}{{[equation][14][]14}{[1][10][]10}}
+\citation{mao2025mambaofr}
+\citation{nah2019reds}
+\citation{rtn2022}
+\citation{kingma2015adam}
+\citation{teed2020raft}
+\citation{wang2022basicsr}
+\citation{rtn2022,rrtn2024,mao2025mambaofr}
+\citation{wang2004ssim}
+\citation{zhang2018lpips}
+\citation{ding2020dists}
+\citation{mittal2013niqe}
+\citation{mittal2012brisque}
+\citation{wang2023clipiqa}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{11}{section.4}\protected@file@percent }
+\newlabel{sec:results}{{4}{11}{Experiments}{section.4}{}}
+\newlabel{sec:results@cref}{{[section][4][]4}{[1][11][]11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Datasets}{11}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Implementation Details}{11}{subsection.4.2}\protected@file@percent }
+\newlabel{subsec:implementation}{{4.2}{11}{Implementation Details}{subsection.4.2}{}}
+\newlabel{subsec:implementation@cref}{{[subsection][2][4]4.2}{[1][11][]11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Evaluation Metrics}{11}{subsection.4.3}\protected@file@percent }
+\newlabel{subsec:metrics}{{4.3}{11}{Evaluation Metrics}{subsection.4.3}{}}
+\newlabel{subsec:metrics@cref}{{[subsection][3][4]4.3}{[1][11][]11}}
+\citation{wan2020bringing}
+\citation{jantic2019deoldify}
+\citation{li2023shiftnet}
+\citation{liang2024vrt}
+\citation{liang2022rvrt}
+\citation{iizuka2019deepremaster}
+\citation{rtn2022}
+\citation{rrtn2024}
+\citation{mao2025mambaofr}
+\citation{iizuka2019deepremaster}
+\citation{jantic2019deoldify}
+\citation{wan2020bringing}
+\citation{rtn2022}
+\citation{liang2022rvrt}
+\citation{li2023shiftnet}
+\citation{rrtn2024}
+\citation{liang2024vrt}
+\citation{mao2025mambaofr}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Comparison with State-of-the-Art Methods}{12}{subsection.4.4}\protected@file@percent }
+\newlabel{subsec:sota}{{4.4}{12}{Comparison with State-of-the-Art Methods}{subsection.4.4}{}}
+\newlabel{subsec:sota@cref}{{[subsection][4][4]4.4}{[1][12][]12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Quantitative Comparison on Synthetic Data}{12}{subsubsection.4.4.1}\protected@file@percent }
+\newlabel{subsec:sota_quant}{{4.4.1}{12}{Quantitative Comparison on Synthetic Data}{subsubsection.4.4.1}{}}
+\newlabel{subsec:sota_quant@cref}{{[subsubsection][1][4,4]4.4.1}{[1][12][]12}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Unified re-training benchmark on the SRWOV synthetic split (30 clips, Y-channel protocol), listed in chronological order of publication with the proposed WaveletMask in the last row. All methods, including WaveletMask, were re-trained and re-evaluated by us under one unified benchmark pipeline, so the rows are directly comparable. Best results are in \textcolor {red}{red} and second-best results in \textcolor {blue}{blue}.\relax }}{12}{table.caption.7}\protected@file@percent }
+\newlabel{tab:literature_context}{{3}{12}{Unified re-training benchmark on the SRWOV synthetic split (30 clips, Y-channel protocol), listed in chronological order of publication with the proposed WaveletMask in the last row. All methods, including WaveletMask, were re-trained and re-evaluated by us under one unified benchmark pipeline, so the rows are directly comparable. Best results are in \textcolor {red}{red} and second-best results in \textcolor {blue}{blue}.\relax }{table.caption.7}{}}
+\newlabel{tab:literature_context@cref}{{[table][3][]3}{[1][12][]12}}
+\citation{jantic2019deoldify}
+\citation{iizuka2019deepremaster}
+\citation{wan2020bringing}
+\citation{rtn2022}
+\citation{liang2024vrt}
+\citation{liang2022rvrt}
+\citation{li2023shiftnet}
+\citation{rrtn2024}
+\citation{mao2025mambaofr}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}No-Reference Comparison on Real-World Data}{13}{subsubsection.4.4.2}\protected@file@percent }
+\newlabel{subsec:realworld}{{4.4.2}{13}{No-Reference Comparison on Real-World Data}{subsubsection.4.4.2}{}}
+\newlabel{subsec:realworld@cref}{{[subsubsection][2][4,4]4.4.2}{[1][13][]13}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces No-reference evaluation on the 216-clip SRWOV real-world split. All values are measured by us under the unified benchmark pipeline; the degraded-input row is the unrestored anchor scored with the same per-frame protocol. Best results among the restoration methods are in \textcolor {red}{red} and second-best in \textcolor {blue}{blue}; the degraded-input anchor is excluded from ranking.\relax }}{13}{table.caption.8}\protected@file@percent }
+\newlabel{tab:realworld_literature}{{4}{13}{No-reference evaluation on the 216-clip SRWOV real-world split. All values are measured by us under the unified benchmark pipeline; the degraded-input row is the unrestored anchor scored with the same per-frame protocol. Best results among the restoration methods are in \textcolor {red}{red} and second-best in \textcolor {blue}{blue}; the degraded-input anchor is excluded from ranking.\relax }{table.caption.8}{}}
+\newlabel{tab:realworld_literature@cref}{{[table][4][]4}{[1][13][]13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}Qualitative Comparison}{13}{subsubsection.4.4.3}\protected@file@percent }
+\newlabel{subsec:sota_qual}{{4.4.3}{13}{Qualitative Comparison}{subsubsection.4.4.3}{}}
+\newlabel{subsec:sota_qual@cref}{{[subsubsection][3][4,4]4.4.3}{[1][13][]13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Qualitative comparison on synthetic old-film degradation from the SRWOV/REDS synthetic test setting. Columns: (a) input, (b) DeOldify, (c) ShiftNet, (d) VRT, (e) RVRT, (f) OldPhoto, (g) DeepRemaster, (h) RTN, (i) RRTN, (j) MambaOFR, (k) WaveletMask, and (l) ground truth (GT). ROI crops highlight selected damage regions.\relax }}{14}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:sota_synthetic}{{5}{14}{Qualitative comparison on synthetic old-film degradation from the SRWOV/REDS synthetic test setting. Columns: (a) input, (b) DeOldify, (c) ShiftNet, (d) VRT, (e) RVRT, (f) OldPhoto, (g) DeepRemaster, (h) RTN, (i) RRTN, (j) MambaOFR, (k) WaveletMask, and (l) ground truth (GT). ROI crops highlight selected damage regions.\relax }{figure.caption.9}{}}
+\newlabel{fig:sota_synthetic@cref}{{[figure][5][]5}{[1][13][]14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Ablation Study}{14}{subsection.4.5}\protected@file@percent }
+\newlabel{subsec:ablation}{{4.5}{14}{Ablation Study}{subsection.4.5}{}}
+\newlabel{subsec:ablation@cref}{{[subsection][5][4]4.5}{[1][14][]14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Qualitative comparison on SRWOV real-world archival clips without paired ground truth. Each row compares one input clip/ROI with outputs from (b) DeOldify, (c) ShiftNet, (d) VRT, (e) RVRT, (f) OldPhoto, (g) DeepRemaster, (h) RTN, (i) RRTN, (j) MambaOFR, and (k) WaveletMask. Full-reference scores are unavailable for this split.\relax }}{15}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:sota_realworld}{{6}{15}{Qualitative comparison on SRWOV real-world archival clips without paired ground truth. Each row compares one input clip/ROI with outputs from (b) DeOldify, (c) ShiftNet, (d) VRT, (e) RVRT, (f) OldPhoto, (g) DeepRemaster, (h) RTN, (i) RRTN, (j) MambaOFR, and (k) WaveletMask. Full-reference scores are unavailable for this split.\relax }{figure.caption.10}{}}
+\newlabel{fig:sota_realworld@cref}{{[figure][6][]6}{[1][13][]15}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Ablation study on SRWOV synthetic data: panel (a) compares the detection-branch components, panel (b) the proposed branch-level maximum rule against representative learned-fusion variants, and panel (c) representative wavelet families. All variants share the same RTN backbone and training recipe. Within panel (a), best results are in \textcolor {red}{red} and second-best results in \textcolor {blue}{blue}.\relax }}{15}{table.caption.11}\protected@file@percent }
+\newlabel{tab:ablation_core}{{5}{15}{Ablation study on SRWOV synthetic data: panel (a) compares the detection-branch components, panel (b) the proposed branch-level maximum rule against representative learned-fusion variants, and panel (c) representative wavelet families. All variants share the same RTN backbone and training recipe. Within panel (a), best results are in \textcolor {red}{red} and second-best results in \textcolor {blue}{blue}.\relax }{table.caption.11}{}}
+\newlabel{tab:ablation_core@cref}{{[table][5][]5}{[1][14][]15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Ablation visual comparison on selected synthetic old-film examples. Columns: (a) degraded input, (b) +LHFM only, (c) +GFM only, and (d) WaveletMask. ROIs mark local damage regions.\relax }}{16}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:ablation}{{7}{16}{Ablation visual comparison on selected synthetic old-film examples. Columns: (a) degraded input, (b) +LHFM only, (c) +GFM only, and (d) WaveletMask. ROIs mark local damage regions.\relax }{figure.caption.12}{}}
+\newlabel{fig:ablation@cref}{{[figure][7][]7}{[1][16][]16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Computational Complexity}{16}{subsection.4.6}\protected@file@percent }
+\newlabel{subsec:complexity}{{4.6}{16}{Computational Complexity}{subsection.4.6}{}}
+\newlabel{subsec:complexity@cref}{{[subsection][6][4]4.6}{[1][16][]16}}
+\citation{iizuka2019deepremaster}
+\citation{rtn2022}
+\citation{rrtn2024}
+\citation{mao2025mambaofr}
+\citation{rtn2022,rrtn2024}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Computational cost measured by us under one unified protocol on a single NVIDIA L40 GPU in FP32 (batch size 1, seven-frame $256\times 256$ clips, three warm-up and ten timed runs). Parameters and FLOPs cover the full executable forward pass on a $1\times 7\times 3\times 256\times 256$ input and include the RAFT flow estimator for the flow-based methods (RTN, RRTN, MambaOFR, WaveletMask); DeepRemaster uses no flow estimator. Latency is reported per seven-frame clip. The measurement protocol and additional batch/resolution settings are detailed in Appendix\nobreakspace  {}\ref {app:complexity_details}.\relax }}{17}{table.caption.13}\protected@file@percent }
+\newlabel{tab:complexity}{{6}{17}{Computational cost measured by us under one unified protocol on a single NVIDIA L40 GPU in FP32 (batch size 1, seven-frame $256\times 256$ clips, three warm-up and ten timed runs). Parameters and FLOPs cover the full executable forward pass on a $1\times 7\times 3\times 256\times 256$ input and include the RAFT flow estimator for the flow-based methods (RTN, RRTN, MambaOFR, WaveletMask); DeepRemaster uses no flow estimator. Latency is reported per seven-frame clip. The measurement protocol and additional batch/resolution settings are detailed in Appendix~\ref {app:complexity_details}.\relax }{table.caption.13}{}}
+\newlabel{tab:complexity@cref}{{[table][6][]6}{[1][17][]17}}
+\newlabel{tab:runtime_benchmark}{{6}{17}{Computational cost measured by us under one unified protocol on a single NVIDIA L40 GPU in FP32 (batch size 1, seven-frame $256\times 256$ clips, three warm-up and ten timed runs). Parameters and FLOPs cover the full executable forward pass on a $1\times 7\times 3\times 256\times 256$ input and include the RAFT flow estimator for the flow-based methods (RTN, RRTN, MambaOFR, WaveletMask); DeepRemaster uses no flow estimator. Latency is reported per seven-frame clip. The measurement protocol and additional batch/resolution settings are detailed in Appendix~\ref {app:complexity_details}.\relax }{table.caption.13}{}}
+\newlabel{tab:runtime_benchmark@cref}{{[table][6][]6}{[1][17][]17}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{17}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{17}{Discussion}{section.5}{}}
+\newlabel{sec:discussion@cref}{{[section][5][]5}{[1][17][]17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Why the Wavelet-Domain Cues Help}{17}{subsection.5.1}\protected@file@percent }
+\newlabel{subsec:fusion_insight}{{5.1}{17}{Why the Wavelet-Domain Cues Help}{subsection.5.1}{}}
+\newlabel{subsec:fusion_insight@cref}{{[subsection][1][5]5.1}{[1][17][]17}}
+\newlabel{subsec:freq_complement}{{5.1}{17}{Why the Wavelet-Domain Cues Help}{subsection.5.1}{}}
+\newlabel{subsec:freq_complement@cref}{{[subsection][1][5]5.1}{[1][17][]17}}
+\newlabel{subsec:wavelet_choice}{{5.1}{17}{Why the Wavelet-Domain Cues Help}{subsection.5.1}{}}
+\newlabel{subsec:wavelet_choice@cref}{{[subsection][1][5]5.1}{[1][17][]17}}
+\citation{kim2025hybrid,park2025spatialfrequency}
+\citation{li2022airnet,potlapalli2023promptir,mao2025mambaofr}
+\citation{liu2018mwcnn}
+\citation{selesnick2005dual}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Transferability, Boundary Conditions, and Evaluation Scope}{18}{subsection.5.2}\protected@file@percent }
+\newlabel{subsec:transferability}{{5.2}{18}{Transferability, Boundary Conditions, and Evaluation Scope}{subsection.5.2}{}}
+\newlabel{subsec:transferability@cref}{{[subsection][2][5]5.2}{[1][18][]18}}
+\citation{mittal2012brisque}
+\citation{mittal2013niqe}
+\citation{wang2023clipiqa}
+\citation{rubel2022combinednr}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Limitations and Future Work}{19}{subsection.5.3}\protected@file@percent }
+\newlabel{subsec:limitations}{{5.3}{19}{Limitations and Future Work}{subsection.5.3}{}}
+\newlabel{subsec:limitations@cref}{{[subsection][3][5]5.3}{[1][19][]19}}
+\citation{yeo2025integration}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{20}{section.6}\protected@file@percent }
+\newlabel{sec:conclusions}{{6}{20}{Conclusions}{section.6}{}}
+\newlabel{sec:conclusions@cref}{{[section][6][]6}{[1][20][]20}}
+\citation{rtn2022}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Statistical Reliability of the Paired Comparison}{22}{appendix.0.1}\protected@file@percent }
+\newlabel{app:stats}{{A}{22}{Statistical Reliability of the Paired Comparison}{appendix.0.1}{}}
+\newlabel{app:stats@cref}{{[appendix][1][2147483647,0]A}{[1][22][]22}}
+\@writefile{lot}{\contentsline {table}{\numberline {A2}{\ignorespaces Three-seed same-protocol Y-channel re-test on the SRWOV synthetic benchmark. Values are mean$\pm $standard deviation over seeds 2021, 2022, and 2023. Best results are in \textcolor {red}{red}.\relax }}{22}{table.caption.15}\protected@file@percent }
+\newlabel{tab:three_seed_summary}{{A2}{22}{Three-seed same-protocol Y-channel re-test on the SRWOV synthetic benchmark. Values are mean$\pm $standard deviation over seeds 2021, 2022, and 2023. Best results are in \textcolor {red}{red}.\relax }{table.caption.15}{}}
+\newlabel{tab:three_seed_summary@cref}{{[table][2][2147483647]A2}{[1][22][]22}}
+\@writefile{lot}{\contentsline {table}{\numberline {A1}{\ignorespaces Paired controlled comparison on the SRWOV synthetic benchmark (seed 2021, Y-channel protocol, 30 clips). RTN and WaveletMask share the same data, degradation pipeline, implementation, and metric scripts, so this strict paired comparison is the controlled evidence for the proposed gate. The paired improvement reports WaveletMask minus RTN for PSNR/SSIM and RTN minus WaveletMask for LPIPS/DISTS (positive favors WaveletMask); confidence intervals use clip-level bootstrap resampling and $p$-values use a two-sided paired permutation test. The WaveletMask paired-protocol PSNR (26.6125\nobreakspace  {}dB) differs slightly from the unified-benchmark value in Table\nobreakspace  {}\ref {tab:literature_context} (26.6017\nobreakspace  {}dB) because the two protocols use different training checkpoints and metric configurations. Best values in each row are in \textcolor {red}{red}.\relax }}{23}{table.caption.14}\protected@file@percent }
+\newlabel{tab:same_protocol_main}{{A1}{23}{Paired controlled comparison on the SRWOV synthetic benchmark (seed 2021, Y-channel protocol, 30 clips). RTN and WaveletMask share the same data, degradation pipeline, implementation, and metric scripts, so this strict paired comparison is the controlled evidence for the proposed gate. The paired improvement reports WaveletMask minus RTN for PSNR/SSIM and RTN minus WaveletMask for LPIPS/DISTS (positive favors WaveletMask); confidence intervals use clip-level bootstrap resampling and $p$-values use a two-sided paired permutation test. The WaveletMask paired-protocol PSNR (26.6125~dB) differs slightly from the unified-benchmark value in Table~\ref {tab:literature_context} (26.6017~dB) because the two protocols use different training checkpoints and metric configurations. Best values in each row are in \textcolor {red}{red}.\relax }{table.caption.14}{}}
+\newlabel{tab:same_protocol_main@cref}{{[table][1][2147483647]A1}{[1][22][]23}}
+\newlabel{tab:paired_seed2021_stats}{{A1}{23}{Paired controlled comparison on the SRWOV synthetic benchmark (seed 2021, Y-channel protocol, 30 clips). RTN and WaveletMask share the same data, degradation pipeline, implementation, and metric scripts, so this strict paired comparison is the controlled evidence for the proposed gate. The paired improvement reports WaveletMask minus RTN for PSNR/SSIM and RTN minus WaveletMask for LPIPS/DISTS (positive favors WaveletMask); confidence intervals use clip-level bootstrap resampling and $p$-values use a two-sided paired permutation test. The WaveletMask paired-protocol PSNR (26.6125~dB) differs slightly from the unified-benchmark value in Table~\ref {tab:literature_context} (26.6017~dB) because the two protocols use different training checkpoints and metric configurations. Best values in each row are in \textcolor {red}{red}.\relax }{table.caption.14}{}}
+\newlabel{tab:paired_seed2021_stats@cref}{{[table][1][2147483647]A1}{[1][22][]23}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Robustness and Cross-Content Generalization}{23}{appendix.0.2}\protected@file@percent }
+\newlabel{app:robustness}{{B}{23}{Robustness and Cross-Content Generalization}{appendix.0.2}{}}
+\newlabel{app:robustness@cref}{{[appendix][2][2147483647,0]B}{[1][23][]23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.1}Artifact-Dominant Synthetic Breakdown}{23}{subsection.0.1}\protected@file@percent }
+\newlabel{subsec:artifact_breakdown}{{B.1}{23}{Artifact-Dominant Synthetic Breakdown}{subsection.0.1}{}}
+\newlabel{subsec:artifact_breakdown@cref}{{[subappendix][1][2147483647,0,2]B.1}{[1][23][]23}}
+\@writefile{lot}{\contentsline {table}{\numberline {A3}{\ignorespaces Artifact-dominant breakdown on the SRWOV synthetic benchmark. Clip strata are formed from paired input--ground-truth residual descriptors. The improvement columns report gains of WaveletMask over the RTN (positive favors WaveletMask); for LPIPS and DISTS, the improvement is the error reduction.\relax }}{23}{table.caption.16}\protected@file@percent }
+\newlabel{tab:artifact_breakdown}{{A3}{23}{Artifact-dominant breakdown on the SRWOV synthetic benchmark. Clip strata are formed from paired input--ground-truth residual descriptors. The improvement columns report gains of WaveletMask over the RTN (positive favors WaveletMask); for LPIPS and DISTS, the improvement is the error reduction.\relax }{table.caption.16}{}}
+\newlabel{tab:artifact_breakdown@cref}{{[table][3][2147483647]A3}{[1][23][]23}}
+\@writefile{lot}{\contentsline {table}{\numberline {A4}{\ignorespaces Motion- and occlusion-binned analysis on the 30 fixed synthetic clips. Motion and occlusion descriptors are RAFT statistics on clean ground-truth frames, and bins are clip terciles rather than absolute thresholds. The improvement columns report gains of WaveletMask over the RTN (positive is better for all four metrics). Clean-FP is the fraction of each detector cue's top-5\% activation outside the residual proxy (lower is better); the max-fused mask follows the GFM column because the GFM response dominates the fused scale.\relax }}{24}{table.caption.17}\protected@file@percent }
+\newlabel{tab:motion_binning}{{A4}{24}{Motion- and occlusion-binned analysis on the 30 fixed synthetic clips. Motion and occlusion descriptors are RAFT statistics on clean ground-truth frames, and bins are clip terciles rather than absolute thresholds. The improvement columns report gains of WaveletMask over the RTN (positive is better for all four metrics). Clean-FP is the fraction of each detector cue's top-5\% activation outside the residual proxy (lower is better); the max-fused mask follows the GFM column because the GFM response dominates the fused scale.\relax }{table.caption.17}{}}
+\newlabel{tab:motion_binning@cref}{{[table][4][2147483647]A4}{[1][24][]24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2}Motion- and Occlusion-Binned Analysis}{24}{subsection.0.2}\protected@file@percent }
+\newlabel{subsec:motion_binning}{{B.2}{24}{Motion- and Occlusion-Binned Analysis}{subsection.0.2}{}}
+\newlabel{subsec:motion_binning@cref}{{[subappendix][2][2147483647,0,2]B.2}{[1][24][]24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.3}Cross-Content Generalization on DAVIS}{25}{subsection.0.3}\protected@file@percent }
+\newlabel{subsec:davis}{{B.3}{25}{Cross-Content Generalization on DAVIS}{subsection.0.3}{}}
+\newlabel{subsec:davis@cref}{{[subappendix][3][2147483647,0,2]B.3}{[1][25][]25}}
+\@writefile{lot}{\contentsline {table}{\numberline {A5}{\ignorespaces Cross-content generalization on DAVIS synthetic data (50 clips). Same degradation pipeline as REDS, different video content. Best results are in \textcolor {red}{red}. The final row reports improvement; for LPIPS and DISTS it is computed as RTN minus WaveletMask.\relax }}{25}{table.caption.18}\protected@file@percent }
+\newlabel{tab:davis_cross_content}{{A5}{25}{Cross-content generalization on DAVIS synthetic data (50 clips). Same degradation pipeline as REDS, different video content. Best results are in \textcolor {red}{red}. The final row reports improvement; for LPIPS and DISTS it is computed as RTN minus WaveletMask.\relax }{table.caption.18}{}}
+\newlabel{tab:davis_cross_content@cref}{{[table][5][2147483647]A5}{[1][25][]25}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Detector Diagnostic Probes}{25}{appendix.0.3}\protected@file@percent }
+\newlabel{app:diagnostics}{{C}{25}{Detector Diagnostic Probes}{appendix.0.3}{}}
+\newlabel{app:diagnostics@cref}{{[appendix][3][2147483647,0]C}{[1][25][]25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.1}GFM Failure-Mode Probe}{25}{subsection.0.1}\protected@file@percent }
+\newlabel{subsec:gfm_failure_probe}{{C.1}{25}{GFM Failure-Mode Probe}{subsection.0.1}{}}
+\newlabel{subsec:gfm_failure_probe@cref}{{[subappendix][1][2147483647,0,3]C.1}{[1][25][]25}}
+\@writefile{lot}{\contentsline {table}{\numberline {A6}{\ignorespaces GFM response on synthetic failure-mode probes. Activation is the mean GFM mask value on non-boundary frames. Ratio compares probe activation with the corresponding clean clip. Suppression reports the activation reduction after a simple luminance-difference cut guard, which is evaluated post hoc and is not part of the deployed WaveletMask model.\relax }}{26}{table.caption.19}\protected@file@percent }
+\newlabel{tab:gfm_failure_probe}{{A6}{26}{GFM response on synthetic failure-mode probes. Activation is the mean GFM mask value on non-boundary frames. Ratio compares probe activation with the corresponding clean clip. Suppression reports the activation reduction after a simple luminance-difference cut guard, which is evaluated post hoc and is not part of the deployed WaveletMask model.\relax }{table.caption.19}{}}
+\newlabel{tab:gfm_failure_probe@cref}{{[table][6][2147483647]A6}{[1][25][]26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.2}Persistent-Scratch Response Probe}{26}{subsection.0.2}\protected@file@percent }
+\newlabel{subsec:persistent_scratch_probe}{{C.2}{26}{Persistent-Scratch Response Probe}{subsection.0.2}{}}
+\newlabel{subsec:persistent_scratch_probe@cref}{{[subappendix][2][2147483647,0,3]C.2}{[1][26][]26}}
+\@writefile{lot}{\contentsline {table}{\numberline {A7}{\ignorespaces Detector response to controlled persistent scratches. Relative response is normalized by the same mode's single-frame ($L=1$) response. Suppression is $1-\mathrm  {relative}$ for the raw LHFM response.\relax }}{26}{table.caption.20}\protected@file@percent }
+\newlabel{tab:persistent_scratch_probe}{{A7}{26}{Detector response to controlled persistent scratches. Relative response is normalized by the same mode's single-frame ($L=1$) response. Suppression is $1-\mathrm {relative}$ for the raw LHFM response.\relax }{table.caption.20}{}}
+\newlabel{tab:persistent_scratch_probe@cref}{{[table][7][2147483647]A7}{[1][26][]26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3}Mask Interpretability and Residual-Proxy Overlap}{26}{subsection.0.3}\protected@file@percent }
+\newlabel{subsec:mask_interpretability}{{C.3}{26}{Mask Interpretability and Residual-Proxy Overlap}{subsection.0.3}{}}
+\newlabel{subsec:mask_interpretability@cref}{{[subappendix][3][2147483647,0,3]C.3}{[1][26][]26}}
+\@writefile{lot}{\contentsline {table}{\numberline {A8}{\ignorespaces Mask interpretability probe on SRWOV/REDS synthetic frames. Proxy regions are derived from paired input--ground-truth residuals rather than generator-side artifact annotations. AUPRC, F1, IoU, precision, and recall are computed against these residual proxies.\relax }}{27}{table.caption.21}\protected@file@percent }
+\newlabel{tab:mask_interpretability}{{A8}{27}{Mask interpretability probe on SRWOV/REDS synthetic frames. Proxy regions are derived from paired input--ground-truth residuals rather than generator-side artifact annotations. AUPRC, F1, IoU, precision, and recall are computed against these residual proxies.\relax }{table.caption.21}{}}
+\newlabel{tab:mask_interpretability@cref}{{[table][8][2147483647]A8}{[1][27][]27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.4}Cue Complementarity Analysis}{27}{subsection.0.4}\protected@file@percent }
+\newlabel{subsec:cue_complementarity}{{C.4}{27}{Cue Complementarity Analysis}{subsection.0.4}{}}
+\newlabel{subsec:cue_complementarity@cref}{{[subappendix][4][2147483647,0,3]C.4}{[1][27][]27}}
+\@writefile{lot}{\contentsline {table}{\numberline {A9}{\ignorespaces Pairwise cue relation in the flow-aligned complementarity analysis. Top-5 overlap and Jaccard are computed from each cue's top 5\% response pixels on the same frame. Low overlap indicates that two cues emphasize different spatial regions.\relax }}{27}{table.caption.22}\protected@file@percent }
+\newlabel{tab:cue_complementarity}{{A9}{27}{Pairwise cue relation in the flow-aligned complementarity analysis. Top-5 overlap and Jaccard are computed from each cue's top 5\% response pixels on the same frame. Low overlap indicates that two cues emphasize different spatial regions.\relax }{table.caption.22}{}}
+\newlabel{tab:cue_complementarity@cref}{{[table][9][2147483647]A9}{[1][27][]27}}
+\@writefile{lot}{\contentsline {table}{\numberline {A10}{\ignorespaces Cross-domain frequency-operator diagnostic on SRWOV/REDS residual proxies. Top-5 non-proxy reports the fraction of top-5\% response pixels outside the residual-proxy region; lower is better. AUPRC is the primary ranking metric because several deterministic operators reach their best F1 only at a near-all-positive threshold. Learned shallow values report the five-fold mean.\relax }}{28}{table.caption.23}\protected@file@percent }
+\newlabel{tab:cross_domain_frequency_ablation}{{A10}{28}{Cross-domain frequency-operator diagnostic on SRWOV/REDS residual proxies. Top-5 non-proxy reports the fraction of top-5\% response pixels outside the residual-proxy region; lower is better. AUPRC is the primary ranking metric because several deterministic operators reach their best F1 only at a near-all-positive threshold. Learned shallow values report the five-fold mean.\relax }{table.caption.23}{}}
+\newlabel{tab:cross_domain_frequency_ablation@cref}{{[table][10][2147483647]A10}{[1][28][]28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.5}Cross-Domain Frequency-Operator Diagnostic}{28}{subsection.0.5}\protected@file@percent }
+\newlabel{subsec:cross_domain_frequency}{{C.5}{28}{Cross-Domain Frequency-Operator Diagnostic}{subsection.0.5}{}}
+\newlabel{subsec:cross_domain_frequency@cref}{{[subappendix][5][2147483647,0,3]C.5}{[1][28][]28}}
+\@writefile{toc}{\contentsline {section}{\numberline {D}Complexity Details and Full Ablation Sweeps}{28}{appendix.0.4}\protected@file@percent }
+\newlabel{app:complexity_details}{{D}{28}{Complexity Details and Full Ablation Sweeps}{appendix.0.4}{}}
+\newlabel{app:complexity_details@cref}{{[appendix][4][2147483647,0]D}{[1][28][]28}}
+\@writefile{lot}{\contentsline {table}{\numberline {A11}{\ignorespaces Fusion strategy comparison on SRWOV synthetic data (Y-channel protocol). WaveletMask with LHFM/GFM branch-level maximum fusion is the proposed model, and learned-fusion rows use the four-layer CNN recipe described in the text. All rows except the WaveletMask row are measured in one dedicated fusion-ablation evaluation run, in which the proposed configuration scores 26.6017\nobreakspace  {}dB; the WaveletMask row displays the reference same-protocol value from Table\nobreakspace  {}\ref {tab:same_protocol_main}, and the cross-run drift is below 0.002 on LPIPS and DISTS. In each metric column, the best result is in \textcolor {red}{red} and the second-best in \textcolor {blue}{blue}.\relax }}{29}{table.caption.24}\protected@file@percent }
+\newlabel{tab:fusion_comparison}{{A11}{29}{Fusion strategy comparison on SRWOV synthetic data (Y-channel protocol). WaveletMask with LHFM/GFM branch-level maximum fusion is the proposed model, and learned-fusion rows use the four-layer CNN recipe described in the text. All rows except the WaveletMask row are measured in one dedicated fusion-ablation evaluation run, in which the proposed configuration scores 26.6017~dB; the WaveletMask row displays the reference same-protocol value from Table~\ref {tab:same_protocol_main}, and the cross-run drift is below 0.002 on LPIPS and DISTS. In each metric column, the best result is in \textcolor {red}{red} and the second-best in \textcolor {blue}{blue}.\relax }{table.caption.24}{}}
+\newlabel{tab:fusion_comparison@cref}{{[table][11][2147483647]A11}{[1][29][]29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.1}Full Fusion Strategy Comparison}{29}{subsection.0.1}\protected@file@percent }
+\newlabel{subsec:fusion_analysis}{{D.1}{29}{Full Fusion Strategy Comparison}{subsection.0.1}{}}
+\newlabel{subsec:fusion_analysis@cref}{{[subappendix][1][2147483647,0,4]D.1}{[1][29][]29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.2}Full Wavelet-Family and Stronger-Fusion Sweeps}{29}{subsection.0.2}\protected@file@percent }
+\newlabel{subsec:wavelet_family_analysis}{{D.2}{29}{Full Wavelet-Family and Stronger-Fusion Sweeps}{subsection.0.2}{}}
+\newlabel{subsec:wavelet_family_analysis@cref}{{[subappendix][2][2147483647,0,4]D.2}{[1][29][]29}}
+\@writefile{lot}{\contentsline {table}{\numberline {A12}{\ignorespaces Extended ablation of wavelet families and stronger fusion alternatives under the Y-channel protocol. The proposed configuration is single-level Haar with branch-level maximum fusion.\relax }}{29}{table.caption.25}\protected@file@percent }
+\newlabel{tab:followup_ablations}{{A12}{29}{Extended ablation of wavelet families and stronger fusion alternatives under the Y-channel protocol. The proposed configuration is single-level Haar with branch-level maximum fusion.\relax }{table.caption.25}{}}
+\newlabel{tab:followup_ablations@cref}{{[table][12][2147483647]A12}{[1][29][]29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.3}Runtime Measurement Protocol}{30}{subsection.0.3}\protected@file@percent }
+\newlabel{subsec:runtime_protocol}{{D.3}{30}{Runtime Measurement Protocol}{subsection.0.3}{}}
+\newlabel{subsec:runtime_protocol@cref}{{[subappendix][3][2147483647,0,4]D.3}{[1][30][]30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.4}Per-Module Parameter Breakdown}{30}{subsection.0.4}\protected@file@percent }
+\newlabel{subsec:module_overhead}{{D.4}{30}{Per-Module Parameter Breakdown}{subsection.0.4}{}}
+\newlabel{subsec:module_overhead@cref}{{[subappendix][4][2147483647,0,4]D.4}{[1][30][]30}}
+\@writefile{lot}{\contentsline {table}{\numberline {A13}{\ignorespaces Per-module parameter count of the WaveletMask detection pathway. The proposed detector excludes PixelWiseMaskFusion; that module is included only in learned-fusion ablations.\relax }}{30}{table.caption.26}\protected@file@percent }
+\newlabel{tab:module_overhead}{{A13}{30}{Per-module parameter count of the WaveletMask detection pathway. The proposed detector excludes PixelWiseMaskFusion; that module is included only in learned-fusion ablations.\relax }{table.caption.26}{}}
+\newlabel{tab:module_overhead@cref}{{[table][13][2147483647]A13}{[1][30][]30}}
+\bibdata{references}
+\bibcite{kokaram1998motion}{{1}{1998}{{Kokaram}}{{}}}
+\bibcite{iizuka2019deepremaster}{{2}{2019}{{Iizuka and Simo-Serra}}{{}}}
+\bibcite{rtn2022}{{3}{2022}{{Wan et~al.}}{{Wan, Zhang, Chen, and Liao}}}
+\bibcite{wan2020bringing}{{4}{2020}{{Wan et~al.}}{{Wan, Zhang, Chen, Zhang, Chen, Liao, and Wen}}}
+\bibcite{su2022survey}{{5}{2022}{{Su et~al.}}{{Su, Xu, and Yin}}}
+\bibcite{tian2020deep_denoising}{{6}{2020}{{Tian et~al.}}{{Tian, Fei, Zheng, Xu, Zuo, and Lin}}}
+\bibcite{rrtn2024}{{7}{2024}{{Lin and Simo-Serra}}{{}}}
+\bibcite{mao2025mambaofr}{{8}{2025}{{Mao et~al.}}{{Mao, Luo, Zhong, Chen, Zhang, and Wang}}}
+\bibcite{guo2024mambair}{{9}{2024}{{Guo et~al.}}{{Guo, Li, Dai, Ouyang, Ren, and Xia}}}
+\bibcite{mallat1989theory}{{10}{1989}{{Mallat}}{{}}}
+\bibcite{bernardini2025driveby}{{11}{2025}{{Bernardini et~al.}}{{Bernardini, Bono, and Collina}}}
+\bibcite{liu2018mwcnn}{{12}{2018}{{Liu et~al.}}{{Liu, Zhang, Zhang, Lin, and Zuo}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.5}No-Reference Ablation on Real-World Data}{31}{subsection.0.5}\protected@file@percent }
+\newlabel{subsec:realworld_ablation}{{D.5}{31}{No-Reference Ablation on Real-World Data}{subsection.0.5}{}}
+\newlabel{subsec:realworld_ablation@cref}{{[subappendix][5][2147483647,0,4]D.5}{[1][31][]31}}
+\@writefile{lot}{\contentsline {table}{\numberline {A14}{\ignorespaces No-reference ablation of the RTN/LHFM/GFM variants on the 216-clip SRWOV real-world split, measured under the strict paired protocol (Appendix\nobreakspace  {}\ref {app:stats}). Lower NIQE/BRISQUE indicates better statistical naturalness; higher CLIPIQA+ indicates better CLIP-based perceptual quality. The best result within this ablation is in \textcolor {red}{red}.\relax }}{31}{table.caption.27}\protected@file@percent }
+\newlabel{tab:realworld_variants}{{A14}{31}{No-reference ablation of the RTN/LHFM/GFM variants on the 216-clip SRWOV real-world split, measured under the strict paired protocol (Appendix~\ref {app:stats}). Lower NIQE/BRISQUE indicates better statistical naturalness; higher CLIPIQA+ indicates better CLIP-based perceptual quality. The best result within this ablation is in \textcolor {red}{red}.\relax }{table.caption.27}{}}
+\newlabel{tab:realworld_variants@cref}{{[table][14][2147483647]A14}{[1][31][]31}}
+\@writefile{toc}{\contentsline {section}{\numberline {E}References}{31}{appendix.0.5}\protected@file@percent }
+\bibcite{kokaram1995blotch}{{13}{1995}{{Kokaram et~al.}}{{Kokaram, Morris, Fitzgerald, and Rayner}}}
+\bibcite{joyeux2001scratch}{{14}{2001}{{Joyeux et~al.}}{{Joyeux, Boukir, Besserer, and Buisson}}}
+\bibcite{vanroosmalen1999flicker}{{15}{1999}{{van Roosmalen et~al.}}{{van Roosmalen, Lagendijk, and Biemond}}}
+\bibcite{liu2022video_survey}{{16}{2023}{{Rota et~al.}}{{Rota, Buzzelli, Bianco, and Schettini}}}
+\bibcite{chan2021basicvsr}{{17}{2021}{{Chan et~al.}}{{Chan, Wang, Yu, Dong, and Loy}}}
+\bibcite{chan2022basicvsrpp}{{18}{2022}{{Chan et~al.}}{{Chan, Zhou, Xu, and Loy}}}
+\bibcite{ranjan2017spynet}{{19}{2017}{{Ranjan and Black}}{{}}}
+\bibcite{teed2020raft}{{20}{2020}{{Teed and Deng}}{{}}}
+\bibcite{vaswani2017attention}{{21}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
+\bibcite{liu2021swin}{{22}{2021}{{Liu et~al.}}{{Liu, Lin, Cao, Hu, Wei, Zhang, Lin, and Guo}}}
+\bibcite{liang2022rvrt}{{23}{2022}{{Liang et~al.}}{{Liang, Fan, Xiang, Ranjan, Ilg, Green, Cao, Zhang, Timofte, and {Van Gool}}}}
+\bibcite{liang2024vrt}{{24}{2024}{{Liang et~al.}}{{Liang, Cao, Fan, Zhang, Ranjan, Li, Timofte, and {Van Gool}}}}
+\bibcite{li2023shiftnet}{{25}{2023}{{Li et~al.}}{{Li, Shi, Zhang, Cheung, See, Wang, Qin, and Li}}}
+\bibcite{liang2021swinir}{{26}{2021}{{Liang et~al.}}{{Liang, Cao, Sun, Zhang, {Van Gool}, and Timofte}}}
+\bibcite{zamir2022restormer}{{27}{2022}{{Zamir et~al.}}{{Zamir, Arora, Khan, Hayat, Khan, and Yang}}}
+\bibcite{wang2021realesrgan}{{28}{2021}{{Wang et~al.}}{{Wang, Xie, Dong, and Shan}}}
+\bibcite{zeng2020sttn}{{29}{2020}{{Zeng et~al.}}{{Zeng, Fu, and Chao}}}
+\bibcite{zhou2023propainter}{{30}{2023}{{Zhou et~al.}}{{Zhou, Li, Chan, and Loy}}}
+\bibcite{huang2017wavelet}{{31}{2017}{{Huang et~al.}}{{Huang, He, Sun, and Tan}}}
+\bibcite{deng2019swd}{{32}{2019}{{Deng et~al.}}{{Deng, Yang, Xu, and Dragotti}}}
+\bibcite{chen2002wavelet}{{33}{2002}{{Chen et~al.}}{{Chen, Liao, and Lin}}}
+\bibcite{selesnick2005dual}{{34}{2005}{{Selesnick et~al.}}{{Selesnick, Baraniuk, and Kingsbury}}}
+\bibcite{li2022airnet}{{35}{2022}{{Li et~al.}}{{Li, Liu, Hu, Wu, Lv, and Peng}}}
+\bibcite{potlapalli2023promptir}{{36}{2023}{{Potlapalli et~al.}}{{Potlapalli, Zamir, Khan, and Khan}}}
+\bibcite{johnson2016perceptual}{{37}{2016}{{Johnson et~al.}}{{Johnson, Alahi, and Li}}}
+\bibcite{simonyan2014vgg}{{38}{2015}{{Simonyan and Zisserman}}{{}}}
+\bibcite{goodfellow2014gan}{{39}{2014}{{Goodfellow et~al.}}{{Goodfellow, Pouget-Abadie, Mirza, Xu, Warde-Farley, Ozair, Courville, and Bengio}}}
+\bibcite{nah2019reds}{{40}{2019}{{Nah et~al.}}{{Nah, Baik, Hong, Moon, Son, Timofte, and Lee}}}
+\bibcite{kingma2015adam}{{41}{2015}{{Kingma and Ba}}{{}}}
+\bibcite{wang2022basicsr}{{42}{2022}{{Wang et~al.}}{{Wang, Xie, Yu, Chan, Loy, and Dong}}}
+\bibcite{wang2004ssim}{{43}{2004}{{Wang et~al.}}{{Wang, Bovik, Sheikh, and Simoncelli}}}
+\bibcite{zhang2018lpips}{{44}{2018}{{Zhang et~al.}}{{Zhang, Isola, Efros, Shechtman, and Wang}}}
+\bibcite{ding2020dists}{{45}{2022}{{Ding et~al.}}{{Ding, Ma, Wang, and Simoncelli}}}
+\bibcite{mittal2013niqe}{{46}{2013}{{Mittal et~al.}}{{Mittal, Soundararajan, and Bovik}}}
+\bibcite{mittal2012brisque}{{47}{2012}{{Mittal et~al.}}{{Mittal, Moorthy, and Bovik}}}
+\bibcite{wang2023clipiqa}{{48}{2023}{{Wang et~al.}}{{Wang, Chan, and Loy}}}
+\bibcite{jantic2019deoldify}{{49}{2019}{{Antic}}{{}}}
+\bibcite{kim2025hybrid}{{50}{2025}{{Kim et~al.}}{{Kim, Kim, and Kim}}}
+\bibcite{park2025spatialfrequency}{{51}{2025}{{Park et~al.}}{{Park, Choi, and Lim}}}
+\bibcite{rubel2022combinednr}{{52}{2022}{{Rubel et~al.}}{{Rubel, Ieremeiev, Lukin, Fastowicz, and Okarma}}}
+\bibcite{yeo2025integration}{{53}{2025}{{Yeo and Ryu}}{{}}}
+\newlabel{LastPage}{{}{34}{}{page.34}{}}
+\xdef\lastpage@lastpage{34}
+\xdef\lastpage@lastpageHy{34}
+\gdef \@abspage@last{34}

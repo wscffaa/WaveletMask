@@ -1,0 +1,64 @@
+schema_version: 2
+figure_id: Figure1
+latex_label: fig:wavelet_motivation
+title: Real-data motivation for wavelet-domain degradation sensing
+role: motivation
+status: done
+slot_id: MECHANISM_ANALYSIS
+fixed_level: conditional
+drop_policy: condition_absent
+motivation_anchor_ids: [A1]
+selected_option:
+  option_id: A
+  archetype: frequency_spectrum
+  source_protocol: .claude/skills/ofr-paper-mdpi-writing/references/figure-options-protocol.md
+archetype: frequency_spectrum
+core_conclusion: Wavelet-domain responses expose local high-frequency damage and low-frequency flicker cues that are weak or ambiguous in pixel residual indicators.
+evidence_data_path:
+  - projects/007-waveletmask/Paper/applsci/figures/Figure1.pdf
+  - projects/007-waveletmask/Paper/_work/mdpi-writing/figure_manifest.yaml
+evidence_gate:
+  required: true
+  status: available
+  missing: []
+reviewer_risk:
+  - Motivation panels could be overread as quantitative superiority evidence.
+forbidden_scene: Do not cite this figure as SOTA comparison or final RealWorld ranking evidence.
+production_owner: user
+production_route: manual_redraw_from_real_assets
+target_path: projects/007-waveletmask/Paper/applsci/figures/Figure1.pdf
+current_asset_path: projects/007-waveletmask/Paper/applsci/figures/Figure1.pdf
+ascii_preview: |
+  Pixel residual       Haar sub-bands       Wavelet mask
+  +-----------+        +-------------+      +-----------+
+  | weak/amb. |  --->  | LL LH HL HH | ---> | local/B   |
+  +-----------+        +-------------+      +-----------+
+dependencies:
+  code:
+    - projects/007-waveletmask/archs/components/wavelet_mask/wavelet_mask.py
+  experiments:
+    - projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure1/source/real_motivation/package/Fig1_real_motivation_complete_assets_20260512.tar.gz
+  assets:
+    - projects/007-waveletmask/Paper/applsci/figures/Figure1.pdf
+sync_targets:
+  introduction:
+    required_refs: ["\\ref{fig:wavelet_motivation}"]
+    claim_to_sync: Pixel residual indicators are weak for sparse damage and flicker.
+  method:
+    required_refs: []
+    claim_to_sync: ""
+  results:
+    required_refs: []
+    claim_to_sync: ""
+caption_contract:
+  tense: present
+  required_terms: [WaveletMask, Haar, pixel-domain indicator]
+  banned_terms: [SOTA, final ranking]
+  draft_caption: Real-data motivation for wavelet-domain degradation sensing.
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by: []
+notes: Existing final manual redraw is present and listed in figure_manifest.yaml.

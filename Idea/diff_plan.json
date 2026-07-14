@@ -1,0 +1,60 @@
+{
+  "project_id": "007-waveletmask",
+  "display_name": "WaveletMask (Wavelet-Domain Degradation-Aware Masking for Old Film Restoration)",
+  "baseline": "RTN (Swin Spatial) — Video_Backbone in waveletmask_base_arch.py",
+  "target_slot": "S2-Spatial (residual_indicator in Gated_Aggregation)",
+  "final_arch": "WaveletMaskABNet (A+B, max fusion)",
+  "new_files": [
+    {
+      "path": "archs/components/haar_dwt.py",
+      "classes": ["HaarDWT2d", "HaarIDWT2d"],
+      "description": "Haar 小波 2D 正/逆变换，纯 PyTorch 卷积实现"
+    },
+    {
+      "path": "archs/components/wavelet_mask.py",
+      "classes": ["WaveletNoiseMask"],
+      "description": "小波域噪声掩码检测（创新 A 局部高频 + 创新 B 全局闪烁 + max 融合）"
+    }
+  ],
+  "archived_files": [
+    {
+      "path": "archs/components/mask_fusion.py",
+      "classes": ["PixelWiseMaskFusion"],
+      "description": "像素级 alpha 融合网络（创新 C）— 已淘汰，仅消融变体使用",
+      "archived_reason": "L40 权威数据确认在所有对照中有害 (2026-04-23)"
+    }
+  ],
+  "modified_files": [
+    {
+      "path": "archs/waveletmask_ab_arch.py",
+      "changes": [
+        "最终架构：继承 Video_Backbone，新增 wavelet_mask 模块",
+        "forward() 中：预计算 wavelet_masks → 循环内直接使用 wavelet_masks[:, i] 作为 residual_indicator"
+      ]
+    }
+  ],
+  "architecture_variants": {
+    "base": {"innovations": [], "net_class": "WaveletMaskBaseNet", "role": "baseline"},
+    "simple": {"innovations": ["A"], "net_class": "WaveletMaskSimpleNet", "fusion": "fixed_weight_0.3", "role": "ablation"},
+    "local": {"innovations": ["A"], "net_class": "WaveletMaskLocalNet", "fusion": "direct_replace", "role": "ablation"},
+    "flicker": {"innovations": ["B"], "net_class": "WaveletMaskFlickerNet", "fusion": "direct_replace", "role": "ablation"},
+    "ab": {"innovations": ["A", "B"], "net_class": "WaveletMaskABNet", "fusion": "max", "role": "final"},
+    "local_fusion": {"innovations": ["A", "C"], "net_class": "WaveletMaskLocalFusionNet", "fusion": "cnn_alpha", "role": "ablation_archived"},
+    "flicker_fusion": {"innovations": ["B", "C"], "net_class": "WaveletMaskFlickerFusionNet", "fusion": "cnn_alpha", "role": "ablation_archived"},
+    "full": {"innovations": ["A", "B", "C"], "net_class": "WaveletMaskFullNet", "fusion": "max_ab_then_cnn_alpha", "role": "ablation_archived"},
+    "gated_flicker": {"innovations": ["A", "B", "C"], "net_class": "WaveletMaskGatedFlickerNet", "fusion": "gated_weighted_then_cnn_alpha", "role": "ablation_archived"}
+  },
+  "new_params": {
+    "wavelet_weight": {"type": "float", "default": 0.3, "used_by": ["simple"]}
+  },
+  "archived_params": {
+    "fusion_mid_channels": {"type": "int", "default": 32, "used_by": ["full", "local_fusion", "flicker_fusion", "gated_flicker"]},
+    "local_weight": {"type": "float", "default": 0.7, "used_by": ["gated_flicker"]},
+    "flicker_weight": {"type": "float", "default": 0.3, "used_by": ["gated_flicker"]},
+    "flicker_threshold": {"type": "float", "default": 0.5, "used_by": ["gated_flicker"]}
+  },
+  "_revision": {
+    "date": "2026-04-23",
+    "reason": "Final arch changed from WaveletMaskFullNet to WaveletMaskABNet; C module archived; mask_fusion.py archived"
+  }
+}

@@ -1,0 +1,25 @@
+best_model:
+  checkpoint: net_g_200000.pth
+  metric: psnr
+  value: 22.2308
+datasets:
+  reds-synthetic:
+    psnr: 22.2308
+    ssim: 0.7970
+    lpips: 0.2217
+    dists: 0.1731
+artifacts:
+  uploaded: []
+test_configs:
+- name: round1_reds_y_t13_fc_ab_seed2022
+  option: /mnt/data/Antigravity_OFR/Exp/options/test/round1_reds_y_t13_fc_ab_seed2022.yml
+  results_subdir: round1_reds_y_t13_fc_ab_seed2022
+  dataset: REDS_synthetic
+  checkpoint: Exp/experiments/waveletmask_fc_ab_seed2022/models/net_g_200000.pth
+  iter: 200000
+  manual_seed: 2022
+  metric_protocol:
+    psnr_test_y_channel: true
+    ssim_test_y_channel: true
+    lpips_convert_to_grayscale: true
+    dists_convert_to_grayscale: true

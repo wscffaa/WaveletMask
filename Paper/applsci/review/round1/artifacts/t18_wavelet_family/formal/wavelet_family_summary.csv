@@ -1,0 +1,21 @@
+track,variant,metric,value,delta_vs_reference,note
+wavelet_family,haar_2level,psnr,26.52,-0.08999999999999986,positive delta favors candidate under metric-direction normalization
+wavelet_family,haar_2level,ssim,0.9011,0.005700000000000038,positive delta favors candidate under metric-direction normalization
+wavelet_family,haar_2level,lpips,0.0847,0.0039000000000000007,positive delta favors candidate under metric-direction normalization
+wavelet_family,haar_2level,dists,0.076,0.006699999999999998,positive delta favors candidate under metric-direction normalization
+wavelet_family,db2,psnr,17.92,-8.689999999999998,positive delta favors candidate under metric-direction normalization
+wavelet_family,db2,ssim,0.6473,-0.2481,positive delta favors candidate under metric-direction normalization
+wavelet_family,db2,lpips,0.4136,-0.325,positive delta favors candidate under metric-direction normalization
+wavelet_family,db2,dists,0.3154,-0.23270000000000002,positive delta favors candidate under metric-direction normalization
+wavelet_family,sym2,psnr,24.21,-2.3999999999999986,positive delta favors candidate under metric-direction normalization
+wavelet_family,sym2,ssim,0.8509,-0.044499999999999984,positive delta favors candidate under metric-direction normalization
+wavelet_family,sym2,lpips,0.1507,-0.0621,positive delta favors candidate under metric-direction normalization
+wavelet_family,sym2,dists,0.1226,-0.039900000000000005,positive delta favors candidate under metric-direction normalization
+wavelet_family,coif1,psnr,25.8533,-0.7566999999999986,positive delta favors candidate under metric-direction normalization
+wavelet_family,coif1,ssim,0.8874,-0.008000000000000007,positive delta favors candidate under metric-direction normalization
+wavelet_family,coif1,lpips,0.1026,-0.013999999999999999,positive delta favors candidate under metric-direction normalization
+wavelet_family,coif1,dists,0.0893,-0.006600000000000009,positive delta favors candidate under metric-direction normalization
+wavelet_family,dtcwt,psnr,26.4506,-0.159399999999998,positive delta favors candidate under metric-direction normalization
+wavelet_family,dtcwt,ssim,0.8992,0.0038000000000000256,positive delta favors candidate under metric-direction normalization
+wavelet_family,dtcwt,lpips,0.0862,0.0023999999999999994,positive delta favors candidate under metric-direction normalization
+wavelet_family,dtcwt,dists,0.078,0.004699999999999996,positive delta favors candidate under metric-direction normalization

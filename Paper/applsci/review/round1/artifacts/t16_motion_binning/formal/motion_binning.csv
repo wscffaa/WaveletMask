@@ -1,0 +1,51 @@
+group,case,metric,value,note
+abrupt_probe,scene_cut,activation_ratio,2.35039340405821,
+abrupt_probe,scene_cut,false_positive_rate,0.05053075154622396,
+abrupt_probe,scene_cut,guarded_false_positive_rate,0.019923909505208334,
+abrupt_probe,scene_cut,cut_guard_ratio,0.6140874021441133,
+abrupt_probe,flash,activation_ratio,10.41273406939631,
+abrupt_probe,flash,false_positive_rate,0.15735626220703125,
+abrupt_probe,flash,guarded_false_positive_rate,0.0035608927408854168,
+abrupt_probe,flash,cut_guard_ratio,0.9470073050863242,
+abrupt_probe,illumination_ramp,activation_ratio,1.5218012327321102,
+abrupt_probe,illumination_ramp,false_positive_rate,0.0351959228515625,
+abrupt_probe,illumination_ramp,guarded_false_positive_rate,0.03474756876627604,
+abrupt_probe,illumination_ramp,cut_guard_ratio,0.024705355646946824,
+persistent_scratch,fixed_L1,raw_lhfm_suppression_from_l1,0.0,
+persistent_scratch,fixed_L1,m_wavelet_suppression_from_l1,0.0,
+persistent_scratch,fixed_L1,m_wavelet_top5,0.34716712440240055,
+persistent_scratch,fixed_L2,raw_lhfm_suppression_from_l1,0.46452543022388804,
+persistent_scratch,fixed_L2,m_wavelet_suppression_from_l1,0.9832532800523948,
+persistent_scratch,fixed_L2,m_wavelet_top5,0.011672261214525479,
+persistent_scratch,fixed_L3,raw_lhfm_suppression_from_l1,0.6501972344650088,
+persistent_scratch,fixed_L3,m_wavelet_suppression_from_l1,0.9891896768162837,
+persistent_scratch,fixed_L3,m_wavelet_top5,0.002492116773471671,
+persistent_scratch,fixed_L5,raw_lhfm_suppression_from_l1,0.6501972344650088,
+persistent_scratch,fixed_L5,m_wavelet_suppression_from_l1,0.9891896768162837,
+persistent_scratch,fixed_L5,m_wavelet_top5,0.002492116773471671,
+persistent_scratch,drift_L1,raw_lhfm_suppression_from_l1,0.0,
+persistent_scratch,drift_L1,m_wavelet_suppression_from_l1,0.0,
+persistent_scratch,drift_L1,m_wavelet_top5,0.34716712440240055,
+persistent_scratch,drift_L2,raw_lhfm_suppression_from_l1,-0.036401183961304984,
+persistent_scratch,drift_L2,m_wavelet_suppression_from_l1,0.863655453456017,
+persistent_scratch,drift_L2,m_wavelet_top5,0.21040585901739395,
+persistent_scratch,drift_L3,raw_lhfm_suppression_from_l1,-0.10965123623963646,
+persistent_scratch,drift_L3,m_wavelet_suppression_from_l1,0.9580910626032941,
+persistent_scratch,drift_L3,m_wavelet_top5,0.07473807344115553,
+persistent_scratch,drift_L5,raw_lhfm_suppression_from_l1,-0.10965123623963646,
+persistent_scratch,drift_L5,m_wavelet_suppression_from_l1,0.9580910626032941,
+persistent_scratch,drift_L5,m_wavelet_top5,0.07473807344115553,
+cue_pair,spatial/local,spearman,-0.04181547514314501,
+cue_pair,spatial/local,topk_overlap,0.1640650406504065,
+cue_pair,spatial/flicker,spearman,0.48497115764169224,
+cue_pair,spatial/flicker,topk_overlap,0.23,
+cue_pair,local/flicker,spearman,-0.3364109238926744,
+cue_pair,local/flicker,topk_overlap,0.0023577235772357726,
+paired_seed2021,psnr,mean_improvement,0.44769666666666635,positive favors WaveletMask
+paired_seed2021,ssim,mean_improvement,0.0031066666666666612,positive favors WaveletMask
+paired_seed2021,lpips,mean_improvement,0.013650000000000002,positive favors WaveletMask
+paired_seed2021,dists,mean_improvement,0.011893333333333332,positive favors WaveletMask
+fc_pilot,mean_vs_ab_seed2021,psnr,-2.6147333333333336,positive favors FC pilot under metric-direction normalization
+fc_pilot,mean_vs_ab_seed2021,ssim,-0.047566666666666646,positive favors FC pilot under metric-direction normalization
+fc_pilot,mean_vs_ab_seed2021,lpips,-0.06123333333333335,positive favors FC pilot under metric-direction normalization
+fc_pilot,mean_vs_ab_seed2021,dists,-0.03643333333333333,positive favors FC pilot under metric-direction normalization

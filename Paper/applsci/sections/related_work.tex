@@ -1,0 +1,58 @@
+\section{Related Work}\label{sec:related_work}
+
+\subsection{Old Film Restoration Methods}
+
+Old film restoration differs from general video restoration because archival footage often contains structured artifacts such as scratches, dust, and blotches together with photometric degradation such as flicker, grain, and fading~\cite{kokaram1998motion}. Kokaram~\cite{kokaram1998motion} summarized classical film restoration pipelines and showed that these degradations often coexist in the same sequence, but such pipelines usually treat each artifact with a separate module. Kokaram~et~al.~\cite{kokaram1995blotch} detected blotches from temporal intensity discontinuities, Joyeux~et~al.~\cite{joyeux2001scratch} tracked line scratches for reconstruction, and van Roosmalen~et~al.~\cite{vanroosmalen1999flicker} corrected brightness flicker with temporal modeling, but these methods rely on hand-crafted cues and are typically specialized to one artifact class at a time.
+
+Wan~et~al.~\cite{wan2020bringing} proposed a domain-translation framework for old photo restoration and showed that mixed defects can be handled in a unified latent space, but the formulation is image-based and does not use temporal redundancy across frames. Iizuka and Simo-Serra~\cite{iizuka2019deepremaster} introduced DeepRemaster with 3D convolutions over spatiotemporal volumes, but the fixed receptive field makes long-range temporal aggregation less flexible. Wan~et~al.~\cite{rtn2022} proposed RTN with bidirectional recurrent propagation and a learnable soft defect mask, but the gating cue is still estimated from pixel-domain frame differences. Lin and Simo-Serra~\cite{rrtn2024} extended this line with recursive recurrent transformers, second-order grid propagation, and flow-guided deformable alignment, but the degradation indicator remains tied to spatial-domain discrepancies. Mao~et~al.~\cite{mao2025mambaofr} further incorporated Mamba-based restoration blocks and degradation-aware prompts on top of the MambaIR backbone~\cite{guo2024mambair}, but the adaptation signal is not explicitly decomposed into low-frequency and high-frequency artifact evidence.
+
+Rota~et~al.~\cite{liu2022video_survey} reviewed deep video restoration and identified temporal propagation, motion compensation, and feature fusion as the main ingredients behind recent progress, but most existing designs are developed for generic degradations rather than archival artifacts. Chan~et~al.~\cite{chan2021basicvsr} established bidirectional recurrent propagation as an efficient temporal backbone, but the original formulation does not explicitly model degradation uncertainty. Chan~et~al.~\cite{chan2022basicvsrpp} strengthened recurrent restoration with second-order grid propagation and flow-guided deformable alignment driven by optical flow estimators such as SPyNet~\cite{ranjan2017spynet} and RAFT~\cite{teed2020raft}, but flow-guided alignment can become unreliable when severe scratches, blotches, or flicker violate motion assumptions. Vaswani~et~al.~\cite{vaswani2017attention} established the transformer formulation, and Liu~et~al.~\cite{liu2021swin} adapted it to vision through shifted-window attention, but these generic attention mechanisms do not by themselves distinguish old-film artifacts from valid scene motion. Liang~et~al.~\cite{liang2022rvrt} and Liang~et~al.~\cite{liang2024vrt} used transformer-based temporal aggregation with guided deformable attention and spatiotemporal self-attention, while Li~et~al.~\cite{li2023shiftnet} explored grouped spatial-temporal shifts for efficient restoration, but these models are still not designed around OFR-specific degradation cues. Liang~et~al.~\cite{liang2021swinir}, Zamir~et~al.~\cite{zamir2022restormer}, and Wang~et~al.~\cite{wang2021realesrgan} also improved restoration backbones on the image side, whereas Zeng~et~al.~\cite{zeng2020sttn} and Zhou~et~al.~\cite{zhou2023propainter} showed that propagation and attention are effective for video completion, but these methods are not built for dense defect-aware gating in aged film. Different from these methods, our approach keeps the recurrent OFR setting but introduces a wavelet-domain cue so that local high-frequency defects and global low-frequency flicker can be inspected separately during temporal gating.
+
+Table~\ref{tab:method_comparison} summarizes how these representative methods differ in backbone, degradation-gating cue domain, and temporal criterion, and positions WaveletMask within this progression.
+
+\begin{table}[H]
+\caption{Method-level comparison of representative old film restoration methods, focusing on the degradation-gating cue. ``--'' denotes that the method does not use a recurrent degradation-gating cue of this type.\label{tab:method_comparison}}
+\footnotesize
+\begin{tabularx}{\textwidth}{lccCC}
+\toprule
+\textbf{Method} & \textbf{Year} & \textbf{Backbone} & \textbf{Gating Cue Domain} & \textbf{Temporal Criterion} \\
+\midrule
+DeepRemaster~\cite{iizuka2019deepremaster} & 2019 & 3D CNN & -- & -- \\
+RTN~\cite{rtn2022} & 2022 & Bi-RNN + Swin & Pixel difference & Single-frame \\
+RRTN~\cite{rrtn2024} & 2024 & Recursive RNN + Swin & Pixel difference & Bilateral \\
+MambaOFR~\cite{mao2025mambaofr} & 2025 & Mamba & Latent prompt & -- \\
+\textbf{WaveletMask (ours)} & 2026 & Bi-RNN + Swin & Haar wavelet sub-bands & Bilateral geometric mean / minimum \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+\subsection{Wavelet Transforms in Image and Video Restoration}
+
+Mallat~\cite{mallat1989theory} established multiresolution wavelet analysis as a way to decompose a signal into one approximation band and multiple directional detail bands, but the theory itself does not prescribe how these sub-bands should be used for degradation detection. This decomposition is relevant to old film restoration because scratches, dust, and blotches usually produce localized high-frequency discontinuities, whereas flicker and fading mainly affect coarse luminance statistics. In this context, a single-level Haar transform provides a lightweight partition between approximation and detail responses, which is well matched to the goal of separating global brightness variation from localized defect evidence.
+
+Liu~et~al.~\cite{liu2018mwcnn} used wavelet decomposition and inverse wavelet reconstruction as substitutes for pooling and upsampling in MWCNN, but their goal was representation learning for image restoration rather than temporal artifact detection. Huang~et~al.~\cite{huang2017wavelet} predicted wavelet coefficients for face super-resolution, and Deng~et~al.~\cite{deng2019swd} introduced wavelet-domain supervision for perception--distortion control, but these methods use wavelets in reconstruction or loss design rather than in recurrent gating.
+
+Chen~et~al.~\cite{chen2002wavelet} investigated optical-flow estimation in the wavelet domain, and Selesnick~et~al.~\cite{selesnick2005dual} developed the dual-tree complex wavelet transform with improved directional selectivity and approximate shift invariance, but these studies were not developed for the compound and temporally varying degradations of old films. In contrast, WaveletMask operates on a single-level Haar decomposition to build a dense gating cue, using high-frequency bands to emphasize localized defects and the low-frequency band to track brightness fluctuations.
+
+\subsection{Degradation Detection and Adaptive Mechanisms}
+
+Li~et~al.~\cite{li2022airnet} learned a degradation representation for all-in-one image restoration and used it to guide restoration under unknown corruption, but the conditioning is performed at the latent level rather than along a dense temporal gating path. Potlapalli~et~al.~\cite{potlapalli2023promptir} introduced degradation-conditioned prompts to adapt restoration behavior across multiple corruption types, but the prompts serve as high-level control tokens instead of localized frame-wise cues. Chan~et~al.~\cite{chan2022basicvsrpp} and Liang~et~al.~\cite{liang2022rvrt} showed that adaptive temporal aggregation and alignment are crucial in video restoration, but their mechanisms are still designed for generic motion compensation and feature fusion. In the OFR setting, Wan~et~al.~\cite{rtn2022} used a representative pixel-domain indicator by comparing the current frame with flow-warped neighboring frames, and Mao~et~al.~\cite{mao2025mambaofr} further adopted prompt-style adaptation for mixed old-film degradation, but these strategies do not explicitly separate high-frequency local damage from low-frequency photometric variation.
+
+Table~\ref{tab:feature_comparison} summarizes the conceptual difference between the two types of cues.
+
+\begin{table}[H]
+\caption{Conceptual comparison of pixel-domain and wavelet-domain degradation cues for recurrent OFR gating. The entries summarize the design motivation rather than a separate quantitative experiment.\label{tab:feature_comparison}}
+\begin{tabularx}{\textwidth}{lCC}
+\toprule
+& \textbf{Pixel-Domain Detection} & \textbf{Wavelet-Domain Detection (Ours)} \\
+\midrule
+Signal domain          & Spatial intensity values & Haar wavelet sub-bands \\
+High-frequency damage  & Response can be diluted when the defect footprint is spatially sparse & Detail bands often preserve sharper local responses \\
+Flicker discrimination & Global intensity changes can be confounded with legitimate scene variation & The approximation band provides a more direct brightness cue \\
+Temporal criterion     & Single-frame absolute difference & Bilateral geometric mean (LHFM) and minimum strategy (GFM) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Different from the global or patch-level degradation estimation used in prior work~\cite{li2022airnet,potlapalli2023promptir,mao2025mambaofr}, our approach injects a dense wavelet-domain cue into the recurrent gating path so that local defect evidence and global flicker evidence are modeled with different temporal criteria.

@@ -1,0 +1,25 @@
+track,variant,metric,value,delta_vs_reference,note
+fusion_completion,channel_attention,psnr,23.25,-3.3599999999999994,positive delta favors candidate under metric-direction normalization
+fusion_completion,channel_attention,ssim,0.8281,-0.06730000000000003,positive delta favors candidate under metric-direction normalization
+fusion_completion,channel_attention,lpips,0.1768,-0.08820000000000001,positive delta favors candidate under metric-direction normalization
+fusion_completion,channel_attention,dists,0.1359,-0.0532,positive delta favors candidate under metric-direction normalization
+fusion_completion,residual,psnr,25.98,-0.629999999999999,positive delta favors candidate under metric-direction normalization
+fusion_completion,residual,ssim,0.8929,-0.0024999999999999467,positive delta favors candidate under metric-direction normalization
+fusion_completion,residual,lpips,0.0966,-0.008000000000000007,positive delta favors candidate under metric-direction normalization
+fusion_completion,residual,dists,0.0811,0.0015999999999999903,positive delta favors candidate under metric-direction normalization
+fusion_completion,bias0,psnr,26.5013,-0.10869999999999891,positive delta favors candidate under metric-direction normalization
+fusion_completion,bias0,ssim,0.8981,0.0027000000000000357,positive delta favors candidate under metric-direction normalization
+fusion_completion,bias0,lpips,0.0857,0.0029,positive delta favors candidate under metric-direction normalization
+fusion_completion,bias0,dists,0.0781,0.004599999999999993,positive delta favors candidate under metric-direction normalization
+fusion_completion,bias2,psnr,23.8376,-2.772400000000001,positive delta favors candidate under metric-direction normalization
+fusion_completion,bias2,ssim,0.842,-0.0534,positive delta favors candidate under metric-direction normalization
+fusion_completion,bias2,lpips,0.1598,-0.0712,positive delta favors candidate under metric-direction normalization
+fusion_completion,bias2,dists,0.1246,-0.04190000000000001,positive delta favors candidate under metric-direction normalization
+fusion_completion,scalar_gate,psnr,25.2362,-1.3737999999999992,positive delta favors candidate under metric-direction normalization
+fusion_completion,scalar_gate,ssim,0.8911,-0.0042999999999999705,positive delta favors candidate under metric-direction normalization
+fusion_completion,scalar_gate,lpips,0.09,-0.0013999999999999985,positive delta favors candidate under metric-direction normalization
+fusion_completion,scalar_gate,dists,0.0795,0.0031999999999999945,positive delta favors candidate under metric-direction normalization
+fusion_completion,normalization_aware,psnr,25.0074,-1.602599999999999,positive delta favors candidate under metric-direction normalization
+fusion_completion,normalization_aware,ssim,0.8898,-0.005599999999999938,positive delta favors candidate under metric-direction normalization
+fusion_completion,normalization_aware,lpips,0.0898,-0.0012000000000000066,positive delta favors candidate under metric-direction normalization
+fusion_completion,normalization_aware,dists,0.0798,0.0029,positive delta favors candidate under metric-direction normalization

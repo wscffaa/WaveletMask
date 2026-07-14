@@ -1,0 +1,19 @@
+{
+  "schema_version": "method_name/v1",
+  "method": "WaveletMask",
+  "arch_class": "WaveletMaskABNet",
+  "expanded_name": "Wavelet-Domain Degradation-Aware Masking for Old Film Restoration",
+  "title_direction": "Wavelet-Domain Degradation-Aware Masking for Old Film Restoration",
+  "_aliases": {
+    "method_abbreviation": "WaveletMask",
+    "method_name": "WaveletMask",
+    "method_full_name": "Wavelet-Domain Degradation-Aware Masking for Old Film Restoration",
+    "registered_arch_name": "WaveletMaskABNet"
+  },
+  "project_id": "007-waveletmask",
+  "registered_model_name": "WaveletMaskModel",
+  "_revision": {
+    "date": "2026-04-23",
+    "reason": "arch_class changed from WaveletMaskFullNet to WaveletMaskABNet; method name simplified from 'WaveletMask OFR' to 'WaveletMask'"
+  }
+}

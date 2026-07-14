@@ -1,0 +1,64 @@
+# ==============================================================================
+# WaveletMask Synthetic Test Configuration
+# ==============================================================================
+# Test command:
+# CUDA_VISIBLE_DEVICES=0 python test.py -opt options/test/seed_variants/waveletmask_base_synthetic_seed2025.yml
+# ==============================================================================
+# ======================== Base Settings ========================
+name: waveletmask_base_reds_synthetic_seed2025
+model_type: RTNGANModel
+scale: 1
+num_gpu: 1
+manual_seed: 2025
+dist: false
+find_unused_parameters: true
+
+# ======================== Dataset ========================
+datasets:
+  test:
+    name: REDS_synthetic
+    type: Film_dataset_1
+    dataroot_gt: datasets/val/REDS/GT/val_sharp
+    dataroot_lq: datasets/val/REDS/LQ/val_sharp_degraded
+    num_frame: -1
+    cache_data: true
+    normalizing: true
+    io_backend:
+      type: disk
+
+# ======================== Network ========================
+network_g:
+  type: WaveletMaskBaseNet
+  num_feat: 16
+  num_block: 6
+  flow_type: raft
+
+# ======================== Validation ========================
+val:
+  save_img: true
+  metrics:
+    psnr:
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: false
+    lpips:
+      type: calculate_lpips
+      crop_border: 0
+      convert_to_grayscale: true
+    dists:
+      type: calculate_dists
+      crop_border: 0
+      convert_to_grayscale: true
+
+# ======================== Logging ========================
+logger:
+  print_freq: 100
+
+# ======================== Paths ========================
+path:
+  pretrain_network_g: Exp/experiments/waveletmask_base_seed2025/models/net_g_best.pth
+  results_root: Exp/results

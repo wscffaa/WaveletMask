@@ -1,0 +1,100 @@
+\section{Complexity Details and Full Ablation Sweeps}\label{app:complexity_details}
+
+This appendix provides the complete fusion-strategy comparison and learned-fusion recipe, the full wavelet-family and stronger-fusion sweeps condensed in Section~\ref{subsec:ablation}, and the runtime measurement protocol and per-module parameter breakdown supporting Section~\ref{subsec:complexity}.
+
+\subsection{Full Fusion Strategy Comparison}\label{subsec:fusion_analysis}
+
+Table~\ref{tab:fusion_comparison} compares the proposed branch-level maximum rule with learned pixel-wise CNN fusion variants. The learned fusion module takes the wavelet-domain mask and the spatial RTN indicator as inputs, uses four convolutional layers with channel widths 2, 32, 32, 16, and 1, and predicts a spatial confidence map. The final convolutional bias is initialized to $b=+5$, giving $\sigma(5)\approx0.993$ and making the initial fused indicator close to the original spatial indicator. This design defines the learned-fusion recipe used throughout the ablation.
+
+\begin{table}[t]
+\caption{Fusion strategy comparison on SRWOV synthetic data (Y-channel protocol). WaveletMask with LHFM/GFM branch-level maximum fusion is the proposed model, and learned-fusion rows use the four-layer CNN recipe described in the text. All rows except the WaveletMask row are measured in one dedicated fusion-ablation evaluation run, in which the proposed configuration scores 26.6017~dB; the WaveletMask row displays the reference same-protocol value from Table~\ref{tab:same_protocol_main}, and the cross-run drift is below 0.002 on LPIPS and DISTS. In each metric column, the best result is in \textcolor{red}{red} and the second-best in \textcolor{blue}{blue}.\label{tab:fusion_comparison}}
+\footnotesize
+\begin{tabularx}{\textwidth}{lcccCCCC}
+\toprule
+\textbf{Variant} & \textbf{LHFM} & \textbf{GFM} & \textbf{Fusion} & \textbf{PSNR$\uparrow$} & \textbf{SSIM$\uparrow$} & \textbf{LPIPS$\downarrow$} & \textbf{DISTS$\downarrow$} \\
+\midrule
+RTN & --- & --- & --- & 26.1580 & 0.8917 & 0.1034 & 0.0953 \\
++LHFM & \checkmark & --- & direct & \textcolor{blue}{26.3778} & 0.8966 & 0.0914 & \textcolor{red}{0.0790} \\
++LHFM + learned & \checkmark & --- & CNN & 25.9858 & \textcolor{blue}{0.8978} & 0.0889 & 0.0830 \\
++GFM & --- & \checkmark & direct & 26.1024 & \textcolor{red}{0.8980} & 0.0969 & 0.0916 \\
++GFM + learned & --- & \checkmark & CNN & 25.9488 & 0.8956 & 0.0946 & \textcolor{blue}{0.0814} \\
+\midrule
+\textbf{WaveletMask} & \checkmark & \checkmark & max & \textcolor{red}{26.6125} & 0.8954 & \textcolor{blue}{0.0886} & 0.0827 \\
+WaveletMask + gated & \checkmark & \checkmark & gated CNN & 26.3515 & 0.8966 & \textcolor{red}{0.0869} & 0.0842 \\
+WaveletMask + learned & \checkmark & \checkmark & max + CNN & 24.9827 & 0.8896 & 0.1068 & 0.0867 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+Table~\ref{tab:fusion_comparison} shows that every learned-fusion variant underperforms its direct counterpart in PSNR under the tested recipe. Adding the CNN to LHFM reduces PSNR by 0.39~dB, adding it to GFM reduces PSNR by 0.15~dB, and within the fusion-ablation evaluation run the gated WaveletMask variant trails the proposed maximum rule by 0.25~dB while the max+CNN variant drops to 24.98~dB. The perceptual metrics are more mixed: the +LHFM+learned and gated variants attain slightly better SSIM or LPIPS than their non-learned counterparts, but neither recovers the PSNR loss, and the max+CNN variant is inferior on all four metrics. This is because the compact CNN must fuse heterogeneous sparse cues only through the final restoration loss, making optimization less stable than the parameter-free maximum rule. Therefore, branch-level maximum fusion remains the most reliable choice for the fidelity-oriented design goal in our experiments.
+
+\subsection{Full Wavelet-Family and Stronger-Fusion Sweeps}\label{subsec:wavelet_family_analysis}
+
+\begin{table}[H]
+\caption{Extended ablation of wavelet families and stronger fusion alternatives under the Y-channel protocol. The proposed configuration is single-level Haar with branch-level maximum fusion.\label{tab:followup_ablations}}
+\footnotesize
+\begin{tabularx}{\textwidth}{lCCCC}
+\toprule
+\textbf{Variant} & \textbf{PSNR$\uparrow$} & \textbf{SSIM$\uparrow$} & \textbf{LPIPS$\downarrow$} & \textbf{DISTS$\downarrow$} \\
+\midrule
+Haar, single level (seed 2021) & 26.6125 & 0.8954 & 0.0886 & 0.0827 \\
+Haar, two levels & 26.5175 & 0.9011 & 0.0847 & 0.0760 \\
+DTCWT (dual-tree complex) & 26.4506 & 0.8992 & 0.0862 & 0.0780 \\
+Coiflet-1 & 25.8533 & 0.8874 & 0.1026 & 0.0893 \\
+Symlet-2 & 24.2087 & 0.8509 & 0.1507 & 0.1226 \\
+Daubechies-2 & 17.9208 & 0.6473 & 0.4136 & 0.3154 \\
+\midrule
+Attention fusion & 23.2479 & 0.8281 & 0.1768 & 0.1359 \\
+Residual fusion & 25.9777 & 0.8929 & 0.0966 & 0.0811 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+Table~\ref{tab:followup_ablations} supports single-level Haar as the most stable PSNR-oriented wavelet default under the implemented recipe. Haar 2-level and DTCWT remain competitive and improve several perceptual metrics at a small PSNR cost, Coiflet-1 degrades by $-0.76$~dB, and longer-support wavelets (sym2, db2) suffer catastrophic failure. This is because non-Haar wavelets with filter lengths exceeding two require boundary padding in the wavelet analysis, which introduces border artifacts into the half-resolution sub-band maps processed by the detector CNNs; these artifacts contaminate the learned mask and destabilize training. While symmetric or reflective extension can reduce such artifacts in principle, the tested implementation already uses reflective padding, so the residual instability is attributed to the longer filter support itself rather than to a missing padding scheme. The stronger-fusion follow-up leads to the same conclusion. Beyond the attention and residual rows in Table~\ref{tab:followup_ablations}, bias-0 initialization reaches 26.50~dB, scalar-gate fusion reaches 25.24~dB, normalization-aware fusion reaches 25.01~dB, and bias-2 initialization reaches 23.84~dB. None of these variants exceeds the parameter-free maximum rule, and even the closest one remains 0.11~dB below. This is because learned fusion must estimate a stable mixture of heterogeneous sparse cues from restoration loss alone, whereas the maximum rule preserves the strongest branch response directly.
+
+\subsection{Runtime Measurement Protocol}\label{subsec:runtime_protocol}
+
+The runtime benchmark in Table~\ref{tab:runtime_benchmark} was measured on an NVIDIA L40 GPU with PyTorch 2.7.0 and CUDA 12.6 in FP32 evaluation mode, using synthetic seven-frame inputs, three warm-up passes, and ten timed runs per configuration; parameters and FLOPs were recomputed with PyTorch FlopCounterMode on the same device. Checkpoint weights are not loaded because the deployed graph, input size, and batch size determine latency and memory. Beyond the batch-1 $256\times256$ setting reported in Table~\ref{tab:runtime_benchmark}, the same parity holds in the remaining feasible configurations: at $256\times256$ with batch size 4, the RTN and WaveletMask reach 114.2 versus 113.1~ms per clip (61.3 versus 61.9 fps) at 0.85~GB peak memory, and at $1280\times720$ with batch size 1 they take 5379.1 versus 5419.1~ms per clip at 9.92~GB peak memory.
+
+\subsection{Per-Module Parameter Breakdown}\label{subsec:module_overhead}
+
+Table~\ref{tab:module_overhead} details the parameter count of the detection pathway. The proposed WaveletMask detector includes LHFM, GFM, and parameter-free maximum fusion. PixelWiseMaskFusion is listed only for the learned-fusion ablations in Table~\ref{tab:fusion_comparison}.
+
+\begin{table}[H]
+\caption{Per-module parameter count of the WaveletMask detection pathway. The proposed detector excludes PixelWiseMaskFusion; that module is included only in learned-fusion ablations.\label{tab:module_overhead}}
+\begin{tabularx}{\textwidth}{lCC}
+\toprule
+\textbf{Module} & \textbf{Parameters} & \textbf{Description} \\
+\midrule
+Haar DWT               & 0        & Fixed $2\times2$ filter kernels, no learnable weights \\
+WaveletNoiseMask CNNs  & 898      & LHFM and GFM lightweight branches (Sections~\ref{subsec:local}--\ref{subsec:flicker}) \\
+PixelWiseMaskFusion    & 14,497    & Learned spatial confidence weighting, ablated only (Appendix~\ref{subsec:fusion_analysis}) \\
+\midrule
+\textbf{WaveletMask detector}  & 898  & LHFM + GFM + maximum fusion (proposed) \\
+\textbf{Learned-fusion variant} & 15,395 & Detector with PixelWiseMaskFusion (ablation) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{No-Reference Ablation on Real-World Data}\label{subsec:realworld_ablation}
+
+Table~\ref{tab:realworld_variants} reports the no-reference scores of the detection-branch variants on the 216-clip SRWOV real-world split, measured under the strict paired protocol of Appendix~\ref{app:stats}. The RTN checkpoint here is the paired-protocol checkpoint and therefore differs from the RTN row in the unified real-world benchmark (Section~\ref{subsec:realworld}, Table~\ref{tab:realworld_literature}); the two checkpoints receive clearly different BRISQUE scores, which illustrates how sensitive no-reference measures are to the training checkpoint.
+
+\begin{table}[H]
+\caption{No-reference ablation of the RTN/LHFM/GFM variants on the 216-clip SRWOV real-world split, measured under the strict paired protocol (Appendix~\ref{app:stats}). Lower NIQE/BRISQUE indicates better statistical naturalness; higher CLIPIQA+ indicates better CLIP-based perceptual quality. The best result within this ablation is in \textcolor{red}{red}.\label{tab:realworld_variants}}
+\begin{tabularx}{\textwidth}{LccCCC}
+\toprule
+\textbf{Variant} & \textbf{LHFM} & \textbf{GFM} & \textbf{NIQE$\downarrow$} & \textbf{BRISQUE$\downarrow$} & \textbf{CLIPIQA+$\uparrow$} \\
+\midrule
+RTN     & ---        & ---        & 5.3340 & 29.3119 & 0.4359 \\
++LHFM only       & \checkmark & ---        & 5.3392 & \textcolor{red}{19.5562} & 0.4115 \\
++GFM only        & ---        & \checkmark & \textcolor{red}{5.0400} & 28.7878 & \textcolor{red}{0.4388} \\
+\midrule
+WaveletMask & \checkmark & \checkmark & 5.2288 & 24.2023 & 0.4356 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Within this paired-protocol ablation the no-reference ranking is mixed, as expected for content-dependent metrics: +LHFM attains the best BRISQUE, +GFM attains the best NIQE and CLIPIQA+, and the full WaveletMask model provides the most balanced overall profile. This mirrors the metric-dependent behavior discussed for the unified real-world benchmark in Section~\ref{subsec:realworld}.

@@ -1,0 +1,71 @@
+schema_version: 2
+figure_id: Figure7
+latex_label: fig:synthetic_sota_qualitative
+title: Synthetic SOTA qualitative comparison
+role: results
+status: blocked
+slot_id: SOTA_SYNTHETIC_QUALITATIVE
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A3]
+selected_option:
+  option_id: A
+  slot_id: SOTA_SYNTHETIC_QUALITATIVE
+  archetype: qualitative_grid
+  source_protocol: .claude/skills/ofr-paper-mdpi-writing/references/figure-options-protocol.md
+archetype: qualitative_grid
+core_conclusion: Synthetic qualitative examples must show whether WaveletMask preserves structures and suppresses old-film artifacts consistently with the frozen synthetic metrics.
+evidence_data_path:
+  - projects/007-waveletmask/Exp/paper_data/main_results.yaml
+  - projects/007-waveletmask/Exp/paper_data/section_synth_8variants.yaml
+  - projects/007-waveletmask/Exp/results/test_results
+evidence_gate:
+  required: true
+  status: blocked
+  missing:
+    - projects/007-waveletmask/Paper/applsci/figures/Figure7.pdf
+reviewer_risk:
+  - The figure will be weak if it shows only WaveletMask variants and omits SOTA baselines or GT.
+forbidden_scene: Do not use this figure to support RealWorld no-reference ranking claims.
+production_owner: ofr-paper-visual-studio
+production_route: Synthetic tab, SOTA context, ROI/zoom export
+target_path: projects/007-waveletmask/Paper/applsci/figures/Figure7.pdf
+current_asset_path: ""
+ascii_preview: |
+  Scene 1           Scene 2           Scene 3
+  Input             Input             Input
+  RTN               RTN               RTN
+  SOTA baselines    SOTA baselines    SOTA baselines
+  WaveletMask       WaveletMask       WaveletMask
+  GT + ROI          GT + ROI          GT + ROI
+dependencies:
+  code: []
+  experiments:
+    - projects/007-waveletmask/Exp/paper_data/main_results.yaml
+    - projects/007-waveletmask/Exp/paper_data/section_synth_8variants.yaml
+  assets:
+    - projects/007-waveletmask/Exp/results/test_results
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: []
+    claim_to_sync: ""
+  results:
+    required_refs: ["\\ref{fig:synthetic_sota_qualitative}"]
+    claim_to_sync: Synthetic qualitative evidence supports the full-reference quantitative table.
+caption_contract:
+  tense: present
+  required_terms: [Synthetic, WaveletMask, RTN, ground truth, ROI]
+  banned_terms: [RealWorld, no-reference, final ranking]
+  draft_caption: Synthetic qualitative comparison for WaveletMask with ROI crops and ground-truth reference.
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by:
+  - target_path missing
+  - scene selection not yet exported
+notes: Added during fixed OFR skeleton migration; required before final Results claims.

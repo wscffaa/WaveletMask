@@ -1,0 +1,85 @@
+{
+  "_doc": "Worked example for ofr-paper-mdpi-review-web. Rebuild the 3 MDPI-template Response docx: python3 .claude/skills/ofr-paper-mdpi-review-web/scripts/build_response_docx.py --config <this file>. Paths are relative to this file's directory.",
+  "manuscript_id": "applsci-4348902",
+  "title": "WaveletMask: Wavelet-Domain Mask-Guided Degradation Detection for Old Film Restoration",
+  "journal": "Applied Sciences",
+  "questions": [
+    "Does the introduction provide sufficient background and include all relevant references?",
+    "Is the research design appropriate?",
+    "Are the methods adequately described?",
+    "Are the results clearly presented?",
+    "Are the conclusions supported by the results?",
+    "Are all figures and tables clear and well-presented?"
+  ],
+  "reviewers": {
+    "1": {
+      "md": "../../round1/response-letter-reviewer1.md",
+      "out": "Response-to-reviewer1.docx",
+      "ratings": [
+        "Can be improved",
+        "Can be improved",
+        "Can be improved",
+        "Must be improved",
+        "Can be improved",
+        "Can be improved"
+      ],
+      "gen_responses": [
+        "Thank you. We revised the Introduction and Related Work to strengthen the background and positioning of the proposed wavelet-domain detector; please see the detailed point-by-point responses below.",
+        "Thank you. We clarified the evaluation protocol and separated the strictly controlled same-protocol comparison from the broader literature context, and added statistical validation (please see Responses 1, 2, and 9).",
+        "Thank you. We added a Response Analysis subsection (Section 3.6) and detector diagnostic probes (Appendix C) that make the LHFM and GFM behavior explicit (please see Responses 4, 7, and 8).",
+        "Thank you. We substantially strengthened the results with multi-seed paired statistics (Appendix A), artifact-type and failure-mode breakdowns, and a clearer no-reference evaluation (please see Responses 1, 3, 5, 7, and 10).",
+        "Thank you. We made the conclusions more conservative and explicitly scoped to the evaluated protocol, and expanded the limitations (please see Responses 2 and 10).",
+        "Thank you. We consolidated the results to four main tables and seven figures, added diagnostic visualizations (Supplementary Figure S6), and clarified the captions."
+      ],
+      "english_rating": "The English is fine and does not require any improvement.",
+      "english_response": "We thank the reviewer for this positive assessment. The revised manuscript was nevertheless carefully proofread for clarity and consistency.",
+      "additional": "We sincerely thank the reviewer for the constructive and rigorous evaluation, which has substantially improved the manuscript. A marked-up version with all changes highlighted has been uploaded together with the revised manuscript."
+    },
+    "2": {
+      "md": "../../round1/response-letter-reviewer2.md",
+      "out": "Response-to-reviewer2.docx",
+      "ratings": [
+        "Can be improved",
+        "Can be improved",
+        "Must be improved",
+        "Must be improved",
+        "Can be improved",
+        "Yes"
+      ],
+      "gen_responses": [
+        "Thank you. We strengthened the Introduction/Related Work and added the wavelet-detection reference suggested by the reviewer (please see Response 7).",
+        "Thank you. We clarified the comparison protocol and added motion/occlusion-binned and cross-content evaluations to better support the design (please see Responses 2 and 8).",
+        "Thank you. We added a Response Analysis subsection (Section 3.6), persistent-scratch and GFM failure-mode probes, mask-interpretability analysis, and a runtime benchmark (please see Responses 1, 4, 9, and 10).",
+        "Thank you. We substantially strengthened the results with multi-seed statistics, dedicated diagnostic probes, expanded fusion and wavelet-family ablations, and deployment metrics (please see Responses 1, 3, 5, 6, 9, and 10).",
+        "Thank you. We made the conclusions more conservative and scoped them to the evaluated protocol, and expanded the limitations (please see Responses 2 and 8).",
+        "We thank the reviewer for the positive assessment of the figures and tables."
+      ],
+      "english_rating": "The English is fine and does not require any improvement.",
+      "english_response": "We thank the reviewer for this positive assessment. The revised manuscript was nevertheless carefully proofread for clarity and consistency.",
+      "additional": "We sincerely thank the reviewer for the detailed and constructive feedback, which has substantially improved the manuscript. A marked-up version with all changes highlighted has been uploaded together with the revised manuscript."
+    },
+    "3": {
+      "md": "../../round1/response-letter-reviewer3.md",
+      "out": "Response-to-reviewer3.docx",
+      "ratings": [
+        "Yes",
+        "Can be improved",
+        "Yes",
+        "Can be improved",
+        "Can be improved",
+        "Yes"
+      ],
+      "gen_responses": [
+        "We thank the reviewer for the positive assessment of the introduction and background.",
+        "Thank you. We clarified the comparison structure (same-protocol versus literature-context) and added motion/occlusion and failure-mode analyses that support the design (please see Responses 2 and 3).",
+        "We thank the reviewer for the positive assessment of the methods description; we additionally added a Response Analysis subsection (Section 3.6) for clarity.",
+        "Thank you. We added multi-seed paired statistics, a cross-domain frequency-operator diagnostic, and clearer comparison tables (please see Responses 1, 2, and 4).",
+        "Thank you. We made the conclusions more conservative and explicitly scoped to the evaluated protocol, and expanded the limitations (please see Responses 2 and 3).",
+        "We thank the reviewer for the positive assessment of the figures and tables."
+      ],
+      "english_rating": "The English is fine and does not require any improvement.",
+      "english_response": "We thank the reviewer for this positive assessment. The revised manuscript was nevertheless carefully proofread for clarity and consistency.",
+      "additional": "We sincerely thank the reviewer for the rigorous technical suggestions, which have substantially improved the manuscript. A marked-up version with all changes highlighted has been uploaded together with the revised manuscript."
+    }
+  }
+}

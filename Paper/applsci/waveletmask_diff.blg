@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: waveletmask_diff.aux
+The style file: Definitions/mdpi.bst
+Database file #1: references.bib
+Warning--string name "nov" is undefined
+--line 119 of file references.bib
+Warning--string name "jul" is undefined
+--line 302 of file references.bib
+Warning--string name "may" is undefined
+--line 455 of file references.bib
+Warning--string name "nov" is undefined
+--line 478 of file references.bib
+You've used 53 entries,
+            2887 wiz_defined-function locations,
+            945 strings with 16146 characters,
+and the built_in function-call counts, 28659 in all, are:
+= -- 2716
+> -- 1689
+< -- 41
++ -- 734
+- -- 454
+* -- 2357
+:= -- 4176
+add.period$ -- 210
+call.type$ -- 53
+change.case$ -- 53
+chr.to.int$ -- 53
+cite$ -- 53
+duplicate$ -- 1257
+empty$ -- 2150
+format.name$ -- 571
+if$ -- 6349
+int.to.chr$ -- 1
+int.to.str$ -- 53
+missing$ -- 52
+newline$ -- 319
+num.names$ -- 159
+pop$ -- 586
+preamble$ -- 0
+purify$ -- 53
+quote$ -- 0
+skip$ -- 986
+stack$ -- 0
+substring$ -- 1687
+swap$ -- 418
+text.length$ -- 31
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 368
+warning$ -- 0
+while$ -- 225
+width$ -- 0
+write$ -- 805
+(There were 4 warnings)

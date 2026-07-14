@@ -1,0 +1,1310 @@
+{
+  "meta": {
+    "chapterId": "waveletmask",
+    "scope": "demo",
+    "generatedAt": "2026-06-08T18:02:39.414Z",
+    "submissionStatus": "INTERNAL",
+    "warning": "INTERNAL / NOT FOR SUBMISSION",
+    "blockers": [],
+    "totalParticipants": 34,
+    "completedParticipants": 34,
+    "totalResponses": 476,
+    "lowConfidenceRate": 0.09663865546218488,
+    "goldenPairConsistency": 0.16176470588235295
+  },
+  "methodOrder": [
+    {
+      "key": "waveletmask",
+      "label": "WaveletMask",
+      "color": "#ef4444"
+    },
+    {
+      "key": "mambaofr",
+      "label": "MambaOFR",
+      "color": "#6366f1"
+    },
+    {
+      "key": "rrtn",
+      "label": "RRTN",
+      "color": "#10b981"
+    },
+    {
+      "key": "rtn",
+      "label": "RTN",
+      "color": "#f59e0b"
+    }
+  ],
+  "figure1": {
+    "id": "Figure 1",
+    "titleCn": "用户整体视觉体验最佳结果的评分分布",
+    "titleEn": "Rating distribution of the best overall visual experience",
+    "captionCn": "用户整体视觉体验最佳结果的评分分布",
+    "captionEn": "Rating distribution of the best overall visual experience",
+    "latex": {
+      "fileBase": "waveletmask_user_study_overall_preference",
+      "pngFilename": "waveletmask_user_study_overall_preference.png",
+      "pdfFilename": "waveletmask_user_study_overall_preference.pdf",
+      "label": "fig:waveletmask_user_study_overall_preference",
+      "includegraphicsWidth": "0.72\\linewidth",
+      "snippetCn": "\\begin{figure}[htbp]\n  \\centering\n  \\includegraphics[width=0.72\\linewidth]{figures/waveletmask_user_study_overall_preference.pdf}\n  \\caption{用户整体视觉体验最佳结果的评分分布}\n  \\label{fig:waveletmask_user_study_overall_preference}\n\\end{figure}",
+      "snippetEn": "\\begin{figure}[htbp]\n  \\centering\n  \\includegraphics[width=0.72\\linewidth]{figures/waveletmask_user_study_overall_preference.pdf}\n  \\caption{Rating distribution of the best overall visual experience}\n  \\label{fig:waveletmask_user_study_overall_preference}\n\\end{figure}"
+    },
+    "totalVotes": 476,
+    "slices": [
+      {
+        "methodKey": "waveletmask",
+        "label": "WaveletMask",
+        "color": "#1f4e8c",
+        "count": 215,
+        "percent": 45.17
+      },
+      {
+        "methodKey": "mambaofr",
+        "label": "MambaOFR",
+        "color": "#b5601d",
+        "count": 114,
+        "percent": 23.95
+      },
+      {
+        "methodKey": "rrtn",
+        "label": "RRTN",
+        "color": "#d1a322",
+        "count": 86,
+        "percent": 18.07
+      },
+      {
+        "methodKey": "rtn",
+        "label": "RTN",
+        "color": "#4d7620",
+        "count": 61,
+        "percent": 12.82
+      }
+    ]
+  },
+  "figure2": {
+    "id": "Figure 2",
+    "titleCn": "在三个评价维度上用户评分的排名统计",
+    "titleEn": "Ranking statistics of user ratings on three evaluation dimensions",
+    "captionCn": "在三个评价维度上用户评分的排名统计",
+    "captionEn": "Ranking statistics of user ratings on three evaluation dimensions",
+    "latex": {
+      "fileBase": "waveletmask_user_study_ranking_statistics",
+      "pngFilename": "waveletmask_user_study_ranking_statistics.png",
+      "pdfFilename": "waveletmask_user_study_ranking_statistics.pdf",
+      "label": "fig:waveletmask_user_study_ranking_statistics",
+      "includegraphicsWidth": "\\linewidth",
+      "snippetCn": "\\begin{figure}[htbp]\n  \\centering\n  \\includegraphics[width=\\linewidth]{figures/waveletmask_user_study_ranking_statistics.pdf}\n  \\caption{在三个评价维度上用户评分的排名统计}\n  \\label{fig:waveletmask_user_study_ranking_statistics}\n\\end{figure}",
+      "snippetEn": "\\begin{figure}[htbp]\n  \\centering\n  \\includegraphics[width=\\linewidth]{figures/waveletmask_user_study_ranking_statistics.pdf}\n  \\caption{Ranking statistics of user ratings on three evaluation dimensions}\n  \\label{fig:waveletmask_user_study_ranking_statistics}\n\\end{figure}"
+    },
+    "panels": [
+      {
+        "id": "a",
+        "sourceDimensionKey": "degradation",
+        "titleCn": "(a) 退化去除质量（划痕、脏污、闪烁抑制）",
+        "titleEn": "(a) Degradation removal quality (scratch, dirt, and flicker suppression)",
+        "bars": [
+          {
+            "methodKey": "waveletmask",
+            "label": "WaveletMask",
+            "color": "#ef4444",
+            "rankCounts": [
+              264,
+              45,
+              114,
+              53
+            ]
+          },
+          {
+            "methodKey": "mambaofr",
+            "label": "MambaOFR",
+            "color": "#6366f1",
+            "rankCounts": [
+              112,
+              133,
+              167,
+              64
+            ]
+          },
+          {
+            "methodKey": "rrtn",
+            "label": "RRTN",
+            "color": "#10b981",
+            "rankCounts": [
+              70,
+              206,
+              84,
+              116
+            ]
+          },
+          {
+            "methodKey": "rtn",
+            "label": "RTN",
+            "color": "#f59e0b",
+            "rankCounts": [
+              30,
+              92,
+              111,
+              243
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b",
+        "sourceDimensionKey": "style",
+        "titleCn": "(b) 原片风格保留（颗粒感、色调、年代质感）",
+        "titleEn": "(b) Original film style preservation (grain, tone, and period texture)",
+        "bars": [
+          {
+            "methodKey": "waveletmask",
+            "label": "WaveletMask",
+            "color": "#ef4444",
+            "rankCounts": [
+              247,
+              58,
+              113,
+              58
+            ]
+          },
+          {
+            "methodKey": "mambaofr",
+            "label": "MambaOFR",
+            "color": "#6366f1",
+            "rankCounts": [
+              132,
+              128,
+              167,
+              49
+            ]
+          },
+          {
+            "methodKey": "rrtn",
+            "label": "RRTN",
+            "color": "#10b981",
+            "rankCounts": [
+              67,
+              198,
+              85,
+              126
+            ]
+          },
+          {
+            "methodKey": "rtn",
+            "label": "RTN",
+            "color": "#f59e0b",
+            "rankCounts": [
+              30,
+              92,
+              111,
+              243
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c",
+        "sourceDimensionKey": "temporal",
+        "titleCn": "(c) 时序一致性（亮度/色彩稳定性、运动连贯性）",
+        "titleEn": "(c) Temporal consistency (brightness/color stability and motion coherence)",
+        "bars": [
+          {
+            "methodKey": "waveletmask",
+            "label": "WaveletMask",
+            "color": "#ef4444",
+            "rankCounts": [
+              273,
+              42,
+              110,
+              51
+            ]
+          },
+          {
+            "methodKey": "mambaofr",
+            "label": "MambaOFR",
+            "color": "#6366f1",
+            "rankCounts": [
+              107,
+              133,
+              177,
+              59
+            ]
+          },
+          {
+            "methodKey": "rrtn",
+            "label": "RRTN",
+            "color": "#10b981",
+            "rankCounts": [
+              69,
+              205,
+              82,
+              120
+            ]
+          },
+          {
+            "methodKey": "rtn",
+            "label": "RTN",
+            "color": "#f59e0b",
+            "rankCounts": [
+              27,
+              96,
+              107,
+              246
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "dataTables": {
+    "summary": [
+      {
+        "key": "participants_total",
+        "labelCn": "参与者人数",
+        "labelEn": "Participants",
+        "value": 34
+      },
+      {
+        "key": "completed_participants",
+        "labelCn": "完成评分的参与者人数",
+        "labelEn": "Completed participants",
+        "value": 34
+      },
+      {
+        "key": "clips_per_participant_expected",
+        "labelCn": "每名参与者预期评测 clip 数",
+        "labelEn": "Expected clips per participant",
+        "value": 14
+      },
+      {
+        "key": "clips_per_participant_mean_observed",
+        "labelCn": "每名参与者实际评测 clip 数均值",
+        "labelEn": "Mean observed clips per participant",
+        "value": 14
+      },
+      {
+        "key": "responses_total",
+        "labelCn": "评分响应总数",
+        "labelEn": "Total responses",
+        "value": 476
+      },
+      {
+        "key": "overall_preference_votes",
+        "labelCn": "整体偏好票数总计",
+        "labelEn": "Overall preference votes",
+        "value": 476
+      },
+      {
+        "key": "data_scope",
+        "labelCn": "数据域",
+        "labelEn": "Data scope",
+        "value": "demo"
+      },
+      {
+        "key": "submission_status",
+        "labelCn": "投稿状态",
+        "labelEn": "Submission status",
+        "value": "INTERNAL"
+      }
+    ],
+    "overallPreference": [
+      {
+        "methodKey": "waveletmask",
+        "methodLabel": "WaveletMask",
+        "count": 215,
+        "percent": 45.17,
+        "totalVotes": 476
+      },
+      {
+        "methodKey": "mambaofr",
+        "methodLabel": "MambaOFR",
+        "count": 114,
+        "percent": 23.95,
+        "totalVotes": 476
+      },
+      {
+        "methodKey": "rrtn",
+        "methodLabel": "RRTN",
+        "count": 86,
+        "percent": 18.07,
+        "totalVotes": 476
+      },
+      {
+        "methodKey": "rtn",
+        "methodLabel": "RTN",
+        "count": 61,
+        "percent": 12.82,
+        "totalVotes": 476
+      }
+    ],
+    "rankingStatistics": [
+      {
+        "dimensionKey": "degradation",
+        "dimensionTitleCn": "(a) 退化去除质量（划痕、脏污、闪烁抑制）",
+        "dimensionTitleEn": "(a) Degradation removal quality (scratch, dirt, and flicker suppression)",
+        "methodKey": "waveletmask",
+        "methodLabel": "WaveletMask",
+        "rank1Count": 264,
+        "rank2Count": 45,
+        "rank3Count": 114,
+        "rank4Count": 53,
+        "totalCount": 476
+      },
+      {
+        "dimensionKey": "degradation",
+        "dimensionTitleCn": "(a) 退化去除质量（划痕、脏污、闪烁抑制）",
+        "dimensionTitleEn": "(a) Degradation removal quality (scratch, dirt, and flicker suppression)",
+        "methodKey": "mambaofr",
+        "methodLabel": "MambaOFR",
+        "rank1Count": 112,
+        "rank2Count": 133,
+        "rank3Count": 167,
+        "rank4Count": 64,
+        "totalCount": 476
+      },
+      {
+        "dimensionKey": "degradation",
+        "dimensionTitleCn": "(a) 退化去除质量（划痕、脏污、闪烁抑制）",
+        "dimensionTitleEn": "(a) Degradation removal quality (scratch, dirt, and flicker suppression)",
+        "methodKey": "rrtn",
+        "methodLabel": "RRTN",
+        "rank1Count": 70,
+        "rank2Count": 206,
+        "rank3Count": 84,
+        "rank4Count": 116,
+        "totalCount": 476
+      },
+      {
+        "dimensionKey": "degradation",
+        "dimensionTitleCn": "(a) 退化去除质量（划痕、脏污、闪烁抑制）",
+        "dimensionTitleEn": "(a) Degradation removal quality (scratch, dirt, and flicker suppression)",
+        "methodKey": "rtn",
+        "methodLabel": "RTN",
+        "rank1Count": 30,
+        "rank2Count": 92,
+        "rank3Count": 111,
+        "rank4Count": 243,
+        "totalCount": 476
+      },
+      {
+        "dimensionKey": "style",
+        "dimensionTitleCn": "(b) 原片风格保留（颗粒感、色调、年代质感）",
+        "dimensionTitleEn": "(b) Original film style preservation (grain, tone, and period texture)",
+        "methodKey": "waveletmask",
+        "methodLabel": "WaveletMask",
+        "rank1Count": 247,
+        "rank2Count": 58,
+        "rank3Count": 113,
+        "rank4Count": 58,
+        "totalCount": 476
+      },
+      {
+        "dimensionKey": "style",
+        "dimensionTitleCn": "(b) 原片风格保留（颗粒感、色调、年代质感）",
+        "dimensionTitleEn": "(b) Original film style preservation (grain, tone, and period texture)",
+        "methodKey": "mambaofr",
+        "methodLabel": "MambaOFR",
+        "rank1Count": 132,
+        "rank2Count": 128,
+        "rank3Count": 167,
+        "rank4Count": 49,
+        "totalCount": 476
+      },
+      {
+        "dimensionKey": "style",
+        "dimensionTitleCn": "(b) 原片风格保留（颗粒感、色调、年代质感）",
+        "dimensionTitleEn": "(b) Original film style preservation (grain, tone, and period texture)",
+        "methodKey": "rrtn",
+        "methodLabel": "RRTN",
+        "rank1Count": 67,
+        "rank2Count": 198,
+        "rank3Count": 85,
+        "rank4Count": 126,
+        "totalCount": 476
+      },
+      {
+        "dimensionKey": "style",
+        "dimensionTitleCn": "(b) 原片风格保留（颗粒感、色调、年代质感）",
+        "dimensionTitleEn": "(b) Original film style preservation (grain, tone, and period texture)",
+        "methodKey": "rtn",
+        "methodLabel": "RTN",
+        "rank1Count": 30,
+        "rank2Count": 92,
+        "rank3Count": 111,
+        "rank4Count": 243,
+        "totalCount": 476
+      },
+      {
+        "dimensionKey": "temporal",
+        "dimensionTitleCn": "(c) 时序一致性（亮度/色彩稳定性、运动连贯性）",
+        "dimensionTitleEn": "(c) Temporal consistency (brightness/color stability and motion coherence)",
+        "methodKey": "waveletmask",
+        "methodLabel": "WaveletMask",
+        "rank1Count": 273,
+        "rank2Count": 42,
+        "rank3Count": 110,
+        "rank4Count": 51,
+        "totalCount": 476
+      },
+      {
+        "dimensionKey": "temporal",
+        "dimensionTitleCn": "(c) 时序一致性（亮度/色彩稳定性、运动连贯性）",
+        "dimensionTitleEn": "(c) Temporal consistency (brightness/color stability and motion coherence)",
+        "methodKey": "mambaofr",
+        "methodLabel": "MambaOFR",
+        "rank1Count": 107,
+        "rank2Count": 133,
+        "rank3Count": 177,
+        "rank4Count": 59,
+        "totalCount": 476
+      },
+      {
+        "dimensionKey": "temporal",
+        "dimensionTitleCn": "(c) 时序一致性（亮度/色彩稳定性、运动连贯性）",
+        "dimensionTitleEn": "(c) Temporal consistency (brightness/color stability and motion coherence)",
+        "methodKey": "rrtn",
+        "methodLabel": "RRTN",
+        "rank1Count": 69,
+        "rank2Count": 205,
+        "rank3Count": 82,
+        "rank4Count": 120,
+        "totalCount": 476
+      },
+      {
+        "dimensionKey": "temporal",
+        "dimensionTitleCn": "(c) 时序一致性（亮度/色彩稳定性、运动连贯性）",
+        "dimensionTitleEn": "(c) Temporal consistency (brightness/color stability and motion coherence)",
+        "methodKey": "rtn",
+        "methodLabel": "RTN",
+        "rank1Count": 27,
+        "rank2Count": 96,
+        "rank3Count": 107,
+        "rank4Count": 246,
+        "totalCount": 476
+      }
+    ],
+    "participantClipCounts": [
+      {
+        "participantId": "demo-waveletmask-034",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-033",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-032",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-031",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-030",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-029",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-028",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-027",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-026",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-025",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-024",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-023",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-022",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-021",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-020",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-019",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-018",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-017",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-016",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-015",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-014",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-013",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-012",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-011",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-010",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-009",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-008",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-007",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-006",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-005",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-004",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-003",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-002",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      },
+      {
+        "participantId": "demo-waveletmask-001",
+        "responseCount": 14,
+        "clipCount": 14,
+        "clipIndices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "expectedClipCount": 14,
+        "missingClipCount": 0,
+        "isComplete": true
+      }
+    ]
+  },
+  "csvFiles": {
+    "summary.csv": "key,labelCn,labelEn,value\nparticipants_total,参与者人数,Participants,34\ncompleted_participants,完成评分的参与者人数,Completed participants,34\nclips_per_participant_expected,每名参与者预期评测 clip 数,Expected clips per participant,14\nclips_per_participant_mean_observed,每名参与者实际评测 clip 数均值,Mean observed clips per participant,14\nresponses_total,评分响应总数,Total responses,476\noverall_preference_votes,整体偏好票数总计,Overall preference votes,476\ndata_scope,数据域,Data scope,demo\nsubmission_status,投稿状态,Submission status,INTERNAL",
+    "overall_preference.csv": "method_key,method_label,count,percent,total_votes\nwaveletmask,WaveletMask,215,45.17,476\nmambaofr,MambaOFR,114,23.95,476\nrrtn,RRTN,86,18.07,476\nrtn,RTN,61,12.82,476",
+    "ranking_statistics.csv": "dimension_key,dimension_title_cn,dimension_title_en,method_key,method_label,rank1_count,rank2_count,rank3_count,rank4_count,total_count\ndegradation,(a) 退化去除质量（划痕、脏污、闪烁抑制）,\"(a) Degradation removal quality (scratch, dirt, and flicker suppression)\",waveletmask,WaveletMask,264,45,114,53,476\ndegradation,(a) 退化去除质量（划痕、脏污、闪烁抑制）,\"(a) Degradation removal quality (scratch, dirt, and flicker suppression)\",mambaofr,MambaOFR,112,133,167,64,476\ndegradation,(a) 退化去除质量（划痕、脏污、闪烁抑制）,\"(a) Degradation removal quality (scratch, dirt, and flicker suppression)\",rrtn,RRTN,70,206,84,116,476\ndegradation,(a) 退化去除质量（划痕、脏污、闪烁抑制）,\"(a) Degradation removal quality (scratch, dirt, and flicker suppression)\",rtn,RTN,30,92,111,243,476\nstyle,(b) 原片风格保留（颗粒感、色调、年代质感）,\"(b) Original film style preservation (grain, tone, and period texture)\",waveletmask,WaveletMask,247,58,113,58,476\nstyle,(b) 原片风格保留（颗粒感、色调、年代质感）,\"(b) Original film style preservation (grain, tone, and period texture)\",mambaofr,MambaOFR,132,128,167,49,476\nstyle,(b) 原片风格保留（颗粒感、色调、年代质感）,\"(b) Original film style preservation (grain, tone, and period texture)\",rrtn,RRTN,67,198,85,126,476\nstyle,(b) 原片风格保留（颗粒感、色调、年代质感）,\"(b) Original film style preservation (grain, tone, and period texture)\",rtn,RTN,30,92,111,243,476\ntemporal,(c) 时序一致性（亮度/色彩稳定性、运动连贯性）,(c) Temporal consistency (brightness/color stability and motion coherence),waveletmask,WaveletMask,273,42,110,51,476\ntemporal,(c) 时序一致性（亮度/色彩稳定性、运动连贯性）,(c) Temporal consistency (brightness/color stability and motion coherence),mambaofr,MambaOFR,107,133,177,59,476\ntemporal,(c) 时序一致性（亮度/色彩稳定性、运动连贯性）,(c) Temporal consistency (brightness/color stability and motion coherence),rrtn,RRTN,69,205,82,120,476\ntemporal,(c) 时序一致性（亮度/色彩稳定性、运动连贯性）,(c) Temporal consistency (brightness/color stability and motion coherence),rtn,RTN,27,96,107,246,476",
+    "participant_clip_counts.csv": "participant_id,response_count,clip_count,clip_indices,expected_clip_count,missing_clip_count,is_complete\ndemo-waveletmask-034,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-033,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-032,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-031,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-030,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-029,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-028,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-027,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-026,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-025,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-024,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-023,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-022,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-021,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-020,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-019,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-018,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-017,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-016,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-015,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-014,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-013,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-012,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-011,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-010,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-009,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-008,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-007,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-006,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-005,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-004,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-003,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-002,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true\ndemo-waveletmask-001,14,14,0|1|2|3|4|5|6|7|8|9|10|11|12|13,14,0,true"
+  }
+}

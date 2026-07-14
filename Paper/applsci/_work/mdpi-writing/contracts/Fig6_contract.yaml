@@ -1,0 +1,65 @@
+schema_version: 2
+figure_id: Fig6
+latex_label: fig:sota_realworld
+title: "Qualitative comparison on real-world old film (SRWOV)"
+role: results
+status: planned
+slot_id: SOTA_REALWORLD_QUALITATIVE
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A3]
+selected_option:
+  option_id: A
+  archetype: qualitative_grid
+  source_protocol: references/02-figure/figure-options-protocol.md
+archetype: qualitative_grid
+core_conclusion: "WaveletMask (ours) generalizes to real-world old films without paired ground truth; it suppresses flicker and removes visible damage that competing methods leave behind."
+evidence_data_path:
+  - Paper/applsci/figures/Figure6.pdf
+  - Exp/paper_data/main_results.yaml
+evidence_gate:
+  required: true
+  status: available
+  missing: []
+provenance_gate:
+  required: true
+  status: not_cleared
+  issue: "Selected frames contain Reuters/Pathé watermarks; no local license record was found in this contract."
+reviewer_risk:
+  - "No-reference metrics (NIQE/BRISQUE/CLIPIQA) may not fully correlate with human preference."
+  - "Real-world evaluation limited to SRWOV dataset → generalization scope claim is bounded."
+forbidden_scene: "Do not cherry-pick best-case frames without disclosing selection protocol."
+figure_priority: secondary
+production_owner: user
+production_route: ppt
+production_status: blocked_rights
+ascii_preview: |
+  [Input] [DeOldify] [ShiftNet] [VRT] [RVRT] [OldPhoto] [DeepRemaster] [RTN] [RRTN] [MambaOFR] [WaveletMask (ours)]
+dependencies:
+  code: []
+  experiments:
+    - Exp/paper_data/main_results.yaml
+  assets:
+    - Paper/applsci/figures/Figure6.pdf
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: []
+    claim_to_sync: ""
+  results:
+    required_refs: ["\\ref{fig:sota_realworld}"]
+    claim_to_sync: "Qualitative results on real-world old films; WaveletMask (ours) generalizes without paired ground truth."
+caption_contract:
+  tense: present
+  required_terms: ["WaveletMask (ours)", "real-world", "SRWOV", "DeOldify", "ShiftNet", "VRT", "RVRT", "OldPhoto", "DeepRemaster", "RTN", "RRTN", "MambaOFR", "flicker suppression"]
+  banned_terms: ["clearly outperforms", "obviously better", "state-of-the-art"]
+  draft_caption: "Qualitative comparison on real-world old film sequences (SRWOV real-world). Columns: (a) Input, (b) DeOldify, (c) ShiftNet, (d) VRT, (e) RVRT, (f) OldPhoto, (g) DeepRemaster, (h) RTN, (i) RRTN, (j) MambaOFR, and (k) WaveletMask (ours). WaveletMask suppresses global flicker and removes local damage more effectively, demonstrating generalization from synthetic training to real-world degradation."
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by: []
+notes: "User PPT/comparison tool; file present after packaging check, but Reuters/Pathé watermark provenance is not cleared. Display figure number shifted from 5 to 6 after adding GFM module figure."

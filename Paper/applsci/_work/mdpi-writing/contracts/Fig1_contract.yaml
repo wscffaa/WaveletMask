@@ -1,0 +1,59 @@
+schema_version: 2
+figure_id: Fig1
+latex_label: fig:motivation
+title: "Frequency-domain degradation separation via Haar wavelet"
+role: motivation
+status: planned
+slot_id: MOTIVATION_DEGRADATION
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A1]
+selected_option:
+  option_id: A
+  archetype: frequency_spectrum
+  source_protocol: references/02-figure/figure-options-protocol.md
+archetype: frequency_spectrum
+core_conclusion: "Pixel-domain residual indicator confuses motion texture with real damage and misses low-frequency flicker; Haar wavelet subbands naturally separate local HF damage (LH/HL/HH) from global LF flicker (LL temporal difference)."
+evidence_data_path:
+  - Paper/applsci/figures/Figure1.pdf
+evidence_gate:
+  required: true
+  status: available
+  missing: []
+reviewer_risk:
+  - "Why Haar wavelet instead of FFT/DCT/learned transforms? → spatial-frequency joint localization + orthogonal decomposition + zero-parameter"
+forbidden_scene: "Not applicable when degradation is purely spatial with no temporal component."
+figure_priority: core
+production_owner: user
+production_route: ppt
+production_status: ready
+ascii_preview: |
+  Pixel domain:  motion texture ≈ damage (false positive), flicker invisible (false negative)
+  Wavelet domain: LH/HL/HH → local HF damage, LL temporal diff → global LF flicker
+dependencies:
+  code: []
+  experiments: []
+  assets:
+    - Paper/applsci/figures/Figure1.pdf
+sync_targets:
+  introduction:
+    required_refs: ["\\ref{fig:motivation}"]
+    claim_to_sync: "Pixel-domain indicators fail to distinguish motion from damage and miss flicker; wavelet frequency decomposition provides a physically-grounded solution."
+  method:
+    required_refs: []
+    claim_to_sync: ""
+  results:
+    required_refs: []
+    claim_to_sync: ""
+caption_contract:
+  tense: present
+  required_terms: ["Haar wavelet", "frequency subbands", "pixel-domain residual indicator"]
+  banned_terms: ["clearly", "obviously"]
+  draft_caption: "Comparison of pixel-domain residual indicator and Haar wavelet frequency decomposition. Pixel-domain output (left) shows false positives on motion regions and misses low-frequency flicker. Wavelet subbands (right) naturally separate local high-frequency damage in LH/HL/HH from global low-frequency flicker via LL temporal difference."
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by: []
+notes: "User PPT hand-drawn; file present and verified."

@@ -1,0 +1,17 @@
+{
+  "fig1": {
+    "png": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure2/draft/Fig1_waveletmask_overall_architecture.png",
+    "pdf": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure2/draft/Fig1_waveletmask_overall_architecture.pdf",
+    "svg": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure2/draft/Fig1_waveletmask_overall_architecture.svg"
+  },
+  "fig2": {
+    "png": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3/draft/Fig2_wavelet_noise_mask_module.png",
+    "pdf": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3/draft/Fig2_wavelet_noise_mask_module.pdf",
+    "svg": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3/draft/Fig2_wavelet_noise_mask_module.svg"
+  },
+  "fig3": {
+    "png": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3/draft/Fig3_wavelet_guided_gated_aggregation_module.png",
+    "pdf": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3/draft/Fig3_wavelet_guided_gated_aggregation_module.pdf",
+    "svg": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/_work/mdpi-writing/figures/Figure3/draft/Fig3_wavelet_guided_gated_aggregation_module.svg"
+  }
+}

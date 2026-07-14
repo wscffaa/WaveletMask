@@ -1,0 +1,3 @@
+Warped hidden state --\
+Current frame feature -> Concatenate -> Gate conv -> Sigmoid gate -> Feature blend -> Swin spatial block
+Wavelet indicator ----/

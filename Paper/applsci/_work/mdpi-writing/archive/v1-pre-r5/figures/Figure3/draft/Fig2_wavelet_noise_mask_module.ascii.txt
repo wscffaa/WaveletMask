@@ -1,0 +1,3 @@
+Frame triplet -> gray conversion -> Haar DWT
+  LH/HL/HH -> geometric mean difference -> Conv 3->16->1 -> upsample -> local mask --\
+  LL       -> bidirectional min difference -> Conv 1->16->1 -> upsample -> flicker mask -> max -> wavelet noise mask

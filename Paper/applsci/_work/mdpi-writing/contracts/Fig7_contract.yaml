@@ -1,0 +1,63 @@
+schema_version: 2
+figure_id: Fig7
+latex_label: fig:ablation
+title: "Ablation visual comparison: component contributions"
+role: results
+status: planned
+slot_id: ABLATION_QUALITATIVE
+fixed_level: fixed
+drop_policy: forbidden
+motivation_anchor_ids: [A3]
+selected_option:
+  option_id: A
+  archetype: ablation_table_visual
+  source_protocol: references/02-figure/figure-options-protocol.md
+archetype: ablation_table_visual
+core_conclusion: "LHFM repairs scratches but leaves flicker; GFM reduces flicker but misses fine damage; WaveletMask combines both responses, demonstrating complementary behavior."
+evidence_data_path:
+  - Paper/applsci/figures/Figure7.pdf
+  - Idea/ablation_matrix.json
+evidence_gate:
+  required: true
+  status: available
+  missing: []
+reviewer_risk:
+  - "Only one frame shown: reviewer may request more cases or statistical aggregation."
+  - "Selection must fairly represent each variant's typical behavior, not best-case for WaveletMask."
+forbidden_scene: "Do not show a frame where all variants produce identical output."
+figure_priority: secondary
+production_owner: user
+production_route: ppt
+production_status: ready
+ascii_preview: |
+  [Input] [RTN baseline] [+LHFM only] [+GFM only] [WaveletMask]
+  + ROI crops below each column
+dependencies:
+  code:
+    - archs/components/wavelet_mask.py
+  experiments:
+    - Idea/ablation_matrix.json
+  assets:
+    - Paper/applsci/figures/Figure7.pdf
+sync_targets:
+  introduction:
+    required_refs: []
+    claim_to_sync: ""
+  method:
+    required_refs: []
+    claim_to_sync: ""
+  results:
+    required_refs: ["\\ref{fig:ablation}"]
+    claim_to_sync: "Ablation results: LHFM repairs local damage, GFM suppresses flicker, and WaveletMask combines both responses."
+caption_contract:
+  tense: present
+  required_terms: ["WaveletMask", "LHFM", "GFM", "max fusion", "complementary"]
+  banned_terms: ["clearly", "obviously", "significantly better"]
+  draft_caption: "Ablation visual comparison on synthetic old film degradation. From left: degraded input, RTN baseline, +LHFM only, +GFM only, and WaveletMask. ROI crops highlight that LHFM repairs local scratches, GFM reduces flicker, and WaveletMask combines both responses."
+drift_policy:
+  can_revisit_step1: true
+  max_step1_revisits: 2
+  step6_drift_revisit_allowed: true
+  fixed_slot_can_be_deleted: false
+blocked_by: []
+notes: "User PPT/comparison tool; shows the RTN baseline, +LHFM only, +GFM only, and WaveletMask. Display figure number shifted from 6 to 7 after adding GFM module figure."

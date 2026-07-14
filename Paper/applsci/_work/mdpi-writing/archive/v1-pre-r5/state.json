@@ -1,0 +1,170 @@
+{
+  "project": "007-waveletmask",
+  "method_name": "WaveletMask",
+  "journal": "Applied Sciences",
+  "current_step": 1,
+  "current_substep": "1.2.ask_user_freeze",
+  "workflow_status": "active",
+  "steps": {
+    "0": {
+      "name": "motivation_anchor",
+      "status": "done",
+      "completed_at": "2026-05-12",
+      "motivation_anchor_id": "M1",
+      "note": "Migrated from existing Idea artifacts and current Applied Sciences manuscript."
+    },
+    "0.5": {
+      "name": "dual_track_writing_guides",
+      "status": "done",
+      "completed_at": "2026-05-12"
+    },
+    "1": {
+      "name": "figure_plan_and_contracts",
+      "status": "revisit",
+      "completed_at": "2026-05-12",
+      "revisit_count": 1,
+      "reopened_at": "2026-05-13",
+      "reopen_reason": "Noncompliant draft promotion was detected for Figure2-Figure6 and Figure9; figure contracts must be refrozen before final figure generation."
+    },
+    "2": {
+      "name": "story_and_introduction",
+      "status": "done",
+      "note": "Existing manuscript introduction already consumes Figure1 motivation and Figure2 pipeline anchors."
+    },
+    "3": {
+      "name": "method_and_experiment_launch",
+      "status": "done",
+      "note": "Existing manuscript method is written; synthetic evidence is frozen in Exp/paper_data."
+    },
+    "4": {
+      "name": "intro_method_revision",
+      "status": "done",
+      "note": "2026-05-10 polish demoted PixelWiseMaskFusion to ablation-only and aligned WaveletMask-ab claims."
+    },
+    "5": {
+      "name": "figure_aware_results",
+      "status": "done",
+      "note": "Existing results text is present; unresolved figure synchronization is tracked through Step 6 contracts."
+    },
+    "6": {
+      "name": "figure_sync_and_caption",
+      "status": "blocked",
+      "drift_revisit_count": 1,
+      "note": "Blocked until fixed figures are regenerated through their owning skills and captions are resynced."
+    }
+  },
+  "figures_status": [
+    {
+      "figure_id": "Figure1",
+      "contract_path": "Paper/_work/mdpi-writing/contracts/Figure1_contract.yaml",
+      "file_path": "Paper/applsci/figures/Figure1.pdf",
+      "file_present": true,
+      "asset_status": "final_manual_redraw",
+      "evidence_gate": "available",
+      "claim_status": "allowed_motivation_only",
+      "caption_synced": true
+    },
+    {
+      "figure_id": "Figure2",
+      "contract_path": "Paper/_work/mdpi-writing/contracts/Figure2_contract.yaml",
+      "file_path": "Paper/applsci/figures/Figure2.pdf",
+      "file_present": true,
+      "asset_status": "placeholder_needs_diagram_route_e",
+      "evidence_gate": "blocked",
+      "claim_status": "blocked_for_final",
+      "caption_synced": false
+    },
+    {
+      "figure_id": "Figure3",
+      "contract_path": "Paper/_work/mdpi-writing/contracts/Figure3_contract.yaml",
+      "file_path": "Paper/applsci/figures/Figure3.pdf",
+      "file_present": true,
+      "asset_status": "placeholder_needs_diagram_route_e",
+      "evidence_gate": "blocked",
+      "claim_status": "blocked_for_final",
+      "caption_synced": false
+    },
+    {
+      "figure_id": "Figure4",
+      "contract_path": "Paper/_work/mdpi-writing/contracts/Figure4_contract.yaml",
+      "file_path": "Paper/applsci/figures/Figure4.pdf",
+      "file_present": true,
+      "asset_status": "optional_placeholder_needs_decision",
+      "evidence_gate": "blocked_if_kept",
+      "claim_status": "blocked_for_final",
+      "caption_synced": false
+    },
+    {
+      "figure_id": "Figure5",
+      "contract_path": "Paper/_work/mdpi-writing/contracts/Figure5_contract.yaml",
+      "file_path": "Paper/applsci/figures/Figure5.pdf",
+      "file_present": true,
+      "asset_status": "placeholder_needs_route_decision",
+      "evidence_gate": "blocked",
+      "claim_status": "blocked_for_final",
+      "caption_synced": false
+    },
+    {
+      "figure_id": "Figure6",
+      "contract_path": "Paper/_work/mdpi-writing/contracts/Figure6_contract.yaml",
+      "file_path": "Paper/applsci/figures/Figure6.pdf",
+      "file_present": true,
+      "asset_status": "placeholder_needs_visual_studio_regeneration",
+      "evidence_gate": "blocked",
+      "claim_status": "blocked_for_realworld_final",
+      "caption_synced": false
+    },
+    {
+      "figure_id": "Figure7",
+      "contract_path": "Paper/_work/mdpi-writing/contracts/Figure7_contract.yaml",
+      "file_path": "Paper/applsci/figures/Figure7.pdf",
+      "file_present": false,
+      "asset_status": "missing_needs_visual_studio_export",
+      "evidence_gate": "blocked",
+      "claim_status": "blocked_for_final",
+      "caption_synced": false
+    },
+    {
+      "figure_id": "Figure8",
+      "contract_path": "Paper/_work/mdpi-writing/contracts/Figure8_contract.yaml",
+      "file_path": "Paper/applsci/figures/Figure8.pdf",
+      "file_present": false,
+      "asset_status": "missing_needs_visual_studio_export",
+      "evidence_gate": "blocked",
+      "claim_status": "blocked_for_final",
+      "caption_synced": false
+    },
+    {
+      "figure_id": "Figure9",
+      "contract_path": "Paper/_work/mdpi-writing/contracts/Figure9_contract.yaml",
+      "file_path": "Paper/applsci/figures/Figure9.pdf",
+      "file_present": true,
+      "asset_status": "placeholder_needs_figure9_finalization",
+      "evidence_gate": "blocked",
+      "claim_status": "blocked_for_final",
+      "caption_synced": false
+    }
+  ],
+  "review_round": 2,
+  "last_session": "2026-05-13",
+  "blocked_by": [
+    "Step 1 figure contracts reopened after noncompliant Figure2-Figure6/Figure9 promotion audit",
+    "Figure2 and Figure3 must pass ofr-paper-diagram Route E ASCII/layout/final-export gates",
+    "Figure5 route must be selected: real mask visualization or schematic",
+    "Figure9 is fixed and must be finalized through the Figure 9 route",
+    "waiting_figure: Figure7, Figure8",
+    "RealWorld no-reference metrics still need refreshed frozen logs before final ranking claims",
+    "F7 fixed Synthetic SOTA qualitative comparison is not yet generated or inserted into LaTeX",
+    "F8 fixed ablation qualitative comparison is not yet generated or inserted into LaTeX",
+    "full-fusion checkpoint mapping remains unresolved; manuscript currently treats WaveletMask-ab as current synthetic best",
+    "references.bib still has unused entries that should be deleted or cited before final submission",
+    "some cited references legitimately have no reliable DOI or are software/preprint-style records"
+  ],
+  "source_policy": {
+    "paper_project": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Paper/applsci",
+    "legacy_reference": "/Users/caifeifan/VibeScholar/Paper_1",
+    "metrics_source": "/Users/caifeifan/VibeScholar/Antigravity_OFR/projects/007-waveletmask/Exp/paper_data"
+  },
+  "last_review_bundle": "/Users/caifeifan/VibeScholar/Antigravity_OFR/docs/workflow/10-active/20260509-214405-007-waveletmask-submission-alignment",
+  "review_status": "partial_pass"
+}

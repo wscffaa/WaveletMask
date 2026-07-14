@@ -1,0 +1,62 @@
+{
+  "schema_version": "module_names/v1",
+  "modules": [
+    {
+      "name": "WaveletNoiseMask",
+      "class_name": "WaveletNoiseMask",
+      "slot": "s3_degprompt",
+      "file": "archs/components/wavelet_mask.py",
+      "role": "小波域噪声掩码检测（创新 A + B + max 融合）",
+      "sub_modules": {
+        "HaarDWT2d": "Haar 小波 2D 正变换",
+        "high_freq_conv": "高频子带 CNN → 局部掩码 (创新 A)",
+        "low_freq_conv": "低频子带 CNN → 闪烁掩码 (创新 B)"
+      }
+    },
+    {
+      "name": "HaarDWT2d",
+      "class_name": "HaarDWT2d",
+      "slot": "s2_spatial",
+      "file": "archs/components/haar_dwt.py",
+      "role": "Haar 小波 2D 正变换（纯 PyTorch 卷积实现）"
+    },
+    {
+      "name": "HaarIDWT2d",
+      "class_name": "HaarIDWT2d",
+      "slot": "s5_reconstruction",
+      "file": "archs/components/haar_dwt.py",
+      "role": "Haar 小波 2D 逆变换（可选，用于重建验证）"
+    }
+  ],
+  "archived_modules": [
+    {
+      "name": "PixelWiseMaskFusion",
+      "class_name": "PixelWiseMaskFusion",
+      "slot": "s4_temporal_fusion",
+      "file": "archs/components/mask_fusion.py",
+      "role": "像素级 alpha 融合网络（创新 C）— 已淘汰",
+      "archived_reason": "L40 权威数据确认 C 在所有对照中有害，2026-04-23 淘汰",
+      "sub_modules": {
+        "fusion_net": "4 层 CNN (2→32→32→16→1) → Sigmoid → alpha"
+      }
+    }
+  ],
+  "excluded_modules": [
+    {
+      "slot": "s1_flow",
+      "reason": "baseline 光流模块（RAFT/SpyNet/MemFlow）已满足对齐需求，本项目不改动"
+    }
+  ],
+  "project_id": "007-waveletmask",
+  "architecture_variants": {
+    "WaveletMaskBaseNet": "Baseline RTN (Video_Backbone)",
+    "WaveletMaskSimpleNet": "A only (固定权重融合) — 消融",
+    "WaveletMaskLocalNet": "A only (直接替换 indicator) — 消融",
+    "WaveletMaskFlickerNet": "B only (直接使用闪烁掩码) — 消融",
+    "WaveletMaskABNet": "A+B (max 融合) — ★ 最终方案",
+    "WaveletMaskLocalFusionNet": "A+C (local + CNN fusion) — 消融（C 有害）",
+    "WaveletMaskFlickerFusionNet": "B+C (flicker + CNN fusion) — 消融（C 有害）",
+    "WaveletMaskFullNet": "A+B+C (max + CNN fusion) — 消融（C 严重有害）",
+    "WaveletMaskGatedFlickerNet": "A+B+C (门控加权 + CNN fusion) — 消融"
+  }
+}

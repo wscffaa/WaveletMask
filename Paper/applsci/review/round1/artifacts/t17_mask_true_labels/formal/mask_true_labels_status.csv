@@ -1,0 +1,5 @@
+field,value,note
+proxy_artifact,projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal,existing evidence is residual-proxy only
+true_masks_available,false,no generator-side true masks found in current workspace
+manual_annotations_available,false,no manual label pack found in current workspace
+ready_for_submission_promotion,false,R1-4 and R2-10 remain partial

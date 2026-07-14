@@ -1,0 +1,10 @@
+{
+  "proxy_artifact": "projects/007-waveletmask/Paper/applsci/review/round1/artifacts/t8_mask_interpretability/formal",
+  "true_masks_available": false,
+  "manual_annotations_available": false,
+  "ready_for_submission_promotion": false,
+  "notes": [
+    "Current local evidence remains residual-proxy based.",
+    "No generator-side true-mask export or manual annotation pack was found in the current workspace."
+  ]
+}

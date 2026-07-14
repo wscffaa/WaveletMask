@@ -1,0 +1,6 @@
+# Prefer the shared `rtn` conda environment on GPU servers.
+# For documentation, pin loosely; install from BasicOFR/requirements.txt when needed.
+torch
+numpy
+opencv-python
+PyYAML

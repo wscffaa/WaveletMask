@@ -1,0 +1,31 @@
+journal: Applied Sciences (MDPI)
+manuscript_id: applsci-4348902
+updated: 2026-06-24
+canonical_source:
+  main: waveletmask.tex
+  supplementary: supplementary.tex
+  diff: waveletmask_diff.tex
+lifecycle:
+  - date: 2026-06-08
+    stage: round1-revision-submission
+    kind: submission_package
+    path: lifecycle/2026-06-08_round1-revision-submission
+  - date: 2026-06-22
+    stage: ethics-not-required-package
+    kind: submission_package
+    path: lifecycle/2026-06-22_ethics-not-required-package
+  - date: 2026-06-23
+    stage: final-proof-author-proofreading
+    kind: proof_package
+    path: lifecycle/2026-06-23_final-proof-applsci-4348902
+    note: SuSy author proofreading; five-file pack under submission_ready/
+# review 物理保留在 review/，此处仅逻辑索引进生命周期时间线
+review_index:
+  - round: round1
+    path: review/round1
+  - round: round2
+    path: review/round2
+assets:
+  ppt: assets/ppt          # Figure1~4.pptx 配图可编辑源
+work: _work                # mdpi-writing, fig9
+supp_build: _supp_build

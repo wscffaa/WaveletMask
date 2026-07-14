@@ -1,0 +1,61 @@
+{
+  "baseline_log": "projects/007-waveletmask/Exp/evidence/reds_round1_y_logs/L40/test_round1_reds_y_t1_base_seed2021_20260607_161215.log",
+  "waveletmask_log": "projects/007-waveletmask/Exp/results/round1_reds_y_t1_ab_seed2021/test_round1_reds_y_t1_ab_seed2021_20260607_155022.log",
+  "n_clips": 30,
+  "draws": 20000,
+  "seed": 20260608,
+  "summary": [
+    {
+      "metric": "psnr",
+      "metric_label": "PSNR",
+      "n_clips": 30,
+      "baseline_mean": 26.164830000000002,
+      "waveletmask_mean": 26.612526666666664,
+      "mean_improvement": 0.44769666666666635,
+      "median_improvement": 0.4227500000000006,
+      "ci95_low": 0.295498666666666,
+      "ci95_high": 0.5981334999999998,
+      "permutation_pvalue": 4.999750012499375e-05,
+      "higher_is_better": true
+    },
+    {
+      "metric": "ssim",
+      "metric_label": "SSIM",
+      "n_clips": 30,
+      "baseline_mean": 0.8923066666666667,
+      "waveletmask_mean": 0.8954133333333333,
+      "mean_improvement": 0.0031066666666666612,
+      "median_improvement": 0.0023499999999999632,
+      "ci95_low": 0.0013866666666666654,
+      "ci95_high": 0.004983333333333336,
+      "permutation_pvalue": 0.0014999250037498126,
+      "higher_is_better": true
+    },
+    {
+      "metric": "lpips",
+      "metric_label": "LPIPS",
+      "n_clips": 30,
+      "baseline_mean": 0.10228333333333332,
+      "waveletmask_mean": 0.08863333333333331,
+      "mean_improvement": 0.013650000000000002,
+      "median_improvement": 0.013100000000000004,
+      "ci95_low": 0.010766666666666671,
+      "ci95_high": 0.016646666666666667,
+      "permutation_pvalue": 4.999750012499375e-05,
+      "higher_is_better": false
+    },
+    {
+      "metric": "dists",
+      "metric_label": "DISTS",
+      "n_clips": 30,
+      "baseline_mean": 0.09463333333333333,
+      "waveletmask_mean": 0.08274000000000002,
+      "mean_improvement": 0.011893333333333332,
+      "median_improvement": 0.011349999999999999,
+      "ci95_low": 0.010263333333333331,
+      "ci95_high": 0.01357333333333333,
+      "permutation_pvalue": 4.999750012499375e-05,
+      "higher_is_better": false
+    }
+  ]
+}
