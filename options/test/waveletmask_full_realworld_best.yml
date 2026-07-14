@@ -1,0 +1,61 @@
+# ==============================================================================
+# WaveletMask Real-world Test Configuration
+# ==============================================================================
+# Test command:
+# CUDA_VISIBLE_DEVICES=1 python test.py -opt options/test/waveletmask/waveletmask_full_realworld_best.yml
+# ==============================================================================
+# ======================== Base Settings ========================
+name: waveletmask_full_realworld_best
+model_type: RTNGANModel
+scale: 1
+num_gpu: 1
+manual_seed: 2021
+dist: false
+find_unused_parameters: true
+
+# ======================== Dataset ========================
+datasets:
+  test:
+    name: RealFilm_SRWOV
+    type: Film_SRWOV_dataset
+    dataroot_lq: datasets/OldFilmRestoration/val/RealFilm/MambaOFR_SRWOV
+    num_frame: -1
+    cache_data: true
+    normalizing: true
+    grayscale: true
+    align: 16  # Swin window_size=8, DWT 下采样 2x, 需要 16 对齐
+    io_backend:
+      type: disk
+
+# ======================== Network ========================
+network_g:
+  type: WaveletMaskFullNet
+  num_feat: 16
+  num_block: 6
+  flow_type: raft
+  fusion_mid_channels: 32
+
+# ======================== Validation ========================
+val:
+  save_img: true
+  # SRWOV clips are long; chunking avoids recurrent drift/collapse on early frames.
+  val_chunk_size: 30
+  metrics:
+    niqe:
+      type: calculate_niqe
+      crop_border: 0
+    brisque:
+      type: calculate_brisque
+      crop_border: 0
+    clipiqa:
+      type: calculate_clipiqa
+      crop_border: 0
+
+# ======================== Logging ========================
+logger:
+  print_freq: 100
+
+# ======================== Paths ========================
+path:
+  pretrain_network_g: projects/007-waveletmask/Exp/experiments/waveletmask/waveletmask_full/models/net_g_best.pth
+  results_root: projects/007-waveletmask/Exp/results

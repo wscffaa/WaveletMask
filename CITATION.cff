@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: "WaveletMask"
+message: "If you use this code, please cite the WaveletMask paper."
+type: software
+authors:
+  - family-names: Cai
+    given-names: Feifan
+  - family-names: Zhang
+    given-names: Qi
+  - family-names: Xu
+    given-names: Chang-An
+  - family-names: Ding
+    given-names: Youdong
+repository-code: "https://github.com/wscffaa/WaveletMask"
+version: "0.1.0"
+date-released: "2026-05-15"
+preferred-citation:
+  type: article
+  title: "WaveletMask: Wavelet-Domain Mask-Guided Degradation Detection for Old Film Restoration"
+  authors:
+    - family-names: Cai
+      given-names: Feifan
+    - family-names: Zhang
+      given-names: Qi
+    - family-names: Xu
+      given-names: Chang-An
+    - family-names: Ding
+      given-names: Youdong
+  journal: "Applied Sciences"
+  year: 2026

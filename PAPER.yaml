@@ -8,8 +8,8 @@ sub_phase: accepted
 thesis_chapter: ""
 legacy_source: [007-waveletmask]
 basicofr_version: "1.0.0"
-release_repo: ../WaveletMask-release
-github: "git@github.com:wscffaa/WaveletMask-dev.git"
+release_repo: null
+github: "git@github.com:wscffaa/WaveletMask.git"
 servers: {}
 training:
   status: idle

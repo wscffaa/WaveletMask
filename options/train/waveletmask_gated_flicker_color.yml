@@ -1,0 +1,184 @@
+# ==============================================================================
+# WaveletMask Gated Flicker 老电影修复训练配置 - 彩色版本
+# ==============================================================================
+# 彩色化+修复联合训练：GT 保留彩色，LQ 为灰度
+# 使用 Film_dataset_damage_color 数据集（film_degradation_video_list）
+#
+# 创新 A: 局部高频掩码（HH/HL/LH 子带几何平均）
+# 创新 B: 全局闪烁掩码（LL 子带差异）- 门控版本
+# 创新 C: 像素级 alpha 融合（空间掩码 + 小波掩码）
+# ==============================================================================
+#
+# 训练命令：
+# CUDA_VISIBLE_DEVICES=6 python train.py -opt options/train/waveletmask/waveletmask_gated_flicker_color.yml --debug
+#
+
+# ======================== 基础配置 ========================
+name: waveletmask_gated_flicker_color         # 实验名称（彩色版）
+model_type: WaveletMaskModel                 # 支持多掩码可视化
+scale: 1
+num_gpu: 1
+manual_seed: 2021
+dist: false
+find_unused_parameters: true
+
+# ======================== 数据集配置 ========================
+datasets:
+  train:
+    name: REDS_FilmDamage_Color
+    type: Film_dataset_damage_color            # 彩色版本：GT=彩色, LQ=灰度
+    dataroot_gt: datasets/train/REDS/train_sharp
+    dataroot_lq: datasets/train/REDS/train_sharp
+    is_train: true
+    num_frame: 7
+    gt_size: [256, 256]
+    scale: 1
+    interval_list: [1, 2]
+    random_reverse: false
+    use_flip: true
+    use_rot: true
+    normalizing: true
+    texture_template: datasets/noise_data
+    film_damage:
+      enabled: true
+      degradation_strength: 0.7
+      assets_root: datasets/film_damage_assets
+
+      scratch:
+        enabled: true
+        prob: 0.5
+        num_range: [1, 3]
+        persistence: 0.6
+        persistence_intensity: 0.6
+        intensity_range: [0.45, 0.8]
+
+      dirt:
+        enabled: true
+        prob: 0.3
+        num_range: [2, 8]
+        scale_range: [0.3, 1.0]
+
+      dust:
+        enabled: true
+        prob: 0.4
+        num_range: [6, 18]
+        scale_range: [0.2, 0.6]
+
+      hair:
+        enabled: true
+        prob: 0.2
+        num_range: [1, 2]
+        types: ['long', 'short']
+
+      flicker:
+        enabled: true
+        prob: 0.3
+        intensity_range: [-0.1, 0.1]
+        modes: ['global', 'local', 'vignette']
+    io_backend:
+      type: disk
+    use_shuffle: true
+    num_worker_per_gpu: 4
+    batch_size_per_gpu: 1
+    dataset_enlarge_ratio: 1
+
+  val:
+    name: OldFilmval
+    type: Film_dataset_1
+    dataroot_gt: datasets/val/miniREDS/GT/val_sharp
+    dataroot_lq: datasets/val/miniREDS/LQ/val_sharp_degraded
+    num_frame: -1
+    cache_data: true
+    normalizing: true
+    io_backend:
+      type: disk
+
+# ======================== 网络架构配置 ========================
+network_g:
+  type: WaveletMaskGatedFlickerNet           # 门控闪烁版本
+  num_feat: 16
+  num_block: 6
+  flow_type: raft
+  fusion_mid_channels: 32                    # 融合网络隐藏通道数
+  # 【修复参数】门控融合配置
+  local_weight: 0.7                          # 局部掩码权重
+  flicker_weight: 0.3                        # 闪烁掩码权重（降低）
+  flicker_threshold: 0.5                     # 闪烁门控阈值
+
+network_d:
+  type: RTNDiscriminator
+  in_channels: 3
+  base_channels: 64
+  use_sigmoid: false
+  use_spectral_norm: true
+
+# ======================== 训练配置 ========================
+train:
+  ema_decay: 0.0
+  train_visualization_iter: 1000
+  net_d_iters: 1
+  net_d_init_iters: 0
+  g_gan_weight: 0.01
+  d_gan_weight: 1.0
+  flow_lr_mul: 0.125
+  flow_modules: ['flow_estimator']
+  fix_flow_iters: !!float 5e-4
+  total_iter: 200000
+
+  optim_g:
+    type: Adam
+    lr: !!float 2e-4
+    betas: [0.9, 0.99]
+
+  optim_d:
+    type: Adam
+    lr: !!float 2e-4
+    betas: [0.9, 0.99]
+
+  pixel_opt:
+    type: L1Loss
+    loss_weight: 1.0
+    reduction: mean
+
+  perceptual_opt:
+    type: VGGLoss
+    loss_weight: 1.0
+
+  gan_opt:
+    type: AdversarialLoss
+    loss_type: nsgan
+    loss_weight: 1.0
+
+  scheduler:
+    type: MultiStepLR
+    milestones: [50000, 100000, 150000]
+    gamma: 0.5
+
+# ======================== 验证配置 ========================
+val:
+  val_freq: !!float 5e3
+  save_img: false
+  val_chunk_size: -1
+  metrics:
+    psnr:
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: true
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: true
+
+# ======================== 日志配置 ========================
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 5e3
+  use_tb_logger: true
+
+# ======================== 路径配置 ========================
+path:
+  experiments_root: projects/007-waveletmask/Exp/experiments
+  pretrain_network_g: projects/007-waveletmask/Exp/experiments/waveletmask_base/models/net_g_best.pth  # warm-start from 007-waveletmask A0 best
+  pretrain_network_d: ~
+  resume_state: ~
+  tb_logger: projects/007-waveletmask/Exp/tb_logger
