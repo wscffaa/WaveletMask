@@ -20,7 +20,9 @@ _ROLE_RE = re.compile(r'^[a-z][a-z0-9_]*$')
 def _checkpoint_refs(data: object) -> list[tuple[str, object]]:
     if not isinstance(data, dict):
         return []
-    path_section = data.get('path') or {}
+    path_section = data.get('path')
+    if path_section is None:
+        path_section = {}
     if not isinstance(path_section, dict):
         return []
     refs = []
@@ -216,7 +218,9 @@ def main() -> int:
                 if not isinstance(data, dict):
                     problems.append(f'{yml.relative_to(REPO)}: YAML root 必须是 mapping')
                     continue
-                path_section = data.get('path') or {}
+                path_section = data.get('path')
+                if path_section is None:
+                    path_section = {}
                 if not isinstance(path_section, dict):
                     problems.append(f'{yml.relative_to(REPO)}: path 必须是 mapping')
                     continue
