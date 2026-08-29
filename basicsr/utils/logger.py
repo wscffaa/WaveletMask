@@ -1,6 +1,8 @@
 import datetime
 import logging
+import subprocess
 import time
+from pathlib import Path
 
 from .dist_util import get_dist_info, master_only
 
@@ -185,6 +187,34 @@ def get_root_logger(logger_name='basicsr', log_level=logging.INFO, log_file=None
     return logger
 
 
+def _get_git_sha():
+    """返回当前仓提交短 SHA；工作树有改动时追加 -dirty。"""
+    repo_root = Path(__file__).resolve().parent.parent.parent
+    try:
+        sha = subprocess.run(
+            ['git', 'rev-parse', '--short', 'HEAD'],
+            capture_output=True, text=True, timeout=5, cwd=str(repo_root),
+            check=False).stdout.strip()
+        if not sha:
+            return 'unknown'
+        dirty = subprocess.run(
+            ['git', 'status', '--porcelain'],
+            capture_output=True, text=True, timeout=5, cwd=str(repo_root),
+            check=False).stdout.strip()
+        return f'{sha}-dirty' if dirty else sha
+    except Exception:
+        return 'unknown'
+
+
+def _get_basicofr_version():
+    """从仓根 VERSION 读取 BasicOFR 版本。"""
+    try:
+        return (Path(__file__).resolve().parent.parent.parent / 'VERSION').read_text(
+            encoding='utf-8').strip()
+    except Exception:
+        return 'unknown'
+
+
 def get_env_info():
     """Get environment information.
 
@@ -208,6 +238,8 @@ def get_env_info():
     """
     msg += ('\nVersion Information: '
             f'\n\tBasicSR: {__version__}'
+            f'\n\tBasicOFR: {_get_basicofr_version()}'
+            f'\n\tGit: {_get_git_sha()}'
             f'\n\tPyTorch: {torch.__version__}'
             f'\n\tTorchVision: {torchvision.__version__}')
     return msg

@@ -129,11 +129,11 @@ _repo_root = osp.dirname(ROOT_PATH)
 if _repo_root not in sys.path:
     sys.path.insert(0, _repo_root)
 
-# ★ Antigravity_OFR 适配：以项目根目录为 CWD 基准
-# YAML 中的相对路径（datasets/, projects/*/Exp/experiments/ 等）以 OFR_ROOT 为基准
+# 以独立论文仓根目录为 CWD 基准。
+# YAML 中的相对路径（datasets/、Exp/experiments/ 等）以 OFR_ROOT 为基准。
 OFR_ROOT = os.environ.get('OFR_ROOT')
 if OFR_ROOT is None:
-    OFR_ROOT = osp.abspath(osp.dirname(ROOT_PATH))  # framework/ 的上一层
+    OFR_ROOT = ROOT_PATH
 
 # CWD 切到项目根目录，使 YAML 中的相对路径正确解析
 os.chdir(OFR_ROOT)
