@@ -30,10 +30,9 @@ Paper/**/original/*.zip
 Paper/**/submission_ready/*.zip
 *.mp4
 
-# Arch code — local backup only; do not push to paper-repo remotes
+# Framework arch copies are re-synced; the method package archs are the local Git SSOT.
 basicofr/archs/
 basicsr/archs/
-*/archs/
 
 # Weights: ignore bulk checkpoints; whitelist shipped baselines
 pretrained/*.pth
