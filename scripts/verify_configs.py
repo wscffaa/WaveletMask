@@ -13,6 +13,8 @@ TRAIN_DIR = OPTIONS_DIR / 'train'
 TEST_DIR = OPTIONS_DIR / 'test'
 _MUST_PATCH = '__MUST_PATCH__'
 _CHECKPOINT_KEY_RE = re.compile(r'^(pretrain_network_[A-Za-z0-9_]+|resume_state)$')
+_REGISTRY_SCHEMA_VERSION = 'ofr_experiment_registry/v1'
+_ROLE_RE = re.compile(r'^[a-z][a-z0-9_]*$')
 
 
 def _checkpoint_refs(data: object) -> list[tuple[str, object]]:
@@ -65,6 +67,94 @@ def _check_checkpoint_path(
     return False
 
 
+def _variant_label(variant: dict, index: int) -> object:
+    variant_id = variant.get('id')
+    return variant_id if variant_id not in (None, '') else f'variants[{index}]'
+
+
+def _check_registry_config(
+        cfg: object, variant_label: object, problems: list[str]) -> None:
+    if cfg is None:
+        return
+    if not isinstance(cfg, str):
+        problems.append(f'registry.yaml: variant {variant_label} 的 config 必须是路径字符串: {cfg!r}')
+        return
+    if not cfg.strip():
+        problems.append(f'registry.yaml: variant {variant_label} 的 config 必须是非空路径字符串')
+        return
+    cfg_path = Path(cfg)
+    resolved_cfg = cfg_path if cfg_path.is_absolute() else REPO / cfg_path
+    try:
+        resolved_cfg.resolve().relative_to(OPTIONS_DIR.resolve())
+    except ValueError:
+        problems.append(f'registry.yaml: variant {variant_label} 的 config 必须位于 Exp/options/: {cfg}')
+        return
+    if _is_generated_config(resolved_cfg):
+        problems.append(
+            f'registry.yaml: variant {variant_label} 不得引用 _resolved 生成配置: {cfg}')
+        return
+    if not resolved_cfg.is_file():
+        problems.append(f'registry.yaml: variant {variant_label} 引用的配置不存在: {cfg}')
+
+
+def _check_registry(registry_data: object, problems: list[str]) -> None:
+    if not isinstance(registry_data, dict):
+        problems.append('Exp/registry.yaml: root 必须是 mapping')
+        return
+    schema_version = registry_data.get('schema_version')
+    if schema_version != _REGISTRY_SCHEMA_VERSION:
+        problems.append(
+            'Exp/registry.yaml: schema_version 必须是 '
+            f'{_REGISTRY_SCHEMA_VERSION}: {schema_version!r}')
+    variants = registry_data.get('variants')
+    if not isinstance(variants, list):
+        problems.append('Exp/registry.yaml: variants 必须是 list')
+        return
+
+    variant_ids = set()
+    for index, variant in enumerate(variants):
+        if not isinstance(variant, dict):
+            problems.append(f'Exp/registry.yaml: variants[{index}] 必须是 mapping')
+            continue
+        variant_id = variant.get('id')
+        if not isinstance(variant_id, str) or not variant_id.strip():
+            problems.append(f'Exp/registry.yaml: variants[{index}].id 必须是非空字符串')
+            continue
+        if variant_id in variant_ids:
+            problems.append(f'Exp/registry.yaml: variant id 重复: {variant_id}')
+            continue
+        variant_ids.add(variant_id)
+
+    for index, variant in enumerate(variants):
+        if not isinstance(variant, dict):
+            continue
+        label = _variant_label(variant, index)
+        for field in ('name', 'role'):
+            value = variant.get(field)
+            if not isinstance(value, str) or not value.strip():
+                problems.append(f'Exp/registry.yaml: variant {label}.{field} 必须是非空字符串')
+        role = variant.get('role')
+        if isinstance(role, str) and role.strip() and not _ROLE_RE.match(role):
+            problems.append(f'Exp/registry.yaml: variant {label}.role 必须是小写 slug: {role!r}')
+        _check_registry_config(variant.get('config'), label, problems)
+        params = variant.get('params')
+        if params is not None and not isinstance(params, dict):
+            problems.append(f'Exp/registry.yaml: variant {label}.params 必须是 mapping')
+        target = variant.get('comparison_target')
+        if target is None:
+            continue
+        if not isinstance(target, str) or not target.strip():
+            problems.append(
+                f'Exp/registry.yaml: variant {label}.comparison_target 必须是非空字符串')
+            continue
+        if isinstance(label, str) and target == label:
+            problems.append(
+                f'Exp/registry.yaml: variant {label}.comparison_target 不得指向自身')
+        elif target not in variant_ids:
+            problems.append(
+                f'Exp/registry.yaml: variant {label}.comparison_target 未引用已登记 variant: {target}')
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument('--check', action='store_true')
@@ -107,37 +197,9 @@ def main() -> int:
             except Exception as exc:
                 problems.append(f'Exp/registry.yaml: YAML 解析失败: {exc}')
                 registry_data = {}
-            if not isinstance(registry_data, dict):
-                problems.append('Exp/registry.yaml: root 必须是 mapping')
-                registry_data = {}
-            variants = registry_data.get('variants') or []
-            if not isinstance(variants, list):
-                problems.append('Exp/registry.yaml: variants 必须是 list')
-                variants = []
-            for index, variant in enumerate(variants):
-                if not isinstance(variant, dict):
-                    problems.append(f'Exp/registry.yaml: variants[{index}] 必须是 mapping')
-                    continue
-                cfg = variant.get('config')
-                if not cfg:
-                    continue
-                vid = variant.get('id', '?')
-                if not isinstance(cfg, str):
-                    problems.append(f'registry.yaml: variant {vid} 的 config 必须是路径字符串: {cfg!r}')
-                    continue
-                cfg_path = Path(cfg)
-                resolved_cfg = cfg_path if cfg_path.is_absolute() else REPO / cfg_path
-                try:
-                    resolved_cfg.resolve().relative_to(REPO.resolve())
-                except ValueError:
-                    problems.append(f'registry.yaml: variant {vid} 的 config 越出仓: {cfg}')
-                    continue
-                if _is_generated_config(resolved_cfg):
-                    problems.append(
-                        f'registry.yaml: variant {vid} 不得引用 _resolved 生成配置: {cfg}')
-                    continue
-                if not resolved_cfg.is_file():
-                    problems.append(f'registry.yaml: variant {vid} 引用的配置不存在: {cfg}')
+            _check_registry(registry_data, problems)
+        else:
+            problems.append('Exp/registry.yaml: missing experiment registry SSOT')
     train_checkpoint_refs = 0
     train_checkpoint_present = 0
     test_checkpoint_refs = 0
