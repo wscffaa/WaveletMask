@@ -4,7 +4,9 @@
   `archs/*_arch.py`、`data/*_dataset.py`、`models/*_model.py`、
   `losses/*_loss.py`，由注册器按后缀扫描。
 - `basicofr/` 与 `basicsr/` 是固定的 1.0.0 框架副本，不放论文方法创新。
-  框架升级必须通过母仓同步流程，并单独评估 1.1.0 评测口径变化。
+  fresh clone 后先用 `scripts/hydrate_framework.py` 按 `FRAMEWORK_REF` 恢复两个
+  ignored framework arch 目录。框架升级必须通过母仓同步流程，并单独评估
+  1.1.0 评测口径变化。
 - 新 variant 的最小闭环是：方法代码 → `Exp/options/` 配置 →
   `Exp/registry.yaml` 登记 → `scripts/verify_configs.py --check` →
   仓根入口运行 → `scripts/harvest_results.py` 生成 receipt。

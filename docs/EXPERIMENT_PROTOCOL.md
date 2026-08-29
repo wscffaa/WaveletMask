@@ -8,7 +8,7 @@
 
 1. 配置只从 `Exp/options/{train,test}/` 选取，并在 `Exp/registry.yaml`
    登记；运行前执行 `python3 scripts/verify_configs.py --check` 做结构检查。
-   实际测试前还必须执行
+   仓级测试/复现前还必须执行
    `python3 scripts/verify_configs.py --check --require-checkpoints`。
 2. 启动入口固定为仓根 `train.py` / `test.py`。相对数据、权重与输出路径均
    以本仓根目录解析；日志必须记录 `VERSION` 与当前 Git SHA（dirty 状态也记录）。
@@ -21,5 +21,7 @@
 evidence；只有能追溯到原始日志并由收割器重建的记录，才可升级为当前 receipt。
 
 `--check` 不声明 checkpoint 已就绪；历史权重不属于 Git 恢复面。严格 checkpoint
-门禁失败时，必须恢复配置指定的精确 artifact，不能用其他 variant 权重替代，也不能
-声称测试闭环。数据集与 GPU 运行时可用性仍须在目标机器单独核验。
+门禁扫描全部 active train/test 配置；`Exp/options/**/legacy_*` 仅作
+provenance，不计入 artifact 就绪门禁。严格门禁失败时，必须恢复配置指定的精确
+artifact，不能用其他 variant 权重替代，也不能声称测试闭环。数据集与 GPU
+运行时可用性仍须在目标机器单独核验。
