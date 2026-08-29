@@ -36,6 +36,15 @@ def _is_legacy_config(yml: Path) -> bool:
     return any(part.startswith('legacy_') for part in rel.parts[:-1])
 
 
+def _is_generated_config(yml: Path) -> bool:
+    """Return whether a config is a generated/provenance-only derivative."""
+    try:
+        rel = yml.resolve().relative_to(OPTIONS_DIR.resolve())
+    except ValueError:
+        return False
+    return '_resolved' in rel.parts[:-1]
+
+
 def _check_checkpoint_path(
         yml: Path, key: str, value: object, *,
         require_artifact: bool, split: str, problems: list[str]) -> bool:
@@ -61,15 +70,25 @@ def main() -> int:
     ap.add_argument('--check', action='store_true')
     ap.add_argument(
         '--require-checkpoints', action='store_true',
-        help='fail unless every checkpoint referenced by active train/test configs exists locally; legacy_* configs are provenance-only')
+        help='fail unless every checkpoint referenced by active train/test configs exists locally; legacy_* and _resolved configs are provenance-only')
     args = ap.parse_args()
     if not TRAIN_DIR.is_dir():
         print(f'ERROR: missing {TRAIN_DIR}', file=sys.stderr)
         return 1
-    configs = sorted(TRAIN_DIR.rglob('*.yml'))
-    test_configs = sorted(TEST_DIR.rglob('*.yml')) if TEST_DIR.is_dir() else []
+    option_configs = sorted(OPTIONS_DIR.rglob('*.yml'))
+    generated_configs = [yml for yml in option_configs if _is_generated_config(yml)]
+    configs = [
+        yml for yml in sorted(TRAIN_DIR.rglob('*.yml'))
+        if not _is_generated_config(yml)
+    ]
+    test_configs = [
+        yml for yml in sorted(TEST_DIR.rglob('*.yml'))
+        if not _is_generated_config(yml)
+    ] if TEST_DIR.is_dir() else []
     problems = []
-    for yml in sorted(OPTIONS_DIR.rglob('*.yml')):
+    for yml in option_configs:
+        if _is_generated_config(yml):
+            continue
         if _MUST_PATCH in yml.read_text(encoding='utf-8'):
             problems.append(f'{yml.relative_to(REPO)}: unresolved {_MUST_PATCH} placeholder')
     try:
@@ -112,6 +131,10 @@ def main() -> int:
                     resolved_cfg.resolve().relative_to(REPO.resolve())
                 except ValueError:
                     problems.append(f'registry.yaml: variant {vid} 的 config 越出仓: {cfg}')
+                    continue
+                if _is_generated_config(resolved_cfg):
+                    problems.append(
+                        f'registry.yaml: variant {vid} 不得引用 _resolved 生成配置: {cfg}')
                     continue
                 if not resolved_cfg.is_file():
                     problems.append(f'registry.yaml: variant {vid} 引用的配置不存在: {cfg}')
@@ -158,12 +181,15 @@ def main() -> int:
         print('CONFIG-CHECK-FAIL')
         print('\n'.join(problems))
         return 1
+    exclusion_status = (
+        f'{legacy_checkpoint_refs} legacy checkpoint refs excluded; '
+        f'{len(generated_configs)} _resolved generated configs excluded')
     artifact_status = (
         f'{train_checkpoint_present}/{train_checkpoint_refs} train checkpoint refs present; '
         f'{test_checkpoint_present}/{test_checkpoint_refs} test checkpoint refs present; '
-        f'{legacy_checkpoint_refs} legacy checkpoint refs excluded'
+        f'{exclusion_status}'
         if args.require_checkpoints else
-        f'checkpoint artifacts not checked; {legacy_checkpoint_refs} legacy checkpoint refs excluded; '
+        f'checkpoint artifacts not checked; {exclusion_status}; '
         'use --require-checkpoints before repository-wide test/reproduction')
     print(
         f'CONFIG-CHECK-OK ({len(configs)} train configs; '
