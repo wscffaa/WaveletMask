@@ -2,7 +2,7 @@ schema_version: ofr_experiment_registry/v1
 project_id: 007-waveletmask
 source:
   type: ablation-matrix
-  path: projects/007-waveletmask/Idea/ablation_matrix.json
+  path: Idea/ablation_matrix.json
 created_at: '2026-05-06T19:15:50+08:00'
 updated_at: '2026-07-02T21:48:02+08:00'
 updated_by: ofr-exp-test.launch

@@ -12,8 +12,6 @@ sys.path.insert(0, str(REPO_ROOT))
 import basicofr.archs  # noqa: F401,E402
 import basicofr.losses  # noqa: F401,E402
 import basicofr.models  # noqa: F401,E402
-import waveletmask.archs  # noqa: F401,E402
-import waveletmask.models  # noqa: F401,E402
 from basicsr.utils.registry import ARCH_REGISTRY, MODEL_REGISTRY  # noqa: E402
 
 

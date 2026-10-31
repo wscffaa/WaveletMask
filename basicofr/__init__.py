@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import importlib
 import warnings
+from pathlib import Path
 from pkgutil import extend_path
 from types import ModuleType
 
@@ -41,7 +42,16 @@ if not hasattr(np, 'sctypes'):
     }
 # ================================================================
 
-__version__ = '0.1.0'
+def _read_version() -> str:
+    """从仓库根目录 VERSION 文件读取版本号；读取失败时回退 unknown。"""
+    try:
+        return (Path(__file__).resolve().parent.parent / 'VERSION').read_text(
+            encoding='utf-8').strip()
+    except Exception:
+        return 'unknown'
+
+
+__version__ = _read_version()
 __author__ = 'BasicOFR Team'
 
 __all__ = ['archs', 'models', 'losses', 'data', 'metrics']

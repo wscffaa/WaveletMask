@@ -1,8 +1,0 @@
-{
-  "project_id": "007-waveletmask",
-  "method_name": "WaveletMask OFR",
-  "method_full_name": "Wavelet-Domain Mask-Guided Old Film Restoration",
-  "method_abbreviation": "WaveletMask",
-  "registered_arch_name": "WaveletMaskFullNet",
-  "registered_model_name": "WaveletMaskModel"
-}
